@@ -34,5 +34,5 @@ EXPOSE 3000
 ENV NODE_ENV=production
 ENV PORT=3000
 
-# Start the application
-CMD ["node", ".next/standalone/server.js"]
+# Start the application with migrations
+CMD ["sh", "-c", "npx prisma migrate deploy && node .next/standalone/server.js"]
