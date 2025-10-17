@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import pool from '@/lib/mysql'
 
 // Email konfigürasyonu - cPanel ayarlarına göre
 const transporter = nodemailer.createTransport({
@@ -15,6 +16,14 @@ const transporter = nodemailer.createTransport({
 export async function POST(request: NextRequest) {
   try {
     const { name, email, phone, subject, message, company } = await request.json()
+
+    // MySQL'e kaydet
+    const connection = await pool.getConnection()
+    const [result] = await connection.execute(
+      'INSERT INTO contact_submissions (name, email, phone, company, subject, message) VALUES (?, ?, ?, ?, ?, ?)',
+      [name, email, phone || null, company || null, subject || null, message]
+    )
+    connection.release()
 
     // Send email
     const info = await transporter.sendMail({
