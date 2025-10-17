@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Offline - Okan Demir</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .container {
+      background: white;
+      border-radius: 20px;
+      padding: 60px 40px;
+      text-align: center;
+      max-width: 500px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    .icon {
+      font-size: 80px;
+      margin-bottom: 20px;
+      animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+    
+    h1 {
+      color: #1a202c;
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 16px;
+    }
+    
+    p {
+      color: #4a5568;
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+    
+    .btn {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 16px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+    
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+    }
+    
+    .status {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: #f7fafc;
+      border-radius: 8px;
+      color: #718096;
+      font-size: 14px;
+    }
+    
+    .online {
+      color: #48bb78;
+      font-weight: 600;
+    }
+    
+    .offline {
+      color: #f56565;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="icon">📡</div>
+    <h1>İnternet Bağlantısı Yok</h1>
+    <p>
+      Şu anda çevrimdışısınız. Lütfen internet bağlantınızı kontrol edin ve tekrar deneyin.
+    </p>
+    <a href="/" class="btn" onclick="window.location.reload(); return false;">
+      🔄 Tekrar Dene
+    </a>
+    <div class="status">
+      Durum: <span id="status" class="offline">Çevrimdışı</span>
+    </div>
+  </div>
+
+  <script>
+    // Check connection status
+    function updateOnlineStatus() {
+      const status = document.getElementById('status')
+      if (navigator.onLine) {
+        status.textContent = 'Çevrimiçi'
+        status.className = 'online'
+        setTimeout(() => {
+          window.location.href = '/'
+        }, 1000)
+      } else {
+        status.textContent = 'Çevrimdışı'
+        status.className = 'offline'
+      }
+    }
+
+    window.addEventListener('online', updateOnlineStatus)
+    window.addEventListener('offline', updateOnlineStatus)
+    
+    // Check periodically
+    setInterval(updateOnlineStatus, 3000)
+  </script>
+</body>
+</html>
+

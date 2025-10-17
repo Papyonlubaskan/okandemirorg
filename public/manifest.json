@@ -1,0 +1,102 @@
+{
+  "name": "Okan Demir - Dijital Pazarlama Uzmanı",
+  "short_name": "Okan Demir",
+  "description": "Dijital Pazarlama Uzmanı, Web Tasarım, SEO, Google Ads, Meta Business, Sosyal Medya Yönetimi. Profesyonel dijital çözümlerle işinizi büyütün.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "marketing"],
+  "screenshots": [
+    {
+      "src": "/hero-background.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "label": "Ana Sayfa"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "İletişim",
+      "short_name": "İletişim",
+      "description": "Bize ulaşın",
+      "url": "/iletisim",
+      "icons": [
+        {
+          "src": "/email-icon.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Hizmetler",
+      "short_name": "Hizmetler",
+      "description": "Tüm hizmetlerimiz",
+      "url": "/hizmetler",
+      "icons": [
+        {
+          "src": "/services-icon.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Projeler",
+      "short_name": "Projeler",
+      "description": "Tamamlanan projeler",
+      "url": "/projeler",
+      "icons": [
+        {
+          "src": "/portfolio-icon.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Hakkımda",
+      "short_name": "Hakkımda",
+      "description": "Benim hakkımda",
+      "url": "/hakkimda",
+      "icons": [
+        {
+          "src": "/about-icon.png",
+          "sizes": "96x96",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "share_target": {
+    "action": "/iletisim",
+    "method": "GET",
+    "params": {
+      "title": "subject",
+      "text": "message",
+      "url": "url"
+    }
+  }
+}
+

@@ -7,6 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Loading from "@/components/Loading";
 import StructuredData from "./structured-data";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
+import PWAInstall from "@/components/PWAInstall";
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -29,6 +30,13 @@ export const metadata: Metadata = {
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
     ],
     apple: { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+  },
+  manifest: '/manifest.json',
+  themeColor: '#2563eb',
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: 'default',
+    title: 'Okan Demir',
   },
   robots: {
     index: true,
@@ -69,6 +77,7 @@ export default function RootLayout({
       <body className={`${poppins.variable} antialiased flex flex-col min-h-screen`}>
         <StructuredData />
         <AnalyticsTracker />
+        <PWAInstall />
         <Loading />
         <Header />
         <main className="flex-1">
