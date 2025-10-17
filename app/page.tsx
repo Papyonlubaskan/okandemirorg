@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import SuccessStories from "@/components/SuccessStories";
 
 export default function Home() {
   return (
@@ -710,9 +709,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Success Stories - Animated Testimonials */}
-      <SuccessStories />
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
