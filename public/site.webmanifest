@@ -1,0 +1,48 @@
+{
+  "name": "Okan Demir - Dijital Pazarlama & Web Tasarım",
+  "short_name": "Okan Demir",
+  "description": "Profesyonel dijital pazarlama, web tasarımı ve marka kimliği hizmetleri. Google Ads, Meta Ads, SEO ve WordPress geliştirme.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#3B82F6",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["business", "marketing", "design"],
+  "shortcuts": [
+    {
+      "name": "İletişim",
+      "short_name": "İletişim",
+      "description": "Bize ulaşın",
+      "url": "/contact",
+      "icons": [{ "src": "/email-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Hizmetler",
+      "short_name": "Hizmetler",
+      "description": "Hizmetlerimizi keşfedin",
+      "url": "/services",
+      "icons": [{ "src": "/services-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "Projeler",
+      "short_name": "Projeler",
+      "description": "Projelerimize göz atın",
+      "url": "/projects",
+      "icons": [{ "src": "/portfolio-icon.png", "sizes": "96x96" }]
+    }
+  ]
+}
