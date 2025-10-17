@@ -7,7 +7,7 @@
     "build": "next build",
     "build:analyze": "ANALYZE=true next build --turbopack",
     "start": "next start",
-    "lint": "eslint",
+    "lint": "eslint"
   },
   "dependencies": {
     "@types/nodemailer": "^7.0.2",
