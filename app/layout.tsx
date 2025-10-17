@@ -8,6 +8,7 @@ import Loading from "@/components/Loading";
 import StructuredData from "./structured-data";
 import WhatsAppChatbot from "@/components/WhatsAppChatbot";
 import AccessibilityHelper from "@/components/AccessibilityHelper";
+import ConsoleErrorSuppressor from "@/components/ConsoleErrorSuppressor";
 
 const montserrat = Montserrat({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -70,8 +71,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
-      <body className={`${montserrat.variable} antialiased flex flex-col min-h-screen`}>
+    <html lang="tr" suppressHydrationWarning>
+      <body className={`${montserrat.variable} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
+        <ConsoleErrorSuppressor />
         <AccessibilityHelper />
         <StructuredData />
         <WhatsAppChatbot />

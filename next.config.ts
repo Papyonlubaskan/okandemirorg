@@ -54,6 +54,11 @@ const nextConfig: NextConfig = {
   /* Output Configuration */
   output: 'standalone',
   
+  /* Generate Build ID for cache busting */
+  generateBuildId: async () => {
+    return `build-${Date.now()}`
+  },
+  
   /* Compiler Options */
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
