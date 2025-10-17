@@ -67,8 +67,14 @@ export default function WhatsAppChatbot() {
               ✕
             </button>
             <div className="flex items-start gap-3">
-              <div className="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold">OD</span>
+              <div className="w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-green-500">
+                <Image 
+                  src="/okan-demir-profile.webp" 
+                  alt="Okan Demir" 
+                  width={40} 
+                  height={40} 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div>
                 <div className="font-black text-gray-900 mb-1">Okan Demir</div>
@@ -88,8 +94,14 @@ export default function WhatsAppChatbot() {
           <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 text-white">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center">
-                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={32} height={32} />
+                <div className="w-12 h-12 rounded-full overflow-hidden ring-2 ring-white">
+                  <Image 
+                    src="/okan-demir-profile.webp" 
+                    alt="Okan Demir" 
+                    width={48} 
+                    height={48} 
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <div className="font-black">Okan Demir</div>
