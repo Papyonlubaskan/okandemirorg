@@ -33,4 +33,4 @@ ENV NODE_ENV=production
 ENV PORT=3000
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["node", ".next/standalone/server.js"]
