@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Poppins } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -9,11 +9,11 @@ import StructuredData from "./structured-data";
 import WhatsAppChatbot from "@/components/WhatsAppChatbot";
 import AccessibilityHelper from "@/components/AccessibilityHelper";
 
-const poppins = Poppins({
+const montserrat = Montserrat({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
   subsets: ["latin"],
   display: "swap",
-  variable: '--font-poppins',
+  variable: '--font-montserrat',
   preload: true,
 });
 
@@ -71,7 +71,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body className={`${poppins.variable} antialiased flex flex-col min-h-screen`}>
+      <body className={`${montserrat.variable} antialiased flex flex-col min-h-screen`}>
         <AccessibilityHelper />
         <StructuredData />
         <WhatsAppChatbot />
