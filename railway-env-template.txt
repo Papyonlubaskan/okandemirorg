@@ -1,0 +1,35 @@
+# Production Environment Variables - Railway'e Eklenecekler
+# Railway Dashboard > Projeniz > Variables sekmesine bu değişkenleri ekleyin
+
+# ===== ZORUNLU DEĞERLER =====
+
+# Site URL
+NEXT_PUBLIC_SITE_URL=https://okandemir.org
+
+# MySQL Database (Railway PostgreSQL service'inden kopyalayın)
+DATABASE_URL=mysql://root:PASSWORD@HOST:PORT/railway
+MYSQL_HOST=tramway.proxy.rlwy.net
+MYSQL_PORT=32383
+MYSQL_USER=root
+MYSQL_PASSWORD=dFTGoNAsywbEMGsQoojVBRnQYZsxIwUz
+MYSQL_DATABASE=railway
+
+# Email Configuration (cPanel'den)
+EMAIL_HOST=okandemir.org
+EMAIL_PORT=465
+EMAIL_USER=info@okandemir.org
+EMAIL_PASSWORD=Okan- 1881@ 
+
+# Node Environment
+NODE_ENV=production
+NEXT_TELEMETRY_DISABLED=1
+
+# ===== OPSİYONEL DEĞERLER =====
+
+# YouTube API (Varsa)
+YOUTUBE_API_KEY=
+YOUTUBE_CHANNEL_ID=UCITScioEO2DHLU5tvy01IzA
+
+# Google Analytics (İleride eklerseniz)
+NEXT_PUBLIC_GA_MEASUREMENT_ID=
+
