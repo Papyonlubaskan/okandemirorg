@@ -7,6 +7,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Loading from "@/components/Loading";
 import StructuredData from "./structured-data";
 import WhatsAppChatbot from "@/components/WhatsAppChatbot";
+import AccessibilityHelper from "@/components/AccessibilityHelper";
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -71,11 +72,12 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className={`${poppins.variable} antialiased flex flex-col min-h-screen`}>
+        <AccessibilityHelper />
         <StructuredData />
         <WhatsAppChatbot />
         <Loading />
         <Header />
-        <main className="flex-1">
+        <main id="main-content" className="flex-1" tabIndex={-1}>
           {children}
         </main>
         <Footer />
