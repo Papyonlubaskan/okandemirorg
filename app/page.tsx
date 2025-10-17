@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import SuccessStories from "@/components/SuccessStories";
 
 export default function Home() {
   return (
@@ -710,52 +711,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Testimonial 1 */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-              <div className="flex items-start space-x-4 mb-6">
-          <Image
-                  src="/hakan-gazioglu.jpg" 
-                  alt="Hakan Gazioğlu" 
-                  width={80} 
-                  height={80} 
-                  className="rounded-full object-cover"
-                />
-                <div>
-                  <h5 className="text-xl font-black text-gray-900">Hakan Gazioğlu</h5>
-                  <p className="text-blue-600 font-black">Türkiye Uyanış Partisi Teşkilat Başkanı</p>
-                </div>
-              </div>
-              <blockquote className="text-lg text-gray-700 leading-tight italic">
-                &ldquo;Okan ile çalışmak, çevrimiçi varlığımız için çığır açıcı bir deneyimdi. Partimizi marka olarak tanınırlık elde etmesi için basın danışmanlığı süresince dijital dönüşüm önerileri ve kreatif çözümler üreterek büyümemize olanak sağladı.&rdquo;
-              </blockquote>
-            </div>
-
-            {/* Testimonial 2 */}
-            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition-shadow duration-300">
-              <div className="flex items-start space-x-4 mb-6">
-          <Image
-                  src="/selin-gorkem.jpg" 
-                  alt="Selin Görkem" 
-                  width={80} 
-                  height={80} 
-                  className="rounded-full object-cover"
-                />
-                <div>
-                  <h5 className="text-xl font-black text-gray-900">Selin Görkem</h5>
-                  <p className="text-green-600 font-black">İşletme Sahibi</p>
-                </div>
-              </div>
-              <blockquote className="text-lg text-gray-700 leading-tight italic">
-                &ldquo;Okan, markamızın özünü gerçekten yansıtan göz alıcı bir web sitesi tasarladı. Sürekli geri bildirimlerde bulunuyor. Uzmanlığını şiddetle tavsiye ediyorum!&rdquo;
-              </blockquote>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Success Stories - Animated Testimonials */}
+      <SuccessStories />
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
