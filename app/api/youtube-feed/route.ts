@@ -2,9 +2,43 @@ import { NextResponse } from 'next/server'
 
 export async function GET() {
   try {
-    // YouTube kanal RSS feed URL'lerini dene
+    const apiKey = process.env.YOUTUBE_API_KEY
+    const channelId = process.env.YOUTUBE_CHANNEL_ID
+    
+    // Eğer API key ve channel ID varsa, YouTube Data API v3 kullan
+    if (apiKey && channelId) {
+      try {
+        const response = await fetch(
+          `https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=${channelId}&maxResults=6&order=date&type=video&key=${apiKey}`,
+          {
+            next: { revalidate: 3600 },
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            }
+          }
+        )
+        
+        if (response.ok) {
+          const data = await response.json()
+          const videos = data.items?.map((item: any) => ({
+            id: item.id.videoId,
+            title: item.snippet.title,
+            thumbnail: item.snippet.thumbnails.high?.url || item.snippet.thumbnails.default?.url,
+            url: `https://www.youtube.com/watch?v=${item.id.videoId}`,
+            publishedAt: item.snippet.publishedAt
+          })) || []
+          
+          console.log(`✅ YouTube API ile ${videos.length} video alındı`)
+          return NextResponse.json({ videos, source: 'youtube_api' })
+        }
+      } catch (apiError) {
+        console.log('❌ YouTube API hatası, RSS feed deneniyor:', apiError)
+      }
+    }
+    
+    // Fallback: RSS feed kullan
     const possibleUrls = [
-      'https://www.youtube.com/feeds/videos.xml?channel_id=UCITScioEO2DHLU5tvy01IzA',
+      `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId || 'UCITScioEO2DHLU5tvy01IzA'}`,
       'https://www.youtube.com/feeds/videos.xml?user=PapyonluBaskan',
       'https://www.youtube.com/@PapyonluBaskan/videos.rss',
     ]
@@ -70,8 +104,8 @@ export async function GET() {
       }
     }
     
-    console.log(`✅ ${videos.length} video parse edildi`)
-    return NextResponse.json({ videos, workingUrl })
+    console.log(`✅ RSS feed ile ${videos.length} video parse edildi`)
+    return NextResponse.json({ videos, workingUrl, source: 'rss_feed' })
     
   } catch (error) {
     console.error('❌ YouTube feed hatası:', error)
