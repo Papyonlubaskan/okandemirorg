@@ -47,9 +47,6 @@ const nextConfig: NextConfig = {
   /* Experimental Features */
   experimental: {
     optimizePackageImports: ['@/components', '@/lib', 'lucide-react'],
-    turbo: {
-      root: process.cwd(),
-    },
   },
   
   /* Production Optimization */
