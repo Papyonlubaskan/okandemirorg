@@ -231,3 +231,48 @@ model AIAnalyticsLog {
   @@index([page])
   @@index([createdAt])
 }
+
+// Customer Satisfaction Survey Models
+model Survey {
+  id                String   @id @default(cuid())
+  projectId         String?  // Optional project reference
+  customerName      String
+  customerEmail     String
+  
+  // Ratings (1-5)
+  overallRating     Int
+  communicationRating Int
+  qualityRating     Int
+  timelinessRating  Int
+  valueRating       Int
+  
+  // Feedback
+  whatWorkedWell    String?
+  whatCouldImprove  String?
+  wouldRecommend    Boolean
+  testimonial       String?  // Can be used on website
+  allowPublic       Boolean  @default(false)
+  
+  // Metadata
+  completedAt       DateTime @default(now())
+  ipAddress         String?
+  
+  @@index([customerEmail])
+  @@index([overallRating])
+  @@index([completedAt])
+}
+
+model SurveyInvitation {
+  id                String   @id @default(cuid())
+  customerEmail     String
+  customerName      String
+  projectId         String?
+  token             String   @unique
+  
+  sentAt            DateTime @default(now())
+  completedAt       DateTime?
+  reminderSentAt    DateTime?
+  
+  @@index([customerEmail])
+  @@index([token])
+}
