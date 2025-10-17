@@ -19,7 +19,7 @@ export async function POST(request: NextRequest) {
 
     // MySQL'e kaydet
     const connection = await pool.getConnection()
-    const [result] = await connection.execute(
+    await connection.execute(
       'INSERT INTO contact_submissions (name, email, phone, company, subject, message) VALUES (?, ?, ?, ?, ?, ?)',
       [name, email, phone || null, company || null, subject || null, message]
     )
