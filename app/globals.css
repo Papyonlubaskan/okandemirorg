@@ -44,6 +44,23 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
 }
 
+/* Input ve Textarea için özel ayarlar */
+input, textarea, select {
+  color: #000000 !important;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #9ca3af !important;
+  font-weight: 400 !important;
+}
+
+input:focus, textarea:focus, select:focus {
+  color: #000000 !important;
+  font-weight: 600 !important;
+}
+
 /* Enhanced Hover Effects */
 @layer utilities {
   .hover-lift {
