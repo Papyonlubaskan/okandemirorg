@@ -1,9 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
-import { PrismaClient } from '@prisma/client'
 import { analyzeCustomerMessage } from '@/lib/ai-analysis'
-
-const prisma = new PrismaClient()
+import prisma from '@/lib/prisma'
 
 // Email konfigürasyonu - cPanel ayarlarına göre
 const transporter = nodemailer.createTransport({
