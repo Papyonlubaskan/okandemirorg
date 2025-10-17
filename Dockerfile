@@ -9,10 +9,7 @@ WORKDIR /app
 # Copy package files
 COPY package.json package-lock.json ./
 
-# Copy prisma schema first
-COPY prisma ./prisma
-
-# Install dependencies (postinstall will run prisma generate)
+# Install dependencies
 RUN npm install
 
 # Copy source code
@@ -34,5 +31,5 @@ EXPOSE 3000
 ENV NODE_ENV=production
 ENV PORT=3000
 
-# Start the application with migrations
-CMD ["sh", "-c", "npx prisma migrate deploy && node .next/standalone/server.js"]
+# Start the application
+CMD ["node", ".next/standalone/server.js"]
