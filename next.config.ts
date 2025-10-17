@@ -51,6 +51,9 @@ const nextConfig: NextConfig = {
   /* Production Optimization */
   productionBrowserSourceMaps: false,
   
+  /* Output Configuration */
+  output: 'standalone',
+  
   /* Compiler Options */
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
