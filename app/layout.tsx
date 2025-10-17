@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import Loading from "@/components/Loading";
 import StructuredData from "./structured-data";
+import AnalyticsTracker from "@/components/AnalyticsTracker";
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -67,6 +68,7 @@ export default function RootLayout({
     <html lang="tr">
       <body className={`${poppins.variable} antialiased flex flex-col min-h-screen`}>
         <StructuredData />
+        <AnalyticsTracker />
         <Loading />
         <Header />
         <main className="flex-1">
