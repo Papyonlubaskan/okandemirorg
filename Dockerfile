@@ -1,6 +1,8 @@
 # Use the official Node.js 20 image
 FROM node:20-alpine
 
+# Force rebuild - Railway cache bust
+
 # Set working directory
 WORKDIR /app
 
