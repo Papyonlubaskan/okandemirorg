@@ -27,7 +27,9 @@ export default function YouTubeFeed() {
         setLoading(false)
       })
       .catch(err => {
-        console.error('Video yüklenemedi:', err)
+        if (process.env.NODE_ENV === 'development') {
+          console.error('Video yüklenemedi:', err)
+        }
         setLoading(false)
       })
   }, [])

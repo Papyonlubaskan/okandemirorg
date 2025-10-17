@@ -62,7 +62,9 @@ export async function POST(request: NextRequest) {
       throw error
     }
   } catch (error) {
-    console.error('Newsletter subscription error:', error)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Newsletter subscription error:', error)
+    }
     return NextResponse.json(
       { success: false, error: 'Bir hata oluştu. Lütfen tekrar deneyin.' },
       { status: 500 }
@@ -97,7 +99,9 @@ export async function DELETE(request: NextRequest) {
       message: 'Aboneliğiniz iptal edildi.',
     })
   } catch (error) {
-    console.error('Newsletter unsubscribe error:', error)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Newsletter unsubscribe error:', error)
+    }
     return NextResponse.json(
       { success: false, error: 'Bir hata oluştu.' },
       { status: 500 }

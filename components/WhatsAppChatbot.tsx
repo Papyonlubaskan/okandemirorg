@@ -77,7 +77,9 @@ export default function WhatsAppChatbot() {
                   unoptimized
                   className="object-cover"
                   onError={(e) => {
-                    console.error('Image load error:', e);
+                    if (process.env.NODE_ENV === 'development') {
+                      console.error('Image load error:', e);
+                    }
                     (e.target as HTMLImageElement).src = '/okan-demir-profile.jpg';
                   }}
                 />
@@ -110,7 +112,9 @@ export default function WhatsAppChatbot() {
                     unoptimized
                     className="object-cover"
                     onError={(e) => {
-                      console.error('Image load error:', e);
+                      if (process.env.NODE_ENV === 'development') {
+                        console.error('Image load error:', e);
+                      }
                       (e.target as HTMLImageElement).src = '/okan-demir-profile.jpg';
                     }}
                   />

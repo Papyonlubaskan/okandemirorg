@@ -38,11 +38,15 @@ export async function GET() {
             publishedAt: item.snippet.publishedAt
           })) || []
           
-          console.log(`✅ YouTube API ile ${videos.length} video alındı`)
+          if (process.env.NODE_ENV === 'development') {
+            console.log(`✅ YouTube API ile ${videos.length} video alındı`)
+          }
           return NextResponse.json({ videos, source: 'youtube_api' })
         }
       } catch (apiError) {
-        console.log('❌ YouTube API hatası, RSS feed deneniyor:', apiError)
+        if (process.env.NODE_ENV === 'development') {
+          console.log('❌ YouTube API hatası, RSS feed deneniyor:', apiError)
+        }
       }
     }
     
@@ -59,7 +63,9 @@ export async function GET() {
     
     for (const rssUrl of possibleUrls) {
       try {
-        console.log('Deneniyor:', rssUrl)
+        if (process.env.NODE_ENV === 'development') {
+          console.log('Deneniyor:', rssUrl)
+        }
         const response = await fetch(rssUrl, {
           next: { revalidate: 3600 },
           headers: {
@@ -71,19 +77,27 @@ export async function GET() {
           xmlText = await response.text()
           success = true
           workingUrl = rssUrl
-          console.log('✅ Başarılı URL:', rssUrl)
+          if (process.env.NODE_ENV === 'development') {
+            console.log('✅ Başarılı URL:', rssUrl)
+          }
           break
         } else {
-          console.log('❌ HTTP Error:', response.status, rssUrl)
+          if (process.env.NODE_ENV === 'development') {
+            console.log('❌ HTTP Error:', response.status, rssUrl)
+          }
         }
       } catch (err) {
-        console.log('❌ Bu URL çalışmadı:', rssUrl, err instanceof Error ? err.message : 'Unknown error')
+        if (process.env.NODE_ENV === 'development') {
+          console.log('❌ Bu URL çalışmadı:', rssUrl, err instanceof Error ? err.message : 'Unknown error')
+        }
         continue
       }
     }
     
     if (!success) {
-      console.log('❌ Hiçbir RSS feed URL\'si çalışmadı')
+      if (process.env.NODE_ENV === 'development') {
+        console.log('❌ Hiçbir RSS feed URL\'si çalışmadı')
+      }
       return NextResponse.json({ 
         videos: [], 
         error: 'YouTube kanal RSS feed\'i bulunamadı',
@@ -96,7 +110,9 @@ export async function GET() {
     const entryRegex = /<entry>[\s\S]*?<\/entry>/g
     const entries = xmlText.match(entryRegex) || []
     
-    console.log(`📹 ${entries.length} video entry'si bulundu`)
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`📹 ${entries.length} video entry'si bulundu`)
+    }
     
     for (const entry of entries.slice(0, 6)) { // Son 6 video
       const videoIdMatch = entry.match(/<yt:videoId>(.*?)<\/yt:videoId>/)
@@ -114,11 +130,15 @@ export async function GET() {
       }
     }
     
-    console.log(`✅ RSS feed ile ${videos.length} video parse edildi`)
+    if (process.env.NODE_ENV === 'development') {
+      console.log(`✅ RSS feed ile ${videos.length} video parse edildi`)
+    }
     return NextResponse.json({ videos, workingUrl, source: 'rss_feed' })
     
   } catch (error) {
-    console.error('❌ YouTube feed hatası:', error)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('❌ YouTube feed hatası:', error)
+    }
     return NextResponse.json({ videos: [] }, { status: 500 })
   }
 }

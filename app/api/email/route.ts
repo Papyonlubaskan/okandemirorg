@@ -59,7 +59,9 @@ export async function POST(request: NextRequest) {
       messageId: info.messageId
     })
   } catch (error) {
-    console.error('Email gönderme hatası:', error)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('Email gönderme hatası:', error)
+    }
     return NextResponse.json(
       { success: false, error: 'Email gönderilemedi' },
       { status: 500 }

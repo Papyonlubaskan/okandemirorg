@@ -16,11 +16,15 @@ const pool = mysql.createPool({
 export async function testConnection() {
   try {
     const connection = await pool.getConnection()
-    console.log('✅ MySQL bağlantısı başarılı!')
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ MySQL bağlantısı başarılı!')
+    }
     connection.release()
     return true
   } catch (error) {
-    console.error('❌ MySQL bağlantı hatası:', error)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('❌ MySQL bağlantı hatası:', error)
+    }
     return false
   }
 }
@@ -44,11 +48,15 @@ export async function createTables() {
       )
     `)
     
-    console.log('✅ Tablolar oluşturuldu!')
+    if (process.env.NODE_ENV === 'development') {
+      console.log('✅ Tablolar oluşturuldu!')
+    }
     connection.release()
     return true
   } catch (error) {
-    console.error('❌ Tablo oluşturma hatası:', error)
+    if (process.env.NODE_ENV === 'development') {
+      console.error('❌ Tablo oluşturma hatası:', error)
+    }
     return false
   }
 }
