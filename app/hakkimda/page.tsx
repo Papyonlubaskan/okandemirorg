@@ -111,7 +111,7 @@ export default function Hakkimda() {
                       28.Dönem İzmir 2.Bölge 2.Sıra Milletvekilliği Adaylığı
                     </h3>
                     <p className="text-lg text-blue-600 font-black mb-2">Güç Birliği Partisi</p>
-                    <p className="text-gray-600 font-black">Haz 2023 'teydi</p>
+                    <p className="text-gray-600 font-black">Haz 2023 &apos;teydi</p>
                   </div>
                 </div>
               </div>

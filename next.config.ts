@@ -17,7 +17,6 @@ const nextConfig: NextConfig = {
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     loader: 'default',
-    quality: 85, // Yüksek kalite
     remotePatterns: [
       {
         protocol: 'https',
