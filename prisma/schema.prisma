@@ -146,3 +146,88 @@ model Review {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+// AI-Powered Customer Analysis Models
+model ContactSubmission {
+  id                String   @id @default(cuid())
+  name              String
+  email             String
+  phone             String?
+  company           String?
+  message           String
+  source            String   @default("contact_form") // contact_form, landing_page, chatbot
+  
+  // AI Analysis Fields
+  aiCategory        String?  // web_design, digital_marketing, seo, development, branding
+  aiSentiment       String?  // positive, neutral, negative
+  aiPriority        String?  // high, medium, low
+  aiEstimatedBudget String?  // low, medium, high, enterprise
+  aiKeywords        String?  // JSON array of extracted keywords
+  aiSummary         String?  // AI-generated summary
+  aiConfidence      Float?   // 0-1 confidence score
+  
+  // Status tracking
+  status            String   @default("new") // new, contacted, qualified, converted, archived
+  assignedTo        String?  // Admin user who handles this
+  notes             String?  // Admin notes
+  followUpDate      DateTime?
+  
+  // Metadata
+  ipAddress         String?
+  userAgent         String?
+  referrer          String?
+  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  
+  // Relations
+  interactions      CustomerInteraction[]
+  
+  @@index([status])
+  @@index([aiCategory])
+  @@index([aiPriority])
+  @@index([createdAt])
+}
+
+model CustomerInteraction {
+  id                    String   @id @default(cuid())
+  contactSubmissionId   String
+  contactSubmission     ContactSubmission @relation(fields: [contactSubmissionId], references: [id], onDelete: Cascade)
+  
+  type                  String   // email, call, meeting, note
+  content               String
+  outcome               String?  // successful, pending, failed
+  nextAction            String?
+  nextActionDate        DateTime?
+  
+  createdBy             String?  // Admin user
+  createdAt             DateTime @default(now())
+  
+  @@index([contactSubmissionId])
+  @@index([createdAt])
+}
+
+model AIAnalyticsLog {
+  id                String   @id @default(cuid())
+  eventType         String   // page_view, form_submit, click, scroll, time_on_page
+  page              String
+  
+  // User data
+  sessionId         String
+  userId            String?
+  ipAddress         String?
+  userAgent         String?
+  
+  // Event data
+  eventData         String?  // JSON data
+  
+  // AI Insights
+  aiInsights        String?  // JSON with AI-generated insights
+  
+  createdAt         DateTime @default(now())
+  
+  @@index([sessionId])
+  @@index([eventType])
+  @@index([page])
+  @@index([createdAt])
+}
