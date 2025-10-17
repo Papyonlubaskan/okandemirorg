@@ -20,7 +20,17 @@ export async function GET() {
         
         if (response.ok) {
           const data = await response.json()
-          const videos = data.items?.map((item: any) => ({
+          const videos = data.items?.map((item: {
+            id: { videoId: string };
+            snippet: {
+              title: string;
+              thumbnails: {
+                high?: { url: string };
+                default?: { url: string };
+              };
+              publishedAt: string;
+            };
+          }) => ({
             id: item.id.videoId,
             title: item.snippet.title,
             thumbnail: item.snippet.thumbnails.high?.url || item.snippet.thumbnails.default?.url,
