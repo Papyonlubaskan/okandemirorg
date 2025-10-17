@@ -3,21 +3,46 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { validateContactForm, checkRateLimit, isLikelySpam, formatPhoneNumber } from '@/lib/formValidation'
 
 export default function Iletisim() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
+    company: '',
     subject: '',
     message: ''
   })
 
+  const [errors, setErrors] = useState<Record<string, string>>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error' | 'rateLimit' | 'spam'>('idle')
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setErrors({})
+    setSubmitStatus('idle')
+
+    // Rate limiting check (3 submissions per 10 minutes)
+    if (!checkRateLimit('contact-form', 3, 600000)) {
+      setSubmitStatus('rateLimit')
+      return
+    }
+
+    // Spam check
+    if (isLikelySpam(formData.message)) {
+      setSubmitStatus('spam')
+      return
+    }
+
+    // Validate form
+    const validation = validateContactForm(formData)
+    if (!validation.isValid) {
+      setErrors(validation.errors)
+      return
+    }
+
     setIsSubmitting(true)
     
     try {
@@ -31,7 +56,8 @@ export default function Iletisim() {
 
       if (response.ok) {
         setSubmitStatus('success')
-        setFormData({ name: '', email: '', phone: '', subject: '', message: '' })
+        setFormData({ name: '', email: '', phone: '', company: '', subject: '', message: '' })
+        setErrors({})
       } else {
         setSubmitStatus('error')
       }
@@ -43,10 +69,27 @@ export default function Iletisim() {
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     })
+    // Clear error for this field
+    if (errors[name]) {
+      setErrors({
+        ...errors,
+        [name]: ''
+      })
+    }
+  }
+
+  const handlePhoneBlur = () => {
+    if (formData.phone) {
+      setFormData({
+        ...formData,
+        phone: formatPhoneNumber(formData.phone)
+      })
+    }
   }
 
   return (
@@ -106,6 +149,18 @@ export default function Iletisim() {
                 </div>
               )}
 
+              {submitStatus === 'rateLimit' && (
+                <div className="mb-6 p-4 bg-yellow-100 border border-yellow-400 text-yellow-700 rounded-lg">
+                  <span className="font-black">Çok fazla mesaj gönderdiniz. Lütfen 10 dakika sonra tekrar deneyin.</span>
+                </div>
+              )}
+
+              {submitStatus === 'spam' && (
+                <div className="mb-6 p-4 bg-orange-100 border border-orange-400 text-orange-700 rounded-lg">
+                  <span className="font-black">Mesajınız spam filtresi tarafından engellendi. Lütfen uygun bir mesaj yazın.</span>
+                </div>
+              )}
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
@@ -118,10 +173,12 @@ export default function Iletisim() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-900 font-black"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 font-black ${
+                        errors.name ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                      }`}
                       placeholder="Adınız ve soyadınız"
                     />
+                    {errors.name && <p className="mt-1 text-sm text-red-600 font-medium">{errors.name}</p>}
                   </div>
                   
                   <div>
@@ -134,10 +191,12 @@ export default function Iletisim() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-900 font-black"
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 font-black ${
+                        errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                      }`}
                       placeholder="ornek@email.com"
                     />
+                    {errors.email && <p className="mt-1 text-sm text-red-600 font-medium">{errors.email}</p>}
                   </div>
                 </div>
 
@@ -152,9 +211,13 @@ export default function Iletisim() {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-900 font-black"
+                      onBlur={handlePhoneBlur}
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 font-black ${
+                        errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                      }`}
                       placeholder="+90 555 123 45 67"
                     />
+                    {errors.phone && <p className="mt-1 text-sm text-red-600 font-medium">{errors.phone}</p>}
                   </div>
                   
                   <div>
@@ -188,11 +251,16 @@ export default function Iletisim() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    required
                     rows={6}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-900 resize-none"
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 resize-none ${
+                      errors.message ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                    }`}
                     placeholder="Projeniz hakkında detaylı bilgi verin..."
                   />
+                  {errors.message && <p className="mt-1 text-sm text-red-600 font-medium">{errors.message}</p>}
+                  <p className="mt-1 text-sm text-gray-500 font-medium">
+                    {formData.message.length} / 1000 karakter
+                  </p>
                 </div>
 
                 <button
