@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Portfolio3D from '@/components/Portfolio3D'
 
 export default function Projeler() {
   return (
@@ -28,8 +29,11 @@ export default function Projeler() {
         </div>
       </section>
 
+      {/* 3D Portfolio Gallery */}
+      <Portfolio3D />
+
       {/* Portfolio Grid */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Portfolio Item 1 */}
