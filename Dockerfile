@@ -16,6 +16,9 @@ RUN npm install
 # Copy source code
 COPY . .
 
+# Set DATABASE_URL for build (Railway will override at runtime)
+ENV DATABASE_URL="postgresql://postgres:placeholder@localhost:5432/placeholder"
+
 # Build the application
 RUN npm run build
 
