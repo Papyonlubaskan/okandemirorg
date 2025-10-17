@@ -19,7 +19,7 @@ RUN npm install
 COPY . .
 
 # Set DATABASE_URL for build (Railway will override at runtime)
-ENV DATABASE_URL="postgresql://postgres:placeholder@localhost:5432/placeholder"
+ENV DATABASE_URL="mysql://root:password@localhost:3306/okandemir"
 
 # Set NODE_ENV for production
 ENV NODE_ENV=production
