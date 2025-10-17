@@ -3,7 +3,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
-import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -42,9 +41,8 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* CTA Button & Language Switcher */}
-          <div className="hidden lg:flex items-center gap-4">
-            <LanguageSwitcher />
+          {/* CTA Button */}
+          <div className="hidden lg:flex items-center">
             <Link
               href="https://wa.me/+905552677739"
               className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-4 xl:px-6 py-2 xl:py-3 rounded-full font-black transition-all duration-300 hover:scale-105 hover:shadow-lg"

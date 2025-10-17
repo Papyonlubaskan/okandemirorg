@@ -18,26 +18,30 @@
   font-variant-ligatures: none;
 }
 
-/* Türkçe karakterler için özel düzenlemeler */
+/* Türkçe karakterler için özel düzenlemeler - Inter Font */
 body, p, span, div, h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-montserrat), 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  letter-spacing: 0.01em;
-  word-spacing: 0.05em;
-  line-height: 1.6;
-  font-kerning: auto;
+  font-family: var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  letter-spacing: -0.01em;
+  word-spacing: normal;
+  line-height: 1.5;
+  font-kerning: normal;
   text-rendering: optimizeLegibility;
-  font-feature-settings: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
 /* Özel harf aralığı ayarları */
 .font-black, .font-bold, .font-semibold {
-  letter-spacing: 0.015em;
+  letter-spacing: -0.02em;
+  font-weight: 700;
 }
 
 /* Başlıklar için özel ayarlar */
 h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 0.02em;
-  word-spacing: 0.08em;
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  font-weight: 800;
 }
 
 /* Enhanced Hover Effects */
