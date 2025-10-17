@@ -8,6 +8,7 @@ import Loading from "@/components/Loading";
 import StructuredData from "./structured-data";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
 import PWAInstall from "@/components/PWAInstall";
+import WhatsAppChatbot from "@/components/WhatsAppChatbot";
 
 const poppins = Poppins({
   weight: ['300', '400', '500', '600', '700', '800', '900'],
@@ -78,6 +79,7 @@ export default function RootLayout({
         <StructuredData />
         <AnalyticsTracker />
         <PWAInstall />
+        <WhatsAppChatbot />
         <Loading />
         <Header />
         <main className="flex-1">
