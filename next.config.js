@@ -47,6 +47,7 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
     optimizeServerReact: true,
+    inlineCss: true,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
@@ -54,6 +55,12 @@ const nextConfig = {
   output: 'standalone',
   // Performance optimizations
   reactStrictMode: true,
+  productionBrowserSourceMaps: false,
+  // Prefetch optimizations
+  onDemandEntries: {
+    maxInactiveAge: 60 * 1000,
+    pagesBufferLength: 5,
+  },
   // Headers for better caching
   async headers() {
     return [

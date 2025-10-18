@@ -107,7 +107,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
+                <Link href="/" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                   </svg>
@@ -115,7 +115,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/referanslar" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
+                <Link href="/referanslar" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-purple-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
                   </svg>
@@ -123,7 +123,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/hizmetler" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
+                <Link href="/hizmetler" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-green-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
                   </svg>
@@ -131,7 +131,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/hakkimda" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
+                <Link href="/hakkimda" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
@@ -139,7 +139,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
+                <Link href="/blog" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
@@ -147,7 +147,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/sss" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
+                <Link href="/sss" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-yellow-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -155,7 +155,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/iletisim" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
+                <Link href="/iletisim" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-pink-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
