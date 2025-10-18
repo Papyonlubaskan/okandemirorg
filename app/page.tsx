@@ -292,7 +292,7 @@ export default function Home() {
                 <Image src="/web-design-icon.png" alt="Web Tasarımı" width={60} height={60} />
               </div>
               <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Web Tasarımı&nbsp;& Dijital Pazarlama Kreatifleri</h3>
-              <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir web tasarımı ve dijital pazarlama stratejisi oluşturmak şarttır.
               </p>
               <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8 w-full">
@@ -331,7 +331,7 @@ export default function Home() {
                 <Image src="/development-icon.png" alt="Gelişim" width={60} height={60} />
               </div>
               <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Gelişim</h3>
-              <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
               </p>
               <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8 w-full">
@@ -370,7 +370,7 @@ export default function Home() {
                 <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={60} height={60} />
               </div>
               <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Marka Kimliği</h3>
-              <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
               </p>
               <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8 w-full">
@@ -672,7 +672,7 @@ export default function Home() {
             <h3 className="text-2xl lg:text-3xl text-blue-600 font-black mb-8">
               İhtiyacınıza Özel Çözümler
             </h3>
-            <p className="text-xl text-gray-800 leading-tight max-w-3xl mx-auto font-black">
+            <p className="text-xl text-gray-800 dark:text-gray-200 leading-tight max-w-3xl mx-auto font-black">
               Her proje benzersizdir. Size en uygun çözümü sunmak için ihtiyaçlarınızı dinleyip, özel bir teklif hazırlıyorum. 
               Birlikte çalışarak en verimli ve ekonomik çözümü bulalım.
             </p>
@@ -694,19 +694,19 @@ export default function Home() {
                 <div className="text-left">
                   <h5 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Neler Dahil?</h5>
                   <ul className="space-y-3">
-                    <li className="flex items-center text-lg font-black text-gray-700">
+                    <li className="flex items-center text-lg font-black text-gray-700 dark:text-gray-300">
                       <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Detaylı Proje Analizi
                     </li>
-                    <li className="flex items-center text-lg font-black text-gray-700">
+                    <li className="flex items-center text-lg font-black text-gray-700 dark:text-gray-300">
                       <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Şeffaf Fiyat Teklifi
                     </li>
-                    <li className="flex items-center text-lg font-black text-gray-700">
+                    <li className="flex items-center text-lg font-black text-gray-700 dark:text-gray-300">
                       <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Esnek Ödeme Seçenekleri
                     </li>
-                    <li className="flex items-center text-lg font-black text-gray-700">
+                    <li className="flex items-center text-lg font-black text-gray-700 dark:text-gray-300">
                       <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Sürekli İletişim ve Destek
                     </li>
@@ -716,19 +716,19 @@ export default function Home() {
                 <div className="text-left">
                   <h5 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Avantajlar</h5>
                   <ul className="space-y-3">
-                    <li className="flex items-center text-lg font-black text-gray-700">
+                    <li className="flex items-center text-lg font-black text-gray-700 dark:text-gray-300">
                       <svg className="w-6 h-6 text-blue-500 dark:text-blue-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Bütçenize Uygun Çözümler
                     </li>
-                    <li className="flex items-center text-lg font-black text-gray-700">
+                    <li className="flex items-center text-lg font-black text-gray-700 dark:text-gray-300">
                       <svg className="w-6 h-6 text-blue-500 dark:text-blue-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Özel İndirim Fırsatları
                     </li>
-                    <li className="flex items-center text-lg font-black text-gray-700">
+                    <li className="flex items-center text-lg font-black text-gray-700 dark:text-gray-300">
                       <svg className="w-6 h-6 text-blue-500 dark:text-blue-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Uzun Vadeli İş Birlikleri
                     </li>
-                    <li className="flex items-center text-lg font-black text-gray-700">
+                    <li className="flex items-center text-lg font-black text-gray-700 dark:text-gray-300">
                       <svg className="w-6 h-6 text-blue-500 dark:text-blue-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Garantili Sonuçlar
                     </li>
@@ -764,7 +764,7 @@ export default function Home() {
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
               Sıkça Sorulan Sorular
             </h2>
-            <p className="text-xl text-gray-700 leading-tight max-w-3xl mx-auto font-black">
+            <p className="text-xl text-gray-700 dark:text-gray-300 leading-tight max-w-3xl mx-auto font-black">
               Dijital pazarlama ve web tasarım hizmetlerim hakkında merak ettiğiniz soruların yanıtları.
             </p>
           </div>

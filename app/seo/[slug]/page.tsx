@@ -80,7 +80,7 @@ export default async function SEOPage({ params }: { params: Promise<{ slug: stri
                       Bu rehberde, {page.h1.toLowerCase()} konusunda bilmeniz gereken her şeyi 
                       detaylı olarak anlatacağım.
                     </p>
-                    <ul className="list-disc list-inside space-y-2 mt-4 text-gray-700">
+                    <ul className="list-disc list-inside space-y-2 mt-4 text-gray-700 dark:text-gray-300">
                       <li className="font-black">Kapsamlı strateji geliştirme</li>
                       <li className="font-black">Pratik uygulama adımları</li>
                       <li className="font-black">Ölçülebilir sonuçlar</li>
@@ -118,7 +118,7 @@ export default async function SEOPage({ params }: { params: Promise<{ slug: stri
                           <h4 className="font-black text-gray-900 dark:text-white mb-2">
                             {faq.question}
                           </h4>
-                          <p className="text-gray-700">
+                          <p className="text-gray-700 dark:text-gray-300">
                             {faq.answer}
                           </p>
                         </div>
