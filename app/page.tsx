@@ -227,7 +227,7 @@ export default function Home() {
               <Image src="/star-icon.png" alt="Yıldız ikonu" width={32} height={32} />
               <span className="text-2xl lg:text-3xl xl:text-4xl">Neden Beni Seçmelisiniz?</span>
             </div>
-            <h2 id="why-choose-me" className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-8">
+            <h2 id="why-choose-me" className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white mb-8">
               Neden Benimle Çalışmalısınız?
             </h2>
           </div>
@@ -277,7 +277,7 @@ export default function Home() {
               <Image src="/services-icon.png" alt="Hizmetler ikonu" width={32} height={32} />
               <span className="text-2xl lg:text-3xl xl:text-4xl">Sunduklarım</span>
             </div>
-            <h2 id="services-heading" className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 mb-8">
+            <h2 id="services-heading" className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white mb-8">
               Profesyonel Hizmetlerim
             </h2>
             <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -291,7 +291,7 @@ export default function Home() {
               <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                 <Image src="/web-design-icon.png" alt="Web Tasarımı" width={60} height={60} />
               </div>
-              <h3 className="text-2xl lg:text-3xl font-black text-gray-900 mb-4 leading-tight">Web Tasarımı&nbsp;& Dijital Pazarlama Kreatifleri</h3>
+              <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Web Tasarımı&nbsp;& Dijital Pazarlama Kreatifleri</h3>
               <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir web tasarımı ve dijital pazarlama stratejisi oluşturmak şarttır.
               </p>
@@ -330,7 +330,7 @@ export default function Home() {
               <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-6">
                 <Image src="/development-icon.png" alt="Gelişim" width={60} height={60} />
               </div>
-              <h3 className="text-2xl lg:text-3xl font-black text-gray-900 mb-4 leading-tight">Gelişim</h3>
+              <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Gelişim</h3>
               <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
               </p>
@@ -369,7 +369,7 @@ export default function Home() {
               <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={60} height={60} />
               </div>
-              <h3 className="text-2xl lg:text-3xl font-black text-gray-900 mb-4 leading-tight">Marka Kimliği</h3>
+              <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Marka Kimliği</h3>
               <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
               </p>
@@ -410,7 +410,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
               Seçilebilir Çalışmalarım
             </h2>
             <h3 className="text-2xl lg:text-3xl text-blue-600 font-black mb-8">
@@ -666,7 +666,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
               Özel Fiyatlandırma
             </h2>
             <h3 className="text-2xl lg:text-3xl text-blue-600 font-black mb-8">
@@ -681,7 +681,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto">
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 lg:p-12 text-center">
               <div className="mb-8">
-                <h4 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6">
+                <h4 className="text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-6">
                   Kişiye Özel Fiyatlandırma
                 </h4>
                 <p className="text-xl text-gray-700 leading-tight font-black mb-8">
@@ -772,7 +772,7 @@ export default function Home() {
           <div className="max-w-4xl mx-auto space-y-6">
             {/* FAQ 1 */}
             <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-black text-gray-900 mb-3">
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Web sitesi tasarım süreci ne kadar sürer?
               </h3>
               <p className="text-lg text-gray-700 leading-tight font-black">
@@ -782,7 +782,7 @@ export default function Home() {
 
             {/* FAQ 2 */}
             <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-black text-gray-900 mb-3">
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Dijital pazarlama kampanyalarında hangi platformları kullanıyorsunuz?
               </h3>
               <p className="text-lg text-gray-700 leading-tight font-black">
@@ -792,7 +792,7 @@ export default function Home() {
 
             {/* FAQ 3 */}
             <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-black text-gray-900 mb-3">
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 SEO sonuçları ne zaman görülür?
               </h3>
               <p className="text-lg text-gray-700 leading-tight font-black">
@@ -802,7 +802,7 @@ export default function Home() {
 
             {/* FAQ 4 */}
             <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-black text-gray-900 mb-3">
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Hangi ödeme seçenekleri mevcut?
               </h3>
               <p className="text-lg text-gray-700 leading-tight font-black">
@@ -812,7 +812,7 @@ export default function Home() {
 
             {/* FAQ 5 */}
             <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-black text-gray-900 mb-3">
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Proje teslim sonrası destek veriyor musunuz?
               </h3>
               <p className="text-lg text-gray-700 leading-tight font-black">
@@ -822,7 +822,7 @@ export default function Home() {
 
             {/* FAQ 6 */}
             <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
-              <h3 className="text-xl font-black text-gray-900 mb-3">
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Web sitesi tasarımında hangi teknolojileri kullanıyorsunuz?
               </h3>
               <p className="text-lg text-gray-700 leading-tight font-black">
@@ -880,9 +880,9 @@ export default function Home() {
               <input
                 type="email"
                 placeholder="E-posta adresiniz"
-                className="flex-1 px-4 py-3 rounded-lg text-gray-900 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 w-full"
+                className="flex-1 px-4 py-3 rounded-lg text-gray-900 dark:text-white dark:bg-gray-700 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 dark:focus:ring-gray-500 w-full"
               />
-              <button className="bg-yellow-400 hover:bg-yellow-500 text-gray-900 px-8 py-3 rounded-lg font-black text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto">
+              <button className="bg-yellow-400 hover:bg-yellow-500 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white px-8 py-3 rounded-lg font-black text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto">
                 Abone Ol
               </button>
             </div>
