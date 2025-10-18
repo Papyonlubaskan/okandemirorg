@@ -290,7 +290,7 @@ export default function Hizmetler() {
               <div className="p-8">
                 <h3 className="text-2xl font-black text-gray-900 mb-4">E-ticaret Platform Uzmanlığı</h3>
                 <p className="text-gray-600 mb-6 leading-tight">
-                  Türkiye'nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümler sunuyorum.
+                  Türkiye&apos;nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümler sunuyorum.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-600">

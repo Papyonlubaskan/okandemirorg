@@ -300,7 +300,7 @@ export default function Hakkimda() {
                 E-ticaret Platform Uzmanlığım
               </h2>
               <p className="text-xl text-gray-600 leading-tight">
-                Türkiye'nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümler sunuyorum.
+                Türkiye&apos;nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümler sunuyorum.
               </p>
             </div>
 
@@ -314,7 +314,7 @@ export default function Hakkimda() {
                 </div>
                 <h3 className="text-2xl font-black text-gray-900 mb-4">Ticimax</h3>
                 <p className="text-gray-600 mb-6 font-black">
-                  Türkiye'nin en popüler e-ticaret platformu olan Ticimax'te kurulum, özelleştirme ve optimizasyon konularında uzmanım.
+                  Türkiye&apos;nin en popüler e-ticaret platformu olan Ticimax&apos;te kurulum, özelleştirme ve optimizasyon konularında uzmanım.
                 </p>
                 <ul className="space-y-2 text-gray-700">
                   <li>✓ Kurulum & Konfigürasyon</li>

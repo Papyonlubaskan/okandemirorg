@@ -18,7 +18,7 @@ export default function ETicaretPlatformlari() {
               Ticimax, İdeasoft & İkas Uzmanı
             </h1>
             <p className="text-xl lg:text-2xl text-emerald-100 leading-tight mb-8">
-              Türkiye'nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümlerle işinizi büyütün.
+              Türkiye&apos;nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümlerle işinizi büyütün.
             </p>
             <Link 
               href="https://wa.me/+905552677739"
@@ -56,7 +56,7 @@ export default function ETicaretPlatformlari() {
               <div className="p-8">
                 <h3 className="text-3xl font-black text-gray-900 mb-4">Ticimax</h3>
                 <p className="text-gray-600 mb-6 leading-tight">
-                  Türkiye'nin en popüler e-ticaret platformu olan Ticimax'te kapsamlı deneyimim bulunmaktadır.
+                  Türkiye&apos;nin en popüler e-ticaret platformu olan Ticimax&apos;te kapsamlı deneyimim bulunmaktadır.
                 </p>
                 
                 <div className="space-y-4 mb-8">
