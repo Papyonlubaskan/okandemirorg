@@ -79,21 +79,21 @@ export default function Home() {
                 </p>
                 <ul className="text-left text-gray-600 space-y-2 mb-8">
                    <li className="flex items-center text-lg dark:text-gray-300">
-                    <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Yaratıcı Kreatifler
                   </li>
                    <li className="flex items-center text-lg dark:text-gray-300">
-                    <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Duyarlı Düzenlemeler
                   </li>
                    <li className="flex items-center text-lg dark:text-gray-300">
-                    <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Kişiye Özel Tasarım & Dijital Pazarlama Çözümleri
                   </li>
                 </ul>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -113,21 +113,21 @@ export default function Home() {
                 </p>
                 <ul className="text-left text-gray-600 space-y-2 mb-8">
                    <li className="flex items-center text-lg dark:text-gray-300">
-                    <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     HTML, CSS, & JS Uzmanlığı
                   </li>
                    <li className="flex items-center text-lg dark:text-gray-300">
-                    <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Tarayıcı Arası Uyumluluk & Daha Hızlı Yükleme Süreleri
                   </li>
                    <li className="flex items-center text-lg dark:text-gray-300">
-                    <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Dijital Pazarlamada Süreklilik & Garantili Gelişim
                   </li>
                 </ul>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -147,15 +147,15 @@ export default function Home() {
                 </p>
                 <ul className="text-left text-gray-600 space-y-2 mb-8">
                    <li className="flex items-center text-lg dark:text-gray-300">
-                    <svg className="w-5 h-5 text-orange-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <svg className="w-5 h-5 text-orange-500 dark:text-orange-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Logo Tasarımı&Tutarlı Renk Paletleri& Marka Yönergeleri
                   </li>
                    <li className="flex items-center text-lg dark:text-gray-300">
-                    <svg className="w-5 h-5 text-orange-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <svg className="w-5 h-5 text-orange-500 dark:text-orange-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Marka Kimliği Reklamları
                   </li>
                    <li className="flex items-center text-lg dark:text-gray-300">
-                    <svg className="w-5 h-5 text-orange-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <svg className="w-5 h-5 text-orange-500 dark:text-orange-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Marka Tanınırlığı İçin Platform Yayınları
                   </li>
                 </ul>
@@ -198,7 +198,7 @@ export default function Home() {
                 <div className="flex flex-col gap-3">
                   <Link
                     href="https://wa.me/+905552677739"
-                    className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                    className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
                   >
                     <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                     Randevu Al
@@ -297,22 +297,22 @@ export default function Home() {
               </p>
               <ul className="text-left text-gray-600 space-y-2 mb-8 w-full">
                 <li className="flex items-start text-lg">
-                  <svg className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Web Tasarımı&nbsp;& Geliştirme&nbsp;& Optimizasyon</span>
                 </li>
                 <li className="flex items-start text-lg">
-                  <svg className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Dijital Pazarlama Kreatifleri</span>
                 </li>
                 <li className="flex items-start text-lg">
-                  <svg className="w-5 h-5 text-blue-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Sosyal Medya Yönetimi</span>
                 </li>
               </ul>
               <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Randevu Al!
                 </Link>
@@ -336,28 +336,28 @@ export default function Home() {
               </p>
               <ul className="text-left text-gray-600 space-y-2 mb-8 w-full">
                 <li className="flex items-start text-lg">
-                  <svg className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-green-500 dark:text-green-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Strateji&nbsp;Geliştirme&nbsp;& Uygulama&nbsp;& Optimizasyon</span>
                 </li>
                 <li className="flex items-start text-lg">
-                  <svg className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-green-500 dark:text-green-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Dijital Dönüşüm Rehberliği</span>
                 </li>
                 <li className="flex items-start text-lg">
-                  <svg className="w-5 h-5 text-green-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-green-500 dark:text-green-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Sürekli İyileştirme ve Analiz</span>
                 </li>
               </ul>
               <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Randevu Al!
                 </Link>
                 <Link
                   href="/hizmetler/gelisim"
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Detayları Gör &gt;
                 </Link>
@@ -375,22 +375,22 @@ export default function Home() {
               </p>
               <ul className="text-left text-gray-600 space-y-2 mb-8 w-full">
                 <li className="flex items-start text-lg">
-                  <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-orange-500 dark:text-orange-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Logo Tasarımı&nbsp;& Tutarlı Renk Paletleri&nbsp;& Marka Yönergeleri</span>
                 </li>
                 <li className="flex items-start text-lg">
-                  <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-orange-500 dark:text-orange-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Marka Kimliği Reklamları</span>
                 </li>
                 <li className="flex items-start text-lg">
-                  <svg className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                  <svg className="w-5 h-5 text-orange-500 dark:text-orange-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Marka Tanınırlığı İçin Platform Yayınları</span>
                 </li>
               </ul>
               <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Randevu Al!
                 </Link>
@@ -431,7 +431,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -451,7 +451,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -471,7 +471,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -491,7 +491,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -695,19 +695,19 @@ export default function Home() {
                   <h5 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Neler Dahil?</h5>
                   <ul className="space-y-3">
                     <li className="flex items-center text-lg font-black text-gray-700">
-                      <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                      <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Detaylı Proje Analizi
                     </li>
                     <li className="flex items-center text-lg font-black text-gray-700">
-                      <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                      <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Şeffaf Fiyat Teklifi
                     </li>
                     <li className="flex items-center text-lg font-black text-gray-700">
-                      <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                      <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Esnek Ödeme Seçenekleri
                     </li>
                     <li className="flex items-center text-lg font-black text-gray-700">
-                      <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                      <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Sürekli İletişim ve Destek
                     </li>
                   </ul>
@@ -717,19 +717,19 @@ export default function Home() {
                   <h5 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Avantajlar</h5>
                   <ul className="space-y-3">
                     <li className="flex items-center text-lg font-black text-gray-700">
-                      <svg className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                      <svg className="w-6 h-6 text-blue-500 dark:text-blue-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Bütçenize Uygun Çözümler
                     </li>
                     <li className="flex items-center text-lg font-black text-gray-700">
-                      <svg className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                      <svg className="w-6 h-6 text-blue-500 dark:text-blue-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Özel İndirim Fırsatları
                     </li>
                     <li className="flex items-center text-lg font-black text-gray-700">
-                      <svg className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                      <svg className="w-6 h-6 text-blue-500 dark:text-blue-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Uzun Vadeli İş Birlikleri
                     </li>
                     <li className="flex items-center text-lg font-black text-gray-700">
-                      <svg className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                      <svg className="w-6 h-6 text-blue-500 dark:text-blue-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                       Garantili Sonuçlar
                     </li>
                   </ul>
@@ -739,14 +739,14 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
                   Ücretsiz Görüşme Talep Et
                 </Link>
                 <Link
                   href="mailto:info@okandemir.org"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
                   Email ile İletişime Geç
@@ -849,14 +849,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="mailto:info@okandemir.org"
-                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
                 Email Gönder
               </Link>
               <Link
                 href="https://wa.me/+905552677739"
-                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
                 WhatsApp İletişim
