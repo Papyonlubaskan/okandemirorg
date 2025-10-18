@@ -72,6 +72,7 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
+        <link rel="alternate" type="application/rss+xml" title="Okan Demir Blog RSS" href="https://okandemir.org/feed.xml" />
         <ConsoleErrorSuppressor />
         <AccessibilityHelper />
         <StructuredData />
