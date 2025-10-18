@@ -49,6 +49,7 @@ const nextConfig = {
     optimizeServerReact: true,
     inlineCss: true,
   },
+  // Modern browser support - ES6+ features
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },

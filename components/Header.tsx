@@ -20,6 +20,8 @@ export default function Header() {
                   width={750}
                   height={750}
                   className="h-24 md:h-28 lg:h-32 xl:h-36 2xl:h-40 w-auto"
+                  priority
+                  sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, (max-width: 1280px) 256px, 320px"
                 />
               </Link>
 

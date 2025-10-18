@@ -1,5 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
+import dynamic from "next/dynamic";
+
+// Lazy load heavy components
+const TestimonialSlider = dynamic(() => import("@/components/TestimonialSlider"), {
+  ssr: false,
+  loading: () => <div className="h-64 bg-gray-100 dark:bg-gray-800 rounded-lg animate-pulse" />
+});
 
 export default function Home() {
   return (
@@ -47,6 +54,7 @@ export default function Home() {
                   className="w-auto h-auto max-h-[600px] lg:max-h-[800px] object-cover shadow-2xl"
                   loading="eager"
                   priority
+                  sizes="(max-width: 768px) 300px, (max-width: 1024px) 400px, 576px"
         />
               </div>
             </div>
@@ -105,7 +113,7 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 dark:from-gray-600 dark:to-gray-700">
-                  <Image src="/development-icon.png" alt="Gelişim" width={40} height={40} />
+                  <Image src="/development-icon.png" alt="Gelişim" width={40} height={40} loading="lazy" />
                 </div>
                 <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Gelişim</h4>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
@@ -328,7 +336,7 @@ export default function Home() {
             {/* Service Card 2: Gelişim */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
               <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <Image src="/development-icon.png" alt="Gelişim" width={60} height={60} />
+                <Image src="/development-icon.png" alt="Gelişim" width={60} height={60} loading="lazy" />
               </div>
               <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Gelişim</h3>
               <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
