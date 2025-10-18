@@ -1,12 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-
-// Lazy load heavy components
-const TestimonialSlider = dynamic(() => import("@/components/TestimonialSlider"), {
-  ssr: false,
-  loading: () => <div className="h-64 bg-gray-100 dark:bg-gray-800 rounded-lg animate-pulse" />
-});
 
 export default function Home() {
   return (
