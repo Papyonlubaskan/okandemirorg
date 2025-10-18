@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function Hizmetler() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
         <div className="container mx-auto px-4">
@@ -33,30 +33,30 @@ export default function Hizmetler() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
               Sunduğum Hizmetler
             </h2>
-            <p className="text-xl text-gray-600 leading-tight">
+            <p className="text-xl text-gray-600 dark:text-gray-300 leading-tight">
               Her biri özel olarak tasarlanmış, sürdürülebilir sonuçlar veren profesyonel hizmetlerim.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Web Tasarımı & Dijital Pazarlama Kreatifleri */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 mb-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Web Tasarımı & Dijital Pazarlama Kreatifleri</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Web Tasarımı & Dijital Pazarlama Kreatifleri</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir web tasarımı ve dijital pazarlama stratejisi oluşturmak şarttır.
               </p>
               <div className="space-y-2 mb-6">
-                <p className="text-gray-600">✓ Web Tasarımı&Geliştirme&Optimizasyon</p>
-                <p className="text-gray-600">✓ Dijital Pazarlama Kreatifleri</p>
-                <p className="text-gray-600">✓ Sosyal Medya Yönetimi</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Web Tasarımı&Geliştirme&Optimizasyon</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Dijital Pazarlama Kreatifleri</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Sosyal Medya Yönetimi</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link 
@@ -81,20 +81,20 @@ export default function Hizmetler() {
             </div>
 
             {/* Gelişim */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 mb-6 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Gelişim</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Gelişim</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
               </p>
               <div className="space-y-2 mb-6">
-                <p className="text-gray-600">✓ Strateji Geliştirme&Uygulama&Optimizasyon</p>
-                <p className="text-gray-600">✓ Dijital Dönüşüm Rehberliği</p>
-                <p className="text-gray-600">✓ Sürekli İyileştirme ve Analiz</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Strateji Geliştirme&Uygulama&Optimizasyon</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Dijital Dönüşüm Rehberliği</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Sürekli İyileştirme ve Analiz</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link 
@@ -119,20 +119,20 @@ export default function Hizmetler() {
             </div>
 
             {/* Marka Kimliği */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 mb-6 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center">
                 <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Marka Kimliği</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Marka Kimliği</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
               </p>
               <div className="space-y-2 mb-6">
-                <p className="text-gray-600">✓ Logo Tasarımı&Tutarlı Renk Paletleri& Marka Yönergeleri</p>
-                <p className="text-gray-600">✓ Marka Kimliği Reklamları</p>
-                <p className="text-gray-600">✓ Marka Tanınırlığı İçin Platform Yayınları</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Logo Tasarımı&Tutarlı Renk Paletleri& Marka Yönergeleri</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Marka Kimliği Reklamları</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Marka Tanınırlığı İçin Platform Yayınları</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link 
@@ -157,7 +157,7 @@ export default function Hizmetler() {
             </div>
 
             {/* Dijital Pazarlama */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                   <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -174,20 +174,20 @@ export default function Hizmetler() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">Dijital Pazarlama</h3>
-                <p className="text-gray-600 mb-6 leading-tight">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Dijital Pazarlama</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-tight">
                   Meta Ads, Google Ads, TikTok ve LinkedIn platformlarında sürdürülebilir stratejiler ile mükemmel sonuçlar alıyorum.
                 </p>
                 <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                     Meta Ads Yönetimi
                   </li>
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                     Google Ads Optimizasyonu
                   </li>
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                     TikTok & LinkedIn Stratejileri
                   </li>
@@ -216,7 +216,7 @@ export default function Hizmetler() {
             </div>
 
             {/* WordPress Tasarım */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
                   <svg className="w-16 h-16 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -231,20 +231,20 @@ export default function Hizmetler() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">WordPress Tasarım</h3>
-                <p className="text-gray-600 mb-6 leading-tight">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">WordPress Tasarım</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-tight">
                   Kişisel ve e-ticaret web tasarım çözümleri ile markanızı dijital dünyada öne çıkarıyorum.
                 </p>
                 <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                     Kişisel Web Siteleri
                   </li>
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                     E-ticaret Çözümleri
                   </li>
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                     Özel Tasarım & Geliştirme
                   </li>
@@ -273,7 +273,7 @@ export default function Hizmetler() {
             </div>
 
             {/* E-ticaret Platform Uzmanlığı */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
                   <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -288,20 +288,20 @@ export default function Hizmetler() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">E-ticaret Platform Uzmanlığı</h3>
-                <p className="text-gray-600 mb-6 leading-tight">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">E-ticaret Platform Uzmanlığı</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-tight">
                   Türkiye&apos;nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümler sunuyorum.
                 </p>
                 <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
                     <strong>Ticimax</strong> - Kurulum & Optimizasyon
                   </li>
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
                     <strong>İdeasoft</strong> - Tasarım & Entegrasyon
                   </li>
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-emerald-500 rounded-full mr-3"></span>
                     <strong>İkas</strong> - Özelleştirme & SEO
                   </li>
@@ -330,7 +330,7 @@ export default function Hizmetler() {
             </div>
 
             {/* Dijital Dönüşüm */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center">
                   <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -345,20 +345,20 @@ export default function Hizmetler() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">Dijital Dönüşüm</h3>
-                <p className="text-gray-600 mb-6 leading-tight">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Dijital Dönüşüm</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-tight">
                   Sürdürülebilir stratejiler ile markanızın dijital dünyada öncü olmasını sağlıyorum.
                 </p>
                 <ul className="space-y-2 mb-6">
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
                     Strateji Geliştirme
                   </li>
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
                     7/24 Canlı Reklamlar
                   </li>
-                  <li className="flex items-center text-gray-600">
+                  <li className="flex items-center text-gray-600 dark:text-gray-300">
                     <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
                     Platform Optimizasyonu
                   </li>
@@ -410,7 +410,7 @@ export default function Hizmetler() {
               </Link>
               <Link 
                 href="/iletisim"
-                className="inline-flex items-center justify-center bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
                 <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
                 E-posta Gönder

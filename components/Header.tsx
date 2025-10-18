@@ -9,7 +9,7 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-white shadow-lg sticky top-0 z-50">
+    <header className="bg-white dark:bg-gray-900 shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-28 md:h-32 lg:h-36 xl:h-40">
               {/* Logo */}
@@ -25,19 +25,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <Link href="/" className="text-gray-800 hover:text-blue-600 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50">
+            <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
               Anasayfa
             </Link>
-            <Link href="/projeler" className="text-gray-800 hover:text-blue-600 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50">
+            <Link href="/projeler" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
               Projeler
             </Link>
-            <Link href="/hizmetler" className="text-gray-800 hover:text-blue-600 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50">
+            <Link href="/hizmetler" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
               Hizmetler
             </Link>
-            <Link href="/hakkimda" className="text-gray-800 hover:text-blue-600 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50">
+            <Link href="/hakkimda" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
               Okan Demir Kimdir?
             </Link>
-            <Link href="/iletisim" className="text-gray-800 hover:text-blue-600 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50">
+            <Link href="/iletisim" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
               İletişim
             </Link>
           </nav>
@@ -57,7 +57,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-3 rounded-lg hover:bg-gray-100 transition-colors touch-manipulation"
+            className="lg:hidden p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors touch-manipulation"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Menüyü aç/kapat"
           >
@@ -69,39 +69,39 @@ export default function Header() {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-              <div className="lg:hidden py-4 border-t bg-white shadow-lg">
+              <div className="lg:hidden py-4 border-t bg-white dark:bg-gray-900 shadow-lg">
                 <nav className="flex flex-col space-y-2">
                   <Link
                     href="/"
-                    className="text-gray-800 hover:text-blue-600 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 touch-manipulation"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Anasayfa
                   </Link>
                   <Link
                     href="/projeler"
-                    className="text-gray-800 hover:text-blue-600 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 touch-manipulation"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Projeler
                   </Link>
                   <Link
                     href="/hizmetler"
-                    className="text-gray-800 hover:text-blue-600 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 touch-manipulation"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Hizmetler
                   </Link>
                   <Link
                     href="/hakkimda"
-                    className="text-gray-800 hover:text-blue-600 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 touch-manipulation"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Okan Demir Kimdir?
                   </Link>
                   <Link
                     href="/iletisim"
-                    className="text-gray-800 hover:text-blue-600 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 touch-manipulation"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     İletişim

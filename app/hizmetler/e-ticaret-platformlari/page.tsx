@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function ETicaretPlatformlari() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-emerald-600 via-teal-600 to-teal-700 text-white">
         <div className="container mx-auto px-4">
@@ -35,17 +35,17 @@ export default function ETicaretPlatformlari() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
               Platform Uzmanlıklarım
             </h2>
-            <p className="text-xl text-gray-600 leading-tight">
+            <p className="text-xl text-gray-600 dark:text-gray-300 leading-tight">
               Her platformun kendine özgü özelliklerini bilen, deneyimli bir uzman olarak hizmetinizdeyim.
             </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Ticimax */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                   <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,8 +54,8 @@ export default function ETicaretPlatformlari() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-black text-gray-900 mb-4">Ticimax</h3>
-                <p className="text-gray-600 mb-6 leading-tight">
+                <h3 className="text-3xl font-black text-gray-900 dark:text-white mb-4">Ticimax</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-tight">
                   Türkiye&apos;nin en popüler e-ticaret platformu olan Ticimax&apos;te kapsamlı deneyimim bulunmaktadır.
                 </p>
                 
@@ -93,7 +93,7 @@ export default function ETicaretPlatformlari() {
             </div>
 
             {/* İdeasoft */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
                   <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,8 +102,8 @@ export default function ETicaretPlatformlari() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-black text-gray-900 mb-4">İdeasoft</h3>
-                <p className="text-gray-600 mb-6 leading-tight">
+                <h3 className="text-3xl font-black text-gray-900 dark:text-white mb-4">İdeasoft</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-tight">
                   İdeasoft platformunda tasarım, entegrasyon ve teknik geliştirme konularında deneyimliyim.
                 </p>
                 
@@ -141,7 +141,7 @@ export default function ETicaretPlatformlari() {
             </div>
 
             {/* İkas */}
-            <div className="bg-white rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
                   <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -150,8 +150,8 @@ export default function ETicaretPlatformlari() {
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-3xl font-black text-gray-900 mb-4">İkas</h3>
-                <p className="text-gray-600 mb-6 leading-tight">
+                <h3 className="text-3xl font-black text-gray-900 dark:text-white mb-4">İkas</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 leading-tight">
                   İkas platformunda özelleştirme, SEO ve dijital pazarlama entegrasyonları konularında uzmanım.
                 </p>
                 
@@ -211,7 +211,7 @@ export default function ETicaretPlatformlari() {
               </Link>
               <Link 
                 href="/iletisim"
-                className="inline-flex items-center justify-center bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
                 <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
                 E-posta Gönder

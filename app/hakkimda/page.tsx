@@ -15,9 +15,9 @@ export const metadata: Metadata = {
 
 export default function Hakkimda() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-700 text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-700 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Content - Photo */}
@@ -57,7 +57,7 @@ export default function Hakkimda() {
                 </Link>
                 <Link 
                   href="/iletisim"
-                  className="inline-flex items-center justify-center bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                  className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
                 >
                   <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
                   İletişime Geç
@@ -69,34 +69,34 @@ export default function Hakkimda() {
       </section>
 
       {/* Yaratıcı Dünyama Hoş Geldiniz Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
                 Yaratıcı Dünyama Hoş Geldiniz
               </h2>
-              <p className="text-xl text-gray-800 leading-tight font-black">
+              <p className="text-xl text-gray-800 dark:text-gray-200 leading-tight font-black">
                 Tasarım ve dijital dönüşüm dünyasına yolculuğum, yaratıcılık ve teknolojinin kesişim noktasına hayran kaldığım lise yıllarımda başladı. Görsel hikaye anlatımının gücünden ilham alarak, amatör seviyede YouTube vb. platformlar üzerinden yayıncılığa başladım.
               </p>
             </div>
 
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 lg:p-12 mb-16">
-              <p className="text-lg text-gray-800 leading-tight font-black text-center mb-6">
+              <p className="text-lg text-gray-800 dark:text-gray-200 leading-tight font-black text-center mb-6">
                 Bugün, harika planlamaların ve tasarımın sadece estetikle ilgili olmadığına; markalar ve hedef kitleleri arasında anlamlı bağlantılar kurmakla ilgili olduğuna olan inancımla hareket ediyorum. Bu inancımı geçmiş tecrübelerim ve siyasi yaşamım ile elde ettiğimi düşünerek, vizyon ve misyon sorumluluğumu bir adım öteye sizin sayenizde taşıyabilirim!
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
-                <div className="bg-white rounded-2xl p-6 text-center">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center">
                   <div className="text-4xl font-black text-blue-600 mb-2">07 Mart 1993</div>
                   <p className="text-gray-700 font-black">Doğum Tarihi</p>
-                  <p className="text-gray-600">Bornova, İzmir</p>
+                  <p className="text-gray-600 dark:text-gray-300">Bornova, İzmir</p>
                 </div>
-                <div className="bg-white rounded-2xl p-6 text-center">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center">
                   <div className="text-4xl font-black text-blue-600 mb-2">♓ Balık</div>
                   <p className="text-gray-700 font-black">Burç</p>
                 </div>
-                <div className="bg-white rounded-2xl p-6 text-center">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center">
                   <div className="text-4xl font-black text-blue-600 mb-2">32 Yaşında</div>
                   <p className="text-gray-700 font-black">Yaş</p>
                 </div>
@@ -123,72 +123,72 @@ export default function Hakkimda() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
                 İş & Kariyer Deneyimim
               </h2>
             </div>
 
             <div className="space-y-8">
               {/* Milletvekilliği Adaylığı */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
                 <div className="flex items-start space-x-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-black text-xl">🏛️</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-black text-gray-900 mb-2">
+                    <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-2">
                       28.Dönem İzmir 2.Bölge 2.Sıra Milletvekilliği Adaylığı
                     </h3>
                     <p className="text-lg text-blue-600 font-black mb-2">Güç Birliği Partisi</p>
-                    <p className="text-gray-600 font-black">Haz 2023 &apos;teydi</p>
+                    <p className="text-gray-600 dark:text-gray-300 font-black">Haz 2023 &apos;teydi</p>
                   </div>
                 </div>
               </div>
 
               {/* Tasarım Uzmanı */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
                 <div className="flex items-start space-x-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-black text-xl">💻</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-black text-gray-900 mb-2">
+                    <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-2">
                       Tasarım - Web - Dijital Pazarlama Uzmanı & Streamer(Yayıncı) - LR Healty & Beauty(İş Ortağı)
                     </h3>
                     <p className="text-lg text-green-600 font-black mb-2">Freelancer</p>
-                    <p className="text-gray-600 font-black">Kas 2008 - Haz 2025</p>
+                    <p className="text-gray-600 dark:text-gray-300 font-black">Kas 2008 - Haz 2025</p>
                   </div>
                 </div>
               </div>
 
               {/* Denizci */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
                 <div className="flex items-start space-x-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-indigo-600 to-indigo-700 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-black text-xl">⚓</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-black text-gray-900 mb-2">
+                    <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-2">
                       Denizci
                     </h3>
                     <p className="text-lg text-indigo-600 font-black mb-2">Gemi Makineleri</p>
-                    <p className="text-gray-600 font-black">Tem 2011 - Kas 2019</p>
+                    <p className="text-gray-600 dark:text-gray-300 font-black">Tem 2011 - Kas 2019</p>
                   </div>
                 </div>
               </div>
 
               {/* Basın Danışmanlığı */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
                 <div className="flex items-start space-x-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-purple-700 rounded-full flex items-center justify-center flex-shrink-0">
                     <span className="text-white font-black text-xl">📰</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-2xl font-black text-gray-900 mb-2">
+                    <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-2">
                       Basın Danışmalığı & Gençlik Kolları Genel Başkanı
                     </h3>
                     <p className="text-lg text-purple-600 font-black mb-2">Türkiye Uyanış Partisi</p>
-                    <p className="text-gray-600 font-black">May 2024 - Haz 2025</p>
+                    <p className="text-gray-600 dark:text-gray-300 font-black">May 2024 - Haz 2025</p>
                   </div>
                 </div>
               </div>
@@ -198,23 +198,23 @@ export default function Hakkimda() {
       </section>
 
       {/* Benim Dünyam Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
                 Benim Dünyam
               </h2>
-              <p className="text-xl text-gray-800 leading-tight font-black">
+              <p className="text-xl text-gray-800 dark:text-gray-200 leading-tight font-black">
                 Çalışmadığım zamanlarda.
               </p>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Instagram Feed */}
-              <div className="bg-white rounded-3xl shadow-2xl p-8">
+              <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl lg:text-3xl font-black text-gray-900">Instagram</h3>
+                  <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white">Instagram</h3>
                   <a 
                     href="https://www.instagram.com/okandemirorg" 
                     target="_blank" 
@@ -228,7 +228,7 @@ export default function Hakkimda() {
                   </a>
                 </div>
                 <div className="space-y-4">
-                  <p className="text-gray-600 mb-6 font-black">Son paylaşımlarım ve dijital pazarlama ipuçları</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 font-black">Son paylaşımlarım ve dijital pazarlama ipuçları</p>
                   <div className="w-full" style={{ height: '500px' }}>
                     <iframe
                       src="https://www.instagram.com/okandemirorg/embed"
@@ -242,9 +242,9 @@ export default function Hakkimda() {
               </div>
 
               {/* YouTube Videos */}
-              <div className="bg-white rounded-3xl shadow-2xl p-8">
+              <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8">
                 <div className="flex items-center justify-between mb-6">
-                  <h3 className="text-2xl lg:text-3xl font-black text-gray-900">YouTube</h3>
+                  <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white">YouTube</h3>
                   <a 
                     href="https://www.youtube.com/@PapyonluBaskan" 
                     target="_blank" 
@@ -258,7 +258,7 @@ export default function Hakkimda() {
                   </a>
                 </div>
                 <div className="space-y-4">
-                  <p className="text-gray-600 mb-6 font-black">En son video içeriklerim ve eğitimler</p>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 font-black">En son video içeriklerim ve eğitimler</p>
                   <YouTubeFeed />
                 </div>
               </div>
@@ -281,19 +281,19 @@ export default function Hakkimda() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+              <div className="bg-white dark:bg-gray-800/10 backdrop-blur-sm rounded-2xl p-8">
                 <h3 className="text-2xl font-black mb-4">Amaçlı Deneyimler Yaratmak</h3>
                 <p className="text-blue-100 font-black">Her proje için anlamlı ve hedef odaklı deneyimler tasarlıyorum.</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+              <div className="bg-white dark:bg-gray-800/10 backdrop-blur-sm rounded-2xl p-8">
                 <h3 className="text-2xl font-black mb-4">Kullanıcı Odaklı Yaklaşım</h3>
                 <p className="text-blue-100 font-black">Kullanıcı ihtiyaçlarını öncelikli tutarak çözümler geliştiriyorum.</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+              <div className="bg-white dark:bg-gray-800/10 backdrop-blur-sm rounded-2xl p-8">
                 <h3 className="text-2xl font-black mb-4">Yenilik ve Uyum, Süreklilik</h3>
                 <p className="text-blue-100 font-black">Sürekli öğrenme ve teknolojik yenilikleri takip ediyorum.</p>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+              <div className="bg-white dark:bg-gray-800/10 backdrop-blur-sm rounded-2xl p-8">
                 <h3 className="text-2xl font-black mb-4">İşbirliği ve Kesintisiz İletişim</h3>
                 <p className="text-blue-100 font-black">Müşterilerimle sürekli iletişim halinde kalarak başarıya ulaşıyorum.</p>
               </div>
@@ -303,14 +303,14 @@ export default function Hakkimda() {
       </section>
 
       {/* E-ticaret Platform Uzmanlığım Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
                 E-ticaret Platform Uzmanlığım
               </h2>
-              <p className="text-xl text-gray-600 leading-tight">
+              <p className="text-xl text-gray-600 dark:text-gray-300 leading-tight">
                 Türkiye&apos;nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümler sunuyorum.
               </p>
             </div>
@@ -323,8 +323,8 @@ export default function Hakkimda() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-black text-gray-900 mb-4">Ticimax</h3>
-                <p className="text-gray-600 mb-6 font-black">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Ticimax</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 font-black">
                   Türkiye&apos;nin en popüler e-ticaret platformu olan Ticimax&apos;te kurulum, özelleştirme ve optimizasyon konularında uzmanım.
                 </p>
                 <ul className="space-y-2 text-gray-700">
@@ -342,8 +342,8 @@ export default function Hakkimda() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-black text-gray-900 mb-4">İdeasoft</h3>
-                <p className="text-gray-600 mb-6 font-black">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">İdeasoft</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 font-black">
                   İdeasoft platformunda tasarım, entegrasyon ve teknik geliştirme konularında deneyimliyim.
                 </p>
                 <ul className="space-y-2 text-gray-700">
@@ -361,8 +361,8 @@ export default function Hakkimda() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-black text-gray-900 mb-4">İkas</h3>
-                <p className="text-gray-600 mb-6 font-black">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">İkas</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 font-black">
                   İkas platformunda özelleştirme, SEO ve dijital pazarlama entegrasyonları konularında uzmanım.
                 </p>
                 <ul className="space-y-2 text-gray-700">

@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative text-white overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700">
+      <section className="relative text-white overflow-hidden bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 dark:from-gray-900 dark:via-gray-800 dark:to-black">
         <div className="container mx-auto px-4 py-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Content - Text */}
@@ -55,38 +55,38 @@ export default function Home() {
       </section>
 
       {/* Services Section - Sunduklarım */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
               Sunduklarım
             </h2>
-            <h3 className="text-2xl lg:text-3xl text-blue-600 font-black mb-8">
+            <h3 className="text-2xl lg:text-3xl text-blue-600 dark:text-blue-400 font-black mb-8">
               Tasarımla, Dijital Dönüşümle Markaları Güçlendirmek
             </h3>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Service 1 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600">
                   <Image src="/web-design-icon.png" alt="Web Tasarımı" width={40} height={40} />
                 </div>
-                <h4 className="text-2xl font-black text-gray-900 mb-4">Web Tasarımı & Dijital Pazarlama Kreatifleri</h4>
-                <p className="text-lg text-gray-800 mb-6 leading-tight font-black">
+                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Web Tasarımı & Dijital Pazarlama Kreatifleri</h4>
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Yaptığım işin temelinde görsel olarak çarpıcı ve kullanıcı dostu eyleme çağrı odaklı dijital pazarlama stratejileri ve web siteleri, çözüm odakları oluşturmak yatıyor.
                 </p>
                 <ul className="text-left text-gray-600 space-y-2 mb-8">
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Yaratıcı Kreatifler
                   </li>
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Duyarlı Düzenlemeler
                   </li>
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-blue-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Kişiye Özel Tasarım & Dijital Pazarlama Çözümleri
                   </li>
@@ -102,25 +102,25 @@ export default function Home() {
             </div>
 
             {/* Service 2 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600">
                   <Image src="/development-icon.png" alt="Gelişim" width={40} height={40} />
                 </div>
-                <h4 className="text-2xl font-black text-gray-900 mb-4">Gelişim</h4>
-                <p className="text-lg text-gray-800 mb-6 leading-tight font-black">
+                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Gelişim</h4>
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Tasarımlarınızı ve Dijital dönüşüm ihtiyaçlarınızı temiz,verimli,garantili yüksek performanlı kodlarla hayata geçirerek öncü olmanızı sağlıyorum.
                 </p>
                 <ul className="text-left text-gray-600 space-y-2 mb-8">
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     HTML, CSS, & JS Uzmanlığı
                   </li>
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Tarayıcı Arası Uyumluluk & Daha Hızlı Yükleme Süreleri
                   </li>
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Dijital Pazarlamada Süreklilik & Garantili Gelişim
                   </li>
@@ -136,25 +136,25 @@ export default function Home() {
             </div>
 
             {/* Service 3 */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600">
                   <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={40} height={40} />
                 </div>
-                <h4 className="text-2xl font-black text-gray-900 mb-4">Marka Kimliği</h4>
-                <p className="text-lg text-gray-800 mb-6 leading-tight font-black">
+                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Marka Kimliği</h4>
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
                 </p>
                 <ul className="text-left text-gray-600 space-y-2 mb-8">
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-orange-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Logo Tasarımı&Tutarlı Renk Paletleri& Marka Yönergeleri
                   </li>
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-orange-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Marka Kimliği Reklamları
                   </li>
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-orange-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Marka Tanınırlığı İçin Platform Yayınları
                   </li>
@@ -170,27 +170,27 @@ export default function Home() {
             </div>
 
             {/* Service 4 - E-ticaret Platform Uzmanlığı */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-600">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                   </svg>
                 </div>
-                <h4 className="text-2xl font-black text-gray-900 mb-4">E-ticaret Platform Uzmanlığı</h4>
-                <p className="text-lg text-gray-800 mb-6 leading-tight font-black">
+                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">E-ticaret Platform Uzmanlığı</h4>
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Türkiye&apos;nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümlerle işinizi büyütün.
                 </p>
                 <ul className="text-left text-gray-600 space-y-2 mb-8">
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     <span><strong>Ticimax</strong> - Kurulum & Optimizasyon</span>
                   </li>
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     <span><strong>İdeasoft</strong> - Tasarım & Entegrasyon</span>
                   </li>
-                  <li className="flex items-center text-lg">
+                   <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     <span><strong>İkas</strong> - Özelleştirme & SEO</span>
                   </li>
@@ -426,7 +426,7 @@ export default function Home() {
                   <Image src="/digital-marketing-icon.png" alt="Dijital Pazarlama" width={60} height={60} className="mr-4" />
                   <h4 className="text-2xl font-black text-gray-900">Dijital Pazarlama</h4>
                 </div>
-                <p className="text-lg text-gray-800 mb-6 leading-tight font-black">
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Siz ve İşletmeniz İçin Öncü Olma Zamanı Meta Ads & Google Ads & Tiktok & LinkedIn platformlarında sürdürülebilir stratejiler ile mükemmel sonuçları almanızı sağlıyorum! Aylık ve Yıllık Ödeme planları ile İndirimli avantajlar sizleri bekliyor!
                 </p>
                 <Link
@@ -446,7 +446,7 @@ export default function Home() {
                   <Image src="/web-design-icon.png" alt="WordPress Web Tasarımı" width={60} height={60} className="mr-4" />
                   <h4 className="text-2xl font-black text-gray-900">WordPress Web Tasarımı</h4>
                 </div>
-                <p className="text-lg text-gray-800 mb-6 leading-tight font-black">
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Siz ve Markanız İçin İster Kişisel, İsterseniz E-Ticaret Web Tasarım Çözümleri ile Yanınızdayım! Daha Kapsamlı E-ticaret kreatifleri için ise İkas, Ticimax, Digi gibi kendi alanlarında lider markalar ile çalışmanızı sağlıyorum.
                 </p>
                 <Link
@@ -466,7 +466,7 @@ export default function Home() {
                   <Image src="/digital-transformation-icon.png" alt="Dijital Dönüşüm" width={60} height={60} className="mr-4" />
                   <h4 className="text-2xl font-black text-gray-900">Dijital Dönüşüm ve Süreklilik!</h4>
                 </div>
-                <p className="text-lg text-gray-800 mb-6 leading-tight font-black">
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Dijital dönüşüm çağında sürdürülebilir stratejiler ile daima sizin için en uygun seçenekleri sunarak markanızın öncü tanınır olmasını sağlıyorum. En az iki platformda markanızın reklamını en iyi kreatifler ile 7/24 canlı olarak yayınlıyorum!
                 </p>
                 <Link
@@ -486,7 +486,7 @@ export default function Home() {
                   <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={60} height={60} className="mr-4" />
                   <h4 className="text-2xl font-black text-gray-900">Sizin İçin Markanızı Oluşturalım!</h4>
                 </div>
-                <p className="text-lg text-gray-800 mb-6 leading-tight font-black">
+                <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Siz yada markanız için en iyi kurumsal tasarımlar ile lider olmanızı sağlıyorum. Her adım verimliliğe aşıktır.
                 </p>
                 <Link
@@ -692,7 +692,7 @@ export default function Home() {
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 <div className="text-left">
-                  <h5 className="text-2xl font-black text-gray-900 mb-4">Neler Dahil?</h5>
+                  <h5 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Neler Dahil?</h5>
                   <ul className="space-y-3">
                     <li className="flex items-center text-lg font-black text-gray-700">
                       <svg className="w-6 h-6 text-green-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
@@ -714,7 +714,7 @@ export default function Home() {
                 </div>
                 
                 <div className="text-left">
-                  <h5 className="text-2xl font-black text-gray-900 mb-4">Avantajlar</h5>
+                  <h5 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Avantajlar</h5>
                   <ul className="space-y-3">
                     <li className="flex items-center text-lg font-black text-gray-700">
                       <svg className="w-6 h-6 text-blue-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
