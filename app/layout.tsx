@@ -10,6 +10,7 @@ import WhatsAppChatbot from "@/components/WhatsAppChatbot";
 import AccessibilityHelper from "@/components/AccessibilityHelper";
 import ConsoleErrorSuppressor from "@/components/ConsoleErrorSuppressor";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -59,6 +60,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'google-site-verification-code',
   },
+  other: {
+    'google-site-verification': 'google-site-verification-code',
+  },
 };
 
 export const viewport: Viewport = {
@@ -74,6 +78,7 @@ export default function RootLayout({
     <html lang="tr" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
         <ThemeProvider>
+          <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
           <link rel="alternate" type="application/rss+xml" title="Okan Demir Blog RSS" href="https://okandemir.org/feed.xml" />
           <ConsoleErrorSuppressor />
           <AccessibilityHelper />
