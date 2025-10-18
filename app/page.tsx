@@ -407,7 +407,7 @@ export default function Home() {
       </section>
 
       {/* Portfolio Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
@@ -525,7 +525,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Step 1 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 shadow-lg">
+            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 shadow-lg">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-blue-600 shadow-md">
                 <span className="text-white font-black text-2xl">1</span>
               </div>
@@ -536,7 +536,7 @@ export default function Home() {
             </div>
 
             {/* Step 2 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 shadow-lg">
+            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-green-50 to-green-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 shadow-lg">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-green-500 to-green-600 shadow-md">
                 <span className="text-white font-black text-2xl">2</span>
               </div>
@@ -547,7 +547,7 @@ export default function Home() {
             </div>
 
             {/* Step 3 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8 shadow-lg">
+            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-orange-50 to-orange-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 shadow-lg">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-orange-500 to-orange-600 shadow-md">
                 <span className="text-white font-black text-2xl">3</span>
               </div>
@@ -558,7 +558,7 @@ export default function Home() {
             </div>
 
             {/* Step 4 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8 shadow-lg">
+            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-purple-50 to-purple-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 shadow-lg">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-purple-500 to-purple-600 shadow-md">
                 <span className="text-white font-black text-2xl">4</span>
               </div>
@@ -581,7 +581,7 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black mb-6">
@@ -663,7 +663,7 @@ export default function Home() {
       </section>
 
       {/* Custom Pricing Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
@@ -867,7 +867,7 @@ export default function Home() {
       </section>
 
       {/* Newsletter Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-black mb-6">

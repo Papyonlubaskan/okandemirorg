@@ -5,7 +5,7 @@ export default function ETicaretPlatformlari() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-emerald-600 via-teal-600 to-teal-700 text-white">
+      <section className="py-20 bg-gradient-to-br from-emerald-600 via-teal-600 to-teal-700 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center space-x-2 text-emerald-300 font-black mb-6">
@@ -192,7 +192,7 @@ export default function ETicaretPlatformlari() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600">
+      <section className="py-20 bg-gradient-to-r from-emerald-600 to-teal-600 dark:from-gray-800 dark:to-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center text-white">
             <h2 className="text-4xl lg:text-5xl font-black mb-6">

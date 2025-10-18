@@ -81,7 +81,7 @@ export default function Hakkimda() {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 lg:p-12 mb-16">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-3xl p-8 lg:p-12 mb-16">
               <p className="text-lg text-gray-800 dark:text-gray-200 leading-tight font-black text-center mb-6">
                 Bugün, harika planlamaların ve tasarımın sadece estetikle ilgili olmadığına; markalar ve hedef kitleleri arasında anlamlı bağlantılar kurmakla ilgili olduğuna olan inancımla hareket ediyorum. Bu inancımı geçmiş tecrübelerim ve siyasi yaşamım ile elde ettiğimi düşünerek, vizyon ve misyon sorumluluğumu bir adım öteye sizin sayenizde taşıyabilirim!
               </p>
@@ -119,7 +119,7 @@ export default function Hakkimda() {
       </section>
 
       {/* İş & Kariyer Deneyimim Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -268,7 +268,7 @@ export default function Hakkimda() {
       </section>
 
       {/* Dijital Dönüşüm Felsefem Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
@@ -317,7 +317,7 @@ export default function Hakkimda() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {/* Ticimax */}
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 text-center hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-3xl p-8 text-center hover:shadow-xl transition-shadow">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
@@ -336,7 +336,7 @@ export default function Hakkimda() {
               </div>
 
               {/* İdeasoft */}
-              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 text-center hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-gray-700 dark:to-gray-600 rounded-3xl p-8 text-center hover:shadow-xl transition-shadow">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -355,7 +355,7 @@ export default function Hakkimda() {
               </div>
 
               {/* İkas */}
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 text-center hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-gray-700 dark:to-gray-600 rounded-3xl p-8 text-center hover:shadow-xl transition-shadow">
                 <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
                   <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />

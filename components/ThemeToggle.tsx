@@ -20,7 +20,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="relative w-12 h-12 rounded-full border-2 border-gray-300 bg-white hover:border-gray-400 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 shadow-sm hover:shadow-md"
+      className="relative w-12 h-12 rounded-full border-2 border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 hover:border-gray-400 dark:hover:border-gray-500 transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-gray-400 dark:focus:ring-gray-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900 shadow-sm hover:shadow-md"
       aria-label={`${theme === 'light' ? 'Dark' : 'Light'} mode'a geç`}
       title={`${theme === 'light' ? 'Dark' : 'Light'} mode'a geç`}
     >
@@ -28,7 +28,7 @@ export default function ThemeToggle() {
         {theme === 'light' ? (
           // Moon icon for light mode (click to go dark)
           <svg 
-            className="w-5 h-5 text-gray-600 transition-all duration-300" 
+            className="w-5 h-5 text-gray-600 dark:text-gray-300 transition-all duration-300" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"
@@ -43,7 +43,7 @@ export default function ThemeToggle() {
         ) : (
           // Sun icon for dark mode (click to go light)
           <svg 
-            className="w-5 h-5 text-gray-600 transition-all duration-300" 
+            className="w-5 h-5 text-gray-600 dark:text-gray-300 transition-all duration-300" 
             fill="none" 
             stroke="currentColor" 
             viewBox="0 0 24 24"

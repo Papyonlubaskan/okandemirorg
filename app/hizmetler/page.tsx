@@ -5,7 +5,7 @@ export default function Hizmetler() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <div className="inline-flex items-center space-x-2 text-blue-300 font-black mb-6">
@@ -391,7 +391,7 @@ export default function Hizmetler() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600 dark:from-gray-800 dark:to-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center text-white">
             <h2 className="text-4xl lg:text-5xl font-black mb-6">
