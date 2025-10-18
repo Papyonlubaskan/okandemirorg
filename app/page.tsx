@@ -41,13 +41,15 @@ export default function Home() {
               <div className="relative">
                   <Image
                   src="/Arka-Plansiz-Photoroom-576x1024.webp" 
-                  alt="Okan Demir" 
+                  alt="Okan Demir - Dijital Pazarlama Uzmanı" 
                   width={576} 
                   height={1024}
                   className="w-auto h-auto max-h-[600px] lg:max-h-[800px] object-cover shadow-2xl"
                   loading="eager"
                   priority
                   sizes="(max-width: 768px) 300px, (max-width: 1024px) 400px, 576px"
+                  placeholder="blur"
+                  blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k="
         />
               </div>
             </div>
@@ -59,7 +61,7 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6" id="services">
               Sunduklarım
             </h2>
             <h3 className="text-2xl lg:text-3xl text-blue-600 dark:text-blue-400 font-black mb-8">

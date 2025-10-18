@@ -17,6 +17,8 @@ const inter = Inter({
   display: "swap",
   variable: '--font-inter',
   preload: true,
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {

@@ -48,7 +48,9 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react'],
     optimizeServerReact: true,
     inlineCss: true,
+    webVitalsAttribution: ['CLS', 'LCP'],
   },
+  serverExternalPackages: ['mysql2'],
   // Modern browser support - ES6+ features
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
