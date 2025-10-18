@@ -46,7 +46,6 @@ const nextConfig = {
   generateEtags: true,
   experimental: {
     optimizePackageImports: ['lucide-react'],
-    optimizeCss: true,
     optimizeServerReact: true,
   },
   compiler: {
