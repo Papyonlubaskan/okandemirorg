@@ -12,10 +12,10 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
     const baseClasses = "rounded-2xl transition-all duration-300"
     
     const variants = {
-      default: "bg-white shadow-lg",
-      elevated: "bg-white shadow-2xl",
-      outlined: "bg-white border-2 border-gray-200",
-      filled: "bg-gray-50 border border-gray-200"
+      default: "bg-white dark:bg-gray-800 shadow-lg",
+      elevated: "bg-white dark:bg-gray-800 shadow-2xl",
+      outlined: "bg-white dark:bg-gray-800 border-2 border-gray-200 dark:border-gray-700",
+      filled: "bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700"
     }
     
     const hoverClasses = hover ? "hover:shadow-xl hover:scale-105" : ""
@@ -54,7 +54,7 @@ const CardTitle = React.forwardRef<HTMLHeadingElement, React.HTMLAttributes<HTML
   ({ className, ...props }, ref) => (
     <h3
       ref={ref}
-      className={cn("text-2xl font-black text-gray-900", className)}
+      className={cn("text-2xl font-black text-gray-900 dark:text-white", className)}
       {...props}
     />
   )
@@ -65,7 +65,7 @@ const CardDescription = React.forwardRef<HTMLParagraphElement, React.HTMLAttribu
   ({ className, ...props }, ref) => (
     <p
       ref={ref}
-      className={cn("text-gray-600 text-sm", className)}
+      className={cn("text-gray-600 dark:text-gray-300 text-sm", className)}
       {...props}
     />
   )
