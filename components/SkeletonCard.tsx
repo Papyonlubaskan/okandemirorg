@@ -1,6 +1,6 @@
 export default function SkeletonCard() {
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-lg animate-pulse">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg animate-pulse">
       {/* Icon skeleton */}
       <div className="w-16 h-16 bg-gray-300 rounded-full mb-6"></div>
       

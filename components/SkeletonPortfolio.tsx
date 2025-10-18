@@ -1,6 +1,6 @@
 export default function SkeletonPortfolio() {
   return (
-    <div className="bg-white rounded-2xl overflow-hidden shadow-lg animate-pulse">
+    <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg animate-pulse">
       {/* Image skeleton */}
       <div className="w-full h-48 bg-gray-300"></div>
       

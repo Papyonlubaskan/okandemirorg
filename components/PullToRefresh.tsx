@@ -22,7 +22,7 @@ export default function PullToRefresh({ onRefresh }: PullToRefreshProps) {
         transform: `translateY(${Math.min(pullDistance - 40, 40)}px)`,
       }}
     >
-      <div className="bg-white rounded-full shadow-lg p-3 mt-4">
+      <div className="bg-white dark:bg-gray-700 rounded-full shadow-lg p-3 mt-4">
         {isRefreshing ? (
           <div className="w-6 h-6 border-2 border-blue-600 border-t-transparent rounded-full animate-spin" />
         ) : (

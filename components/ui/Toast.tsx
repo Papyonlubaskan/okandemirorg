@@ -104,7 +104,7 @@ const ToastItem: React.FC<{
 
   return (
     <div className={cn(
-      "max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden animate-fade-in-right",
+      "max-w-sm w-full bg-white dark:bg-gray-800 shadow-lg rounded-lg pointer-events-auto ring-1 ring-black dark:ring-gray-700 ring-opacity-5 overflow-hidden animate-fade-in-right",
       colors[toast.type]
     )}>
       <div className="p-4">

@@ -220,7 +220,7 @@ export default function Home() {
       </section>
 
       {/* Why Choose Me Section */}
-      <section className="py-20 bg-white" role="region" aria-labelledby="why-choose-me">
+      <section className="py-20 bg-white dark:bg-gray-900" role="region" aria-labelledby="why-choose-me">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 text-blue-600 font-black mb-6">
@@ -512,10 +512,10 @@ export default function Home() {
       </section>
 
       {/* Process Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
               Benim Sürecim
             </h2>
             <h3 className="text-2xl lg:text-3xl text-blue-600 font-black mb-8">
@@ -758,10 +758,10 @@ export default function Home() {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
               Sıkça Sorulan Sorular
             </h2>
             <p className="text-xl text-gray-700 leading-tight max-w-3xl mx-auto font-black">
