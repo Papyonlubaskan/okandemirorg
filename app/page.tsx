@@ -76,7 +76,7 @@ export default function Home() {
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 dark:from-gray-600 dark:to-gray-700">
                   <Image src="/web-design-icon.png" alt="Web Tasarımı" width={40} height={40} />
                 </div>
-                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Web Tasarımı & Dijital Pazarlama Kreatifleri</h4>
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Web Tasarımı & Dijital Pazarlama Kreatifleri</h3>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Yaptığım işin temelinde görsel olarak çarpıcı ve kullanıcı dostu eyleme çağrı odaklı dijital pazarlama stratejileri ve web siteleri, çözüm odakları oluşturmak yatıyor.
                 </p>
@@ -110,7 +110,7 @@ export default function Home() {
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 dark:from-gray-600 dark:to-gray-700">
                   <Image src="/development-icon.png" alt="Gelişim" width={40} height={40} loading="lazy" />
                 </div>
-                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Gelişim</h4>
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Gelişim</h3>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Tasarımlarınızı ve Dijital dönüşüm ihtiyaçlarınızı temiz,verimli,garantili yüksek performanlı kodlarla hayata geçirerek öncü olmanızı sağlıyorum.
                 </p>
@@ -130,7 +130,7 @@ export default function Home() {
                 </ul>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -144,7 +144,7 @@ export default function Home() {
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 dark:from-gray-600 dark:to-gray-700">
                   <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={40} height={40} />
                 </div>
-                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Marka Kimliği</h4>
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Marka Kimliği</h3>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
                 </p>
@@ -164,7 +164,7 @@ export default function Home() {
                 </ul>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-orange-700 hover:bg-orange-800 text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -180,7 +180,7 @@ export default function Home() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
                   </svg>
                 </div>
-                <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">E-ticaret Platform Uzmanlığı</h4>
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">E-ticaret Platform Uzmanlığı</h3>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Türkiye&apos;nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümlerle işinizi büyütün.
                 </p>
@@ -201,14 +201,14 @@ export default function Home() {
                 <div className="flex flex-col gap-3">
                   <Link
                     href="https://wa.me/+905552677739"
-                    className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                    className="inline-flex items-center bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
                   >
                     <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                     Randevu Al
                   </Link>
                   <Link
                     href="/hizmetler/e-ticaret-platformlari"
-                    className="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                    className="inline-flex items-center justify-center bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-3 rounded-lg font-black transition-colors"
                   >
                     Detayları Gör
                     <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -315,7 +315,7 @@ export default function Home() {
               <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex-1 bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Randevu Al!
                 </Link>
@@ -354,13 +354,13 @@ export default function Home() {
               <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex-1 bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Randevu Al!
                 </Link>
                 <Link
                   href="/hizmetler/gelisim"
-                  className="flex-1 bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Detayları Gör &gt;
                 </Link>
@@ -393,13 +393,13 @@ export default function Home() {
               <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex-1 bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Randevu Al!
                 </Link>
                 <Link
                   href="/hizmetler/marka-kimligi"
-                  className="flex-1 bg-orange-600 hover:bg-orange-700 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-orange-700 hover:bg-orange-800 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Detayları Gör &gt;
                 </Link>
@@ -742,7 +742,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="inline-flex items-center bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
                   Ücretsiz Görüşme Talep Et
@@ -859,7 +859,7 @@ export default function Home() {
               </Link>
               <Link
                 href="https://wa.me/+905552677739"
-                className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="inline-flex items-center bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
                 WhatsApp İletişim
