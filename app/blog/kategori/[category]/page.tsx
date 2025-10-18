@@ -38,7 +38,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
   const categoryPosts = posts.filter((p) => p.category === category.name).slice(0, 24)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero */}
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
         <div className="container mx-auto px-4">
@@ -111,7 +111,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <Link
                   key={cat.id}
                   href={`/blog/kategori/${cat.slug}`}
-                  className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:scale-105"
                 >
                   <span className="font-black text-gray-900 dark:text-white">{cat.name}</span>
                   <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">{cat.count}+</div>

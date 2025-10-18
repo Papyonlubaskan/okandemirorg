@@ -44,7 +44,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   const cityPosts = posts.filter((p) => p.city === cityName).slice(0, 12)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero */}
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
         <div className="container mx-auto px-4">
@@ -120,7 +120,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   🎯 Yerel Pazar Bilgisi
                 </h3>
@@ -228,7 +228,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               <Link
                 key={city}
                 href={`/blog/sehir/${city.toLowerCase().replace(/ı/g, 'i').replace(/ş/g, 's').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ö/g, 'o')}`}
-                className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 <span className="font-black text-gray-900 dark:text-white">{city}</span>
               </Link>

@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Gelisim() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-green-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-green-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-green-500 to-teal-600 text-white">
         <div className="container mx-auto px-4">

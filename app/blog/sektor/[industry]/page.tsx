@@ -44,7 +44,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
   const industryPosts = posts.filter((p) => p.industry === industryName).slice(0, 12)
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero */}
       <section className="py-20 bg-gradient-to-br from-green-600 via-green-700 to-green-800 text-white">
         <div className="container mx-auto px-4">
@@ -112,7 +112,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
             {serviceTypes.slice(0, 9).map((service, index) => (
               <div
                 key={index}
-                className="bg-gradient-to-br from-gray-50 to-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                className="bg-gradient-to-br from-gray-50 to-white dark:from-gray-700 dark:to-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center mb-6">
                   <span className="text-white text-2xl font-black">{index + 1}</span>
