@@ -146,7 +146,7 @@ export default function TicimaxCaseStudyPage() {
                       </svg>
                     </div>
                     <h3 className="text-lg font-black text-gray-900 dark:text-white mb-3">SEO Eksiklikleri</h3>
-                    <p className="text-gray-700 dark:text-gray-300">Google'da görünürlük sorunları ve organik trafik kaybı</p>
+                    <p className="text-gray-700 dark:text-gray-300">Google&apos;da görünürlük sorunları ve organik trafik kaybı</p>
                   </div>
                   <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6">
                     <div className="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center mb-4">
