@@ -174,7 +174,7 @@ export default function Iletisim() {
                       value={formData.name}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 dark:text-white font-black ${
-                        errors.name ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500'
+                        errors.name ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 dark:border-gray-600 focus:ring-blue-500 dark:focus:ring-gray-500'
                       }`}
                       placeholder="Adınız ve soyadınız"
                     />
@@ -192,7 +192,7 @@ export default function Iletisim() {
                       value={formData.email}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 dark:text-white font-black ${
-                        errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500'
+                        errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 dark:border-gray-600 focus:ring-blue-500 dark:focus:ring-gray-500'
                       }`}
                       placeholder="ornek@email.com"
                     />
@@ -213,7 +213,7 @@ export default function Iletisim() {
                       onChange={handleChange}
                       onBlur={handlePhoneBlur}
                       className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 dark:text-white font-black ${
-                        errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500'
+                        errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 dark:border-gray-600 focus:ring-blue-500 dark:focus:ring-gray-500'
                       }`}
                       placeholder="+90 555 123 45 67"
                     />
@@ -230,7 +230,7 @@ export default function Iletisim() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-900 dark:text-white font-black"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 dark:focus:ring-gray-500 focus:border-transparent text-lg text-gray-900 dark:text-white font-black"
                     >
                       <option value="">Konu seçin</option>
                       <option value="dijital-pazarlama">Dijital Pazarlama</option>
@@ -253,7 +253,7 @@ export default function Iletisim() {
                     onChange={handleChange}
                     rows={6}
                     className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 dark:text-white resize-none ${
-                      errors.message ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500'
+                      errors.message ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 dark:border-gray-600 focus:ring-blue-500 dark:focus:ring-gray-500'
                     }`}
                     placeholder="Projeniz hakkında detaylı bilgi verin..."
                   />

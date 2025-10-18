@@ -25,7 +25,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
                   <Link 
                     href="https://wa.me/+905552677739"
-                    className="group inline-flex items-center text-white px-10 py-6 rounded-full font-black text-2xl transition-all duration-500 hover:scale-110 touch-manipulation w-full sm:w-auto justify-center focus:outline-none focus:ring-4 bg-gradient-to-r from-green-600 to-green-700"
+                    className="group inline-flex items-center text-white px-10 py-6 rounded-full font-black text-2xl transition-all duration-500 hover:scale-110 touch-manipulation w-full sm:w-auto justify-center focus:outline-none focus:ring-4 bg-gradient-to-r from-green-600 to-green-700 dark:from-gray-700 dark:to-gray-800"
                     aria-label="WhatsApp ile randevu al"
                     role="button"
                   >
@@ -70,7 +70,7 @@ export default function Home() {
             {/* Service 1 */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 dark:from-gray-600 dark:to-gray-700">
                   <Image src="/web-design-icon.png" alt="Web Tasarımı" width={40} height={40} />
                 </div>
                 <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Web Tasarımı & Dijital Pazarlama Kreatifleri</h4>
@@ -104,7 +104,7 @@ export default function Home() {
             {/* Service 2 */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 dark:from-gray-600 dark:to-gray-700">
                   <Image src="/development-icon.png" alt="Gelişim" width={40} height={40} />
                 </div>
                 <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Gelişim</h4>
@@ -138,7 +138,7 @@ export default function Home() {
             {/* Service 3 */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
-                <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 dark:from-gray-600 dark:to-gray-700">
                   <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={40} height={40} />
                 </div>
                 <h4 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Marka Kimliği</h4>
@@ -235,33 +235,33 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white rounded-2xl p-8 shadow-lg">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-pink-500 shadow-md">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-pink-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <Image src="/custom-design-icon.png" alt="Custom Design" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-2xl font-black mb-6 text-gray-900 transition-colors duration-300">Kişiye ve Markanıza Özel Tasarım</h3>
-              <p className="text-xl font-black leading-tight text-gray-600 transition-colors duration-300">
+              <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Kişiye ve Markanıza Özel Tasarım</h3>
+              <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 Size Özel Tasarım Her markanın ve sizin eşsiz olduğunuza ve aynı derecede özgün bir web sitesini yada dijital pazarlama çözümlerini hak ettiğine inanıyorum. Dijital dönüşümde de dijital pazarlama uzmanı olarak, Size ve markanıza özel Google Ads & Meta Ads seçenekleri ile, markanızın öncü görünürlüğünü sağlar iken sizin hızlı dönüşüm almanızı sağlıyorum! Garantili stratejiler ile her daim önde ve öncü olacaksınız!
               </p>
             </div>
             
             {/* Card 2 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white rounded-2xl p-8 shadow-lg">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-green-500 shadow-md">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-green-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <Image src="/user-focused-icon.png" alt="User Focused" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-2xl font-black mb-6 text-gray-900 transition-colors duration-300">Kullanıcı Odaklı Yaklaşım</h3>
-              <p className="text-xl font-black leading-tight text-gray-600 transition-colors duration-300">
+              <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Kullanıcı Odaklı Yaklaşım</h3>
+              <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 Kullanıcı ve İşletme, Marka Odaklı Yaklaşım; Kullanıcı deneyimine büyük önem vererek, sezgisel ve gezinmesi kolay isteğinize göre E-Ticaret siteleri veya kişisel web siteleri, sosyal medya görünürlüğü tasarlıyorum. Sizin için en iyi yönetimi sağlıyorum. Ayrıca sizin ve işletmeniz için en uygun dijital pazarlama tekniklerini harekete geçirerek dijital dönüşümde markanızın öne çıkmasını sağlıyorum!
               </p>
             </div>
             
             {/* Card 3 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white rounded-2xl p-8 shadow-lg">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-orange-500 to-red-500 shadow-md">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-orange-500 to-red-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <Image src="/trend-tech-icon.png" alt="Trend Tech" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-2xl font-black mb-6 text-gray-900 transition-colors duration-300">Trend Teknolojiler</h3>
-              <p className="text-xl font-black leading-tight text-gray-600 transition-colors duration-300">
+              <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Trend Teknolojiler</h3>
+              <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 Size en yenilikçi çözümleri sunmak için web tasarım ve dijital pazarlama trendleri ve teknolojilerinin ön saflarında yer alıyorum. Dijital pazarlama uzmanı olarak en garantili yolu hedefleyen uygulamaları ve araçları süreklilik halinde tutabilmek adına teknolojiden yararlanıyorum.
               </p>
             </div>
@@ -503,7 +503,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="/projeler"
-              className="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 dark:from-gray-700 dark:to-gray-800 hover:from-blue-700 hover:to-blue-800 dark:hover:from-gray-800 dark:hover:to-gray-900 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               Tüm Çalışmalarıma Göz Atın!
             </Link>
@@ -526,44 +526,44 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Step 1 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 shadow-lg">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-blue-600 shadow-md">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-blue-600 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <span className="text-white font-black text-2xl">1</span>
               </div>
-              <h4 className="text-2xl font-black mb-4 text-gray-900 transition-colors duration-300">Keşif</h4>
-              <p className="text-lg font-black leading-tight text-gray-600 transition-colors duration-300">
+              <h4 className="text-2xl font-black mb-4 text-gray-900 dark:text-white transition-colors duration-300">Keşif</h4>
+              <p className="text-lg font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 Markanızı, hedeflerinizi ve hedef kitlenizi derinlemesine anlamak için derinlemesine araştırmalar yapıyorum. Detaylı danışmanlık ve araştırmalar yoluyla, tüm tasarım yada dijital dönüşüm sürecini bilgilendiren temel iç görüler topluyorum.
               </p>
             </div>
 
             {/* Step 2 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-green-50 to-green-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 shadow-lg">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-green-500 to-green-600 shadow-md">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-green-500 to-green-600 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <span className="text-white font-black text-2xl">2</span>
               </div>
-              <h4 className="text-2xl font-black mb-4 text-gray-900 transition-colors duration-300">Tasarım</h4>
-              <p className="text-lg font-black leading-tight text-gray-600 transition-colors duration-300">
+              <h4 className="text-2xl font-black mb-4 text-gray-900 dark:text-white transition-colors duration-300">Tasarım</h4>
+              <p className="text-lg font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 Görsel olarak etkileyici ve stratejik tasarımlar oluşturmaya başlıyorum. Bu adım, fikirleri markanızla uyumlu, somut görsel konseptlere dönüştürmeye odaklanıyor. Bu görseller kişisel seçimlerinize kreatif çeşitlilik barındırıyor.
               </p>
             </div>
 
             {/* Step 3 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-orange-50 to-orange-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 shadow-lg">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-orange-500 to-orange-600 shadow-md">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-orange-500 to-orange-600 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <span className="text-white font-black text-2xl">3</span>
               </div>
-              <h4 className="text-2xl font-black mb-4 text-gray-900 transition-colors duration-300">Geliştirme</h4>
-              <p className="text-lg font-black leading-tight text-gray-600 transition-colors duration-300">
+              <h4 className="text-2xl font-black mb-4 text-gray-900 dark:text-white transition-colors duration-300">Geliştirme</h4>
+              <p className="text-lg font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 Görselleri tamamen işlevsel bir web sitesine yada seçmiş olduğunuz dijital pazarlama araçlarına dönüştürüyorum. Bu aşama, sitenizin yada dijital pazarlama araçlarınızın tüm cihazlarda ve platformlarda sorunsuz bir şekilde çalışmasını sağlamak için titiz bir kodlama süreci içerir.
               </p>
             </div>
 
             {/* Step 4 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-gradient-to-br from-purple-50 to-purple-100 dark:from-gray-700 dark:to-gray-600 rounded-2xl p-8 shadow-lg">
-              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-purple-500 to-purple-600 shadow-md">
+              <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-purple-500 to-purple-600 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <span className="text-white font-black text-2xl">4</span>
               </div>
-              <h4 className="text-2xl font-black mb-4 text-gray-900 transition-colors duration-300">Başlatma</h4>
-              <p className="text-lg font-black leading-tight text-gray-600 transition-colors duration-300">
+              <h4 className="text-2xl font-black mb-4 text-gray-900 dark:text-white transition-colors duration-300">Başlatma</h4>
+              <p className="text-lg font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
                 Yayına girmeden önce her şeyin kusursuz çalıştığından emin olmak için web sitenizi yada dijital pazarlama uygulama ve araçlarını titizlikle test ediyorum. Lansman sonrasında ise, yeni çevrimiçi varlığınızı en üst düzeye çıkarmanıza yardımcı olmak için destek ve rehberlik sağlıyorum.
               </p>
             </div>
@@ -572,7 +572,7 @@ export default function Home() {
           <div className="text-center mt-12">
             <Link
               href="https://wa.me/+905552677739"
-              className="inline-flex items-center bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="inline-flex items-center bg-gradient-to-r from-green-600 to-green-700 dark:from-gray-700 dark:to-gray-800 hover:from-green-700 hover:to-green-800 dark:hover:from-gray-800 dark:hover:to-gray-900 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               Randevu Planlayın!
             </Link>

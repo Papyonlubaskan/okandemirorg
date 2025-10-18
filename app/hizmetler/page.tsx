@@ -70,7 +70,7 @@ export default function Hizmetler() {
                 </Link>
                 <Link 
                   href="/hizmetler/web-tasarim"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-3 rounded-full font-black transition-colors"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 dark:from-gray-600 dark:to-gray-700 hover:from-blue-600 hover:to-blue-700 dark:hover:from-gray-700 dark:hover:to-gray-800 text-white px-6 py-3 rounded-full font-black transition-colors"
                 >
                   Detayları Gör
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -108,7 +108,7 @@ export default function Hizmetler() {
                 </Link>
                 <Link 
                   href="/hizmetler/gelisim"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white px-6 py-3 rounded-full font-black transition-colors"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-green-500 to-teal-500 dark:from-gray-600 dark:to-gray-700 hover:from-green-600 hover:to-teal-600 dark:hover:from-gray-700 dark:hover:to-gray-800 text-white px-6 py-3 rounded-full font-black transition-colors"
                 >
                   Detayları Gör
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -146,7 +146,7 @@ export default function Hizmetler() {
                 </Link>
                 <Link 
                   href="/hizmetler/marka-kimligi"
-                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-6 py-3 rounded-full font-black transition-colors"
+                  className="inline-flex items-center justify-center bg-gradient-to-r from-orange-500 to-red-500 dark:from-gray-600 dark:to-gray-700 hover:from-orange-600 hover:to-red-600 dark:hover:from-gray-700 dark:hover:to-gray-800 text-white px-6 py-3 rounded-full font-black transition-colors"
                 >
                   Detayları Gör
                   <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

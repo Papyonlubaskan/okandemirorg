@@ -193,7 +193,7 @@ export default function WhatsAppChatbot() {
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Mesajınızı yazın..."
-                className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-full focus:ring-2 focus:ring-green-500 focus:border-transparent font-medium"
+                className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-full focus:ring-2 focus:ring-green-500 dark:focus:ring-gray-500 focus:border-transparent font-medium"
               />
               <button
                 onClick={handleSend}
