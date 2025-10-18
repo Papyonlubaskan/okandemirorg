@@ -18,9 +18,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "O Copyright© Dijital Pazarlama & Yazılım | Okan Demir",
-  description: "Okan Demir - Dijital Pazarlama Uzmanı, Web Tasarım, SEO, Google Ads, Meta Business, Sosyal Medya Yönetimi. Profesyonel dijital çözümlerle işinizi büyütün. 5+ yıl deneyim, 50+ proje, %98 müşteri memnuniyeti.",
-  keywords: ["Okan Demir", "Dijital Pazarlama", "Web Tasarım", "SEO", "Google Ads", "Meta Business", "Sosyal Medya", "Freelancer", "Dijital Dönüşüm"],
+  title: "Okan Demir - Dijital Pazarlama Uzmanı | Web Tasarım & E-ticaret",
+  description: "Okan Demir - Türkiye'nin önde gelen dijital pazarlama uzmanı. Web tasarım, SEO, Google Ads, Meta Business, e-ticaret platformları (Ticimax, İdeasoft, İkas). 5+ yıl deneyim, 50+ proje, %98 müşteri memnuniyeti.",
+  keywords: ["Okan Demir", "Okan", "Dijital Pazarlama", "Web Tasarım", "SEO", "Google Ads", "Meta Business", "E-ticaret", "Ticimax", "İdeasoft", "İkas", "Freelancer", "Dijital Dönüşüm"],
   authors: [{ name: "Okan Demir" }],
   creator: "Okan Demir",
   publisher: "Okan Demir",
@@ -46,14 +46,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'tr_TR',
     url: 'https://okandemir.org',
-    title: 'O Copyright© Dijital Pazarlama & Yazılım | Okan Demir',
-    description: 'Okan Demir - Dijital Pazarlama Uzmanı, Web Tasarım, SEO, Google Ads, Meta Business, Sosyal Medya Yönetimi.',
+    title: 'Okan Demir - Dijital Pazarlama Uzmanı | Web Tasarım & E-ticaret',
+    description: 'Okan Demir - Türkiye\'nin önde gelen dijital pazarlama uzmanı. Web tasarım, SEO, Google Ads, Meta Business, e-ticaret platformları.',
     siteName: 'Okan Demir',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'O Copyright© Dijital Pazarlama & Yazılım | Okan Demir',
-    description: 'Okan Demir - Dijital Pazarlama Uzmanı, Web Tasarım, SEO, Google Ads, Meta Business, Sosyal Medya Yönetimi.',
+    title: 'Okan Demir - Dijital Pazarlama Uzmanı | Web Tasarım & E-ticaret',
+    description: 'Okan Demir - Türkiye\'nin önde gelen dijital pazarlama uzmanı. Web tasarım, SEO, Google Ads, Meta Business, e-ticaret platformları.',
   },
   verification: {
     google: 'google-site-verification-code',
