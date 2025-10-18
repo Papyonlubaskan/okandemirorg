@@ -114,7 +114,7 @@ export default async function SEOPage({ params }: { params: Promise<{ slug: stri
                     </h2>
                     <div className="space-y-4">
                       {page.faqs.map((faq, index) => (
-                        <div key={index} className="bg-gray-50 rounded-xl p-6">
+                        <div key={index} className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
                           <h4 className="font-black text-gray-900 dark:text-white mb-2">
                             {faq.question}
                           </h4>

@@ -122,10 +122,10 @@ export default function YouTubeFeed() {
       </div>
 
       {/* Kanal Linki */}
-      <div className="flex items-center justify-between bg-gray-50 rounded-xl p-4">
+      <div className="flex items-center justify-between bg-gray-50 dark:bg-gray-700 rounded-xl p-4">
         <div>
           <p className="font-black text-gray-900 dark:text-white">@PapyonluBaskan</p>
-          <p className="text-sm text-gray-600">YouTube Kanalım</p>
+          <p className="text-sm text-gray-600 dark:text-gray-300">YouTube Kanalım</p>
         </div>
         <a 
           href="https://www.youtube.com/@PapyonluBaskan/videos" 

@@ -13,7 +13,7 @@ export default function ThemeToggle() {
 
   if (!mounted) {
     return (
-      <div className="w-12 h-12 rounded-full border-2 border-gray-300 bg-gray-100 animate-pulse"></div>
+      <div className="w-12 h-12 rounded-full border-2 border-gray-300 dark:border-gray-600 bg-gray-100 dark:bg-gray-700 animate-pulse"></div>
     )
   }
 

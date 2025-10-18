@@ -153,7 +153,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     Sıkça Sorulan Sorular
                   </h2>
                   <div className="space-y-4">
-                    <div className="bg-gray-50 rounded-xl p-6">
+                    <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
                       <h4 className="font-black text-gray-900 dark:text-white mb-2">
                         Bu hizmet ne kadar sürer?
                       </h4>
@@ -163,7 +163,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         devam eden optimizasyon gerektirir.
                       </p>
                     </div>
-                    <div className="bg-gray-50 rounded-xl p-6">
+                    <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
                       <h4 className="font-black text-gray-900 dark:text-white mb-2">
                         Maliyeti nedir?
                       </h4>
@@ -172,7 +172,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         üzere ücretsiz görüşme yapabiliriz.
                       </p>
                     </div>
-                    <div className="bg-gray-50 rounded-xl p-6">
+                    <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
                       <h4 className="font-black text-gray-900 dark:text-white mb-2">
                         Sonuçları ne zaman görebilirim?
                       </h4>

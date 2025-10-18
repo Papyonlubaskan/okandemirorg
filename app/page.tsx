@@ -771,7 +771,7 @@ export default function Home() {
           
           <div className="max-w-4xl mx-auto space-y-6">
             {/* FAQ 1 */}
-            <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Web sitesi tasarım süreci ne kadar sürer?
               </h3>
@@ -781,7 +781,7 @@ export default function Home() {
             </div>
 
             {/* FAQ 2 */}
-            <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Dijital pazarlama kampanyalarında hangi platformları kullanıyorsunuz?
               </h3>
@@ -791,7 +791,7 @@ export default function Home() {
             </div>
 
             {/* FAQ 3 */}
-            <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 SEO sonuçları ne zaman görülür?
               </h3>
@@ -801,7 +801,7 @@ export default function Home() {
             </div>
 
             {/* FAQ 4 */}
-            <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Hangi ödeme seçenekleri mevcut?
               </h3>
@@ -811,7 +811,7 @@ export default function Home() {
             </div>
 
             {/* FAQ 5 */}
-            <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Proje teslim sonrası destek veriyor musunuz?
               </h3>
@@ -821,7 +821,7 @@ export default function Home() {
             </div>
 
             {/* FAQ 6 */}
-            <div className="bg-gray-50 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 hover:shadow-lg transition-shadow duration-300">
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Web sitesi tasarımında hangi teknolojileri kullanıyorsunuz?
               </h3>

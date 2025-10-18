@@ -57,7 +57,7 @@ export default class ErrorBoundary extends Component<Props, State> {
               </button>
               <button
                 onClick={() => window.location.href = '/'}
-                className="w-full bg-gray-100 text-gray-700 px-6 py-3 rounded-xl font-black hover:bg-gray-200 transition-all duration-300"
+                className="w-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-xl font-black hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-300"
               >
                 🏠 Ana Sayfaya Dön
               </button>
@@ -67,7 +67,7 @@ export default class ErrorBoundary extends Component<Props, State> {
                 <summary className="cursor-pointer text-sm font-bold text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
                   Hata Detayları (Geliştirici Modu)
                 </summary>
-                <pre className="mt-2 text-xs bg-gray-100 p-3 rounded overflow-auto max-h-40">
+                <pre className="mt-2 text-xs bg-gray-100 dark:bg-gray-700 dark:text-gray-300 p-3 rounded overflow-auto max-h-40">
                   {this.state.error.message}
                   {'\n\n'}
                   {this.state.error.stack}
