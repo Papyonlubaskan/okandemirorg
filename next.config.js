@@ -54,7 +54,6 @@ const nextConfig = {
   },
   output: 'standalone',
   // Performance optimizations
-  swcMinify: true,
   reactStrictMode: true,
   // Headers for better caching
   async headers() {

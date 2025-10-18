@@ -227,8 +227,8 @@ export default function TicimaxCaseStudyPage() {
                     </svg>
                   </div>
                   <blockquote className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 mb-6 font-medium italic">
-                    "Okan Demir ile çalışmak işimizi tamamen dönüştürdü. Ticimax platformunda kurduğu e-ticaret sitemiz 
-                    sayesinde satışlarımız %300 arttı. Profesyonel yaklaşımı ve teknik uzmanlığı gerçekten etkileyici."
+                    &ldquo;Okan Demir ile çalışmak işimizi tamamen dönüştürdü. Ticimax platformunda kurduğu e-ticaret sitemiz 
+                    sayesinde satışlarımız %300 arttı. Profesyonel yaklaşımı ve teknik uzmanlığı gerçekten etkileyici.&rdquo;
                   </blockquote>
                   <div className="text-gray-600 dark:text-gray-400">
                     <div className="font-black text-lg">Ayşe Yılmaz</div>

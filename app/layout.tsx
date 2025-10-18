@@ -58,10 +58,10 @@ export const metadata: Metadata = {
     description: 'Okan Demir - Türkiye\'nin önde gelen dijital pazarlama uzmanı. Web tasarım, SEO, Google Ads, Meta Business, e-ticaret platformları.',
   },
   verification: {
-    google: 'google-site-verification-code',
+    google: process.env.GOOGLE_SITE_VERIFICATION || 'google-site-verification-code',
   },
   other: {
-    'google-site-verification': 'google-site-verification-code',
+    'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || 'google-site-verification-code',
   },
 };
 

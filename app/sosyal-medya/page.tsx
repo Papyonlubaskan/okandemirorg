@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+// import Link from "next/link"; // Kullanılmıyor
 
 export const metadata: Metadata = {
   title: "Sosyal Medya Hesaplarım | Okan Demir - Dijital Pazarlama Uzmanı",
@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   keywords: ["Okan Demir Instagram", "Okan Demir YouTube", "Okan Demir LinkedIn", "Okan Demir Twitter", "Okan Demir Facebook", "Dijital Pazarlama İçerikleri"],
   openGraph: {
     title: "Sosyal Medya Hesaplarım | Okan Demir",
-    description: "Dijital pazarlama uzmanı Okan Demir'in tüm sosyal medya hesapları ve içerikleri.",
+    description: "Dijital pazarlama uzmanı Okan Demir&apos;in tüm sosyal medya hesapları ve içerikleri.",
     url: "https://okandemir.org/sosyal-medya",
   },
 };

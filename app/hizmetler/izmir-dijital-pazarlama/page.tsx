@@ -123,7 +123,7 @@ export default function IzmirDigitalMarketingPage() {
                   </div>
                   <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">İzmir Web Tasarım</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    İzmir'deki işletmeniz için modern, responsive ve SEO uyumlu web siteleri tasarlıyorum.
+                    İzmir&apos;deki işletmeniz için modern, responsive ve SEO uyumlu web siteleri tasarlıyorum.
                   </p>
                   <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                     <li>• Bornova, Konak, Karşıyaka odaklı</li>
@@ -142,7 +142,7 @@ export default function IzmirDigitalMarketingPage() {
                   </div>
                   <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">İzmir SEO Uzmanı</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    İzmir'de Google aramalarında üst sıralarda yer almanızı sağlayacak SEO stratejileri.
+                    İzmir&apos;de Google aramalarında üst sıralarda yer almanızı sağlayacak SEO stratejileri.
                   </p>
                   <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                     <li>• Yerel SEO optimizasyonu</li>
@@ -174,7 +174,7 @@ export default function IzmirDigitalMarketingPage() {
 
               {/* İzmir Bölgeleri */}
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 lg:p-12 text-white mb-16">
-                <h3 className="text-3xl font-black mb-8 text-center">İzmir'de Hizmet Verdiğim Bölgeler</h3>
+                <h3 className="text-3xl font-black mb-8 text-center">İzmir&apos;de Hizmet Verdiğim Bölgeler</h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                   <div className="text-center">
                     <h4 className="text-xl font-black mb-2">Bornova</h4>
@@ -198,13 +198,13 @@ export default function IzmirDigitalMarketingPage() {
               {/* Neden İzmir */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 lg:p-12 shadow-lg">
                 <h3 className="text-3xl font-black text-gray-900 dark:text-white mb-8 text-center">
-                  Neden İzmir'de Dijital Pazarlama Uzmanı Olarak Çalışıyorum?
+                  Neden İzmir&apos;de Dijital Pazarlama Uzmanı Olarak Çalışıyorum?
                 </h3>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-xl font-black text-gray-900 dark:text-white mb-4">🏙️ İzmir'in Avantajları</h4>
+                    <h4 className="text-xl font-black text-gray-900 dark:text-white mb-4">🏙️ İzmir&apos;in Avantajları</h4>
                     <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-                      <li>• Türkiye'nin 3. büyük şehri</li>
+                      <li>• Türkiye&apos;nin 3. büyük şehri</li>
                       <li>• Güçlü ticari potansiyel</li>
                       <li>• Teknoloji odaklı işletmeler</li>
                       <li>• Turizm ve ticaret merkezi</li>

@@ -84,11 +84,12 @@ export default function DigitalMarketingTrends2025Page() {
 
               {/* Featured Image */}
               <div className="mb-12">
-                <img 
-                  src="/blog/dijital-pazarlama-trendleri-2025.jpg" 
-                  alt="2025 Dijital Pazarlama Trendleri" 
-                  className="w-full h-64 lg:h-96 object-cover rounded-2xl shadow-lg"
-                />
+                <div className="w-full h-64 lg:h-96 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl shadow-lg flex items-center justify-center">
+                  <div className="text-white text-center">
+                    <h3 className="text-2xl font-black mb-2">2025 Dijital Pazarlama Trendleri</h3>
+                    <p className="text-blue-100">Geleceği şekillendiren teknolojiler</p>
+                  </div>
+                </div>
               </div>
 
               {/* Content */}
@@ -97,7 +98,7 @@ export default function DigitalMarketingTrends2025Page() {
                   <p className="text-lg text-gray-700 dark:text-gray-300 font-medium leading-relaxed">
                     2025 yılına girerken dijital pazarlama dünyası hızla değişiyor. AI teknolojilerinin yaygınlaşması, 
                     tüketici davranışlarının evrimi ve yeni platformların ortaya çıkması, pazarlama stratejilerini köklü 
-                    bir şekilde dönüştürüyor. Bu yazıda, 2025'te öne çıkacak en önemli dijital pazarlama trendlerini 
+                    bir şekilde dönüştürüyor. Bu yazıda, 2025&apos;te öne çıkacak en önemli dijital pazarlama trendlerini 
                     detaylı olarak inceliyoruz.
                   </p>
                 </div>
@@ -107,7 +108,7 @@ export default function DigitalMarketingTrends2025Page() {
                 </h2>
                 
                 <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                  Yapay zeka teknolojileri artık sadece geleceğin teknolojisi değil, bugünün gerçeği. 2025'te AI, 
+                  Yapay zeka teknolojileri artık sadece geleceğin teknolojisi değil, bugünün gerçeği. 2025&apos;te AI, 
                   müşteri deneyimini kişiselleştirmede çok daha sofistike hale gelecek. Makine öğrenmesi algoritmaları, 
                   her kullanıcının davranışını analiz ederek özel içerikler, ürün önerileri ve pazarlama mesajları sunacak.
                 </p>
@@ -127,7 +128,7 @@ export default function DigitalMarketingTrends2025Page() {
                 </h2>
                 
                 <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                  Video içerik, 2025'te dijital pazarlamanın kalbi olacak. TikTok, Instagram Reels, YouTube Shorts 
+                  Video içerik, 2025&apos;te dijital pazarlamanın kalbi olacak. TikTok, Instagram Reels, YouTube Shorts 
                   gibi platformların popülaritesi artarken, işletmeler de video-first yaklaşımını benimsiyor. 
                   Kısa form video içerikler, canlı yayınlar ve interaktif videolar pazarlama stratejilerinin 
                   merkezinde yer alacak.
@@ -139,7 +140,7 @@ export default function DigitalMarketingTrends2025Page() {
                 
                 <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                   Alexa, Google Assistant ve Siri gibi sesli asistanların kullanımı her geçen gün artıyor. 
-                  2025'te sesli arama optimizasyonu, SEO stratejilerinin ayrılmaz bir parçası olacak. 
+                  2025&apos;te sesli arama optimizasyonu, SEO stratejilerinin ayrılmaz bir parçası olacak. 
                   Konuşma diline uygun içerik üretimi ve yerel sesli arama optimizasyonu kritik hale gelecek.
                 </p>
 
@@ -149,7 +150,7 @@ export default function DigitalMarketingTrends2025Page() {
                 
                 <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
                   Tüketiciler artık sadece ürün kalitesine değil, şirketlerin değerlerine de bakıyor. 
-                  2025'te sürdürülebilirlik, çevresel sorumluluk ve etik değerler pazarlama mesajlarının 
+                  2025&apos;te sürdürülebilirlik, çevresel sorumluluk ve etik değerler pazarlama mesajlarının 
                   merkezinde yer alacak. Green marketing ve purpose-driven branding önem kazanacak.
                 </p>
 
@@ -158,7 +159,7 @@ export default function DigitalMarketingTrends2025Page() {
                 </h2>
                 
                 <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
-                  Metaverse kavramı hızla gelişiyor ve 2025'te daha fazla işletme sanal dünyalarda 
+                  Metaverse kavramı hızla gelişiyor ve                   2025&apos;te daha fazla işletme sanal dünyalarda 
                   pazarlama aktiviteleri gerçekleştirecek. VR deneyimleri, sanal mağazalar ve 
                   immersive reklamlar yeni pazarlama kanalları olarak öne çıkacak.
                 </p>
@@ -178,11 +179,9 @@ export default function DigitalMarketingTrends2025Page() {
               {/* Author Bio */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 mt-12 shadow-lg">
                 <div className="flex items-center mb-6">
-                  <img 
-                    src="/okan-about-photo.webp" 
-                    alt="Okan Demir" 
-                    className="w-16 h-16 rounded-full mr-4"
-                  />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full mr-4 flex items-center justify-center">
+                  <span className="text-white font-black text-lg">OD</span>
+                </div>
                   <div>
                     <h3 className="text-xl font-black text-gray-900 dark:text-white">Okan Demir</h3>
                     <p className="text-gray-600 dark:text-gray-400">Dijital Pazarlama Uzmanı</p>

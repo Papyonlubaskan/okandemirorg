@@ -86,7 +86,7 @@ export default function IstanbulDigitalMarketingPage() {
                 İstanbul Dijital Pazarlama Uzmanı
               </h1>
               <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8">
-                Türkiye'nin ticaret merkezi İstanbul'da dijital pazarlama, web tasarım ve e-ticaret platform uzmanlığı hizmetleri sunuyorum.
+                  Türkiye&apos;nin ticaret merkezi İstanbul&apos;da dijital pazarlama, web tasarım ve e-ticaret platform uzmanlığı hizmetleri sunuyorum.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a 
@@ -123,7 +123,7 @@ export default function IstanbulDigitalMarketingPage() {
                   </div>
                   <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">İstanbul Web Tasarım</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    İstanbul'un rekabetçi pazarında öne çıkacak profesyonel web siteleri tasarlıyorum.
+                    İstanbul&apos;un rekabetçi pazarında öne çıkacak profesyonel web siteleri tasarlıyorum.
                   </p>
                   <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                     <li>• Şişli, Beşiktaş, Kadıköy odaklı</li>
@@ -142,7 +142,7 @@ export default function IstanbulDigitalMarketingPage() {
                   </div>
                   <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">İstanbul SEO Uzmanı</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    İstanbul'un yoğun rekabet ortamında Google'da üst sıralarda yer almanızı sağlıyorum.
+                    İstanbul&apos;un yoğun rekabet ortamında Google&apos;da üst sıralarda yer almanızı sağlıyorum.
                   </p>
                   <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                     <li>• İstanbul anahtar kelime stratejisi</li>
@@ -161,7 +161,7 @@ export default function IstanbulDigitalMarketingPage() {
                   </div>
                   <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">İstanbul E-ticaret</h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-6">
-                    İstanbul'un büyük ticaret hacmine uygun e-ticaret platformları ve çözümleri.
+                    İstanbul&apos;un büyük ticaret hacmine uygun e-ticaret platformları ve çözümleri.
                   </p>
                   <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                     <li>• Büyük ölçekli e-ticaret</li>
@@ -174,7 +174,7 @@ export default function IstanbulDigitalMarketingPage() {
 
               {/* İstanbul Bölgeleri */}
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 lg:p-12 text-white mb-16">
-                <h3 className="text-3xl font-black mb-8 text-center">İstanbul'da Hizmet Verdiğim Bölgeler</h3>
+                <h3 className="text-3xl font-black mb-8 text-center">İstanbul&apos;da Hizmet Verdiğim Bölgeler</h3>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                   <div className="text-center">
                     <h4 className="text-xl font-black mb-2">Şişli</h4>
@@ -198,16 +198,16 @@ export default function IstanbulDigitalMarketingPage() {
               {/* İstanbul Avantajları */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 lg:p-12 shadow-lg">
                 <h3 className="text-3xl font-black text-gray-900 dark:text-white mb-8 text-center">
-                  İstanbul'da Dijital Pazarlama Uzmanı Olmanın Avantajları
+                  İstanbul&apos;da Dijital Pazarlama Uzmanı Olmanın Avantajları
                 </h3>
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h4 className="text-xl font-black text-gray-900 dark:text-white mb-4">🏢 İstanbul'un Gücü</h4>
+                    <h4 className="text-xl font-black text-gray-900 dark:text-white mb-4">🏢 İstanbul&apos;un Gücü</h4>
                     <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-                      <li>• Türkiye'nin ticaret merkezi</li>
+                      <li>• Türkiye&apos;nin ticaret merkezi</li>
                       <li>• Büyük pazar potansiyeli</li>
                       <li>• Uluslararası bağlantılar</li>
-                      <li>• Teknoloji ve inovasyon hub'ı</li>
+                      <li>• Teknoloji ve inovasyon hub&apos;ı</li>
                       <li>• Finans merkezi</li>
                     </ul>
                   </div>
