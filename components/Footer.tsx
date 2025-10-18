@@ -26,7 +26,7 @@ export default function Footer() {
                   <Image src="/phone-icon.png" alt="Phone" width={20} height={20} />
                 </div>
                 <div>
-                  <p className="text-lg text-gray-400">Telefon</p>
+                  <p className="text-lg text-gray-400 dark:text-gray-300">Telefon</p>
                   <Link href="tel:+905552677739" className="text-white font-black hover:text-blue-400 transition-colors">
                     +90 555 267 77 39
                   </Link>
@@ -38,7 +38,7 @@ export default function Footer() {
                   <Image src="/email-icon.png" alt="Email" width={20} height={20} />
                 </div>
                 <div>
-                  <p className="text-lg text-gray-400">E-posta</p>
+                  <p className="text-lg text-gray-400 dark:text-gray-300">E-posta</p>
                   <Link href="mailto:info@okandemir.org" className="text-white font-black hover:text-red-400 transition-colors">
                     info@okandemir.org
                   </Link>
@@ -50,7 +50,7 @@ export default function Footer() {
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} />
                 </div>
                 <div>
-                  <p className="text-lg text-gray-400">WhatsApp</p>
+                  <p className="text-lg text-gray-400 dark:text-gray-300">WhatsApp</p>
                   <Link href="https://wa.me/+905552677739" className="text-white font-black hover:text-green-400 transition-colors">
                     Hemen İletişim
                   </Link>
@@ -67,31 +67,31 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/services" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/services" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <div className="w-2 h-2 bg-blue-500 rounded-full mr-3 group-hover:bg-blue-400 transition-colors"></div>
                   Web Tasarımı & Dijital Pazarlama
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/services" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <div className="w-2 h-2 bg-purple-500 rounded-full mr-3 group-hover:bg-purple-400 transition-colors"></div>
                   WordPress Geliştirme
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/services" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <div className="w-2 h-2 bg-green-500 rounded-full mr-3 group-hover:bg-green-400 transition-colors"></div>
                   Marka Kimliği Tasarımı
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/services" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <div className="w-2 h-2 bg-orange-500 rounded-full mr-3 group-hover:bg-orange-400 transition-colors"></div>
                   Dijital Dönüşüm
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/services" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <div className="w-2 h-2 bg-pink-500 rounded-full mr-3 group-hover:bg-pink-400 transition-colors"></div>
                   Sosyal Medya Yönetimi
                 </Link>
@@ -107,7 +107,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               <li>
-                <Link href="/" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                   </svg>
@@ -115,7 +115,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/projeler" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/projeler" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-purple-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
                   </svg>
@@ -123,7 +123,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/hizmetler" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/hizmetler" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-green-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V8a2 2 0 012-2V6" />
                   </svg>
@@ -131,7 +131,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/hakkimda" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/hakkimda" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                   </svg>
@@ -139,7 +139,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/blog" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                   </svg>
@@ -147,7 +147,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/iletisim" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                <Link href="/iletisim" className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-pink-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
@@ -238,21 +238,21 @@ export default function Footer() {
             <p className="text-lg text-gray-400">
               <span className="font-black text-white">O Copyright© Dijital Pazarlama & Yazılım</span> Tüm Hakları Saklıdır.
             </p>
-            <p className="text-lg text-gray-500 mt-2">
+            <p className="text-lg text-gray-500 dark:text-gray-400 mt-2">
               © 2025 <span className="font-black text-gray-300">Okan Demir</span>
             </p>
             
             {/* Legal Links - Horizontal */}
             <div className="flex justify-center items-center space-x-6 mt-4 flex-wrap gap-2">
-              <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-lg">
+              <Link href="/privacy-policy" className="text-gray-400 dark:text-gray-300 hover:text-white transition-colors text-lg">
                 Gizlilik Politikası
               </Link>
               <span className="text-gray-600">|</span>
-              <Link href="/terms-conditions" className="text-gray-400 hover:text-white transition-colors text-lg">
+              <Link href="/terms-conditions" className="text-gray-400 dark:text-gray-300 hover:text-white transition-colors text-lg">
                 Kullanım Şartları
               </Link>
               <span className="text-gray-600">|</span>
-              <Link href="https://www.biyografiler.com/kimdir/okan-demir" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-lg">
+              <Link href="https://www.biyografiler.com/kimdir/okan-demir" target="_blank" rel="noopener noreferrer" className="text-gray-400 dark:text-gray-300 hover:text-white transition-colors text-lg">
                 Biyografi
               </Link>
             </div>

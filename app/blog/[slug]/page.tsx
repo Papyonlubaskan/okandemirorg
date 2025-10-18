@@ -43,12 +43,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
-            <nav className="mb-8 text-sm text-gray-600 dark:text-gray-400 dark:text-gray-400">
-              <Link href="/" className="hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-400">Ana Sayfa</Link>
+            <nav className="mb-8 text-sm text-gray-600 dark:text-gray-400">
+              <Link href="/" className="hover:text-blue-600 dark:hover:text-blue-400">Ana Sayfa</Link>
               {' > '}
-              <Link href="/blog" className="hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-400">Blog</Link>
+              <Link href="/blog" className="hover:text-blue-600 dark:hover:text-blue-400">Blog</Link>
               {' > '}
-              <span className="text-gray-900 dark:text-white dark:text-white font-black">{post.category}</span>
+              <span className="text-gray-900 dark:text-white font-black">{post.category}</span>
             </nav>
 
             {/* Article Header */}
