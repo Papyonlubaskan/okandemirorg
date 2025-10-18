@@ -66,7 +66,7 @@ export default function Home() {
             </h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Service 1 */}
             <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
@@ -166,6 +166,53 @@ export default function Home() {
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
                 </Link>
+              </div>
+            </div>
+
+            {/* Service 4 - E-ticaret Platform Uzmanlığı */}
+            <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+              <div className="text-center">
+                <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-emerald-500 to-teal-600">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                </div>
+                <h4 className="text-2xl font-black text-gray-900 mb-4">E-ticaret Platform Uzmanlığı</h4>
+                <p className="text-lg text-gray-800 mb-6 leading-tight font-black">
+                  Türkiye&apos;nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümlerle işinizi büyütün.
+                </p>
+                <ul className="text-left text-gray-600 space-y-2 mb-8">
+                  <li className="flex items-center text-lg">
+                    <svg className="w-5 h-5 text-emerald-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <strong>Ticimax</strong> - Kurulum & Optimizasyon
+                  </li>
+                  <li className="flex items-center text-lg">
+                    <svg className="w-5 h-5 text-emerald-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <strong>İdeasoft</strong> - Tasarım & Entegrasyon
+                  </li>
+                  <li className="flex items-center text-lg">
+                    <svg className="w-5 h-5 text-emerald-500 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
+                    <strong>İkas</strong> - Özelleştirme & SEO
+                  </li>
+                </ul>
+                <div className="flex flex-col gap-3">
+                  <Link
+                    href="https://wa.me/+905552677739"
+                    className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  >
+                    <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
+                    Randevu Al
+                  </Link>
+                  <Link
+                    href="/hizmetler/e-ticaret-platformlari"
+                    className="inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  >
+                    Detayları Gör
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
