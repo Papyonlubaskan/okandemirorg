@@ -234,7 +234,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Card 1 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-pink-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <Image src="/custom-design-icon.png" alt="Custom Design" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
@@ -245,7 +245,7 @@ export default function Home() {
             </div>
             
             {/* Card 2 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-green-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <Image src="/user-focused-icon.png" alt="User Focused" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
@@ -256,7 +256,7 @@ export default function Home() {
             </div>
             
             {/* Card 3 */}
-            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white rounded-2xl p-8 shadow-lg">
+            <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-orange-500 to-red-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <Image src="/trend-tech-icon.png" alt="Trend Tech" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
@@ -287,7 +287,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {/* Service Card 1: Web Tasarımı & Dijital Pazarlama Kreatifleri */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
               <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                 <Image src="/web-design-icon.png" alt="Web Tasarımı" width={60} height={60} />
               </div>
@@ -326,7 +326,7 @@ export default function Home() {
             </div>
 
             {/* Service Card 2: Gelişim */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
               <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-6">
                 <Image src="/development-icon.png" alt="Gelişim" width={60} height={60} />
               </div>
@@ -365,7 +365,7 @@ export default function Home() {
             </div>
 
             {/* Service Card 3: Marka Kimliği */}
-            <div className="bg-white rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
               <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={60} height={60} />
               </div>
@@ -420,7 +420,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Portfolio Item 1 */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <Image src="/digital-marketing-icon.png" alt="Dijital Pazarlama" width={60} height={60} className="mr-4" />
@@ -440,7 +440,7 @@ export default function Home() {
             </div>
 
             {/* Portfolio Item 2 */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <Image src="/web-design-icon.png" alt="WordPress Web Tasarımı" width={60} height={60} className="mr-4" />
@@ -460,7 +460,7 @@ export default function Home() {
             </div>
 
             {/* Portfolio Item 3 */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <Image src="/digital-transformation-icon.png" alt="Dijital Dönüşüm" width={60} height={60} className="mr-4" />
@@ -480,7 +480,7 @@ export default function Home() {
             </div>
 
             {/* Portfolio Item 4 */}
-            <div className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={60} height={60} className="mr-4" />
@@ -679,7 +679,7 @@ export default function Home() {
           </div>
           
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 lg:p-12 text-center">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 lg:p-12 text-center">
               <div className="mb-8">
                 <h4 className="text-3xl lg:text-4xl font-black text-gray-900 mb-6">
                   Kişiye Özel Fiyatlandırma
