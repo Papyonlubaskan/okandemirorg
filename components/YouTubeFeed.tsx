@@ -81,7 +81,7 @@ export default function YouTubeFeed() {
       {/* Video Başlığı */}
       {selectedVideo && (
         <div className="px-2">
-          <h4 className="text-lg font-black text-gray-900 line-clamp-2">
+          <h4 className="text-lg font-black text-gray-900 dark:text-white line-clamp-2">
             {selectedVideo.title}
           </h4>
           <p className="text-sm text-gray-600 mt-1">
@@ -124,7 +124,7 @@ export default function YouTubeFeed() {
       {/* Kanal Linki */}
       <div className="flex items-center justify-between bg-gray-50 rounded-xl p-4">
         <div>
-          <p className="font-black text-gray-900">@PapyonluBaskan</p>
+          <p className="font-black text-gray-900 dark:text-white">@PapyonluBaskan</p>
           <p className="text-sm text-gray-600">YouTube Kanalım</p>
         </div>
         <a 

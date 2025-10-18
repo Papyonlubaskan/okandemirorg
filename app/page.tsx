@@ -424,7 +424,7 @@ export default function Home() {
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <Image src="/digital-marketing-icon.png" alt="Dijital Pazarlama" width={60} height={60} className="mr-4" />
-                  <h4 className="text-2xl font-black text-gray-900">Dijital Pazarlama</h4>
+                  <h4 className="text-2xl font-black text-gray-900 dark:text-white">Dijital Pazarlama</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Siz ve İşletmeniz İçin Öncü Olma Zamanı Meta Ads & Google Ads & Tiktok & LinkedIn platformlarında sürdürülebilir stratejiler ile mükemmel sonuçları almanızı sağlıyorum! Aylık ve Yıllık Ödeme planları ile İndirimli avantajlar sizleri bekliyor!
@@ -444,7 +444,7 @@ export default function Home() {
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <Image src="/web-design-icon.png" alt="WordPress Web Tasarımı" width={60} height={60} className="mr-4" />
-                  <h4 className="text-2xl font-black text-gray-900">WordPress Web Tasarımı</h4>
+                  <h4 className="text-2xl font-black text-gray-900 dark:text-white">WordPress Web Tasarımı</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Siz ve Markanız İçin İster Kişisel, İsterseniz E-Ticaret Web Tasarım Çözümleri ile Yanınızdayım! Daha Kapsamlı E-ticaret kreatifleri için ise İkas, Ticimax, Digi gibi kendi alanlarında lider markalar ile çalışmanızı sağlıyorum.
@@ -464,7 +464,7 @@ export default function Home() {
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <Image src="/digital-transformation-icon.png" alt="Dijital Dönüşüm" width={60} height={60} className="mr-4" />
-                  <h4 className="text-2xl font-black text-gray-900">Dijital Dönüşüm ve Süreklilik!</h4>
+                  <h4 className="text-2xl font-black text-gray-900 dark:text-white">Dijital Dönüşüm ve Süreklilik!</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Dijital dönüşüm çağında sürdürülebilir stratejiler ile daima sizin için en uygun seçenekleri sunarak markanızın öncü tanınır olmasını sağlıyorum. En az iki platformda markanızın reklamını en iyi kreatifler ile 7/24 canlı olarak yayınlıyorum!
@@ -484,7 +484,7 @@ export default function Home() {
               <div className="p-8">
                 <div className="flex items-center mb-6">
                   <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={60} height={60} className="mr-4" />
-                  <h4 className="text-2xl font-black text-gray-900">Sizin İçin Markanızı Oluşturalım!</h4>
+                  <h4 className="text-2xl font-black text-gray-900 dark:text-white">Sizin İçin Markanızı Oluşturalım!</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Siz yada markanız için en iyi kurumsal tasarımlar ile lider olmanızı sağlıyorum. Her adım verimliliğe aşıktır.

@@ -87,7 +87,7 @@ export default function TestimonialSlider() {
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-4">
+          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-4">
             ⭐ Müşterilerimiz Ne Diyor?
           </h2>
           <p className="text-xl text-gray-600 font-medium">
@@ -137,7 +137,7 @@ export default function TestimonialSlider() {
                   />
                 </div>
                 <div>
-                  <h4 className="text-xl font-black text-gray-900">
+                  <h4 className="text-xl font-black text-gray-900 dark:text-white">
                     {currentTestimonial.name}
                   </h4>
                   <p className="text-gray-600 font-medium">

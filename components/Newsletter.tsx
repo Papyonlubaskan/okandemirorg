@@ -60,7 +60,7 @@ export default function Newsletter() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="E-posta adresiniz"
-              className="flex-1 px-6 py-4 rounded-xl text-gray-900 font-medium focus:ring-4 focus:ring-white/30 outline-none"
+              className="flex-1 px-6 py-4 rounded-xl text-gray-900 dark:text-white dark:bg-gray-700 font-medium focus:ring-4 focus:ring-white/30 dark:focus:ring-gray-500 outline-none"
               disabled={status === 'loading'}
               aria-label="E-posta adresi"
               aria-required="true"

@@ -26,7 +26,7 @@ export default function Loading() {
         </div>
         
         {/* Loading Text */}
-        <h2 className="text-2xl font-black text-gray-900 mb-4">
+        <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
           O Copyright© Dijital Pazarlama & Yazılım
         </h2>
         
