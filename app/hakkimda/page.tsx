@@ -89,16 +89,16 @@ export default function Hakkimda() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center">
                   <div className="text-4xl font-black text-blue-600 mb-2">07 Mart 1993</div>
-                  <p className="text-gray-700 font-black">Doğum Tarihi</p>
+                  <p className="text-gray-700 dark:text-gray-300 font-black">Doğum Tarihi</p>
                   <p className="text-gray-600 dark:text-gray-300">Bornova, İzmir</p>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center">
                   <div className="text-4xl font-black text-blue-600 mb-2">♓ Balık</div>
-                  <p className="text-gray-700 font-black">Burç</p>
+                  <p className="text-gray-700 dark:text-gray-300 font-black">Burç</p>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 text-center">
                   <div className="text-4xl font-black text-blue-600 mb-2">32 Yaşında</div>
-                  <p className="text-gray-700 font-black">Yaş</p>
+                  <p className="text-gray-700 dark:text-gray-300 font-black">Yaş</p>
                 </div>
               </div>
 

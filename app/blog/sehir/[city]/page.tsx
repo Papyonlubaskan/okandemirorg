@@ -96,7 +96,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   {service}
                 </h3>
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-700 dark:text-gray-300 mb-6">
                   {cityName} bölgesinde profesyonel {service.toLowerCase()} hizmeti ile işletmenizi büyütün.
                 </p>
                 <Link
@@ -124,7 +124,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   🎯 Yerel Pazar Bilgisi
                 </h3>
-                <p className="text-gray-800 font-black">
+                <p className="text-gray-800 dark:text-gray-200 font-black">
                   {cityName} ve çevresindeki pazar dinamiklerini anlıyor, hedef kitlenize en etkili şekilde ulaşmanızı sağlıyorum.
                 </p>
               </div>
@@ -133,7 +133,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   💡 5+ Yıllık Deneyim
                 </h3>
-                <p className="text-gray-800 font-black">
+                <p className="text-gray-800 dark:text-gray-200 font-black">
                   Dijital pazarlama alanında 5+ yıllık deneyimimle {cityName} işletmelerine başarılı projeler sunuyorum.
                 </p>
               </div>
@@ -142,7 +142,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   📈 Ölçülebilir Sonuçlar
                 </h3>
-                <p className="text-gray-800 font-black">
+                <p className="text-gray-800 dark:text-gray-200 font-black">
                   Her kampanyayı detaylı analiz ediyor, ROI odaklı stratejiler ile somut sonuçlar sunuyorum.
                 </p>
               </div>
@@ -151,7 +151,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   🤝 Kişiselleştirilmiş Hizmet
                 </h3>
-                <p className="text-gray-800 font-black">
+                <p className="text-gray-800 dark:text-gray-200 font-black">
                   {cityName} bölgesindeki işletmenizin özel ihtiyaçlarına göre özelleştirilmiş çözümler geliştiriyorum.
                 </p>
               </div>
@@ -177,7 +177,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                   <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                     {post.title}
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
                     {post.excerpt}
                   </p>
                   <span className="text-blue-600 dark:text-blue-400 font-black">

@@ -109,7 +109,7 @@ export default function TestimonialSlider() {
               <div className="text-6xl text-blue-600 opacity-20 mb-4">&ldquo;</div>
 
               {/* Testimonial Text */}
-              <p className="text-xl lg:text-2xl text-gray-700 font-medium mb-8 leading-relaxed min-h-[120px]">
+              <p className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 font-medium mb-8 leading-relaxed min-h-[120px]">
                 {currentTestimonial.text}
               </p>
 
@@ -154,7 +154,7 @@ export default function TestimonialSlider() {
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 lg:-translate-x-16 w-12 h-12 bg-white dark:bg-gray-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:bg-blue-600 dark:hover:bg-gray-600"
             aria-label="Önceki"
           >
-            <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
@@ -164,7 +164,7 @@ export default function TestimonialSlider() {
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 lg:translate-x-16 w-12 h-12 bg-white dark:bg-gray-700 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:bg-blue-600 dark:hover:bg-gray-600"
             aria-label="Sonraki"
           >
-            <svg className="w-6 h-6 text-gray-700 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-gray-700 dark:text-gray-300 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
             </svg>
           </button>

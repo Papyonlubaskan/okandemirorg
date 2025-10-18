@@ -61,7 +61,7 @@ export default async function SEOPage({ params }: { params: Promise<{ slug: stri
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 dark:text-white mb-6">
                 {page.h1}
               </h1>
-              <p className="text-xl text-gray-700 leading-relaxed">
+              <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed">
                 {page.description}
               </p>
             </header>
@@ -136,7 +136,7 @@ export default async function SEOPage({ params }: { params: Promise<{ slug: stri
                 {page.keywords.map((keyword, index) => (
                   <span
                     key={index}
-                    className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-black"
+                    className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-full text-sm font-black"
                   >
                     {keyword}
                   </span>

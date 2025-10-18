@@ -73,7 +73,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
               <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-6">
                 {industryName} Sektörü İçin Dijital Pazarlama
               </h2>
-              <p className="text-xl text-gray-800 leading-relaxed font-black mb-6">
+              <p className="text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-black mb-6">
                 {industryName} sektöründe faaliyet gösteren işletmeler için özel olarak tasarlanmış 
                 dijital pazarlama stratejileri ile markanızı öne çıkarın. 5+ yıllık deneyimimle, 
                 sektörünüzün özel ihtiyaçlarına uygun çözümler sunuyorum.
@@ -81,19 +81,19 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-green-600 font-black mr-3">✓</span>
-                  <span className="text-gray-800 font-black">Sektöre özel anahtar kelime stratejisi</span>
+                  <span className="text-gray-800 dark:text-gray-200 font-black">Sektöre özel anahtar kelime stratejisi</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 font-black mr-3">✓</span>
-                  <span className="text-gray-800 font-black">Rakip analizi ve pazar araştırması</span>
+                  <span className="text-gray-800 dark:text-gray-200 font-black">Rakip analizi ve pazar araştırması</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 font-black mr-3">✓</span>
-                  <span className="text-gray-800 font-black">Hedef kitle odaklı içerik üretimi</span>
+                  <span className="text-gray-800 dark:text-gray-200 font-black">Hedef kitle odaklı içerik üretimi</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-600 font-black mr-3">✓</span>
-                  <span className="text-gray-800 font-black">Sektörel uzman danışmanlık</span>
+                  <span className="text-gray-800 dark:text-gray-200 font-black">Sektörel uzman danışmanlık</span>
                 </li>
               </ul>
             </div>
@@ -120,7 +120,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   {service}
                 </h3>
-                <p className="text-gray-700 mb-6">
+                <p className="text-gray-700 dark:text-gray-300 mb-6">
                   {industryName} sektörüne özel {service.toLowerCase()} ile rekabette öne geçin.
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -182,7 +182,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
                   <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                     {post.title}
                   </h3>
-                  <p className="text-gray-700 mb-4">
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
                     {post.excerpt}
                   </p>
                   <span className="text-green-600 font-black">

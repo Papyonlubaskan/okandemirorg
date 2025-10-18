@@ -84,7 +84,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <p className="text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-black mb-6">
                   {post.excerpt}
                 </p>
-                <div className="text-lg text-gray-700 leading-relaxed space-y-6">
+                <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed space-y-6">
                   <p className="font-black">
                     {post.content}
                   </p>
@@ -193,7 +193,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 {post.keywords.map((keyword, index) => (
                   <span
                     key={index}
-                    className="bg-gray-100 text-gray-700 px-4 py-2 rounded-full text-sm font-black"
+                    className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-4 py-2 rounded-full text-sm font-black"
                   >
                     {keyword}
                   </span>

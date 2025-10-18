@@ -684,7 +684,7 @@ export default function Home() {
                 <h4 className="text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-6">
                   Kişiye Özel Fiyatlandırma
                 </h4>
-                <p className="text-xl text-gray-700 leading-tight font-black mb-8">
+                <p className="text-xl text-gray-700 dark:text-gray-300 leading-tight font-black mb-8">
                   Projenizin kapsamına, karmaşıklığına ve süresine göre size özel bir fiyat teklifi hazırlıyorum. 
                   İlk görüşmemizde ihtiyaçlarınızı detaylı olarak dinleyip, en uygun çözümü sunuyorum.
                 </p>
@@ -775,7 +775,7 @@ export default function Home() {
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Web sitesi tasarım süreci ne kadar sürer?
               </h3>
-              <p className="text-lg text-gray-700 leading-tight font-black">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                 Temel web sitesi tasarımı 1-2 hafta, e-ticaret sitesi 3-4 hafta sürer. Süreç, projenin karmaşıklığına ve müşterinin geri bildirim hızına bağlıdır.
               </p>
             </div>
@@ -785,7 +785,7 @@ export default function Home() {
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Dijital pazarlama kampanyalarında hangi platformları kullanıyorsunuz?
               </h3>
-              <p className="text-lg text-gray-700 leading-tight font-black">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                 Google Ads, Meta (Facebook/Instagram) Ads, TikTok Ads, LinkedIn Ads ve sosyal medya platformlarında kampanyalar yürütüyorum.
               </p>
             </div>
@@ -795,7 +795,7 @@ export default function Home() {
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 SEO sonuçları ne zaman görülür?
               </h3>
-              <p className="text-lg text-gray-700 leading-tight font-black">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                 SEO sonuçları genellikle 3-6 ay içinde görülmeye başlar. İlk aylarda teknik optimizasyon, sonrasında içerik ve link çalışmaları devam eder.
               </p>
             </div>
@@ -805,7 +805,7 @@ export default function Home() {
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Hangi ödeme seçenekleri mevcut?
               </h3>
-              <p className="text-lg text-gray-700 leading-tight font-black">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                 Aylık, 3 aylık ve yıllık ödeme seçenekleri sunuyorum. Yıllık ödemelerde %20 indirim uygulanır.
               </p>
             </div>
@@ -815,7 +815,7 @@ export default function Home() {
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Proje teslim sonrası destek veriyor musunuz?
               </h3>
-              <p className="text-lg text-gray-700 leading-tight font-black">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                 Evet, tüm projelerim için 30 gün ücretsiz destek veriyorum. Sonrasında aylık bakım paketleri mevcuttur.
               </p>
             </div>
@@ -825,7 +825,7 @@ export default function Home() {
               <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                 Web sitesi tasarımında hangi teknolojileri kullanıyorsunuz?
               </h3>
-              <p className="text-lg text-gray-700 leading-tight font-black">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                 WordPress, Next.js, React, HTML5, CSS3, JavaScript ve modern web teknolojilerini kullanarak responsive ve hızlı siteler tasarlıyorum.
               </p>
             </div>

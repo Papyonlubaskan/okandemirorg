@@ -80,7 +80,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                 <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                   {post.title}
                 </h3>
-                <p className="text-gray-700 mb-4">
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
                   {post.excerpt}
                 </p>
                 <span className="text-blue-600 dark:text-blue-400 font-black">
