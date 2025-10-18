@@ -327,7 +327,7 @@ export default function Hakkimda() {
                 <p className="text-gray-600 dark:text-gray-300 mb-6 font-black">
                   Türkiye&apos;nin en popüler e-ticaret platformu olan Ticimax&apos;te kurulum, özelleştirme ve optimizasyon konularında uzmanım.
                 </p>
-                <ul className="space-y-2 text-gray-700">
+                <ul className="space-y-2 text-gray-700 dark:text-gray-200">
                   <li>✓ Kurulum & Konfigürasyon</li>
                   <li>✓ Tema Özelleştirme</li>
                   <li>✓ SEO Optimizasyonu</li>
@@ -346,7 +346,7 @@ export default function Hakkimda() {
                 <p className="text-gray-600 dark:text-gray-300 mb-6 font-black">
                   İdeasoft platformunda tasarım, entegrasyon ve teknik geliştirme konularında deneyimliyim.
                 </p>
-                <ul className="space-y-2 text-gray-700">
+                <ul className="space-y-2 text-gray-700 dark:text-gray-200">
                   <li>✓ Tasarım & UI/UX</li>
                   <li>✓ API Entegrasyonları</li>
                   <li>✓ Özel Geliştirmeler</li>
@@ -365,7 +365,7 @@ export default function Hakkimda() {
                 <p className="text-gray-600 dark:text-gray-300 mb-6 font-black">
                   İkas platformunda özelleştirme, SEO ve dijital pazarlama entegrasyonları konularında uzmanım.
                 </p>
-                <ul className="space-y-2 text-gray-700">
+                <ul className="space-y-2 text-gray-700 dark:text-gray-200">
                   <li>✓ Özelleştirme & Tasarım</li>
                   <li>✓ SEO & Dijital Pazarlama</li>
                   <li>✓ Analytics Entegrasyonu</li>
