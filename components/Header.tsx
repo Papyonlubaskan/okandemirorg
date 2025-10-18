@@ -25,20 +25,20 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8">
-            <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg xl:text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
+            <Link href="/" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
               Anasayfa
             </Link>
-            <Link href="/hizmetler" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg xl:text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
+            <Link href="/projeler" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
+              Projeler
+            </Link>
+            <Link href="/hizmetler" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
               Hizmetler
             </Link>
-            <Link href="/referanslar" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg xl:text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
-              Referanslar
+            <Link href="/hakkimda" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
+              Okan Demir Kimdir?
             </Link>
-            <Link href="/blog" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg xl:text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
-              Blog
-            </Link>
-            <Link href="/sss" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg xl:text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
-              SSS
+            <Link href="/iletisim" className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
+              İletişim
             </Link>
           </nav>
 
@@ -73,38 +73,38 @@ export default function Header() {
                 <nav className="flex flex-col space-y-2">
                   <Link
                     href="/"
-                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Anasayfa
                   </Link>
                   <Link
+                    href="/projeler"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Projeler
+                  </Link>
+                  <Link
                     href="/hizmetler"
-                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Hizmetler
                   </Link>
                   <Link
-                    href="/referanslar"
-                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
+                    href="/hakkimda"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Referanslar
+                    Okan Demir Kimdir?
                   </Link>
                   <Link
-                    href="/blog"
-                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
+                    href="/iletisim"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Blog
-                  </Link>
-                  <Link
-                    href="/sss"
-                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    SSS
+                    İletişim
                   </Link>
                   
                   <div className="flex items-center justify-center mt-4 space-x-4">
