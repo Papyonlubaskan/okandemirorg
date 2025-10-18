@@ -17,7 +17,7 @@ const Skeleton = React.forwardRef<HTMLDivElement, SkeletonProps>(
     animation = 'pulse',
     ...props 
   }, ref) => {
-    const baseClasses = "bg-gray-300 rounded"
+    const baseClasses = "bg-gray-300 dark:bg-gray-600 rounded"
     
     const variants = {
       text: "h-4 w-full",

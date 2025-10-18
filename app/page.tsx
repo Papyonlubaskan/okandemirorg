@@ -292,7 +292,7 @@ export default function Home() {
                 <Image src="/web-design-icon.png" alt="Web Tasarımı" width={60} height={60} />
               </div>
               <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Web Tasarımı&nbsp;& Dijital Pazarlama Kreatifleri</h3>
-              <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
+              <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir web tasarımı ve dijital pazarlama stratejisi oluşturmak şarttır.
               </p>
               <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8 w-full">
@@ -331,7 +331,7 @@ export default function Home() {
                 <Image src="/development-icon.png" alt="Gelişim" width={60} height={60} />
               </div>
               <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Gelişim</h3>
-              <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
+              <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
               </p>
               <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8 w-full">
@@ -370,7 +370,7 @@ export default function Home() {
                 <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={60} height={60} />
               </div>
               <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Marka Kimliği</h3>
-              <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
+              <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
               </p>
               <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8 w-full">
@@ -672,7 +672,7 @@ export default function Home() {
             <h3 className="text-2xl lg:text-3xl text-blue-600 font-black mb-8">
               İhtiyacınıza Özel Çözümler
             </h3>
-            <p className="text-xl text-gray-800 leading-tight max-w-3xl mx-auto font-black">
+            <p className="text-xl text-gray-800 dark:text-gray-200 leading-tight max-w-3xl mx-auto font-black">
               Her proje benzersizdir. Size en uygun çözümü sunmak için ihtiyaçlarınızı dinleyip, özel bir teklif hazırlıyorum. 
               Birlikte çalışarak en verimli ve ekonomik çözümü bulalım.
             </p>
