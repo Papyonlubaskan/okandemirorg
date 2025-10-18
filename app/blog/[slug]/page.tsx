@@ -38,17 +38,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <article className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
-            <nav className="mb-8 text-sm text-gray-600">
-              <Link href="/" className="hover:text-blue-600">Ana Sayfa</Link>
+            <nav className="mb-8 text-sm text-gray-600 dark:text-gray-400 dark:text-gray-400">
+              <Link href="/" className="hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-400">Ana Sayfa</Link>
               {' > '}
-              <Link href="/blog" className="hover:text-blue-600">Blog</Link>
+              <Link href="/blog" className="hover:text-blue-600 dark:text-blue-400 dark:hover:text-blue-400">Blog</Link>
               {' > '}
-              <span className="text-gray-900 font-black">{post.category}</span>
+              <span className="text-gray-900 dark:text-white dark:text-white font-black">{post.category}</span>
             </nav>
 
             {/* Article Header */}
@@ -68,10 +68,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   </span>
                 )}
               </div>
-              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 mb-6">
+              <h1 className="text-4xl lg:text-5xl xl:text-6xl font-black text-gray-900 dark:text-white mb-6">
                 {post.title}
               </h1>
-              <div className="flex items-center space-x-4 text-gray-600">
+              <div className="flex items-center space-x-4 text-gray-600 dark:text-gray-400">
                 <span className="font-black">{post.author}</span>
                 <span>•</span>
                 <time>{new Date(post.date).toLocaleDateString('tr-TR')}</time>
@@ -80,8 +80,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {/* Article Content */}
             <div className="prose prose-lg max-w-none">
-              <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12 mb-8">
-                <p className="text-xl text-gray-800 leading-relaxed font-black mb-6">
+              <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-8 lg:p-12 mb-8">
+                <p className="text-xl text-gray-800 dark:text-gray-200 leading-relaxed font-black mb-6">
                   {post.excerpt}
                 </p>
                 <div className="text-lg text-gray-700 leading-relaxed space-y-6">
@@ -89,7 +89,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     {post.content}
                   </p>
                   
-                  <h2 className="text-3xl font-black text-gray-900 mt-8 mb-4">
+                  <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
                     {post.title} Nedir?
                   </h2>
                   <p>
@@ -100,7 +100,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     ve online başarınızı artırmak için tasarlanmıştır.
                   </p>
 
-                  <h2 className="text-3xl font-black text-gray-900 mt-8 mb-4">
+                  <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
                     Neden Bu Hizmet Önemlidir?
                   </h2>
                   <p>
@@ -110,7 +110,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     için profesyonel dijital pazarlama desteğine ihtiyaç vardır.
                   </p>
 
-                  <h2 className="text-3xl font-black text-gray-900 mt-8 mb-4">
+                  <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
                     Sunduğum Çözümler
                   </h2>
                   <ul className="list-disc list-inside space-y-2">
@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     <li className="font-black">Veri analizi ve performans raporlama</li>
                   </ul>
 
-                  <h2 className="text-3xl font-black text-gray-900 mt-8 mb-4">
+                  <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
                     Başarı İçin Adımlar
                   </h2>
                   <ol className="list-decimal list-inside space-y-2">
@@ -133,10 +133,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   </ol>
 
                   <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 my-8">
-                    <h3 className="text-2xl font-black text-gray-900 mb-4">
+                    <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                       💡 Profesyonel Yardım Alın
                     </h3>
-                    <p className="text-gray-800 font-black mb-4">
+                    <p className="text-gray-800 dark:text-gray-200 font-black mb-4">
                       {post.city ? `${post.city} şehrinde` : 'Türkiye genelinde'} 
                       {post.industry ? ` ${post.industry} sektöründe` : ''} 
                       dijital pazarlama hizmetleri için 5+ yıllık deneyimim ile yanınızdayım.
@@ -149,12 +149,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     </Link>
                   </div>
 
-                  <h2 className="text-3xl font-black text-gray-900 mt-8 mb-4">
+                  <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
                     Sıkça Sorulan Sorular
                   </h2>
                   <div className="space-y-4">
                     <div className="bg-gray-50 rounded-xl p-6">
-                      <h4 className="font-black text-gray-900 mb-2">
+                      <h4 className="font-black text-gray-900 dark:text-white mb-2">
                         Bu hizmet ne kadar sürer?
                       </h4>
                       <p className="text-gray-700">
@@ -164,7 +164,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                       </p>
                     </div>
                     <div className="bg-gray-50 rounded-xl p-6">
-                      <h4 className="font-black text-gray-900 mb-2">
+                      <h4 className="font-black text-gray-900 dark:text-white mb-2">
                         Maliyeti nedir?
                       </h4>
                       <p className="text-gray-700">
@@ -173,7 +173,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                       </p>
                     </div>
                     <div className="bg-gray-50 rounded-xl p-6">
-                      <h4 className="font-black text-gray-900 mb-2">
+                      <h4 className="font-black text-gray-900 dark:text-white mb-2">
                         Sonuçları ne zaman görebilirim?
                       </h4>
                       <p className="text-gray-700">
@@ -188,7 +188,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
             {/* Keywords */}
             <div className="mt-12">
-              <h3 className="text-xl font-black text-gray-900 mb-4">İlgili Konular:</h3>
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-4">İlgili Konular:</h3>
               <div className="flex flex-wrap gap-2">
                 {post.keywords.map((keyword, index) => (
                   <span
@@ -212,13 +212,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link
                   href="/iletisim"
-                  className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-full font-black text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center justify-center bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 px-8 py-4 rounded-full font-black text-lg hover:bg-blue-50 transition-all duration-300 hover:scale-105"
                 >
                   İletişime Geç
                 </Link>
                 <Link
                   href="/blog"
-                  className="inline-flex items-center justify-center bg-white/20 text-white px-8 py-4 rounded-full font-black text-lg hover:bg-white/30 transition-all duration-300 hover:scale-105"
+                  className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 text-white px-8 py-4 rounded-full font-black text-lg hover:bg-white dark:bg-gray-800/30 transition-all duration-300 hover:scale-105"
                 >
                   Diğer İçerikler
                 </Link>

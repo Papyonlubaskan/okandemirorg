@@ -55,7 +55,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
             <p className="text-xl text-blue-100 font-black mb-8">
               {category.description}
             </p>
-            <div className="inline-block bg-white/20 backdrop-blur-sm px-6 py-3 rounded-full">
+            <div className="inline-block bg-white dark:bg-gray-800/20 backdrop-blur-sm px-6 py-3 rounded-full">
               <span className="font-black">{category.count}+ Makale</span>
             </div>
           </div>
@@ -70,20 +70,20 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
               <Link
                 key={post.id}
                 href={`/blog/${post.slug}`}
-                className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
                 <div className="mb-4">
-                  <span className="text-sm font-black text-blue-600">
+                  <span className="text-sm font-black text-blue-600 dark:text-blue-400">
                     {post.category}
                   </span>
                 </div>
-                <h3 className="text-xl font-black text-gray-900 mb-3">
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                   {post.title}
                 </h3>
                 <p className="text-gray-700 mb-4">
                   {post.excerpt}
                 </p>
-                <span className="text-blue-600 font-black">
+                <span className="text-blue-600 dark:text-blue-400 font-black">
                   Devamını Oku →
                 </span>
               </Link>
@@ -99,9 +99,9 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
       </section>
 
       {/* Other Categories */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-black text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
             Diğer Kategoriler
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
@@ -113,8 +113,8 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
                   href={`/blog/kategori/${cat.slug}`}
                   className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:scale-105"
                 >
-                  <span className="font-black text-gray-900">{cat.name}</span>
-                  <div className="text-sm text-gray-600 mt-2">{cat.count}+</div>
+                  <span className="font-black text-gray-900 dark:text-white">{cat.name}</span>
+                  <div className="text-sm text-gray-600 dark:text-gray-400 mt-2">{cat.count}+</div>
                 </Link>
               ))}
           </div>

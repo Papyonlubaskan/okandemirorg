@@ -7,7 +7,7 @@ export default function DijitalPazarlama() {
       <section className="py-20 bg-gradient-to-br from-blue-600 to-blue-700 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto mb-6 bg-white dark:bg-gray-800/20 rounded-full flex items-center justify-center">
               <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
@@ -27,17 +27,17 @@ export default function DijitalPazarlama() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Meta Ads Yönetimi</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Meta Ads Yönetimi</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Facebook ve Instagram platformlarında hedef kitleye ulaşan etkili reklam kampanyaları yönetiyoruz. ROI odaklı stratejiler ile maksimum verimlilik.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                   Kampanya Kurulumu
@@ -53,7 +53,7 @@ export default function DijitalPazarlama() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-red-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -62,11 +62,11 @@ export default function DijitalPazarlama() {
                   <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Google Ads Optimizasyonu</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Google Ads Optimizasyonu</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Google arama ve görüntülü reklam ağında etkili kampanyalar yürütüyoruz. Anahtar kelime araştırması ve landing page optimizasyonu dahil.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
                   Anahtar Kelime Araştırması
@@ -82,17 +82,17 @@ export default function DijitalPazarlama() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.1z"/>
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">TikTok & LinkedIn Stratejileri</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">TikTok & LinkedIn Stratejileri</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 TikTok ve LinkedIn platformlarında markanız için özel stratejiler geliştiriyoruz. Yaratıcı içerik ve etkileşim odaklı yaklaşım.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
                   İçerik Stratejisi
@@ -111,17 +111,17 @@ export default function DijitalPazarlama() {
 
           {/* Additional Services */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Analitik ve Raporlama</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Analitik ve Raporlama</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Tüm kampanyalarınızın performansını detaylı olarak takip ediyoruz ve düzenli raporlar sunuyoruz. Veri odaklı kararlar almanızı sağlıyoruz.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-green-500 rounded-full mr-3"></span>
                   Performans Analizi
@@ -137,17 +137,17 @@ export default function DijitalPazarlama() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">A/B Testing</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">A/B Testing</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Farklı kampanya varyantlarını test ederek en etkili stratejileri belirliyoruz. Sürekli iyileştirme ile daha iyi sonuçlar elde ediyoruz.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
                   Kampanya Testleri
@@ -165,28 +165,28 @@ export default function DijitalPazarlama() {
           </div>
 
           {/* Process Section */}
-          <div className="bg-white rounded-3xl p-12 shadow-lg">
-            <h2 className="text-3xl font-black text-center text-gray-900 mb-12">Dijital Pazarlama Sürecimiz</h2>
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-12 shadow-lg">
+            <h2 className="text-3xl font-black text-center text-gray-900 dark:text-white mb-12">Dijital Pazarlama Sürecimiz</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">1</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Analiz</h3>
-                <p className="text-gray-600">Hedef kitlenizi ve pazarı analiz ediyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Analiz</h3>
+                <p className="text-gray-600 dark:text-gray-300">Hedef kitlenizi ve pazarı analiz ediyoruz</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">2</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Strateji</h3>
-                <p className="text-gray-600">Etkili pazarlama stratejileri geliştiriyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Strateji</h3>
+                <p className="text-gray-600 dark:text-gray-300">Etkili pazarlama stratejileri geliştiriyoruz</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">3</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Uygulama</h3>
-                <p className="text-gray-600">Kampanyaları hayata geçiriyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Uygulama</h3>
+                <p className="text-gray-600 dark:text-gray-300">Kampanyaları hayata geçiriyoruz</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">4</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Optimizasyon</h3>
-                <p className="text-gray-600">Sürekli iyileştirme yapıyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Optimizasyon</h3>
+                <p className="text-gray-600 dark:text-gray-300">Sürekli iyileştirme yapıyoruz</p>
               </div>
             </div>
           </div>
@@ -215,7 +215,7 @@ export default function DijitalPazarlama() {
               </Link>
               <Link 
                 href="/iletisim"
-                className="inline-flex items-center justify-center bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
                 <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

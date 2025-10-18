@@ -62,11 +62,11 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               {cityName} için Profesyonel Dijital Pazarlama Hizmetleri
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full font-black">SEO</span>
-              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full font-black">Google Ads</span>
-              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full font-black">Meta Ads</span>
-              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full font-black">Web Tasarım</span>
-              <span className="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full font-black">Sosyal Medya</span>
+              <span className="bg-white dark:bg-gray-800/20 backdrop-blur-sm px-4 py-2 rounded-full font-black">SEO</span>
+              <span className="bg-white dark:bg-gray-800/20 backdrop-blur-sm px-4 py-2 rounded-full font-black">Google Ads</span>
+              <span className="bg-white dark:bg-gray-800/20 backdrop-blur-sm px-4 py-2 rounded-full font-black">Meta Ads</span>
+              <span className="bg-white dark:bg-gray-800/20 backdrop-blur-sm px-4 py-2 rounded-full font-black">Web Tasarım</span>
+              <span className="bg-white dark:bg-gray-800/20 backdrop-blur-sm px-4 py-2 rounded-full font-black">Sosyal Medya</span>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
               {cityName} İçin Hizmetlerimiz
             </h2>
             <p className="text-xl text-gray-700">
@@ -88,12 +88,12 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             {serviceTypes.slice(0, 9).map((service, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-blue-700 rounded-full flex items-center justify-center mb-6">
                   <span className="text-white text-2xl font-black">{index + 1}</span>
                 </div>
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   {service}
                 </h3>
                 <p className="text-gray-700 mb-6">
@@ -101,7 +101,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 </p>
                 <Link
                   href="/iletisim"
-                  className="inline-flex items-center text-blue-600 font-black hover:text-blue-700"
+                  className="inline-flex items-center text-blue-600 dark:text-blue-400 font-black hover:text-blue-700"
                 >
                   Teklif Alın →
                 </Link>
@@ -112,16 +112,16 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-12 text-center">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-12 text-center">
               {cityName}&apos;da Neden Benimle Çalışmalısınız?
             </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   🎯 Yerel Pazar Bilgisi
                 </h3>
                 <p className="text-gray-800 font-black">
@@ -130,7 +130,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               </div>
 
               <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   💡 5+ Yıllık Deneyim
                 </h3>
                 <p className="text-gray-800 font-black">
@@ -139,7 +139,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               </div>
 
               <div className="bg-gradient-to-br from-orange-50 to-orange-100 rounded-2xl p-8">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   📈 Ölçülebilir Sonuçlar
                 </h3>
                 <p className="text-gray-800 font-black">
@@ -148,7 +148,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
               </div>
 
               <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-2xl p-8">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   🤝 Kişiselleştirilmiş Hizmet
                 </h3>
                 <p className="text-gray-800 font-black">
@@ -164,7 +164,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       {cityPosts.length > 0 && (
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-black text-gray-900 mb-12 text-center">
+            <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
               {cityName} İçin İçerikler
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -172,15 +172,15 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 <Link
                   key={post.id}
                   href={`/blog/${post.slug}`}
-                  className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
-                  <h3 className="text-xl font-black text-gray-900 mb-3">
+                  <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                     {post.title}
                   </h3>
                   <p className="text-gray-700 mb-4">
                     {post.excerpt}
                   </p>
-                  <span className="text-blue-600 font-black">
+                  <span className="text-blue-600 dark:text-blue-400 font-black">
                     Devamını Oku →
                   </span>
                 </Link>
@@ -203,7 +203,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link
               href="/iletisim"
-              className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-4 rounded-full font-black text-xl hover:bg-blue-50 transition-all duration-300 hover:scale-105"
+              className="inline-flex items-center justify-center bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 px-8 py-4 rounded-full font-black text-xl hover:bg-blue-50 transition-all duration-300 hover:scale-105"
             >
               Ücretsiz Danışmanlık
             </Link>
@@ -218,9 +218,9 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
       </section>
 
       {/* Other Cities */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-black text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
             Diğer Şehirler
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -230,7 +230,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                 href={`/blog/sehir/${city.toLowerCase().replace(/ı/g, 'i').replace(/ş/g, 's').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ö/g, 'o')}`}
                 className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
-                <span className="font-black text-gray-900">{city}</span>
+                <span className="font-black text-gray-900 dark:text-white">{city}</span>
               </Link>
             ))}
           </div>

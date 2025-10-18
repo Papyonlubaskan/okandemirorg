@@ -59,7 +59,7 @@ export default function WhatsAppChatbot() {
       {/* Chat Bubble (Initial Prompt) */}
       {showBubble && !isOpen && (
         <div className="fixed bottom-24 right-6 z-40 animate-bounce">
-          <div className="bg-white rounded-2xl shadow-2xl p-4 max-w-xs relative">
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-4 max-w-xs relative">
             <button
               onClick={() => setShowBubble(false)}
               className="absolute -top-2 -right-2 w-6 h-6 bg-gray-800 text-white rounded-full text-xs font-bold"
@@ -85,8 +85,8 @@ export default function WhatsAppChatbot() {
                 />
               </div>
               <div>
-                <div className="font-black text-gray-900 mb-1">Okan Demir</div>
-                <div className="text-sm text-gray-600 font-medium">
+                <div className="font-black text-gray-900 dark:text-white mb-1">Okan Demir</div>
+                <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">
                   Merhaba! 👋 Size nasıl yardımcı olabilirim?
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default function WhatsAppChatbot() {
 
       {/* Chat Window */}
       {isOpen && (
-        <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-3rem)] bg-white rounded-2xl shadow-2xl z-50 overflow-hidden animate-slide-up">
+        <div className="fixed bottom-24 right-6 w-96 max-w-[calc(100vw-3rem)] bg-white dark:bg-gray-800 rounded-2xl shadow-2xl z-50 overflow-hidden animate-slide-up">
           {/* Header */}
           <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 text-white">
             <div className="flex items-center justify-between">
@@ -134,14 +134,14 @@ export default function WhatsAppChatbot() {
           </div>
 
           {/* Messages */}
-          <div className="p-4 h-96 overflow-y-auto bg-[#E5DDD5]">
+          <div className="p-4 h-96 overflow-y-auto bg-[#E5DDD5] dark:bg-gray-700">
             {/* Welcome Message */}
             <div className="mb-4">
-              <div className="bg-white rounded-lg rounded-tl-none p-3 shadow max-w-[80%]">
-                <div className="font-medium text-gray-800 mb-2">
+              <div className="bg-white dark:bg-gray-800 rounded-lg rounded-tl-none p-3 shadow max-w-[80%]">
+                <div className="font-medium text-gray-800 dark:text-white mb-2">
                   Merhaba! 👋 Ben Okan Demir.
                 </div>
-                <div className="text-sm text-gray-600 font-medium">
+                <div className="text-sm text-gray-600 dark:text-gray-300 font-medium">
                   Size nasıl yardımcı olabilirim? Aşağıdan bir hizmet seçebilir veya doğrudan mesaj yazabilirsiniz.
                 </div>
               </div>
@@ -149,7 +149,7 @@ export default function WhatsAppChatbot() {
 
             {/* Service Selection */}
             <div className="mb-4">
-              <div className="text-xs font-bold text-gray-600 mb-2">Hızlı Seçim:</div>
+              <div className="text-xs font-bold text-gray-600 dark:text-gray-300 mb-2">Hızlı Seçim:</div>
               <div className="grid grid-cols-2 gap-2">
                 {services.map((service, idx) => (
                   <button
@@ -158,7 +158,7 @@ export default function WhatsAppChatbot() {
                     className={`p-2 rounded-lg text-sm font-bold transition-all ${
                       selectedService === service
                         ? 'bg-green-500 text-white'
-                        : 'bg-white text-gray-700 hover:bg-gray-100'
+                        : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
                     }`}
                   >
                     {service}
@@ -169,13 +169,13 @@ export default function WhatsAppChatbot() {
 
             {/* Quick Messages */}
             <div className="mb-4">
-              <div className="text-xs font-bold text-gray-600 mb-2">Hızlı Mesajlar:</div>
+              <div className="text-xs font-bold text-gray-600 dark:text-gray-300 mb-2">Hızlı Mesajlar:</div>
               <div className="space-y-2">
                 {predefinedMessages.map((msg, idx) => (
                   <button
                     key={idx}
                     onClick={() => handleQuickMessage(msg)}
-                    className="w-full text-left bg-white rounded-lg p-3 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-all"
+                    className="w-full text-left bg-white dark:bg-gray-800 rounded-lg p-3 text-sm font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all"
                   >
                     {msg}
                   </button>
@@ -185,7 +185,7 @@ export default function WhatsAppChatbot() {
           </div>
 
           {/* Input */}
-          <div className="p-4 border-t bg-white">
+          <div className="p-4 border-t bg-white dark:bg-gray-800">
             <div className="flex gap-2">
               <input
                 type="text"
@@ -193,7 +193,7 @@ export default function WhatsAppChatbot() {
                 onChange={(e) => setMessage(e.target.value)}
                 onKeyPress={(e) => e.key === 'Enter' && handleSend()}
                 placeholder="Mesajınızı yazın..."
-                className="flex-1 px-4 py-3 border border-gray-300 rounded-full focus:ring-2 focus:ring-green-500 focus:border-transparent font-medium"
+                className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white rounded-full focus:ring-2 focus:ring-green-500 focus:border-transparent font-medium"
               />
               <button
                 onClick={handleSend}

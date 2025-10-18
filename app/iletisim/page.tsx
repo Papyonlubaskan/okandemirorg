@@ -93,7 +93,7 @@ export default function Iletisim() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-700 text-white">
         <div className="container mx-auto px-4">
@@ -117,7 +117,7 @@ export default function Iletisim() {
               </Link>
               <a 
                 href="tel:+905552677739"
-                className="inline-flex items-center justify-center bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
                 <Image src="/phone-icon.png" alt="Phone" width={24} height={24} className="mr-3" />
                 +90 555 267 77 39
@@ -132,8 +132,8 @@ export default function Iletisim() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12">
-              <h2 className="text-3xl lg:text-4xl font-black text-gray-900 mb-8">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 lg:p-12">
+              <h2 className="text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-8">
                 Mesaj Gönderin
               </h2>
               
@@ -164,7 +164,7 @@ export default function Iletisim() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-lg font-black text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-lg font-black text-gray-700 dark:text-gray-300 mb-2">
                       Ad Soyad *
                     </label>
                     <input
@@ -173,8 +173,8 @@ export default function Iletisim() {
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 font-black ${
-                        errors.name ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 dark:text-white font-black ${
+                        errors.name ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500'
                       }`}
                       placeholder="Adınız ve soyadınız"
                     />
@@ -182,7 +182,7 @@ export default function Iletisim() {
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-lg font-black text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-lg font-black text-gray-700 dark:text-gray-300 mb-2">
                       E-posta *
                     </label>
                     <input
@@ -191,8 +191,8 @@ export default function Iletisim() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 font-black ${
-                        errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 dark:text-white font-black ${
+                        errors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500'
                       }`}
                       placeholder="ornek@email.com"
                     />
@@ -202,7 +202,7 @@ export default function Iletisim() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-lg font-black text-gray-700 mb-2">
+                    <label htmlFor="phone" className="block text-lg font-black text-gray-700 dark:text-gray-300 mb-2">
                       Telefon
                     </label>
                     <input
@@ -212,8 +212,8 @@ export default function Iletisim() {
                       value={formData.phone}
                       onChange={handleChange}
                       onBlur={handlePhoneBlur}
-                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 font-black ${
-                        errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                      className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 dark:text-white font-black ${
+                        errors.phone ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500'
                       }`}
                       placeholder="+90 555 123 45 67"
                     />
@@ -221,7 +221,7 @@ export default function Iletisim() {
                   </div>
                   
                   <div>
-                    <label htmlFor="subject" className="block text-lg font-black text-gray-700 mb-2">
+                    <label htmlFor="subject" className="block text-lg font-black text-gray-700 dark:text-gray-300 mb-2">
                       Konu *
                     </label>
                     <select
@@ -230,7 +230,7 @@ export default function Iletisim() {
                       value={formData.subject}
                       onChange={handleChange}
                       required
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-900 font-black"
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg text-gray-900 dark:text-white font-black"
                     >
                       <option value="">Konu seçin</option>
                       <option value="dijital-pazarlama">Dijital Pazarlama</option>
@@ -243,7 +243,7 @@ export default function Iletisim() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-lg font-black text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-lg font-black text-gray-700 dark:text-gray-300 mb-2">
                     Mesaj *
                   </label>
                   <textarea
@@ -252,13 +252,13 @@ export default function Iletisim() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={6}
-                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 resize-none ${
-                      errors.message ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 focus:ring-blue-500'
+                    className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:border-transparent text-lg text-gray-900 dark:text-white resize-none ${
+                      errors.message ? 'border-red-500 focus:ring-red-500' : 'border-gray-300 dark:border-gray-600 focus:ring-blue-500'
                     }`}
                     placeholder="Projeniz hakkında detaylı bilgi verin..."
                   />
                   {errors.message && <p className="mt-1 text-sm text-red-600 font-medium">{errors.message}</p>}
-                  <p className="mt-1 text-sm text-gray-500 font-medium">
+                  <p className="mt-1 text-sm text-gray-500 dark:text-gray-400 font-medium">
                     {formData.message.length} / 1000 karakter
                   </p>
                 </div>
@@ -275,8 +275,8 @@ export default function Iletisim() {
 
             {/* Contact Info */}
             <div className="space-y-8">
-              <div className="bg-white rounded-3xl shadow-2xl p-8">
-                <h3 className="text-2xl lg:text-3xl font-black text-gray-900 mb-8">
+              <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8">
+                <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-8">
                   İletişim Bilgileri
                 </h3>
                 
@@ -286,8 +286,8 @@ export default function Iletisim() {
                       <Image src="/phone-icon.png" alt="Phone" width={24} height={24} />
                     </div>
                     <div>
-                      <h4 className="text-xl font-black text-gray-900 mb-1">Telefon</h4>
-                      <a href="tel:+905552677739" className="text-lg text-gray-600 hover:text-blue-600 transition-colors">
+                      <h4 className="text-xl font-black text-gray-900 dark:text-white mb-1">Telefon</h4>
+                      <a href="tel:+905552677739" className="text-lg text-gray-600 dark:text-gray-400 hover:text-blue-600 transition-colors">
                         +90 555 267 77 39
                       </a>
                     </div>
@@ -298,8 +298,8 @@ export default function Iletisim() {
                       <Image src="/email-icon.png" alt="Email" width={24} height={24} />
                     </div>
                     <div>
-                      <h4 className="text-xl font-black text-gray-900 mb-1">E-posta</h4>
-                      <a href="mailto:info@okandemir.org" className="text-lg text-gray-600 hover:text-red-600 transition-colors">
+                      <h4 className="text-xl font-black text-gray-900 dark:text-white mb-1">E-posta</h4>
+                      <a href="mailto:info@okandemir.org" className="text-lg text-gray-600 dark:text-gray-400 hover:text-red-600 transition-colors">
                         info@okandemir.org
                       </a>
                     </div>
@@ -310,8 +310,8 @@ export default function Iletisim() {
                       <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} />
                     </div>
                     <div>
-                      <h4 className="text-xl font-black text-gray-900 mb-1">WhatsApp</h4>
-                      <a href="https://wa.me/+905552677739" className="text-lg text-gray-600 hover:text-green-600 transition-colors">
+                      <h4 className="text-xl font-black text-gray-900 dark:text-white mb-1">WhatsApp</h4>
+                      <a href="https://wa.me/+905552677739" className="text-lg text-gray-600 dark:text-gray-400 hover:text-green-600 transition-colors">
                         Hemen İletişim
                       </a>
                     </div>
@@ -350,65 +350,65 @@ export default function Iletisim() {
       </section>
 
       {/* Sıkça Sorulan Sorular */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
                 Sıkça Sorulan Sorular
               </h2>
-              <p className="text-xl text-gray-600 leading-tight font-black">
+              <p className="text-xl text-gray-600 dark:text-gray-400 leading-tight font-black">
                 Size en kısa sürede döneceğim
               </p>
             </div>
 
             <div className="space-y-8">
               {/* Soru 1 */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   Hangi hizmetleri sunuyorsunuz?
                 </h3>
-                <p className="text-lg text-gray-700 leading-tight font-black">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                   Web tasarımı, ön uç geliştirme, UX/UI tasarımı, duyarlı tasarım, e-ticaret çözümleri ve marka kimliği, dijital dönüşümde dijital pazarlama kreatifleri oluşturma gibi çeşitli hizmetler sunuyorum. Ayrıntılı bilgi için Hizmetler sayfamı ziyaret edin.
                 </p>
               </div>
 
               {/* Soru 2 */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   Yeni bir projeye nasıl yaklaşıyorsunuz?
                 </h3>
-                <p className="text-lg text-gray-700 leading-tight font-black">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                   Web tasarımı, ön uç geliştirme, UX/UI tasarımı, duyarlı tasarım, e-ticaret çözümleri ve marka kimliği, dijital pazarlama kreatifleri ve reklam yayınları oluşturma gibi çeşitli hizmetler sunuyorum. Projeye yaklaşım ölçütü sizin mevcut durumunuzla doğrudan bağlantılıdır. Çünkü sahip olduklarınız ve olmadıklarınız üzerinden garantili strateji belirleyerek en iyi sonuca ulaşıyorum. Ayrıntılı bilgi için Hizmetler sayfamı ziyaret edin.
                 </p>
               </div>
 
               {/* Soru 3 */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   Projenizin zaman çizelgesi nedir?
                 </h3>
-                <p className="text-lg text-gray-700 leading-tight font-black">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                   Teslimat ve başlangıç süreçleri mevcut durumunuzun ardından talepleriniz doğrultusunda belirlenen stratejilere göre değişiklik göstermektedir. Ayrıntılı bilgi için Hizmetler sayfamı ziyaret edin.
                 </p>
               </div>
 
               {/* Soru 4 */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   Hizmetlerinizin maliyeti ne kadar?
                 </h3>
-                <p className="text-lg text-gray-700 leading-tight font-black">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                   Hizmetlerimizin maliyetleri sizin ve markanızın mevcut durumu göz önüne alınarak talepleriniz ile ihtiyaçlarınız doğrultusunda değişiklik göstermektedir.
                 </p>
               </div>
 
               {/* Soru 5 */}
-              <div className="bg-white rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   Hangi platformlarla çalışıyorsunuz?
                 </h3>
-                <p className="text-lg text-gray-700 leading-tight font-black">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
                   Dijital dönüşüm artık çağın gerçek bir meselesidir. Bu gerçekliğin getirdiği gereklilikler için dijital pazarlama ve reklam kreatifleri için Google Ads & Meta Ads Business & TikTok Ads & LinkedIn & YouTube & Kick & Twitch & Yandex gibi platformlar üzerinde çalışmalarımı sürdürüyorum. Dijital pazarlama içerisinde sürekli önde olabilmek adına reklamların hiç durmadan devam ediyor olması siz ve markanız için mühim. Web sitesi tasarımlarında özel istek baz alınarak WordPress & Digi & Ticimax & İkas gibi kendisini ispatlamış ve dijital kreatiflerle son derece hızlı, uyumlu olan platformlar ile çalışmayı tercih ediyorum.
                 </p>
               </div>
@@ -435,7 +435,7 @@ export default function Iletisim() {
                 </Link>
                 <Link 
                   href="mailto:info@okandemir.org"
-                  className="inline-flex items-center justify-center bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                  className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
                 >
                   <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
                   E-posta Gönder

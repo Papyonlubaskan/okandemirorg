@@ -7,7 +7,7 @@ export default function DijitalDonusum() {
       <section className="py-20 bg-gradient-to-br from-orange-500 to-red-600 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto mb-6 bg-white dark:bg-gray-800/20 rounded-full flex items-center justify-center">
               <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
               </svg>
@@ -26,17 +26,17 @@ export default function DijitalDonusum() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Sürdürülebilir Stratejiler</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Sürdürülebilir Stratejiler</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 İşletmenizin uzun vadeli başarısı için sürdürülebilir dijital stratejiler geliştiriyoruz. Değişen pazar koşullarına uyum sağlayan esnek yaklaşımlar.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
                   Uzun Vadeli Planlama
@@ -52,17 +52,17 @@ export default function DijitalDonusum() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Öncü Tanınırlık</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Öncü Tanınırlık</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Markanızı sektörünüzde öncü konuma getiriyoruz. İnovatif yaklaşımlar ve yaratıcı çözümlerle fark yaratmanızı sağlıyoruz.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
                   Sektörde Öncülük
@@ -78,17 +78,17 @@ export default function DijitalDonusum() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">7/24 Canlı Yayın</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">7/24 Canlı Yayın</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 En az iki platformda markanızın reklamını en iyi kreatifler ile 7/24 canlı olarak yayınlıyoruz. Sürekli görünürlük sağlıyoruz.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
                   Çoklu Platform Yönetimi
@@ -107,17 +107,17 @@ export default function DijitalDonusum() {
 
           {/* Digital Transformation Process */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Dijital Dönüşüm Rehberliği</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Dijital Dönüşüm Rehberliği</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 İşletmenizin dijital dönüşüm sürecinde size rehberlik ediyoruz. Teknoloji seçimi, süreç optimizasyonu ve değişim yönetimi dahil.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
                   Teknoloji Seçimi
@@ -133,17 +133,17 @@ export default function DijitalDonusum() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Sürekli İyileştirme</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Sürekli İyileştirme</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Dijital stratejilerinizi sürekli olarak geliştiriyoruz. Performans analizi, pazar takibi ve optimizasyon ile sürekli büyüme sağlıyoruz.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
                   Performans Analizi
@@ -161,62 +161,62 @@ export default function DijitalDonusum() {
           </div>
 
           {/* Process Section */}
-          <div className="bg-white rounded-3xl p-12 shadow-lg">
-            <h2 className="text-3xl font-black text-center text-gray-900 mb-12">Dijital Dönüşüm Sürecimiz</h2>
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-12 shadow-lg">
+            <h2 className="text-3xl font-black text-center text-gray-900 dark:text-white mb-12">Dijital Dönüşüm Sürecimiz</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">1</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Analiz</h3>
-                <p className="text-gray-600">Mevcut durumunuzu ve potansiyelinizi analiz ediyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Analiz</h3>
+                <p className="text-gray-600 dark:text-gray-300">Mevcut durumunuzu ve potansiyelinizi analiz ediyoruz</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">2</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Planlama</h3>
-                <p className="text-gray-600">Dijital dönüşüm stratejileri planlıyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Planlama</h3>
+                <p className="text-gray-600 dark:text-gray-300">Dijital dönüşüm stratejileri planlıyoruz</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-pink-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">3</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Uygulama</h3>
-                <p className="text-gray-600">Stratejileri adım adım hayata geçiriyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Uygulama</h3>
+                <p className="text-gray-600 dark:text-gray-300">Stratejileri adım adım hayata geçiriyoruz</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-700 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">4</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Süreklilik</h3>
-                <p className="text-gray-600">Sürekli iyileştirme ve büyüme sağlıyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Süreklilik</h3>
+                <p className="text-gray-600 dark:text-gray-300">Sürekli iyileştirme ve büyüme sağlıyoruz</p>
               </div>
             </div>
           </div>
 
           {/* Benefits Section */}
           <div className="mt-16 bg-gradient-to-r from-orange-50 to-red-50 rounded-3xl p-12">
-            <h2 className="text-3xl font-black text-center text-gray-900 mb-12">Dijital Dönüşümün Faydaları</h2>
+            <h2 className="text-3xl font-black text-center text-gray-900 dark:text-white mb-12">Dijital Dönüşümün Faydaları</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg text-center">
                 <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-6 h-6 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Verimlilik Artışı</h3>
-                <p className="text-gray-600">Dijital süreçlerle %40&apos;a varan verimlilik artışı</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Verimlilik Artışı</h3>
+                <p className="text-gray-600 dark:text-gray-300">Dijital süreçlerle %40&apos;a varan verimlilik artışı</p>
               </div>
-              <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg text-center">
                 <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Maliyet Azaltma</h3>
-                <p className="text-gray-600">Operasyonel maliyetlerde %30&apos;a varan azalma</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Maliyet Azaltma</h3>
+                <p className="text-gray-600 dark:text-gray-300">Operasyonel maliyetlerde %30&apos;a varan azalma</p>
               </div>
-              <div className="bg-white rounded-2xl p-6 shadow-lg text-center">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg text-center">
                 <div className="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <svg className="w-6 h-6 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Müşteri Memnuniyeti</h3>
-                <p className="text-gray-600">Dijital deneyimle %60 artan müşteri memnuniyeti</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Müşteri Memnuniyeti</h3>
+                <p className="text-gray-600 dark:text-gray-300">Dijital deneyimle %60 artan müşteri memnuniyeti</p>
               </div>
             </div>
           </div>
@@ -245,7 +245,7 @@ export default function DijitalDonusum() {
               </Link>
               <Link 
                 href="/iletisim"
-                className="inline-flex items-center justify-center bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
                 <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

@@ -69,8 +69,8 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-2xl p-8 lg:p-12 mb-12">
-              <h2 className="text-4xl font-black text-gray-900 mb-6">
+            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 lg:p-12 mb-12">
+              <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-6">
                 {industryName} Sektörü İçin Dijital Pazarlama
               </h2>
               <p className="text-xl text-gray-800 leading-relaxed font-black mb-6">
@@ -102,9 +102,9 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
       </section>
 
       {/* Services */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-12 text-center">
             {industryName} İçin Özel Hizmetler
           </h2>
 
@@ -117,7 +117,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
                 <div className="w-16 h-16 bg-gradient-to-r from-green-600 to-green-700 rounded-full flex items-center justify-center mb-6">
                   <span className="text-white text-2xl font-black">{index + 1}</span>
                 </div>
-                <h3 className="text-2xl font-black text-gray-900 mb-4">
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   {service}
                 </h3>
                 <p className="text-gray-700 mb-6">
@@ -148,15 +148,15 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
               50+ {industryName} sektörü işletmesine dijital pazarlama hizmeti verdim
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
+              <div className="bg-white dark:bg-gray-800/20 backdrop-blur-sm rounded-2xl p-6">
                 <div className="text-4xl font-black mb-2">300%</div>
                 <p className="font-black">Ortalama Trafik Artışı</p>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
+              <div className="bg-white dark:bg-gray-800/20 backdrop-blur-sm rounded-2xl p-6">
                 <div className="text-4xl font-black mb-2">5x</div>
                 <p className="font-black">ROI Artışı</p>
               </div>
-              <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6">
+              <div className="bg-white dark:bg-gray-800/20 backdrop-blur-sm rounded-2xl p-6">
                 <div className="text-4xl font-black mb-2">98%</div>
                 <p className="font-black">Müşteri Memnuniyeti</p>
               </div>
@@ -167,9 +167,9 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
 
       {/* Related Posts */}
       {industryPosts.length > 0 && (
-        <section className="py-20 bg-white">
+        <section className="py-20 bg-white dark:bg-gray-800">
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-black text-gray-900 mb-12 text-center">
+            <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
               {industryName} İçin İçerikler
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -177,9 +177,9 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
                 <Link
                   key={post.id}
                   href={`/blog/${post.slug}`}
-                  className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"
                 >
-                  <h3 className="text-xl font-black text-gray-900 mb-3">
+                  <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
                     {post.title}
                   </h3>
                   <p className="text-gray-700 mb-4">
@@ -214,9 +214,9 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
       </section>
 
       {/* Other Industries */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-black text-gray-900 mb-12 text-center">
+          <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
             Diğer Sektörler
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -226,7 +226,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
                 href={`/blog/sektor/${industry.toLowerCase().replace(/\s+/g, '-')}`}
                 className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
-                <span className="font-black text-gray-900 text-sm">{industry}</span>
+                <span className="font-black text-gray-900 dark:text-white text-sm">{industry}</span>
               </Link>
             ))}
           </div>

@@ -7,7 +7,7 @@ export default function MarkaKimligi() {
       <section className="py-20 bg-gradient-to-br from-orange-500 to-red-600 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="w-20 h-20 mx-auto mb-6 bg-white/20 rounded-full flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto mb-6 bg-white dark:bg-gray-800/20 rounded-full flex items-center justify-center">
               <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
               </svg>
@@ -26,17 +26,17 @@ export default function MarkaKimligi() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Logo Tasarımı</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Logo Tasarımı</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Markanızı en iyi şekilde temsil eden, unutulmaz ve etkili logo tasarımları oluşturuyoruz. Yaratıcılık ve profesyonellik bir arada.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
                   Yaratıcı Tasarım
@@ -52,17 +52,17 @@ export default function MarkaKimligi() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Tutarlı Renk Paletleri</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Tutarlı Renk Paletleri</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Markanızın karakterini yansıtan, psikolojik etkisi olan renk paletleri oluşturuyoruz. Tüm materyallerde tutarlılık sağlıyoruz.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
                   Renk Psikolojisi
@@ -78,17 +78,17 @@ export default function MarkaKimligi() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-pink-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Marka Yönergeleri</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Marka Yönergeleri</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Markanızın doğru kullanımı için detaylı yönergeler hazırlıyoruz. Logo kullanımı, renk kodları ve tipografi kuralları dahil.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
                   Kullanım Kuralları
@@ -107,18 +107,18 @@ export default function MarkaKimligi() {
 
           {/* Additional Services */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Marka Kimliği Reklamları</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Marka Kimliği Reklamları</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Markanızı tanıtmak için etkili reklam kampanyaları tasarlıyoruz. Dijital ve basılı medya için uygun formatlar.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
                   Sosyal Medya Reklamları
@@ -134,17 +134,17 @@ export default function MarkaKimligi() {
               </ul>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 mb-4">Platform Yayınları</h3>
-              <p className="text-gray-600 mb-6">
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Platform Yayınları</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Tüm dijital platformlarda markanızın tanınırlığını artırmak için tutarlı içerik stratejileri geliştiriyoruz.
               </p>
-              <ul className="space-y-2 text-gray-600">
+              <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-red-500 rounded-full mr-3"></span>
                   İçerik Stratejisi
@@ -162,28 +162,28 @@ export default function MarkaKimligi() {
           </div>
 
           {/* Brand Process */}
-          <div className="bg-white rounded-3xl p-12 shadow-lg">
-            <h2 className="text-3xl font-black text-center text-gray-900 mb-12">Marka Kimliği Sürecimiz</h2>
+          <div className="bg-white dark:bg-gray-800 rounded-3xl p-12 shadow-lg">
+            <h2 className="text-3xl font-black text-center text-gray-900 dark:text-white mb-12">Marka Kimliği Sürecimiz</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">1</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Keşif</h3>
-                <p className="text-gray-600">Markanızı ve hedeflerinizi keşfediyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Keşif</h3>
+                <p className="text-gray-600 dark:text-gray-300">Markanızı ve hedeflerinizi keşfediyoruz</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-red-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">2</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Tasarım</h3>
-                <p className="text-gray-600">Yaratıcı ve etkili tasarımlar oluşturuyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Tasarım</h3>
+                <p className="text-gray-600 dark:text-gray-300">Yaratıcı ve etkili tasarımlar oluşturuyoruz</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-pink-600 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">3</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Geliştirme</h3>
-                <p className="text-gray-600">Tasarımları geliştirip mükemmelleştiriyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Geliştirme</h3>
+                <p className="text-gray-600 dark:text-gray-300">Tasarımları geliştirip mükemmelleştiriyoruz</p>
               </div>
               <div className="text-center">
                 <div className="w-16 h-16 bg-orange-700 text-white rounded-full flex items-center justify-center text-2xl font-black mx-auto mb-4">4</div>
-                <h3 className="text-xl font-black text-gray-900 mb-2">Uygulama</h3>
-                <p className="text-gray-600">Marka kimliğini hayata geçiriyoruz</p>
+                <h3 className="text-xl font-black text-gray-900 dark:text-white mb-2">Uygulama</h3>
+                <p className="text-gray-600 dark:text-gray-300">Marka kimliğini hayata geçiriyoruz</p>
               </div>
             </div>
           </div>
@@ -212,7 +212,7 @@ export default function MarkaKimligi() {
               </Link>
               <Link 
                 href="/iletisim"
-                className="inline-flex items-center justify-center bg-white/20 hover:bg-white/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
                 <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
