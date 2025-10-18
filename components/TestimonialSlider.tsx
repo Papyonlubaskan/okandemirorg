@@ -83,7 +83,7 @@ export default function TestimonialSlider() {
   const currentTestimonial = testimonials[currentIndex]
 
   return (
-    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 overflow-hidden">
       <div className="container mx-auto px-4">
         {/* Section Title */}
         <div className="text-center mb-16">
@@ -100,8 +100,8 @@ export default function TestimonialSlider() {
           {/* Main Testimonial Card */}
           <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 lg:p-12 relative overflow-hidden">
             {/* Background Decoration */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-100 to-purple-100 rounded-full blur-3xl opacity-30 -mr-32 -mt-32"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-yellow-100 to-orange-100 rounded-full blur-3xl opacity-30 -ml-32 -mb-32"></div>
+            <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-700 dark:to-gray-600 rounded-full blur-3xl opacity-30 -mr-32 -mt-32"></div>
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-gradient-to-tr from-yellow-100 to-orange-100 dark:from-gray-700 dark:to-gray-600 rounded-full blur-3xl opacity-30 -ml-32 -mb-32"></div>
 
             {/* Content */}
             <div className="relative z-10">
