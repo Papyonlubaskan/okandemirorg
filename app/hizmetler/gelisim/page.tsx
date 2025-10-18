@@ -7,7 +7,7 @@ export default function Gelisim() {
       <section className="py-20 bg-gradient-to-br from-green-500 to-teal-600 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
-            <div className="w-20 h-20 mx-auto mb-6 bg-white dark:bg-gray-800/20 rounded-full flex items-center justify-center">
+            <div className="w-20 h-20 mx-auto mb-6 bg-white dark:bg-gray-800 dark:bg-gray-800/20 rounded-full flex items-center justify-center">
               <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
               </svg>
@@ -26,7 +26,7 @@ export default function Gelisim() {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
@@ -52,7 +52,7 @@ export default function Gelisim() {
               </ul>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-teal-100 dark:bg-teal-900/30 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -78,7 +78,7 @@ export default function Gelisim() {
               </ul>
             </div>
 
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+            <div className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mb-6">
                 <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4" />
@@ -106,7 +106,7 @@ export default function Gelisim() {
           </div>
 
           {/* Growth Process */}
-          <div className="bg-white dark:bg-gray-800 rounded-3xl p-12 shadow-lg">
+          <div className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-3xl p-12 shadow-lg">
             <h2 className="text-3xl font-black text-center text-gray-900 dark:text-white mb-12">Büyüme Sürecimiz</h2>
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
               <div className="text-center">
@@ -136,7 +136,7 @@ export default function Gelisim() {
           <div className="mt-16 bg-gradient-to-r from-green-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-12">
             <h2 className="text-3xl font-black text-center text-gray-900 dark:text-white mb-12">Sürekli İyileştirme ve Analiz</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+              <div className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Veri Analizi</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
                   Performans verilerinizi düzenli olarak analiz ediyoruz ve iyileştirme fırsatlarını belirliyoruz.
@@ -156,7 +156,7 @@ export default function Gelisim() {
                   </li>
                 </ul>
               </div>
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
+              <div className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Sürekli Gelişim</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
                   Pazar değişikliklerini takip ederek stratejilerinizi güncel tutuyoruz ve sürekli büyüme sağlıyoruz.
@@ -203,7 +203,7 @@ export default function Gelisim() {
               </Link>
               <Link 
                 href="/iletisim"
-                className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="inline-flex items-center justify-center bg-white dark:bg-gray-800 dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
                 <svg className="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

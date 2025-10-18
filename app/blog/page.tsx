@@ -57,7 +57,7 @@ export default function BlogPage() {
               <Link
                 key={category.id}
                 href={`/blog/kategori/${category.slug}`}
-                className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
+                className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-all duration-300 hover:scale-105"
               >
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
                   {category.name}
@@ -78,7 +78,7 @@ export default function BlogPage() {
       </section>
 
       {/* Recent Posts */}
-      <section className="py-20 bg-white dark:bg-gray-800">
+      <section className="py-20 bg-white dark:bg-gray-800 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
@@ -141,7 +141,7 @@ export default function BlogPage() {
               <Link
                 key={city}
                 href={`/blog/sehir/${city.toLowerCase().replace(/ı/g, 'i').replace(/ş/g, 's').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ö/g, 'o')}`}
-                className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-4 text-center hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-xl shadow-lg p-4 text-center hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <span className="text-lg font-black text-gray-900 dark:text-white">{city}</span>
               </Link>

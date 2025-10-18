@@ -45,7 +45,7 @@ export default function ETicaretPlatformlari() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Ticimax */}
-            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
+            <div className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center">
                   <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -93,7 +93,7 @@ export default function ETicaretPlatformlari() {
             </div>
 
             {/* İdeasoft */}
-            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
+            <div className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
                   <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -141,7 +141,7 @@ export default function ETicaretPlatformlari() {
             </div>
 
             {/* İkas */}
-            <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
+            <div className="bg-white dark:bg-gray-800 dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden hover:shadow-3xl transition-all duration-500 group">
               <div className="relative overflow-hidden">
                 <div className="w-full h-48 bg-gradient-to-br from-purple-500 to-purple-600 flex items-center justify-center">
                   <svg className="w-20 h-20 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,7 +211,7 @@ export default function ETicaretPlatformlari() {
               </Link>
               <Link 
                 href="/iletisim"
-                className="inline-flex items-center justify-center bg-white dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                className="inline-flex items-center justify-center bg-white dark:bg-gray-800 dark:bg-gray-800/20 hover:bg-white dark:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm"
               >
                 <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
                 E-posta Gönder

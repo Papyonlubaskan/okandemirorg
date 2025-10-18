@@ -6,7 +6,7 @@ export default function Projeler() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-700 text-white">
+      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-700 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black mb-6">
@@ -20,7 +20,7 @@ export default function Projeler() {
             </p>
             <Link 
               href="https://wa.me/+905552677739"
-              className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
               Randevu Al!
@@ -33,7 +33,7 @@ export default function Projeler() {
       <PortfolioFilter />
 
       {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600">
+      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600 dark:from-gray-800 dark:to-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center text-white mb-16">
             <h2 className="text-4xl lg:text-5xl font-black mb-6">
@@ -78,7 +78,7 @@ export default function Projeler() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="https://wa.me/+905552677739"
-                className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
                 WhatsApp ile İletişim
