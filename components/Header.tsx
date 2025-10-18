@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState } from 'react'
+import ThemeToggle from './ThemeToggle'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -41,8 +42,9 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden lg:flex items-center">
+          {/* CTA Button & Theme Toggle */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <ThemeToggle />
             <Link
               href="https://wa.me/+905552677739"
               className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-4 xl:px-6 py-2 xl:py-3 rounded-full font-black transition-all duration-300 hover:scale-105 hover:shadow-lg"
@@ -105,14 +107,17 @@ export default function Header() {
                     İletişim
                   </Link>
                   
-                  <Link
-                    href="https://wa.me/+905552677739"
-                    className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg mt-4 touch-manipulation"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
-                    WhatsApp
-                  </Link>
+                  <div className="flex items-center justify-center mt-4 space-x-4">
+                    <ThemeToggle />
+                    <Link
+                      href="https://wa.me/+905552677739"
+                      className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg touch-manipulation"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
+                      WhatsApp
+                    </Link>
+                  </div>
                 </nav>
               </div>
             )}

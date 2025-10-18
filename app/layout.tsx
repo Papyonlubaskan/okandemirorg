@@ -9,6 +9,7 @@ import StructuredData from "./structured-data";
 import WhatsAppChatbot from "@/components/WhatsAppChatbot";
 import AccessibilityHelper from "@/components/AccessibilityHelper";
 import ConsoleErrorSuppressor from "@/components/ConsoleErrorSuppressor";
+import { ThemeProvider } from "@/contexts/ThemeContext";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -72,18 +73,20 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
-        <link rel="alternate" type="application/rss+xml" title="Okan Demir Blog RSS" href="https://okandemir.org/feed.xml" />
-        <ConsoleErrorSuppressor />
-        <AccessibilityHelper />
-        <StructuredData />
-        <WhatsAppChatbot />
-        <Loading />
-        <Header />
-        <main id="main-content" className="flex-1" tabIndex={-1}>
-          {children}
-        </main>
-        <Footer />
-        <ScrollToTop />
+        <ThemeProvider>
+          <link rel="alternate" type="application/rss+xml" title="Okan Demir Blog RSS" href="https://okandemir.org/feed.xml" />
+          <ConsoleErrorSuppressor />
+          <AccessibilityHelper />
+          <StructuredData />
+          <WhatsAppChatbot />
+          <Loading />
+          <Header />
+          <main id="main-content" className="flex-1" tabIndex={-1}>
+            {children}
+          </main>
+          <Footer />
+          <ScrollToTop />
+        </ThemeProvider>
       </body>
     </html>
   );
