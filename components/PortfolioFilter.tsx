@@ -78,7 +78,7 @@ export default function PortfolioFilter() {
   }
 
   return (
-    <section className="py-20 bg-white">
+    <section className="py-20 bg-white dark:bg-gray-900">
       <div className="container mx-auto px-4">
         {/* Category Filter */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
@@ -89,7 +89,7 @@ export default function PortfolioFilter() {
               className={`px-6 py-3 rounded-full font-black transition-all duration-300 shadow-md hover:shadow-xl transform hover:scale-105 ${
                 selectedCategory === category
                   ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white scale-105'
-                  : 'bg-white text-gray-700 hover:bg-gray-50'
+                  : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700'
               }`}
             >
               {category}
@@ -115,7 +115,7 @@ export default function PortfolioFilter() {
               className="block"
               style={{ animationDelay: `${index * 100}ms` }}
             >
-              <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ease-out group hover:transform hover:scale-105 cursor-pointer animate-fade-in">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 ease-out group hover:transform hover:scale-105 cursor-pointer animate-fade-in">
                 {/* Image Section */}
                 <div className="relative overflow-hidden">
                   <div className={`w-full h-64 bg-gradient-to-br ${item.gradient} flex items-center justify-center`}>
@@ -146,14 +146,14 @@ export default function PortfolioFilter() {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-6 group-hover:bg-gradient-to-br group-hover:from-blue-50 group-hover:to-purple-50 transition-all duration-500">
-                  <h3 className="text-2xl font-black text-gray-900 mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                <div className="p-6 group-hover:bg-gradient-to-br group-hover:from-blue-50 group-hover:to-purple-50 dark:group-hover:from-gray-700 dark:group-hover:to-gray-600 transition-all duration-500">
+                  <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
                     {item.title}
                   </h3>
-                  <p className="text-gray-600 font-medium group-hover:text-gray-700 transition-colors duration-300 line-clamp-3">
+                  <p className="text-gray-600 dark:text-gray-300 font-medium group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors duration-300 line-clamp-3">
                     {item.description}
                   </p>
-                  <div className="mt-4 flex items-center text-blue-600 font-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="mt-4 flex items-center text-blue-600 dark:text-blue-400 font-black opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                     Detayları Gör
                     <svg className="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -169,10 +169,10 @@ export default function PortfolioFilter() {
         {filteredItems.length === 0 && (
           <div className="text-center py-20">
             <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-black text-gray-900 mb-2">
+            <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-2">
               Sonuç Bulunamadı
             </h3>
-            <p className="text-gray-600 font-medium">
+            <p className="text-gray-600 dark:text-gray-300 font-medium">
               Bu kategoride henüz proje bulunmamaktadır.
             </p>
           </div>
