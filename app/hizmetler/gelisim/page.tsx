@@ -133,7 +133,7 @@ export default function Gelisim() {
           </div>
 
           {/* Benefits Section */}
-          <div className="mt-16 bg-gradient-to-r from-green-50 to-teal-50 rounded-3xl p-12">
+          <div className="mt-16 bg-gradient-to-r from-green-50 to-teal-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-12">
             <h2 className="text-3xl font-black text-center text-gray-900 dark:text-white mb-12">Sürekli İyileştirme ve Analiz</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
@@ -182,7 +182,7 @@ export default function Gelisim() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-green-500 to-teal-600">
+      <section className="py-20 bg-gradient-to-r from-green-500 to-teal-600 dark:from-gray-800 dark:to-gray-700">
         <div className="container mx-auto px-4">
           <div className="text-center text-white">
             <h2 className="text-4xl font-black mb-6">

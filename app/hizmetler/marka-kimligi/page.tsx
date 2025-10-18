@@ -191,7 +191,7 @@ export default function MarkaKimligi() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-red-600">
+      <section className="py-20 bg-gradient-to-r from-orange-500 to-red-600 dark:from-gray-800 dark:to-gray-700">
         <div className="container mx-auto px-4">
           <div className="text-center text-white">
             <h2 className="text-4xl font-black mb-6">

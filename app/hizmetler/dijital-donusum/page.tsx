@@ -188,7 +188,7 @@ export default function DijitalDonusum() {
           </div>
 
           {/* Benefits Section */}
-          <div className="mt-16 bg-gradient-to-r from-orange-50 to-red-50 rounded-3xl p-12">
+          <div className="mt-16 bg-gradient-to-r from-orange-50 to-red-50 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-12">
             <h2 className="text-3xl font-black text-center text-gray-900 dark:text-white mb-12">Dijital Dönüşümün Faydaları</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg text-center">
@@ -224,7 +224,7 @@ export default function DijitalDonusum() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-orange-500 to-red-600">
+      <section className="py-20 bg-gradient-to-r from-orange-500 to-red-600 dark:from-gray-800 dark:to-gray-700">
         <div className="container mx-auto px-4">
           <div className="text-center text-white">
             <h2 className="text-4xl font-black mb-6">

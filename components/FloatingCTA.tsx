@@ -26,7 +26,7 @@ export default function FloatingCTA() {
       } hidden lg:block`}>
         <Link
           href="https://wa.me/+905552677739"
-          className="group flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-110 hover:rotate-2 cta-float cta-pulse-glow cta-hover-lift"
+          className="group flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-4 rounded-full shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-110 hover:rotate-2 cta-float cta-pulse-glow cta-hover-lift"
           aria-label="WhatsApp ile randevu al"
         >
           <div className="flex items-center space-x-3">
@@ -53,7 +53,7 @@ export default function FloatingCTA() {
       <div className="fixed bottom-4 right-4 z-50 lg:hidden">
         <Link
           href="https://wa.me/+905552677739"
-          className="group flex items-center bg-green-600 hover:bg-green-700 text-white px-4 py-3 rounded-full shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-110"
+          className="group flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-4 py-3 rounded-full shadow-2xl hover:shadow-green-500/25 transition-all duration-300 hover:scale-110"
           aria-label="WhatsApp ile randevu al"
         >
           <div className="flex items-center space-x-2">

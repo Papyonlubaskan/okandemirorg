@@ -43,7 +43,7 @@ export default function Newsletter() {
   }
 
   return (
-    <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 lg:p-12 text-white shadow-2xl">
+    <div className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gray-800 dark:to-gray-700 rounded-3xl p-8 lg:p-12 text-white shadow-2xl">
       <div className="max-w-2xl mx-auto text-center">
         <div className="text-5xl mb-4">📬</div>
         <h2 className="text-3xl lg:text-4xl font-black mb-4">
@@ -69,7 +69,7 @@ export default function Newsletter() {
             <button
               type="submit"
               disabled={status === 'loading' || !email}
-              className="px-8 py-4 bg-white text-blue-600 rounded-xl font-black hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+              className="px-8 py-4 bg-white dark:bg-gray-700 text-blue-600 dark:text-white rounded-xl font-black hover:bg-gray-100 dark:hover:bg-gray-600 transition-all duration-300 hover:scale-105 shadow-lg disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
               aria-label="Bültene abone ol"
             >
               {status === 'loading' ? (

@@ -16,11 +16,11 @@ export default function Loading() {
   if (!loading) return null
 
   return (
-    <div className="fixed inset-0 bg-white z-50 flex items-center justify-center">
+    <div className="fixed inset-0 bg-white dark:bg-gray-900 z-50 flex items-center justify-center">
       <div className="text-center">
         {/* Logo */}
         <div className="mb-8">
-          <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-600 to-blue-800 rounded-full flex items-center justify-center animate-pulse">
+          <div className="w-24 h-24 mx-auto bg-gradient-to-br from-blue-600 to-blue-800 dark:from-gray-700 dark:to-gray-800 rounded-full flex items-center justify-center animate-pulse">
             <span className="text-white font-black text-2xl">O</span>
           </div>
         </div>
