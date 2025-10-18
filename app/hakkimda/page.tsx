@@ -71,9 +71,26 @@ export default function Hakkimda() {
             </div>
 
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 lg:p-12 mb-16">
-              <p className="text-lg text-gray-800 leading-tight font-black text-center">
+              <p className="text-lg text-gray-800 leading-tight font-black text-center mb-6">
                 Bugün, harika planlamaların ve tasarımın sadece estetikle ilgili olmadığına; markalar ve hedef kitleleri arasında anlamlı bağlantılar kurmakla ilgili olduğuna olan inancımla hareket ediyorum. Bu inancımı geçmiş tecrübelerim ve siyasi yaşamım ile elde ettiğimi düşünerek, vizyon ve misyon sorumluluğumu bir adım öteye sizin sayenizde taşıyabilirim!
               </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                <div className="bg-white rounded-2xl p-6 text-center">
+                  <div className="text-4xl font-black text-blue-600 mb-2">07 Mart 1993</div>
+                  <p className="text-gray-700 font-black">Doğum Tarihi</p>
+                  <p className="text-gray-600">Bornova, İzmir</p>
+                </div>
+                <div className="bg-white rounded-2xl p-6 text-center">
+                  <div className="text-4xl font-black text-blue-600 mb-2">♓ Balık</div>
+                  <p className="text-gray-700 font-black">Burç</p>
+                </div>
+                <div className="bg-white rounded-2xl p-6 text-center">
+                  <div className="text-4xl font-black text-blue-600 mb-2">32 Yaşında</div>
+                  <p className="text-gray-700 font-black">Yaş</p>
+                </div>
+              </div>
+
               <div className="text-center mt-8">
                 <Link 
                   href="https://www.biyografiler.com/kimdir/okan-demir"
@@ -81,10 +98,11 @@ export default function Hakkimda() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
-                  Diğer Özgeçmiş İçin Tıkla!
+                  Detaylı Biyografi İçin Tıkla
                 </Link>
               </div>
             </div>
+
           </div>
         </div>
       </section>

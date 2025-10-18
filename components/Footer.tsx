@@ -139,6 +139,14 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/blog" className="flex items-center text-gray-400 hover:text-white transition-colors group">
+                  <svg className="w-4 h-4 mr-3 group-hover:text-blue-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                  Blog
+                </Link>
+              </li>
+              <li>
                 <Link href="/iletisim" className="flex items-center text-gray-400 hover:text-white transition-colors group">
                   <svg className="w-4 h-4 mr-3 group-hover:text-pink-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
@@ -235,13 +243,17 @@ export default function Footer() {
             </p>
             
             {/* Legal Links - Horizontal */}
-            <div className="flex justify-center items-center space-x-6 mt-4">
+            <div className="flex justify-center items-center space-x-6 mt-4 flex-wrap gap-2">
               <Link href="/privacy-policy" className="text-gray-400 hover:text-white transition-colors text-lg">
                 Gizlilik Politikası
               </Link>
               <span className="text-gray-600">|</span>
               <Link href="/terms-conditions" className="text-gray-400 hover:text-white transition-colors text-lg">
                 Kullanım Şartları
+              </Link>
+              <span className="text-gray-600">|</span>
+              <Link href="https://www.biyografiler.com/kimdir/okan-demir" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors text-lg">
+                Biyografi
               </Link>
             </div>
           </div>
