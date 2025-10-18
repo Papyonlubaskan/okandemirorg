@@ -84,7 +84,7 @@ export default function YouTubeFeed() {
           <h4 className="text-lg font-black text-gray-900 dark:text-white line-clamp-2">
             {selectedVideo.title}
           </h4>
-          <p className="text-sm text-gray-600 mt-1">
+          <p className="text-sm text-gray-600 dark:text-gray-300 mt-1">
             {new Date(selectedVideo.publishedAt).toLocaleDateString('tr-TR', {
               year: 'numeric',
               month: 'long',

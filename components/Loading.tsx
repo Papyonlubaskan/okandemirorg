@@ -36,7 +36,7 @@ export default function Loading() {
         </div>
         
         {/* Loading Text */}
-        <p className="text-gray-600 mt-4 animate-pulse">
+        <p className="text-gray-600 dark:text-gray-300 mt-4 animate-pulse">
           Yükleniyor...
         </p>
       </div>

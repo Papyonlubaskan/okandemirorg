@@ -77,7 +77,7 @@ export default function Home() {
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Yaptığım işin temelinde görsel olarak çarpıcı ve kullanıcı dostu eyleme çağrı odaklı dijital pazarlama stratejileri ve web siteleri, çözüm odakları oluşturmak yatıyor.
                 </p>
-                <ul className="text-left text-gray-600 space-y-2 mb-8">
+                <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8">
                    <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Yaratıcı Kreatifler
@@ -111,7 +111,7 @@ export default function Home() {
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Tasarımlarınızı ve Dijital dönüşüm ihtiyaçlarınızı temiz,verimli,garantili yüksek performanlı kodlarla hayata geçirerek öncü olmanızı sağlıyorum.
                 </p>
-                <ul className="text-left text-gray-600 space-y-2 mb-8">
+                <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8">
                    <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     HTML, CSS, & JS Uzmanlığı
@@ -145,7 +145,7 @@ export default function Home() {
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
                 </p>
-                <ul className="text-left text-gray-600 space-y-2 mb-8">
+                <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8">
                    <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-orange-500 dark:text-orange-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     Logo Tasarımı&Tutarlı Renk Paletleri& Marka Yönergeleri
@@ -181,7 +181,7 @@ export default function Home() {
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Türkiye&apos;nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümlerle işinizi büyütün.
                 </p>
-                <ul className="text-left text-gray-600 space-y-2 mb-8">
+                <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8">
                    <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-emerald-500 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                     <span><strong>Ticimax</strong> - Kurulum & Optimizasyon</span>
@@ -280,7 +280,7 @@ export default function Home() {
             <h2 id="services-heading" className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white mb-8">
               Profesyonel Hizmetlerim
             </h2>
-            <p className="text-xl lg:text-2xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
               Dijital dünyada markanızı öne çıkaran, yaratıcı çözümlerle işinizi büyüten profesyonel hizmetlerim.
             </p>
           </div>
@@ -295,7 +295,7 @@ export default function Home() {
               <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir web tasarımı ve dijital pazarlama stratejisi oluşturmak şarttır.
               </p>
-              <ul className="text-left text-gray-600 space-y-2 mb-8 w-full">
+              <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8 w-full">
                 <li className="flex items-start text-lg">
                   <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Web Tasarımı&nbsp;& Geliştirme&nbsp;& Optimizasyon</span>
@@ -334,7 +334,7 @@ export default function Home() {
               <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
               </p>
-              <ul className="text-left text-gray-600 space-y-2 mb-8 w-full">
+              <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8 w-full">
                 <li className="flex items-start text-lg">
                   <svg className="w-5 h-5 text-green-500 dark:text-green-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Strateji&nbsp;Geliştirme&nbsp;& Uygulama&nbsp;& Optimizasyon</span>
@@ -373,7 +373,7 @@ export default function Home() {
               <p className="text-lg text-gray-800 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
               </p>
-              <ul className="text-left text-gray-600 space-y-2 mb-8 w-full">
+              <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8 w-full">
                 <li className="flex items-start text-lg">
                   <svg className="w-5 h-5 text-orange-500 dark:text-orange-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
                   <span>Logo Tasarımı&nbsp;& Tutarlı Renk Paletleri&nbsp;& Marka Yönergeleri</span>

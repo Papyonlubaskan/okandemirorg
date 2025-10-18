@@ -45,7 +45,7 @@ export default class ErrorBoundary extends Component<Props, State> {
             <h1 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
               Bir Hata Oluştu
             </h1>
-            <p className="text-gray-600 font-medium mb-6">
+            <p className="text-gray-600 dark:text-gray-300 font-medium mb-6">
               Üzgünüz, beklenmeyen bir hata meydana geldi. Lütfen sayfayı yenileyin veya ana sayfaya dönün.
             </p>
             <div className="space-y-3">

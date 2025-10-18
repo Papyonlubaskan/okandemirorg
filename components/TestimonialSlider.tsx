@@ -90,7 +90,7 @@ export default function TestimonialSlider() {
           <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-4">
             ⭐ Müşterilerimiz Ne Diyor?
           </h2>
-          <p className="text-xl text-gray-600 font-medium">
+          <p className="text-xl text-gray-600 dark:text-gray-300 font-medium">
             Birlikte çalıştığımız mutlu müşterilerimizin görüşleri
           </p>
         </div>
@@ -140,7 +140,7 @@ export default function TestimonialSlider() {
                   <h4 className="text-xl font-black text-gray-900 dark:text-white">
                     {currentTestimonial.name}
                   </h4>
-                  <p className="text-gray-600 font-medium">
+                  <p className="text-gray-600 dark:text-gray-300 font-medium">
                     {currentTestimonial.title} - {currentTestimonial.company}
                   </p>
                 </div>
@@ -214,19 +214,19 @@ export default function TestimonialSlider() {
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16 max-w-4xl mx-auto">
           <div className="text-center">
             <div className="text-4xl font-black text-blue-600 mb-2">50+</div>
-            <div className="text-gray-600 font-medium">Mutlu Müşteri</div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium">Mutlu Müşteri</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-black text-blue-600 mb-2">5.0</div>
-            <div className="text-gray-600 font-medium">Ortalama Puan</div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium">Ortalama Puan</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-black text-blue-600 mb-2">%98</div>
-            <div className="text-gray-600 font-medium">Memnuniyet</div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium">Memnuniyet</div>
           </div>
           <div className="text-center">
             <div className="text-4xl font-black text-blue-600 mb-2">100%</div>
-            <div className="text-gray-600 font-medium">Tavsiye Oranı</div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium">Tavsiye Oranı</div>
           </div>
         </div>
       </div>
