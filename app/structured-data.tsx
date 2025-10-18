@@ -19,7 +19,10 @@ export default function StructuredData() {
     "sameAs": [
       "https://wa.me/+905552677739",
       "https://www.instagram.com/okandemirorg",
-      "https://www.youtube.com/@PapyonluBaskan"
+      "https://www.youtube.com/@PapyonluBaskan",
+      "https://www.linkedin.com/in/okan-demir",
+      "https://twitter.com/okandemirorg",
+      "https://www.facebook.com/okandemirorg"
     ],
     "address": {
       "@type": "PostalAddress",
