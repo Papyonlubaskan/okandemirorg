@@ -291,6 +291,93 @@ export default function Hakkimda() {
         </div>
       </section>
 
+      {/* E-ticaret Platform Uzmanlığım Section */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl lg:text-5xl font-black text-gray-900 mb-6">
+                E-ticaret Platform Uzmanlığım
+              </h2>
+              <p className="text-xl text-gray-600 leading-tight">
+                Türkiye'nin önde gelen e-ticaret platformlarında uzmanlaşmış, profesyonel çözümler sunuyorum.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Ticimax */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8 text-center hover:shadow-xl transition-shadow">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-black text-gray-900 mb-4">Ticimax</h3>
+                <p className="text-gray-600 mb-6 font-black">
+                  Türkiye'nin en popüler e-ticaret platformu olan Ticimax'te kurulum, özelleştirme ve optimizasyon konularında uzmanım.
+                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>✓ Kurulum & Konfigürasyon</li>
+                  <li>✓ Tema Özelleştirme</li>
+                  <li>✓ SEO Optimizasyonu</li>
+                  <li>✓ Entegrasyonlar</li>
+                </ul>
+              </div>
+
+              {/* İdeasoft */}
+              <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8 text-center hover:shadow-xl transition-shadow">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-black text-gray-900 mb-4">İdeasoft</h3>
+                <p className="text-gray-600 mb-6 font-black">
+                  İdeasoft platformunda tasarım, entegrasyon ve teknik geliştirme konularında deneyimliyim.
+                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>✓ Tasarım & UI/UX</li>
+                  <li>✓ API Entegrasyonları</li>
+                  <li>✓ Özel Geliştirmeler</li>
+                  <li>✓ Performans Optimizasyonu</li>
+                </ul>
+              </div>
+
+              {/* İkas */}
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 text-center hover:shadow-xl transition-shadow">
+                <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-black text-gray-900 mb-4">İkas</h3>
+                <p className="text-gray-600 mb-6 font-black">
+                  İkas platformunda özelleştirme, SEO ve dijital pazarlama entegrasyonları konularında uzmanım.
+                </p>
+                <ul className="space-y-2 text-gray-700">
+                  <li>✓ Özelleştirme & Tasarım</li>
+                  <li>✓ SEO & Dijital Pazarlama</li>
+                  <li>✓ Analytics Entegrasyonu</li>
+                  <li>✓ Mobil Optimizasyon</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="text-center mt-12">
+              <Link 
+                href="/hizmetler"
+                className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              >
+                Tüm Hizmetlerimi Gör
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
