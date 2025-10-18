@@ -37,10 +37,10 @@ export default function YouTubeFeed() {
   if (loading) {
     return (
       <div className="space-y-4">
-        <div className="aspect-video w-full rounded-2xl bg-gray-200 animate-pulse"></div>
+        <div className="aspect-video w-full rounded-2xl bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
         <div className="grid grid-cols-3 gap-4">
           {[1, 2, 3].map(i => (
-            <div key={i} className="aspect-video rounded-lg bg-gray-200 animate-pulse"></div>
+            <div key={i} className="aspect-video rounded-lg bg-gray-200 dark:bg-gray-700 animate-pulse"></div>
           ))}
         </div>
       </div>

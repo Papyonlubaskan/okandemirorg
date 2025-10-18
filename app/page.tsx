@@ -270,7 +270,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50" role="region" aria-labelledby="services-heading">
+      <section className="py-20 bg-gray-50 dark:bg-gray-900" role="region" aria-labelledby="services-heading">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 text-blue-600 font-black mb-6">

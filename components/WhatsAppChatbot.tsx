@@ -67,7 +67,7 @@ export default function WhatsAppChatbot() {
               ✕
             </button>
             <div className="flex items-start gap-3">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-green-500 bg-gray-200">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-green-500 bg-gray-200 dark:bg-gray-600">
                 <Image 
                   src="/okan-demir-profile.webp" 
                   alt="Okan Demir" 
@@ -102,7 +102,7 @@ export default function WhatsAppChatbot() {
           <div className="bg-gradient-to-r from-green-500 to-green-600 p-4 text-white">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-white bg-gray-200">
+                <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-white dark:ring-gray-600 bg-gray-200 dark:bg-gray-600">
                   <Image 
                     src="/okan-demir-profile.webp" 
                     alt="Okan Demir" 
