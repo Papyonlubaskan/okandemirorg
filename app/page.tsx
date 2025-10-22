@@ -87,7 +87,7 @@ export default function Home() {
                 </h1>
                 
                 <p className="hero-description text-gray-100 leading-tight mb-12 font-black" style={{ fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize: '24px', fontWeight: '500' }}>
-                  Okan Demir olarak, doğru strateji + doğru araçlar = gerçek sonuçlar formülüyle çalışıyorum. Dijital pazarlama, dijital dönüşüm, sosyal medya yönetimi, SEO, Google Ads, Meta Business sistem kurulumu ve yüksek dönüşüm odaklı web tasarımı ile daha fazla trafik, daha çok lead, daha yüksek satış için yanınızdayım! Okan Demir ile en iyisini gerçekleştirelim.
+                  Dijital dönüşüm uzmanı olarak doğru strateji + doğru araçlar = gerçek sonuçlar formülüyle çalışıyorum. Dijital pazarlama, dijital dönüşüm, sosyal medya yönetimi, SEO, Google Ads, Meta Business sistem kurulumu ve yüksek dönüşüm odaklı web tasarımı ile daha fazla trafik, daha çok lead, daha yüksek satış için yanınızdayım! Sizin için en iyisini gerçekleştirelim.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
