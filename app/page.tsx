@@ -428,7 +428,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="/hizmetler/gelisim"
-                  className="flex-1 bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Detayları Gör &gt;
                 </Link>
