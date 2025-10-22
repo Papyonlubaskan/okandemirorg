@@ -17,6 +17,7 @@ export default function StructuredData() {
     },
     "nationality": "Turkish",
     "sameAs": [
+      "https://biyografi.net/okan-demir",
       "https://wa.me/+905552677739",
       "https://www.instagram.com/okandemirorg",
       "https://www.youtube.com/@PapyonluBaskan",
@@ -84,6 +85,7 @@ export default function StructuredData() {
       "availableLanguage": "Turkish"
     },
     "sameAs": [
+      "https://biyografi.net/okan-demir",
       "https://wa.me/+905552677739",
       "https://www.instagram.com/okandemirorg",
       "https://www.youtube.com/@PapyonluBaskan",

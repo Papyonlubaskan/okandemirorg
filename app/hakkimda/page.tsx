@@ -4,12 +4,12 @@ import YouTubeFeed from '@/components/YouTubeFeed'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Okan Demir Kimdir? - Okan | Dijital Pazarlama Uzmanı Hakkında",
-  description: "Okan Demir kimdir? Okan - Türkiye'nin en iyi dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. 5+ yıl deneyim, 50+ proje. Ticimax, İdeasoft, İkas uzmanı. Okan Demir ile tanışın.",
-  keywords: ["Okan Demir", "Okan", "Dijital Pazarlama Uzmanı", "Dijital Pazarlama", "Web Tasarımcı", "E-ticaret Uzmanı", "Ticimax", "İdeasoft", "İkas", "SEO Uzmanı", "Okan SEO", "Okan Web Tasarım", "Okan Dijital Pazarlama", "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan"],
+  title: "Okan Demir Kimdir? - Okan İzmir | Dijital Pazarlama Uzmanı Hakkında",
+  description: "Okan Demir kimdir? Okan - Türkiye'nin en iyi dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. İzmir merkezli, 5+ yıl deneyim, 50+ proje. Ticimax, İdeasoft, İkas uzmanı. Biyografi.net'te doğrulanmış profil. Okan Demir İzmir ile tanışın.",
+  keywords: ["Okan Demir", "Okan", "Okan İzmir", "Okan Demir İzmir", "Dijital Pazarlama Uzmanı", "Dijital Pazarlama", "Web Tasarımcı", "E-ticaret Uzmanı", "Ticimax", "İdeasoft", "İkas", "SEO Uzmanı", "Okan SEO", "Okan Web Tasarım", "Okan Dijital Pazarlama", "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan", "Biyografi.net Okan Demir"],
   openGraph: {
-    title: "Okan Demir Kimdir? - Okan | Dijital Pazarlama Uzmanı",
-    description: "Okan Demir kimdir? Okan - Türkiye'nin en iyi dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. 5+ yıl deneyim, 50+ proje.",
+    title: "Okan Demir Kimdir? - Okan İzmir | Dijital Pazarlama Uzmanı",
+    description: "Okan Demir kimdir? Okan - Türkiye'nin en iyi dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. İzmir merkezli, 5+ yıl deneyim, 50+ proje. Biyografi.net'te doğrulanmış profil.",
   },
 }
 
