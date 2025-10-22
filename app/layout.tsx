@@ -23,9 +23,37 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Okan | Okan Demir İzmir - En İyi Dijital Pazarlama Uzmanı | Web Tasarım & SEO",
-  description: "Okan - Okan Demir İzmir, Türkiye'nin en iyi dijital pazarlama uzmanı. Okan olarak İzmir'de web tasarım, SEO, Google Ads, Meta Business, e-ticaret platformları (Ticimax, İdeasoft, İkas) konularında 5+ yıl deneyim. Biyografi.net'te doğrulanmış. Okan Demir İzmir ile 50+ başarılı proje, %98 müşteri memnuniyeti. Okan ile dijital dönüşüm.",
-  keywords: ["Okan Demir", "Okan", "Okan Demir İzmir", "Okan İzmir", "Dijital Pazarlama", "Dijital Pazarlama Uzmanı", "Dijital Pazarlama İzmir", "Web Tasarım", "Web Tasarım İzmir", "SEO", "SEO İzmir", "Google Ads", "Meta Business", "E-ticaret", "Ticimax", "İdeasoft", "İkas", "Freelancer", "Dijital Dönüşüm", "Okan SEO", "Okan Web Tasarım", "Okan Dijital Pazarlama", "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan", "İzmir Dijital Pazarlama", "İzmir Web Tasarım"],
+  title: {
+    default: "Okan | Okan Demir | Okan Demir İzmir | Türkiye #1 Dijital Pazarlama Uzmanı",
+    template: "%s | Okan Demir | Dijital Pazarlama Uzmanı"
+  },
+  description: "Okan - Okan Demir - Okan Demir İzmir, Türkiye'nin #1 dijital pazarlama uzmanı. Okan olarak İzmir, İstanbul, Ankara genelinde dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business, e-ticaret (Ticimax, İdeasoft, İkas) 5+ yıl deneyim. Biyografi.net doğrulanmış profil. Okan Demir 50+ başarılı proje, %98 müşteri memnuniyeti. Okan ile garantili dijital dönüşüm.",
+  keywords: [
+    // Core Brand Keywords
+    "Okan", "Okan Demir", "Okan Demir İzmir", "Okan İzmir", "Okan Demir Bornova",
+    // Primary Services with Name
+    "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan", "SEO Uzmanı Okan",
+    "Okan Dijital Pazarlama", "Okan Web Tasarım", "Okan SEO",
+    // Service Combinations
+    "Okan Google Ads", "Okan Meta Business", "Okan Facebook Ads", "Okan Instagram Ads",
+    "Okan TikTok Ads", "Okan LinkedIn Ads", "Okan YouTube Ads",
+    // E-commerce Platforms
+    "Okan Ticimax", "Okan İdeasoft", "Okan İkas", "Okan Shopify", "Okan WooCommerce",
+    "Okan E-ticaret", "Okan E-ticaret Uzmanı",
+    // Location-based
+    "Dijital Pazarlama İzmir Okan", "Web Tasarım İzmir Okan", "SEO İzmir Okan",
+    "Okan Dijital Pazarlama İzmir", "Okan Web Tasarım İzmir",
+    // Long-tail Professional
+    "Dijital Pazarlama Uzmanı Okan Demir", "Web Tasarım Uzmanı Okan Demir",
+    "SEO Uzmanı Okan Demir", "Freelance Dijital Pazarlama Okan",
+    "Dijital Pazarlama Danışmanı Okan", "E-ticaret Uzmanı Okan Demir",
+    // Personal Brand Questions
+    "Okan Kimdir", "Okan Demir Kimdir", "Okan Biyografi", "Okan Hakkında",
+    "Okan Demir Biyografi.net", "Okan Demir İzmir Bornova",
+    // Service Quality
+    "En İyi Dijital Pazarlama Uzmanı", "En İyi Web Tasarımcı", "En İyi SEO Uzmanı",
+    "Profesyonel Dijital Pazarlama", "Güvenilir Dijital Pazarlama Uzmanı"
+  ],
   authors: [{ name: "Okan Demir" }],
   creator: "Okan Demir",
   publisher: "Okan Demir",
@@ -50,15 +78,36 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
+    alternateLocale: ['en_US', 'en_GB'],
     url: 'https://okandemir.org',
-    title: 'Okan Demir İzmir - Dijital Pazarlama Uzmanı | Okan | Web Tasarım & SEO',
-    description: 'Okan Demir İzmir - Türkiye\'nin en iyi dijital pazarlama uzmanı. Okan olarak İzmir\'de web tasarım, SEO, Google Ads, Meta Business, e-ticaret platformları konularında uzman. 5+ yıl deneyim, 50+ proje, %98 müşteri memnuniyeti.',
-    siteName: 'Okan Demir İzmir',
+    title: 'Okan | Okan Demir | Okan Demir İzmir - Türkiye #1 Dijital Pazarlama Uzmanı',
+    description: 'Okan - Okan Demir - Okan Demir İzmir, Türkiye\'nin en iyi dijital pazarlama uzmanı. Biyografi.net doğrulanmış. 50+ başarılı proje, %98 müşteri memnuniyeti. Okan ile garantili dijital dönüşüm.',
+    siteName: 'Okan Demir - Dijital Pazarlama Uzmanı',
+    images: [
+      {
+        url: 'https://okandemir.org/okan-demir-profile.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Okan Demir - Türkiye #1 Dijital Pazarlama Uzmanı',
+      },
+      {
+        url: 'https://okandemir.org/okan-about-photo.webp',
+        width: 800,
+        height: 600,
+        alt: 'Okan - Dijital Pazarlama ve Web Tasarım Uzmanı',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Okan Demir İzmir - Dijital Pazarlama Uzmanı | Okan | Web Tasarım & SEO',
-    description: 'Okan Demir İzmir - Türkiye\'nin en iyi dijital pazarlama uzmanı. Okan olarak İzmir\'de web tasarım, SEO, Google Ads, Meta Business, e-ticaret platformları konularında uzman.',
+    site: '@okandemirorg',
+    creator: '@okandemirorg',
+    title: 'Okan | Okan Demir | Dijital Pazarlama Uzmanı',
+    description: 'Okan - Okan Demir İzmir, Türkiye\'nin #1 dijital pazarlama uzmanı. Biyografi.net doğrulanmış. 50+ proje, %98 memnuniyet.',
+    images: {
+      url: 'https://okandemir.org/okan-demir-profile.jpg',
+      alt: 'Okan Demir - Dijital Pazarlama Uzmanı',
+    },
   },
   verification: {
     google: process.env.GOOGLE_SITE_VERIFICATION || 'google-site-verification-code',

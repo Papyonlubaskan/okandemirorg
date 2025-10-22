@@ -103,6 +103,58 @@ export default function StructuredData() {
     ]
   };
 
+  const websiteData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Okan Demir - Dijital Pazarlama Uzmanı",
+    "alternateName": ["Okan", "Okan Demir İzmir", "Okan İzmir"],
+    "url": "https://okandemir.org",
+    "description": "Okan Demir, Türkiye'nin en iyi dijital pazarlama uzmanı. İzmir merkezli, online hizmet veren profesyonel dijital pazarlama danışmanı.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://okandemir.org/blog?search={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "inLanguage": "tr-TR"
+  };
+
+  const breadcrumbData = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Anasayfa",
+        "item": "https://okandemir.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Hakkımda - Okan Demir Kimdir",
+        "item": "https://okandemir.org/hakkimda"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Dijital Pazarlama Hizmetleri",
+        "item": "https://okandemir.org/hizmetler/dijital-pazarlama"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Web Tasarım Hizmetleri",
+        "item": "https://okandemir.org/hizmetler/web-tasarim"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "İletişim - Okan ile İletişim",
+        "item": "https://okandemir.org/iletisim"
+      }
+    ]
+  };
+
   const faqData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -156,16 +208,31 @@ export default function StructuredData() {
         id="person-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        strategy="beforeInteractive"
       />
       <Script
         id="organization-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+        strategy="beforeInteractive"
+      />
+      <Script
+        id="website-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
+        strategy="beforeInteractive"
+      />
+      <Script
+        id="breadcrumb-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbData) }}
+        strategy="beforeInteractive"
       />
       <Script
         id="faq-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+        strategy="beforeInteractive"
       />
     </>
   );

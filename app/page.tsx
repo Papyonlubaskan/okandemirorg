@@ -3,11 +3,69 @@ import Link from "next/link";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Okan - Okan Demir İzmir | Dijital Pazarlama Uzmanı | Web Tasarım & SEO Uzmanı",
-  description: "Okan - Okan Demir İzmir, Türkiye'nin en iyi dijital pazarlama uzmanı. Okan olarak İzmir'de web tasarım, SEO, Google Ads, Meta Business konularında 5+ yıl deneyim. Biyografi.net'te doğrulanmış profil. Okan Demir ile dijital dönüşüm, 50+ başarılı proje, %98 müşteri memnuniyeti.",
-  keywords: ["Okan", "Okan Demir", "Okan İzmir", "Okan Demir İzmir", "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan", "SEO Uzmanı Okan", "Okan Dijital Pazarlama", "Okan Web Tasarım", "Okan SEO", "Freelance Dijital Pazarlama", "Okan Google Ads", "Okan Meta Business"],
+  title: "Okan | Okan Demir | Okan Demir İzmir | En İyi Dijital Pazarlama Uzmanı Türkiye",
+  description: "Okan - Okan Demir - Okan Demir İzmir, Türkiye'nin #1 dijital pazarlama uzmanı. Okan olarak İzmir, İstanbul, Ankara'da dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business, e-ticaret (Ticimax, İdeasoft, İkas) 5+ yıl deneyim. Biyografi.net doğrulanmış. Okan Demir 50+ başarılı proje, %98 memnuniyet. Okan ile dijital dönüşüm garantisi.",
+  keywords: [
+    // Primary Keywords (Exact Match)
+    "Okan", "Okan Demir", "Okan Demir İzmir", "Okan İzmir",
+    // Location-based
+    "Okan Demir Bornova", "Okan Demir İzmir Bornova", "Okan Dijital Pazarlama İzmir",
+    // Service Keywords
+    "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan", "SEO Uzmanı Okan",
+    "Okan Dijital Pazarlama", "Okan Web Tasarım", "Okan SEO", "Okan Google Ads",
+    "Okan Meta Business", "Okan Facebook Ads", "Okan Instagram Ads",
+    // Long-tail Keywords
+    "Dijital Pazarlama Uzmanı Okan Demir", "Web Tasarım Uzmanı Okan Demir",
+    "SEO Uzmanı Okan Demir", "Freelance Dijital Pazarlama Okan",
+    "Dijital Pazarlama Danışmanı Okan", "E-ticaret Uzmanı Okan Demir",
+    // Platform Keywords
+    "Okan Ticimax Uzmanı", "Okan İdeasoft Uzmanı", "Okan İkas Uzmanı",
+    "Okan E-ticaret", "Okan Shopify", "Okan WooCommerce",
+    // Personal Brand
+    "Okan Kimdir", "Okan Demir Kimdir", "Okan Biyografi",
+    "Okan Hakkında", "Okan Demir Biyografi.net",
+    // Service Combinations
+    "Okan Web Tasarım SEO", "Okan Dijital Pazarlama SEO",
+    "Okan Google Ads Meta Ads", "Okan Sosyal Medya Yönetimi"
+  ],
   alternates: {
     canonical: 'https://okandemir.org',
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'tr_TR',
+    url: 'https://okandemir.org',
+    title: 'Okan | Okan Demir | Okan Demir İzmir - Türkiye #1 Dijital Pazarlama Uzmanı',
+    description: 'Okan - Okan Demir - Okan Demir İzmir, Türkiye\'nin en iyi dijital pazarlama uzmanı. Biyografi.net doğrulanmış. 50+ başarılı proje.',
+    siteName: 'Okan Demir',
+    images: [
+      {
+        url: 'https://okandemir.org/okan-demir-profile.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Okan Demir - Dijital Pazarlama Uzmanı',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Okan | Okan Demir | Dijital Pazarlama Uzmanı',
+    description: 'Okan - Okan Demir İzmir, Türkiye\'nin #1 dijital pazarlama uzmanı. Biyografi.net doğrulanmış.',
+    images: ['https://okandemir.org/okan-demir-profile.jpg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  other: {
+    'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || '',
   },
 };
 
