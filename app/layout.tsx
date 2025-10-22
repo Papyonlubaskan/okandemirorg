@@ -23,8 +23,8 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Okan Demir İzmir - Dijital Pazarlama Uzmanı | Okan | Web Tasarım & SEO",
-  description: "Okan Demir İzmir - Türkiye'nin en iyi dijital pazarlama uzmanı. Okan olarak İzmir'de web tasarım, SEO, Google Ads, Meta Business, e-ticaret platformları (Ticimax, İdeasoft, İkas) konularında uzman. 5+ yıl deneyim, 50+ proje, %98 müşteri memnuniyeti. Okan Demir İzmir ile dijital dönüşümünüzü başlatın.",
+  title: "Okan | Okan Demir İzmir - En İyi Dijital Pazarlama Uzmanı | Web Tasarım & SEO",
+  description: "Okan - Okan Demir İzmir, Türkiye'nin en iyi dijital pazarlama uzmanı. Okan olarak İzmir'de web tasarım, SEO, Google Ads, Meta Business, e-ticaret platformları (Ticimax, İdeasoft, İkas) konularında 5+ yıl deneyim. Biyografi.net'te doğrulanmış. Okan Demir İzmir ile 50+ başarılı proje, %98 müşteri memnuniyeti. Okan ile dijital dönüşüm.",
   keywords: ["Okan Demir", "Okan", "Okan Demir İzmir", "Okan İzmir", "Dijital Pazarlama", "Dijital Pazarlama Uzmanı", "Dijital Pazarlama İzmir", "Web Tasarım", "Web Tasarım İzmir", "SEO", "SEO İzmir", "Google Ads", "Meta Business", "E-ticaret", "Ticimax", "İdeasoft", "İkas", "Freelancer", "Dijital Dönüşüm", "Okan SEO", "Okan Web Tasarım", "Okan Dijital Pazarlama", "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan", "İzmir Dijital Pazarlama", "İzmir Web Tasarım"],
   authors: [{ name: "Okan Demir" }],
   creator: "Okan Demir",

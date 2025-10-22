@@ -103,6 +103,53 @@ export default function StructuredData() {
     ]
   };
 
+  const faqData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Okan Kimdir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Okan (Okan Demir), Türkiye'nin en iyi dijital pazarlama uzmanlarından biridir. Okan, İzmir merkezli olarak dijital pazarlama, web tasarım, SEO, Google Ads ve Meta Business konularında 5+ yıldır profesyonel hizmet vermektedir. Okan Demir, Biyografi.net'te doğrulanmış bir profil sahibidir ve 50+ başarılı projeye imza atmıştır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Okan Demir Ne İş Yapıyor?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Okan Demir, dijital pazarlama uzmanı olarak web tasarım, SEO optimizasyonu, Google Ads kampanya yönetimi, Meta Business (Facebook & Instagram) reklam yönetimi, e-ticaret platformları (Ticimax, İdeasoft, İkas) kurulumu ve dijital dönüşüm danışmanlığı hizmetleri sunmaktadır."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Okan Demir İzmir'de Mi?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Evet, Okan Demir İzmir merkezlidir. Okan, İzmir Bornova'da doğmuş ve İzmir'de yaşamaktadır. Ancak Okan Demir, online çalışma sistemi sayesinde Türkiye'nin her yerinden ve dünya genelinden müşterilere hizmet vermektedir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Okan ile Nasıl İletişime Geçebilirim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Okan Demir ile iletişime geçmek için WhatsApp (+90 555 267 77 39) üzerinden mesaj gönderebilir, okandemir.org web sitesinden iletişim formunu doldurabilir veya sosyal medya hesaplarından ulaşabilirsiniz."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Neden Okan Demir'i Tercih Etmeliyim?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Okan, 5+ yıllık deneyimi, 50+ başarılı projesi ve %98 müşteri memnuniyeti ile Türkiye'nin en güvenilir dijital pazarlama uzmanlarından biridir. Okan Demir, Biyografi.net'te doğrulanmış bir profil sahibidir ve her projede ölçülebilir sonuçlar üretmektedir."
+        }
+      }
+    ]
+  };
+
   return (
     <>
       <Script
@@ -114,6 +161,11 @@ export default function StructuredData() {
         id="organization-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationData) }}
+      />
+      <Script
+        id="faq-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
       />
     </>
   );

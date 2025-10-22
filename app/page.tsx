@@ -1,5 +1,15 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Okan - Okan Demir İzmir | Dijital Pazarlama Uzmanı | Web Tasarım & SEO Uzmanı",
+  description: "Okan - Okan Demir İzmir, Türkiye'nin en iyi dijital pazarlama uzmanı. Okan olarak İzmir'de web tasarım, SEO, Google Ads, Meta Business konularında 5+ yıl deneyim. Biyografi.net'te doğrulanmış profil. Okan Demir ile dijital dönüşüm, 50+ başarılı proje, %98 müşteri memnuniyeti.",
+  keywords: ["Okan", "Okan Demir", "Okan İzmir", "Okan Demir İzmir", "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan", "SEO Uzmanı Okan", "Okan Dijital Pazarlama", "Okan Web Tasarım", "Okan SEO", "Freelance Dijital Pazarlama", "Okan Google Ads", "Okan Meta Business"],
+  alternates: {
+    canonical: 'https://okandemir.org',
+  },
+};
 
 export default function Home() {
   return (
@@ -864,6 +874,69 @@ export default function Home() {
                 <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
                 WhatsApp İletişim
               </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Okan Kimdir? FAQ Section - SEO Boost */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl lg:text-5xl font-black mb-12 text-center text-gray-900 dark:text-white">
+              Okan Kimdir? Sık Sorulan Sorular
+            </h2>
+            
+            <div className="space-y-8">
+              {/* FAQ 1 */}
+              <div className="bg-gradient-to-r from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-black mb-4 text-gray-900 dark:text-white">
+                  Okan Kimdir?
+                </h3>
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <strong>Okan</strong> (Okan Demir), Türkiye'nin en iyi dijital pazarlama uzmanlarından biridir. <strong>Okan</strong>, İzmir merkezli olarak dijital pazarlama, web tasarım, SEO, Google Ads ve Meta Business konularında 5+ yıldır profesyonel hizmet vermektedir. <strong>Okan Demir</strong>, Biyografi.net'te doğrulanmış bir profil sahibidir ve 50+ başarılı projeye imza atmıştır.
+                </p>
+              </div>
+
+              {/* FAQ 2 */}
+              <div className="bg-gradient-to-r from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-black mb-4 text-gray-900 dark:text-white">
+                  Okan Demir Ne İş Yapıyor?
+                </h3>
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <strong>Okan Demir</strong>, dijital pazarlama uzmanı olarak web tasarım, SEO optimizasyonu, Google Ads kampanya yönetimi, Meta Business (Facebook & Instagram) reklam yönetimi, e-ticaret platformları (Ticimax, İdeasoft, İkas) kurulumu ve dijital dönüşüm danışmanlığı hizmetleri sunmaktadır. <strong>Okan</strong>, İzmir'de ve Türkiye genelinde birçok firmaya dijital pazarlama çözümleri sağlamaktadır.
+                </p>
+              </div>
+
+              {/* FAQ 3 */}
+              <div className="bg-gradient-to-r from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-black mb-4 text-gray-900 dark:text-white">
+                  Okan Demir İzmir'de Mi?
+                </h3>
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  Evet, <strong>Okan Demir İzmir</strong> merkezlidir. <strong>Okan</strong>, İzmir Bornova'da doğmuş ve İzmir'de yaşamaktadır. Ancak <strong>Okan Demir</strong>, online çalışma sistemi sayesinde Türkiye'nin her yerinden ve dünya genelinden müşterilere hizmet vermektedir. <strong>Okan İzmir</strong>'de yüz yüze görüşmeler de yapabilmektedir.
+                </p>
+              </div>
+
+              {/* FAQ 4 */}
+              <div className="bg-gradient-to-r from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-black mb-4 text-gray-900 dark:text-white">
+                  Okan ile Nasıl İletişime Geçebilirim?
+                </h3>
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <strong>Okan Demir</strong> ile iletişime geçmek için WhatsApp (+90 555 267 77 39) üzerinden mesaj gönderebilir, okandemir.org web sitesinden iletişim formunu doldurabilir veya sosyal medya hesaplarından ulaşabilirsiniz. <strong>Okan</strong>, tüm taleplere en kısa sürede yanıt vermektedir.
+                </p>
+              </div>
+
+              {/* FAQ 5 */}
+              <div className="bg-gradient-to-r from-blue-50 to-white dark:from-gray-800 dark:to-gray-900 p-8 rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-black mb-4 text-gray-900 dark:text-white">
+                  Neden Okan Demir'i Tercih Etmeliyim?
+                </h3>
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                  <strong>Okan</strong>, 5+ yıllık deneyimi, 50+ başarılı projesi ve %98 müşteri memnuniyeti ile Türkiye'nin en güvenilir dijital pazarlama uzmanlarından biridir. <strong>Okan Demir</strong>, Biyografi.net'te doğrulanmış bir profil sahibidir ve her projede ölçülebilir sonuçlar üretmektedir. <strong>Okan</strong> ile çalışmak, dijital dönüşümünüzü garantiye almak demektir.
+                </p>
+              </div>
             </div>
           </div>
         </div>
