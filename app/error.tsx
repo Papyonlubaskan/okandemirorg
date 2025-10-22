@@ -67,7 +67,7 @@ export default function Error({
           </button>
           <Link
             href="/"
-            className="px-6 py-3 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 text-gray-900 dark:text-white rounded-lg font-black transition-colors"
+            className="px-6 py-3 bg-gray-200 hover:bg-gray-300 text-gray-900 dark:text-white rounded-lg font-black transition-colors"
           >
             Ana Sayfa
           </Link>

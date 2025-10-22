@@ -194,13 +194,13 @@ export default function DigitalMarketingTrends2025Page() {
                 <div className="flex gap-4">
                   <a 
                     href="https://wa.me/+905552677739"
-                    className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-full font-black transition-colors"
+                    className="inline-flex items-center bg-green-600 hover:bg-green-700  text-white px-6 py-3 rounded-full font-black transition-colors"
                   >
                     WhatsApp
                   </a>
                   <Link 
                     href="/hizmetler"
-                    className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-full font-black transition-colors"
+                    className="inline-flex items-center bg-blue-600 hover:bg-blue-700  text-white px-6 py-3 rounded-full font-black transition-colors"
                   >
                     Hizmetlerim
                   </Link>

@@ -93,7 +93,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
                   <Link 
                     href="https://wa.me/+905552677739"
-                    className="group inline-flex items-center text-white px-10 py-6 rounded-full font-black text-2xl transition-all duration-500 hover:scale-110 touch-manipulation w-full sm:w-auto justify-center focus:outline-none focus:ring-4 bg-gradient-to-r from-green-600 to-green-700 dark:from-gray-700 dark:to-gray-800"
+                    className="group inline-flex items-center text-white px-10 py-6 rounded-full font-black text-2xl transition-all duration-500 hover:scale-110 touch-manipulation w-full sm:w-auto justify-center focus:outline-none focus:ring-4 bg-gradient-to-r from-green-600 to-green-700"
                     aria-label="WhatsApp ile randevu al"
                     role="button"
                   >
@@ -164,7 +164,7 @@ export default function Home() {
                 </ul>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700  text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -198,7 +198,7 @@ export default function Home() {
                 </ul>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-green-700 hover:bg-green-800  text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -269,7 +269,7 @@ export default function Home() {
                 <div className="flex flex-col gap-3">
                   <Link
                     href="https://wa.me/+905552677739"
-                    className="inline-flex items-center bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                    className="inline-flex items-center bg-green-700 hover:bg-green-800  text-white px-6 py-3 rounded-lg font-black transition-colors"
                   >
                     <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                     Randevu Al
@@ -383,7 +383,7 @@ export default function Home() {
               <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex-1 bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-700 hover:bg-green-800  text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Randevu Al!
                 </Link>
@@ -422,7 +422,7 @@ export default function Home() {
               <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex-1 bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-700 hover:bg-green-800  text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Randevu Al!
                 </Link>
@@ -461,7 +461,7 @@ export default function Home() {
               <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex-1 bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-700 hover:bg-green-800  text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
                   Randevu Al!
                 </Link>
@@ -502,7 +502,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700  text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -522,7 +522,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700  text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -542,7 +542,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700  text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -562,7 +562,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700  text-white px-6 py-3 rounded-lg font-black transition-colors"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
@@ -810,14 +810,14 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="inline-flex items-center bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="inline-flex items-center bg-green-700 hover:bg-green-800  text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
                   Ücretsiz Görüşme Talep Et
                 </Link>
                 <Link
                   href="mailto:info@okandemir.org"
-                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700  text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
                   Email ile İletişime Geç
@@ -920,14 +920,14 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
                 href="mailto:info@okandemir.org"
-                className="inline-flex items-center bg-blue-600 hover:bg-blue-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="inline-flex items-center bg-blue-600 hover:bg-blue-700  text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
                 Email Gönder
               </Link>
               <Link
                 href="https://wa.me/+905552677739"
-                className="inline-flex items-center bg-green-700 hover:bg-green-800 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="inline-flex items-center bg-green-700 hover:bg-green-800  text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
                 WhatsApp İletişim
@@ -953,7 +953,7 @@ export default function Home() {
                 placeholder="E-posta adresiniz"
                 className="flex-1 px-4 py-3 rounded-lg bg-white dark:bg-gray-700 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 dark:focus:ring-gray-500 w-full"
               />
-              <button className="bg-yellow-400 hover:bg-yellow-500 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white px-8 py-3 rounded-lg font-black text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto">
+              <button className="bg-yellow-400 hover:bg-yellow-500  text-gray-900 dark:text-white px-8 py-3 rounded-lg font-black text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto">
                 Abone Ol
               </button>
             </div>

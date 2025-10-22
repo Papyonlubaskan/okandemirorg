@@ -188,7 +188,7 @@ export default function BlogPage() {
           </p>
           <Link
             href="/iletisim"
-            className="inline-flex items-center bg-yellow-400 hover:bg-yellow-500 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-900 dark:text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105"
+            className="inline-flex items-center bg-yellow-400 hover:bg-yellow-500  text-gray-900 dark:text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105"
           >
             Hemen İletişime Geç
           </Link>

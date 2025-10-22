@@ -20,7 +20,7 @@ export default function Projeler() {
             </p>
             <Link 
               href="https://wa.me/+905552677739"
-              className="inline-flex items-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="inline-flex items-center bg-green-600 hover:bg-green-700  text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
               Randevu Al!
@@ -78,7 +78,7 @@ export default function Projeler() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="https://wa.me/+905552677739"
-                className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700 dark:bg-gray-700 dark:hover:bg-gray-600 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="inline-flex items-center justify-center bg-green-600 hover:bg-green-700  text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
                 <Image src="/whatsapp-icon.png" alt="WhatsApp" width={24} height={24} className="mr-3" />
                 WhatsApp ile İletişim
