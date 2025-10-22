@@ -1,0 +1,92 @@
+/* Global Typography Settings */
+
+/* Ana Başlıklar - Hero hariç */
+h2, h3 {
+  font-size: 1.5rem !important; /* 24px */
+  font-weight: 700 !important;
+  line-height: 1.4 !important;
+}
+
+/* Alt Metinler - 18px ve Kalın (Hero paragrafları hariç) */
+li, label, input, textarea {
+  font-size: 1.125rem !important; /* 18px */
+  font-weight: 600 !important;
+  line-height: 1.6 !important;
+}
+
+/* Hero Description Override */
+.hero-description {
+  font-size: 36px !important;
+  font-weight: 400 !important;
+}
+
+/* Hero Title Override */
+.hero-title {
+  font-size: inherit !important;
+}
+
+/* Özel Başlık Boyutları (Responsive) - Hero hariç */
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 1.625rem !important; /* 26px */
+  }
+}
+
+@media (min-width: 1280px) {
+  h2 {
+    font-size: 1.75rem !important; /* 28px */
+  }
+}
+
+/* Card Başlıkları */
+.card h3,
+.service h3,
+.portfolio-item h3 {
+  font-size: 1.5rem !important; /* 24px */
+  font-weight: 700 !important;
+}
+
+/* Card Metinleri */
+.card p,
+.service p,
+.portfolio-item p {
+  font-size: 1.125rem !important; /* 18px */
+  font-weight: 600 !important;
+}
+
+/* Footer Yazıları */
+footer p,
+footer a,
+footer span,
+footer li {
+  font-size: 1.125rem !important; /* 18px */
+  font-weight: 600 !important;
+}
+
+/* Header Navigasyon */
+header nav a {
+  font-size: 1.25rem !important; /* 20px */
+  font-weight: 700 !important;
+}
+
+/* Butonlar */
+button,
+.btn,
+a.button {
+  font-size: 1.125rem !important; /* 18px */
+  font-weight: 700 !important;
+}
+
+/* Form Elemanları */
+input,
+textarea,
+select {
+  font-size: 1.125rem !important; /* 18px */
+  font-weight: 600 !important;
+}
+
+/* Minimum Font Size */
+* {
+  min-font-size: 1.125rem; /* 18px */
+}
+
