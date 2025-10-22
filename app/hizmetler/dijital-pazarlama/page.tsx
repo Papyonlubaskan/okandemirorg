@@ -1,4 +1,15 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: "Dijital Pazarlama Hizmetleri | Okan Demir - Okan | Dijital Pazarlama Uzmanı",
+  description: "Dijital pazarlama hizmetleri - Okan Demir ile Meta Ads, Google Ads, TikTok, LinkedIn pazarlama. Okan olarak dijital pazarlama uzmanı. SEO, sosyal medya yönetimi, reklam kampanyaları. En iyi dijital pazarlama hizmetleri.",
+  keywords: ["Dijital Pazarlama", "Dijital Pazarlama Hizmetleri", "Okan Demir", "Okan", "Meta Ads", "Google Ads", "TikTok Pazarlama", "LinkedIn Pazarlama", "SEO", "Sosyal Medya Yönetimi", "Reklam Kampanyaları", "Dijital Pazarlama Uzmanı", "Okan Dijital Pazarlama"],
+  openGraph: {
+    title: "Dijital Pazarlama Hizmetleri | Okan Demir - Okan",
+    description: "Dijital pazarlama hizmetleri - Okan Demir ile Meta Ads, Google Ads, TikTok, LinkedIn pazarlama. Okan olarak dijital pazarlama uzmanı.",
+  },
+}
 
 export default function DijitalPazarlama() {
   return (
@@ -14,10 +25,10 @@ export default function DijitalPazarlama() {
               </svg>
             </div>
             <h1 className="text-4xl lg:text-5xl font-black mb-6">
-              Dijital Pazarlama
+              Dijital Pazarlama Hizmetleri | Okan Demir
             </h1>
             <p className="text-xl text-blue-100 leading-tight mb-8">
-              Meta Ads, Google Ads, TikTok ve LinkedIn platformlarında sürdürülebilir stratejiler ile mükemmel sonuçlar alıyorum.
+              Okan Demir - Dijital pazarlama uzmanı olarak Meta Ads, Google Ads, TikTok ve LinkedIn platformlarında sürdürülebilir stratejiler ile mükemmel sonuçlar alıyorum. Okan ile dijital pazarlama dönüşümünüzü başlatın.
             </p>
           </div>
         </div>

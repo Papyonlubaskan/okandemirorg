@@ -4,12 +4,12 @@ import YouTubeFeed from '@/components/YouTubeFeed'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Okan Demir Kimdir? - Dijital Pazarlama Uzmanı Hakkında",
-  description: "Okan Demir kimdir? Türkiye'nin önde gelen dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. 5+ yıl deneyim, 50+ proje. Ticimax, İdeasoft, İkas uzmanı.",
-  keywords: ["Okan Demir", "Okan", "Dijital Pazarlama Uzmanı", "Web Tasarımcı", "E-ticaret Uzmanı", "Ticimax", "İdeasoft", "İkas", "SEO Uzmanı"],
+  title: "Okan Demir Kimdir? - Okan | Dijital Pazarlama Uzmanı Hakkında",
+  description: "Okan Demir kimdir? Okan - Türkiye'nin en iyi dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. 5+ yıl deneyim, 50+ proje. Ticimax, İdeasoft, İkas uzmanı. Okan Demir ile tanışın.",
+  keywords: ["Okan Demir", "Okan", "Dijital Pazarlama Uzmanı", "Dijital Pazarlama", "Web Tasarımcı", "E-ticaret Uzmanı", "Ticimax", "İdeasoft", "İkas", "SEO Uzmanı", "Okan SEO", "Okan Web Tasarım", "Okan Dijital Pazarlama", "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan"],
   openGraph: {
-    title: "Okan Demir Kimdir? - Dijital Pazarlama Uzmanı",
-    description: "Okan Demir kimdir? Türkiye'nin önde gelen dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı.",
+    title: "Okan Demir Kimdir? - Okan | Dijital Pazarlama Uzmanı",
+    description: "Okan Demir kimdir? Okan - Türkiye'nin en iyi dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. 5+ yıl deneyim, 50+ proje.",
   },
 }
 

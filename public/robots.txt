@@ -2,6 +2,12 @@
 User-agent: *
 Allow: /
 
+# SEO için önemli sayfalar
+Allow: /hizmetler/dijital-pazarlama
+Allow: /hakkimda
+Allow: /projeler
+Allow: /blog
+
 # Sitemaps
 Sitemap: https://okandemir.org/sitemap.xml
 

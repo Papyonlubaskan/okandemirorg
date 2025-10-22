@@ -15,11 +15,11 @@ export default function Home() {
                   <span className="block text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-6 lg:mb-8" style={{ fontSize: '64px', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 'bold' }}>
                     OKAN DEMİR <span aria-label="telif hakkı">©</span>
                   </span>
-                  <span className="block text-white" style={{ fontSize: '48px', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 'bold' }}>Sizin İçin Çalışmaya Hazırım!</span>
+                  <span className="block text-white" style={{ fontSize: '48px', fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontWeight: 'bold' }}>Dijital Pazarlama Uzmanı | Okan</span>
                 </h1>
                 
                 <p className="hero-description text-gray-100 leading-tight mb-12 font-black" style={{ fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize: '24px', fontWeight: '500' }}>
-                  Okan Demir olarak, doğru strateji + doğru araçlar = gerçek sonuçlar formülüyle çalışıyorum. Dijital pazarlama, dijital dönüşüm, sosyal medya yönetimi, SEO, Google Ads, Meta Business sistem kurulumu ve yüksek dönüşüm odaklı web tasarımı ile daha fazla trafik, daha çok lead, daha yüksek satış için yanınızdayım! Okan Demir ile en iyisini gerçekleştirelim.
+                  Okan Demir - Türkiye'nin en iyi dijital pazarlama uzmanı. Okan olarak, doğru strateji + doğru araçlar = gerçek sonuçlar formülüyle çalışıyorum. Dijital pazarlama, dijital dönüşüm, sosyal medya yönetimi, SEO, Google Ads, Meta Business sistem kurulumu ve yüksek dönüşüm odaklı web tasarımı ile daha fazla trafik, daha çok lead, daha yüksek satış için yanınızdayım! Okan Demir ile dijital dönüşümünüzü başlatın.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">

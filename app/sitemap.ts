@@ -86,6 +86,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
+      url: `${baseUrl}/hizmetler/dijital-pazarlama`,
+      lastModified: now,
+      changeFrequency: 'weekly',
+      priority: 0.95,
+    },
+    {
       url: `${baseUrl}/blog/dijital-pazarlama-trendleri-2025`,
       lastModified: now,
       changeFrequency: 'monthly',
