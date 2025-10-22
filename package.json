@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "build:analyze": "ANALYZE=true next build",
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "build:analyze": "ANALYZE=true next build --turbopack",
     "start": "next start",
     "lint": "next lint --fix",
     "lint:check": "next lint",
@@ -14,8 +14,7 @@
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
     "railway:build": "npm run build",
-    "railway:start": "npm run start",
-    "postinstall": "npm run build"
+    "railway:start": "npm run start"
   },
   "dependencies": {
     "@types/nodemailer": "^7.0.2",

@@ -15,8 +15,16 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   
-  /* Turbopack Configuration - Disabled for Railway */
-  // Turbopack ayarları Railway için kapatıldı
+  /* Turbopack Configuration */
+  turbopack: {
+    // Turbopack ayarları
+    rules: {
+      '*.svg': {
+        loaders: ['@svgr/webpack'],
+        as: '*.js',
+      },
+    },
+  },
   
   /* Security Headers - Eski telefonlar için SSL uyumluluğu */
   async headers() {
