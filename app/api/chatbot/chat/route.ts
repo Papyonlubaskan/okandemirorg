@@ -137,6 +137,44 @@ Markanız için profesyonel, güven veren ve tamamen size özel WordPress web si
 Detaylı bilgi için iletişime geçin! 📞`
   }
 
+  // Özel Web Geliştirme (PHP, Laravel, Node.js vb.)
+  if (lowerMessage.includes('php') || lowerMessage.includes('laravel') || lowerMessage.includes('node.js') || lowerMessage.includes('react') || lowerMessage.includes('vue') || lowerMessage.includes('mysql') || lowerMessage.includes('custom') || lowerMessage.includes('özel kodlama')) {
+    return `💻 **Özel Web Geliştirme Hizmetlerim:**
+
+%100 MÜŞTERİ MEMNUNİYETİ!
+
+Kişiye ya da kuruma özel her türlü web projesini admin panelli ve dinamik olarak kodlayarak hizmete sunuyorum. Web sitenizi teslim ettiğimde bütün içerikleri ve detayları tek bir panelden hızlı bir şekilde kendiniz düzenleyip sitenizde yayınlayabileceksiniz.
+
+**Kullandığım Teknolojiler:**
+✅ PHP & Laravel
+✅ Node.js & Express.js
+✅ ReactJs & Nuxt.js
+✅ Vue.js
+✅ MySQL
+✅ JavaScript & JQuery
+✅ HTML5 & CSS3
+✅ Responsive Web Design (Tüm Cihazlara Duyarlı Tasarım)
+
+**Proje Özellikleri:**
+• Tamamen müşteri talepleri doğrultusunda
+• Fikir alışverişi ile proje tamamlama
+• Admin panelli dinamik yapı
+• Tek panelden tüm içerik yönetimi
+• Özel geliştirme ve kodlama
+
+**Başlangıç Fiyatları:**
+
+🚀 **Özel Geliştirme Paketleri:**
+• Temel özel site: 5.000₺ - 15.000₺
+• Orta seviye özel uygulama: 15.000₺ - 30.000₺
+• Gelişmiş özel proje: 30.000₺ - 50.000₺+
+• Kurumsal özel çözümler: Teklif üzerine
+
+⚠️ **ÖNEMLİ:** Teslim süresi yapılan projenin düzeyine ve karmaşıklığına göre değişiklik gösterir. Her proje için özel teklif hazırlanır.
+
+Detaylı bilgi için iletişime geçin! 📞`
+  }
+
   // SEO
   if (lowerMessage.includes('seo') || lowerMessage.includes('google')) {
     return `🔍 **SEO Hizmetlerim:**
@@ -257,6 +295,14 @@ Cumartesi: 10:00 - 16:00
   if (lowerMessage.includes('portfolio') || lowerMessage.includes('proje') || lowerMessage.includes('referans')) {
     return `🎨 **Portfolio & Projeler:**
 
+**Özel Web Geliştirme Projeleri:**
+- PHP & Laravel projeleri
+- Node.js & Express.js çözümleri
+- ReactJs & Nuxt.js uygulamaları
+- Vue.js geliştirmeleri
+- MySQL veritabanı entegrasyonları
+- Admin panelli dinamik siteler
+
 **Web Tasarım Projeleri:**
 - E-ticaret siteleri
 - Kurumsal web siteler
@@ -272,6 +318,20 @@ Cumartesi: 10:00 - 16:00
 - 10K+ takipçi artışları
 - Viral içerik kampanyaları
 - Marka bilinirliği artışları
+
+**%100 Müşteri Memnuniyeti!**
+
+Kişiye ya da kuruma özel her türlü web projesini admin panelli ve dinamik olarak kodlayarak hizmete sunuyorum. Web sitenizi teslim ettiğimde bütün içerikleri ve detayları tek bir panelden hızlı bir şekilde kendiniz düzenleyip sitenizde yayınlayabileceksiniz.
+
+**Kullandığım Teknolojiler:**
+• PHP & Laravel
+• Node.js & Express.js
+• ReactJs & Nuxt.js
+• Vue.js
+• MySQL
+• JavaScript & JQuery
+• HTML5 & CSS3
+• Responsive Web Design
 
 Detaylı portfolio için: https://okandemir.org/referanslar`
   }
