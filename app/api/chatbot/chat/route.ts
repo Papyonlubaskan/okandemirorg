@@ -87,27 +87,63 @@ Hangi konuda detaylı bilgi almak istersiniz? 💬`
   }
 
   // Web tasarım
-  if (lowerMessage.includes('web') || lowerMessage.includes('website') || lowerMessage.includes('site')) {
-    return `🌐 **Web Tasarım Hizmetlerim:**
+  if (lowerMessage.includes('web') || lowerMessage.includes('website') || lowerMessage.includes('site') || lowerMessage.includes('wordpress')) {
+    return `🌐 **WordPress Web Tasarım Hizmetlerim:**
 
-✅ Responsive web tasarım
-✅ WordPress geliştirme
-✅ E-ticaret çözümleri
-✅ SEO uyumlu kodlama
-✅ Hızlı yükleme süreleri
-✅ Mobil uyumlu tasarım
+Markanız için profesyonel, güven veren ve tamamen size özel bir WordPress web sitesi!
+
+**Hizmetler:**
+✅ Mobil ve tablet uyumlu modern tasarım
+✅ Hız ve performans optimizasyonu
+✅ SEO uyumlu altyapı (meta başlıklar + açıklamalar)
+✅ Güvenlik ve anti-spam eklentileri
+✅ Yönetilebilir kontrol paneli
+✅ Sınırsız revize imkânı (proje bitimine kadar)
+✅ WhatsApp, Instagram, harita ve iletişim formları entegrasyonu
+
+**WordPress Paketler (Başlangıç Ücretleri):**
+
+💼 **Temel Paket** - 5.000₺
+• 3 sayfa
+• İçerik girişi
+• Responsive tasarım
+• 7 plugin yükleme
+• Tasarım özelleştirme
+• 1 revizyon
+• Teslim: 5 gün
+
+💼 **Standart Paket** - 10.000₺
+• 5 sayfa
+• İçerik girişi
+• Responsive tasarım
+• Blog modülü
+• 10 plugin yükleme
+• Tasarım özelleştirme
+• 2 revizyon
+• Teslim: 7 gün
+
+⭐ **Pro Paket** - 20.000₺
+• 10 sayfa
+• İçerik girişi
+• Responsive tasarım
+• SEO uyumlu altyapı
+• 20 plugin yükleme
+• Ödeme altyapısı entegrasyonu
+• Tasarım özelleştirme
+• Kurumsal kimlik odaklı
+• 10+ revizyon
+• Teslim: 10 gün
+
+⚠️ **Pro Paket'i aşan talepler için özel ücretlendirme yapılır.**
 
 **Süreç:**
-1. Analiz ve planlama
-2. Damla tasarım
-3. Geliştirme
-4. Test ve optimizasyon
-5. Canlıya alma
+1. Hedef kitle ve sektör analizi
+2. Tasarım dilinin belirlenmesi
+3. UX prensiplerine göre tasarım
+4. Geliştirme ve optimizasyon
+5. Test ve canlıya alma
 
-**Fiyat:** Proje kapsamına göre değişir
-**Süre:** 2-4 hafta
-
-Detaylı bilgi için: info@okandemir.org`
+Markanızın dijital yüzünü oluşturmak için iletişime geçin! 📞`
   }
 
   // SEO
