@@ -42,24 +42,43 @@ async function generateChatbotResponse(message: string, _history: ChatMessage[])
   
   // Hizmet bilgileri
   if (lowerMessage.includes('hizmet') || lowerMessage.includes('ne yapıyorsun')) {
-    return `Merhaba! Ben Okan Demir'in dijital asistanıyım. Size şu hizmetler konusunda yardımcı olabilirim:
+    return `Merhaba! Ben Okan Demir'in dijital asistanıyım. 
 
-🎨 **Web Tasarım & Geliştirme**
-- Responsive web siteleri
-- WordPress geliştirme
-- E-ticaret çözümleri
-
-📈 **Dijital Pazarlama**
-- SEO optimizasyonu
-- Google Ads yönetimi
-- Sosyal medya pazarlama
+🚀 **Dijital Pazarlama Hizmetleri:**
 
 📱 **Sosyal Medya Yönetimi**
-- Instagram, Facebook yönetimi
-- İçerik stratejisi
-- Reklam kampanyaları
+- Instagram, Facebook, LinkedIn, TikTok
+- İçerik planlama ve görsel tasarım
+- Etkileşim artırma
 
-Hangi konuda detaylı bilgi almak istersiniz?`
+🎯 **Hedef Odaklı Reklam Kampanyaları**
+- Meta Ads (Facebook & Instagram)
+- Google Ads yönetimi
+- Hedef kitle analizi
+
+📝 **İçerik & Görsel Tasarım**
+- Markanıza özel özgün içerikler
+- Reklam görselleri
+- Yazılım dışı tasarım
+
+📊 **Analiz & Raporlama**
+- Veriye dayalı optimizasyon
+- Aylık performans raporları
+- ROI analizi
+
+🌐 **SEO ve Web İçerik Optimizasyonu**
+- Arama motoru optimizasyonu
+- İçerik stratejisi
+
+**Neden Okan Demir?**
+✅ Strateji + Yaratıcılık + Analiz = Daha fazla müşteri
+✅ Şeffaf iletişim, net sonuç
+✅ Sektörünüze özel planlama
+✅ Hızlı teslim ve kaliteli iş
+✅ Mükemmel sürdürülebilirlik
+✅ Tasarruflu ödeme planları
+
+Hangi konuda detaylı bilgi almak istersiniz? 💬`
   }
 
   // Web tasarım
@@ -134,21 +153,44 @@ Detaylı paket bilgisi için iletişime geçin!`
 
   // Fiyat
   if (lowerMessage.includes('fiyat') || lowerMessage.includes('ücret') || lowerMessage.includes('maliyet')) {
-    return `💰 **Fiyat Bilgileri:**
+    return `💰 **Dijital Pazarlama Paketleri:**
 
-**Web Tasarım:** 2.500₺ - 15.000₺
-**SEO Paketleri:** 1.500₺ - 5.000₺/ay
-**Sosyal Medya:** 1.000₺ - 3.000₺/ay
-**Google Ads:** 500₺ - 2.000₺/ay + reklam bütçesi
+🚀 **Temel Paket** - 10.000₺/ay
+• 1 Yıllık anlaşma
+• 1 ay ücretsiz
+• Yıllık ödemede %15 indirim
+• Toplam: 93.500₺/yıl
+• Tüm hizmetleri kapsar
 
-**Özel Projeler:** Teklif üzerine
+📈 **Standart Paket** - 12.500₺/ay  
+• 2 Yıllık anlaşma
+• 1. yıl Temel Paket fiyatında + 1 ay bedava
+• 2. yıl ilk ay %50 indirimli
+• 2 Yıllık ödemede %20 indirim
+• Toplam: 203.000₺/2 yıl
 
-**Ödeme Seçenekleri:**
-- Peşin ödeme (10% indirim)
-- 3 taksit
-- Aylık ödeme (SEO/SMM)
+⭐ **Pro Paket** - 15.000₺/ay+
+• 3 Yıllık anlaşma
+• 1. yıl Temel Paket fiyatında + 1 ay bedava
+• 2. yıl Standart Paket fiyatında + ilk ay %50 indirimli  
+• 3. yıl bir ay %75 indirimli
+• 3 Yıllık ödemede %25 indirim
+• Toplam: 316.000₺/3 yıl
 
-Detaylı teklif için projenizi anlatın!`
+⚠️ **ÖNEMLİ:** Reklam ücretleri paketlere dahil değildir. Reklam bütçesi müşterinin aylık cirosuna göre belirlenir.
+
+**Hizmetler:**
+✅ Meta (Facebook & Instagram) Ads
+✅ Google Ads  
+✅ Hedef kitle analizi
+✅ Reklam tipi önerileri
+✅ Görsel & metin oluşturma
+✅ Aylık hesap yönetimi
+✅ Aksiyon planı
+✅ Analiz & raporlama
+✅ 10 revizyon hakkı
+
+Detaylı bilgi için iletişime geçin! 📞`
   }
 
   // İletişim
