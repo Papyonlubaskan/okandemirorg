@@ -90,9 +90,9 @@ Hangi konuda detaylı bilgi almak istersiniz? 💬`
   if (lowerMessage.includes('web') || lowerMessage.includes('website') || lowerMessage.includes('site') || lowerMessage.includes('wordpress')) {
     return `🌐 **WordPress Web Tasarım Hizmetlerim:**
 
-Markanız için profesyonel, güven veren ve tamamen size özel bir WordPress web sitesi!
+Markanız için profesyonel, güven veren ve tamamen size özel WordPress web sitesi çözümleri sunuyorum. Hazır kalıplarla zaman kaybetmek yerine, tamamen markanızın kimliğine uygun, benzersiz ve modern bir web sitesi tasarlıyorum.
 
-**Hizmetler:**
+**Her Sitede Standart Olarak Sunduklarım:**
 ✅ Mobil ve tablet uyumlu modern tasarım
 ✅ Hız ve performans optimizasyonu
 ✅ SEO uyumlu altyapı (meta başlıklar + açıklamalar)
@@ -101,49 +101,40 @@ Markanız için profesyonel, güven veren ve tamamen size özel bir WordPress we
 ✅ Sınırsız revize imkânı (proje bitimine kadar)
 ✅ WhatsApp, Instagram, harita ve iletişim formları entegrasyonu
 
-**WordPress Paketler (Başlangıç Ücretleri):**
+**Başlangıç Fiyatları:**
 
-💼 **Temel Paket** - 5.000₺
+🚀 **Temel Paket** - 5.000₺
 • 3 sayfa
-• İçerik girişi
+• İçerik girişi dahil
 • Responsive tasarım
-• 7 plugin yükleme
+• 7 plugin
 • Tasarım özelleştirme
-• 1 revizyon
-• Teslim: 5 gün
+• 1 revizyon hakkı
+• Teslim süresi: 5 gün (Acil: +990₺ ile 2 gün)
 
-💼 **Standart Paket** - 10.000₺
+📈 **Standart Paket** - 10.000₺
 • 5 sayfa
-• İçerik girişi
+• İçerik girişi dahil
 • Responsive tasarım
+• 10 plugin
 • Blog modülü
-• 10 plugin yükleme
 • Tasarım özelleştirme
-• 2 revizyon
-• Teslim: 7 gün
+• 2 revizyon hakkı
+• Teslim süresi: 7 gün (Acil: +1.990₺ ile 2 gün)
 
 ⭐ **Pro Paket** - 20.000₺
 • 10 sayfa
-• İçerik girişi
+• İçerik girişi dahil
 • Responsive tasarım
-• SEO uyumlu altyapı
-• 20 plugin yükleme
-• Ödeme altyapısı entegrasyonu
-• Tasarım özelleştirme
+• 20 plugin
+• Ödeme altyapısı
 • Kurumsal kimlik odaklı
-• 10+ revizyon
-• Teslim: 10 gün
+• 10+ revizyon hakkı
+• Teslim süresi: 10 gün (Acil: +3.990₺ ile 5 gün)
 
-⚠️ **Pro Paket'i aşan talepler için özel ücretlendirme yapılır.**
+⚠️ **ÖNEMLİ:** Pro planı aşan durumlar (özel tasarımlar, e-ticaret entegrasyonları, özel eklentiler vb.) özel fiyatlandırılır.
 
-**Süreç:**
-1. Hedef kitle ve sektör analizi
-2. Tasarım dilinin belirlenmesi
-3. UX prensiplerine göre tasarım
-4. Geliştirme ve optimizasyon
-5. Test ve canlıya alma
-
-Markanızın dijital yüzünü oluşturmak için iletişime geçin! 📞`
+Detaylı bilgi için iletişime geçin! 📞`
   }
 
   // SEO
