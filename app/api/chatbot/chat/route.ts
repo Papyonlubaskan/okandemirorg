@@ -78,6 +78,11 @@ async function generateChatbotResponse(message: string, _history: ChatMessage[])
 ✅ Mükemmel sürdürülebilirlik
 ✅ Tasarruflu ödeme planları
 
+💡 **Esnek Çalışma Modeli:**
+• Hem aylık hem uzun vadeli anlaşma seçenekleri
+• İstediğiniz sürede başlayıp bırakabilirsiniz
+• İhtiyacınıza göre özel paketler
+
 Hangi konuda detaylı bilgi almak istersiniz? 💬`
   }
 
@@ -154,6 +159,14 @@ Detaylı paket bilgisi için iletişime geçin!`
   // Fiyat
   if (lowerMessage.includes('fiyat') || lowerMessage.includes('ücret') || lowerMessage.includes('maliyet')) {
     return `💰 **Dijital Pazarlama Paketleri:**
+
+💼 **AYLIK ANLAŞMA SEÇENEĞİ:**
+• Paket sınırlaması olmadan çalışabiliriz
+• İstediğiniz zaman başlayın, bırakın
+• Esnek fiyatlandırma
+• Tüm hizmetleri alın, ihtiyacınıza göre özelleştirin
+
+📋 **UZUN VADELİ PAKETLER:**
 
 🚀 **Temel Paket** - 10.000₺/ay
 • 1 Yıllık anlaşma
