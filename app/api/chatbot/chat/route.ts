@@ -137,23 +137,45 @@ Markanız için profesyonel, güven veren ve tamamen size özel WordPress web si
 Detaylı bilgi için iletişime geçin! 📞`
   }
 
-  // Özel Web Geliştirme (PHP, Laravel, Node.js vb.)
-  if (lowerMessage.includes('php') || lowerMessage.includes('laravel') || lowerMessage.includes('node.js') || lowerMessage.includes('react') || lowerMessage.includes('vue') || lowerMessage.includes('mysql') || lowerMessage.includes('custom') || lowerMessage.includes('özel kodlama')) {
+  // Özel Web Geliştirme (PHP, Laravel, Node.js, Python, Django vb.)
+  if (lowerMessage.includes('php') || lowerMessage.includes('laravel') || lowerMessage.includes('node.js') || lowerMessage.includes('react') || lowerMessage.includes('vue') || lowerMessage.includes('mysql') || lowerMessage.includes('python') || lowerMessage.includes('django') || lowerMessage.includes('postgresql') || lowerMessage.includes('mongodb') || lowerMessage.includes('custom') || lowerMessage.includes('özel kodlama')) {
     return `💻 **Özel Web Geliştirme Hizmetlerim:**
 
 %100 MÜŞTERİ MEMNUNİYETİ!
 
 Kişiye ya da kuruma özel her türlü web projesini admin panelli ve dinamik olarak kodlayarak hizmete sunuyorum. Web sitenizi teslim ettiğimde bütün içerikleri ve detayları tek bir panelden hızlı bir şekilde kendiniz düzenleyip sitenizde yayınlayabileceksiniz.
 
-**Kullandığım Teknolojiler:**
+**Kullandığım Backend Teknolojiler:**
 ✅ PHP & Laravel
+✅ Python & Django
 ✅ Node.js & Express.js
 ✅ ReactJs & Nuxt.js
 ✅ Vue.js
+✅ RESTful API geliştirme
+✅ GraphQL API geliştirme
+
+**Kullandığım Veritabanları:**
 ✅ MySQL
+✅ PostgreSQL
+✅ MongoDB
+✅ SQLite
+✅ Redis (Cache)
+
+**Kullandığım Frontend Teknolojiler:**
 ✅ JavaScript & JQuery
 ✅ HTML5 & CSS3
+✅ React & React Hooks
+✅ Vue.js & Vuex
+✅ TypeScript
 ✅ Responsive Web Design (Tüm Cihazlara Duyarlı Tasarım)
+
+**Özel Şema ve Veritabanı Tasarımı:**
+✅ Normalize edilmiş veritabanı şemaları
+✅ İlişkisel veritabanı tasarımı
+✅ Veritabanı optimizasyonu
+✅ Index stratejileri
+✅ Backup ve güvenlik protokolleri
+✅ Veri migrasyonu
 
 **Proje Özellikleri:**
 • Tamamen müşteri talepleri doğrultusunda
@@ -161,6 +183,7 @@ Kişiye ya da kuruma özel her türlü web projesini admin panelli ve dinamik ol
 • Admin panelli dinamik yapı
 • Tek panelden tüm içerik yönetimi
 • Özel geliştirme ve kodlama
+• Ölçeklenebilir mimari
 
 **Başlangıç Fiyatları:**
 
@@ -297,10 +320,13 @@ Cumartesi: 10:00 - 16:00
 
 **Özel Web Geliştirme Projeleri:**
 - PHP & Laravel projeleri
+- Python & Django uygulamaları
 - Node.js & Express.js çözümleri
 - ReactJs & Nuxt.js uygulamaları
 - Vue.js geliştirmeleri
-- MySQL veritabanı entegrasyonları
+- MySQL & PostgreSQL & MongoDB veritabanı entegrasyonları
+- Özel şema ve veritabanı tasarımı
+- RESTful API & GraphQL API geliştirmeleri
 - Admin panelli dinamik siteler
 
 **Web Tasarım Projeleri:**
@@ -324,14 +350,12 @@ Cumartesi: 10:00 - 16:00
 Kişiye ya da kuruma özel her türlü web projesini admin panelli ve dinamik olarak kodlayarak hizmete sunuyorum. Web sitenizi teslim ettiğimde bütün içerikleri ve detayları tek bir panelden hızlı bir şekilde kendiniz düzenleyip sitenizde yayınlayabileceksiniz.
 
 **Kullandığım Teknolojiler:**
-• PHP & Laravel
-• Node.js & Express.js
-• ReactJs & Nuxt.js
-• Vue.js
-• MySQL
-• JavaScript & JQuery
-• HTML5 & CSS3
-• Responsive Web Design
+• Backend: PHP & Laravel, Python & Django, Node.js & Express.js
+• Frontend: ReactJs & Nuxt.js, Vue.js, TypeScript
+• Veritabanları: MySQL, PostgreSQL, MongoDB, SQLite, Redis
+• API: RESTful API, GraphQL API
+• Veritabanı Tasarımı: Özel şema tasarımı, normalize edilmiş yapılar
+• Web: JavaScript & JQuery, HTML5 & CSS3, Responsive Web Design
 
 Detaylı portfolio için: https://okandemir.org/referanslar`
   }
