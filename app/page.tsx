@@ -266,18 +266,22 @@ export default function Home() {
                     <span><strong>İkas</strong> - Özelleştirme & SEO</span>
                   </li>
                 </ul>
-                <div className="flex space-x-4 w-full">
+                <div className="flex flex-col gap-3">
                   <Link
                     href="https://wa.me/+905552677739"
-                    className="flex-1 bg-green-700 hover:bg-green-800  text-white text-center py-3 rounded-lg font-black transition-colors"
+                    className="inline-flex items-center bg-green-700 hover:bg-green-800  text-white px-6 py-3 rounded-lg font-black transition-colors"
                   >
+                    <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                     Randevu Al
                   </Link>
                   <Link
                     href="/hizmetler/e-ticaret-platformlari"
-                    className="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white text-center py-3 rounded-lg font-black transition-colors"
+                    className="inline-flex items-center justify-center bg-emerald-700 hover:bg-emerald-800 text-white px-6 py-3 rounded-lg font-black transition-colors"
                   >
-                    Detayları Gör &gt;
+                    Detayları Gör
+                    <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </Link>
                 </div>
               </div>
@@ -376,13 +380,18 @@ export default function Home() {
                   <span>Sosyal Medya Yönetimi</span>
                 </li>
               </ul>
-              <div className="w-full">
+              <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex items-center justify-center w-full bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-700 hover:bg-green-800 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
-                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
+                </Link>
+                <Link
+                  href="/hizmetler/web-tasarim"
+                  className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-black transition-colors"
+                >
+                  Detayları Gör &gt;
                 </Link>
               </div>
             </div>
@@ -410,13 +419,18 @@ export default function Home() {
                   <span>Sürekli İyileştirme ve Analiz</span>
                 </li>
               </ul>
-              <div className="w-full">
+              <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex items-center justify-center w-full bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-700 hover:bg-green-800 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
-                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
+                </Link>
+                <Link
+                  href="/hizmetler/gelisim"
+                  className="flex-1 bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-lg font-black transition-colors"
+                >
+                  Detayları Gör &gt;
                 </Link>
               </div>
             </div>
@@ -444,13 +458,18 @@ export default function Home() {
                   <span>Marka Tanınırlığı İçin Platform Yayınları</span>
                 </li>
               </ul>
-              <div className="w-full">
+              <div className="flex space-x-4 w-full">
                 <Link
                   href="https://wa.me/+905552677739"
-                  className="flex items-center justify-center w-full bg-orange-700 hover:bg-orange-800 text-white px-6 py-3 rounded-lg font-black transition-colors"
+                  className="flex-1 bg-green-700 hover:bg-green-800 text-white text-center py-3 rounded-lg font-black transition-colors"
                 >
-                  <Image src="/whatsapp-icon.png" alt="WhatsApp" width={20} height={20} className="mr-2" />
                   Randevu Al
+                </Link>
+                <Link
+                  href="/hizmetler/marka-kimligi"
+                  className="flex-1 bg-orange-700 hover:bg-orange-800 text-white text-center py-3 rounded-lg font-black transition-colors"
+                >
+                  Detayları Gör &gt;
                 </Link>
               </div>
             </div>
