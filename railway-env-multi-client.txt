@@ -1,0 +1,111 @@
+# ==========================================
+# Multi-Client Ajans Sistemi
+# Railway Environment Variables
+# ==========================================
+
+# ----- Groq AI (100% Ücretsiz) -----
+# https://console.groq.com - Kayıt ol (kredi kartı gerekmez)
+GROQ_API_KEY=gsk_your_groq_key_here
+GROQ_MODEL=llama-3.1-70b-versatile
+
+# ----- Google Ads MCC (Manager Account) -----
+GOOGLE_ADS_MCC_CUSTOMER_ID=123-456-7890
+GOOGLE_ADS_DEVELOPER_TOKEN=your-developer-token
+GOOGLE_ADS_CLIENT_ID=your-client-id.apps.googleusercontent.com
+GOOGLE_ADS_CLIENT_SECRET=your-client-secret
+GOOGLE_ADS_REFRESH_TOKEN=your-refresh-token
+
+# ----- Meta Business Manager -----
+META_BUSINESS_MANAGER_ID=your-business-manager-id
+META_ACCESS_TOKEN=your-long-lived-access-token
+META_APP_ID=your-app-id
+META_APP_SECRET=your-app-secret
+
+# ----- n8n -----
+N8N_WEBHOOK_URL=https://n8n.okandemir.org/webhook/multi-client
+N8N_BASIC_AUTH_USER=admin
+N8N_BASIC_AUTH_PASSWORD=your-secure-password
+
+# ----- Database (Mevcut) -----
+MYSQL_HOST=your-mysql-host
+MYSQL_DATABASE=okandemir_org
+MYSQL_USER=your-username
+MYSQL_PASSWORD=your-password
+MYSQL_PORT=3306
+
+# ----- WhatsApp (Mevcut) -----
+WHATSAPP_ACCESS_TOKEN=your-whatsapp-token
+WHATSAPP_PHONE_NUMBER_ID=your-phone-number-id
+WHATSAPP_VERIFY_TOKEN=okandemir_whatsapp_2024
+
+# ----- Email (Mevcut) -----
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=noreply@okandemir.org
+EMAIL_PASSWORD=your-app-specific-password
+EMAIL_FROM=Okan Demir Digital <noreply@okandemir.org>
+
+# ----- Alert Settings -----
+ADMIN_EMAIL=okan@okandemir.org
+ADMIN_PHONE=+905552677739
+ADMIN_WHATSAPP=+905552677739
+
+# ----- Otomasyon Thresholds -----
+AUTO_PAUSE_LOW_ROAS=true
+MIN_ROAS_THRESHOLD=2.0
+MAX_CPA_MULTIPLIER=1.5
+DAILY_BUDGET_ALERT_PERCENT=80
+
+# ----- API Rate Limiting -----
+GROQ_RATE_LIMIT_PER_MINUTE=30
+GROQ_RATE_LIMIT_PER_DAY=14400
+
+# ==========================================
+# SETUP ADIMLAR
+# ==========================================
+
+# 1. Groq API Key Al (5 dakika):
+#    - https://console.groq.com
+#    - Email ile kayıt (kredi kartı gerekmez!)
+#    - API Keys > Create API Key
+#    - Key'i kopyala ve buraya yapıştır
+
+# 2. Google Ads MCC:
+#    - https://ads.google.com/home/tools/manager-accounts/
+#    - Manager account oluştur
+#    - API access başvurusu (1-2 gün)
+
+# 3. Meta Business Manager:
+#    - https://business.facebook.com
+#    - Business oluştur
+#    - Partner access ile müşteri hesaplarını bağla
+
+# 4. Database:
+#    - database/client-schema.sql'i çalıştır
+#    - Tabloları oluştur
+
+# 5. Test:
+#    - curl https://okandemir.org/api/clients
+#    - İlk müşteri ekle
+
+# ==========================================
+# GÜNLÜK KULLANIM (Örnek)
+# ==========================================
+
+# 20 Müşteri için günlük:
+# - Her müşteri için 5 analiz = 100 request/gün
+# - Groq limit: 14,400 request/gün
+# - Kullanım: %0.7 (çok rahat!)
+
+# ==========================================
+# DESTEK
+# ==========================================
+
+# Groq sorun yaşarsan:
+# - Docs: https://console.groq.com/docs
+# - Support: https://console.groq.com/support
+
+# Genel sorular:
+# - Email: okan@okandemir.org
+# - WhatsApp: +90 555 267 77 39
+

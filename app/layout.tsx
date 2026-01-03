@@ -147,7 +147,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
         <ThemeProvider>
-          <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ''} />
+          <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID || ''} />
           <ConsoleErrorSuppressor />
           <AccessibilityHelper />
           <StructuredData />

@@ -1,0 +1,101 @@
+# ==========================================
+# n8n + Dijital Pazarlama Otomasyonu
+# Railway Environment Variables
+# ==========================================
+
+# ----- n8n Core -----
+N8N_BASIC_AUTH_ACTIVE=true
+N8N_BASIC_AUTH_USER=admin
+N8N_BASIC_AUTH_PASSWORD=your-super-secure-password-here
+N8N_HOST=n8n.okandemir.org
+N8N_PORT=5678
+N8N_PROTOCOL=https
+WEBHOOK_URL=https://n8n.okandemir.org
+
+# ----- n8n Webhook (okandemir.org için) -----
+N8N_WEBHOOK_URL=https://n8n.okandemir.org/webhook/dijital-pazarlama
+
+# ----- Google Ads API -----
+GOOGLE_ADS_DEVELOPER_TOKEN=your-developer-token
+GOOGLE_ADS_CLIENT_ID=your-client-id.apps.googleusercontent.com
+GOOGLE_ADS_CLIENT_SECRET=your-client-secret
+GOOGLE_ADS_REFRESH_TOKEN=your-refresh-token
+GOOGLE_ADS_CUSTOMER_ID=123-456-7890
+
+# ----- Meta (Facebook/Instagram) Ads API -----
+META_ACCESS_TOKEN=your-long-lived-access-token
+META_AD_ACCOUNT_ID=act_1234567890
+META_APP_ID=your-app-id
+META_APP_SECRET=your-app-secret
+META_BUSINESS_ID=your-business-id
+
+# ----- LinkedIn Ads API (opsiyonel) -----
+LINKEDIN_ACCESS_TOKEN=your-linkedin-token
+LINKEDIN_AD_ACCOUNT_ID=your-account-id
+
+# ----- OpenAI (ChatGPT) API -----
+OPENAI_API_KEY=sk-proj-your-api-key
+
+# ----- Database (Mevcut) -----
+MYSQL_HOST=your-mysql-host
+MYSQL_DATABASE=okandemir_org
+MYSQL_USER=your-username
+MYSQL_PASSWORD=your-password
+MYSQL_PORT=3306
+
+# ----- WhatsApp (Mevcut) -----
+WHATSAPP_ACCESS_TOKEN=your-token
+WHATSAPP_PHONE_NUMBER_ID=your-phone-id
+WHATSAPP_VERIFY_TOKEN=okandemir_whatsapp_2024
+
+# ----- Email (Mevcut) -----
+EMAIL_HOST=smtp.gmail.com
+EMAIL_PORT=587
+EMAIL_USER=noreply@okandemir.org
+EMAIL_PASSWORD=your-app-specific-password
+EMAIL_FROM=noreply@okandemir.org
+EMAIL_TO=okan@okandemir.org
+
+# ----- Webhook Security -----
+WEBHOOK_SECRET=your-random-secret-string-for-verification
+
+# ----- Otomasyon Ayarları -----
+AUTO_PAUSE_CAMPAIGNS=true
+MIN_ROAS_THRESHOLD=2
+MAX_CPA_THRESHOLD=100
+MAX_DAILY_SPEND=500
+ALERT_PHONE=+905552677739
+ALERT_EMAIL=okan@okandemir.org
+
+# ----- Rate Limiting -----
+API_RATE_LIMIT_PER_MINUTE=60
+API_RATE_LIMIT_PER_DAY=10000
+
+# ==========================================
+# KURULUM ADIMLARI
+# ==========================================
+
+# 1. Google Ads API Setup:
+#    - https://ads.google.com > Tools > API Center
+#    - Developer token başvurusu (24-48 saat onay)
+#    - OAuth2 credentials oluştur
+#    - Refresh token al
+
+# 2. Meta Ads API Setup:
+#    - https://business.facebook.com
+#    - App oluştur (Business type)
+#    - Ads Management permission ekle
+#    - Long-lived access token al (60 gün)
+
+# 3. n8n Workflow Import:
+#    - N8N-WORKFLOW-ORNEKLERI.json dosyasını import et
+#    - Credentials ekle
+#    - Test et
+
+# 4. Database Tables:
+#    - N8N-DIJITAL-PAZARLAMA-OTOMASYON.md'deki SQL'leri çalıştır
+
+# 5. Test:
+#    - GET https://okandemir.org/api/n8n/trigger (health check)
+#    - POST https://okandemir.org/api/n8n/campaigns (test workflow)
+

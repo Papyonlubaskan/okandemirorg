@@ -1,0 +1,227 @@
+{
+  "name": "Dijital Pazarlama Master Workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "0 8 * * *"
+            }
+          ]
+        }
+      },
+      "name": "Her Gün 08:00",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "getAll",
+        "returnAll": true,
+        "options": {
+          "fields": [
+            "campaign.name",
+            "metrics.impressions",
+            "metrics.clicks",
+            "metrics.conversions",
+            "metrics.cost_micros"
+          ]
+        }
+      },
+      "name": "Google Ads - Get Campaigns",
+      "type": "n8n-nodes-base.googleAds",
+      "typeVersion": 1,
+      "position": [450, 200]
+    },
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "getInsights",
+        "accountId": "={{$env.META_AD_ACCOUNT_ID}}",
+        "fields": [
+          "campaign_name",
+          "impressions",
+          "clicks",
+          "conversions",
+          "spend",
+          "ctr",
+          "cpc",
+          "roas"
+        ],
+        "datePreset": "yesterday"
+      },
+      "name": "Meta Ads - Get Campaigns",
+      "type": "n8n-nodes-base.facebookGraphApi",
+      "typeVersion": 1,
+      "position": [450, 400]
+    },
+    {
+      "parameters": {
+        "functionCode": "// Tüm kampanya verilerini birleştir ve analiz et\nconst googleAds = $('Google Ads - Get Campaigns').all();\nconst metaAds = $('Meta Ads - Get Campaigns').all();\n\nconst allCampaigns = [];\n\n// Google Ads verileri\ngoogleAds.forEach(item => {\n  const data = item.json;\n  const spend = data.metrics?.cost_micros / 1000000 || 0;\n  const conversions = data.metrics?.conversions || 0;\n  const clicks = data.metrics?.clicks || 0;\n  const impressions = data.metrics?.impressions || 0;\n  \n  allCampaigns.push({\n    platform: 'google_ads',\n    name: data.campaign?.name,\n    impressions,\n    clicks,\n    conversions,\n    spend,\n    ctr: impressions > 0 ? (clicks / impressions * 100).toFixed(2) : 0,\n    cpc: clicks > 0 ? (spend / clicks).toFixed(2) : 0,\n    cpa: conversions > 0 ? (spend / conversions).toFixed(2) : 0\n  });\n});\n\n// Meta Ads verileri\nmetaAds.forEach(item => {\n  const data = item.json;\n  allCampaigns.push({\n    platform: 'meta_ads',\n    name: data.campaign_name,\n    impressions: data.impressions,\n    clicks: data.clicks,\n    conversions: data.conversions,\n    spend: data.spend,\n    ctr: data.ctr,\n    cpc: data.cpc,\n    roas: data.roas || 0\n  });\n});\n\n// Toplam metrikleri hesapla\nconst totalSpend = allCampaigns.reduce((sum, c) => sum + parseFloat(c.spend), 0);\nconst totalConversions = allCampaigns.reduce((sum, c) => sum + parseFloat(c.conversions), 0);\nconst avgCPA = totalConversions > 0 ? totalSpend / totalConversions : 0;\n\n// Sorunlu kampanyaları bul\nconst issues = allCampaigns.filter(c => {\n  const cpa = parseFloat(c.cpa);\n  const roas = parseFloat(c.roas || 0);\n  return cpa > 100 || roas < 2;\n});\n\nreturn [{\n  json: {\n    summary: {\n      total_campaigns: allCampaigns.length,\n      total_spend: totalSpend.toFixed(2),\n      total_conversions: totalConversions,\n      avg_cpa: avgCPA.toFixed(2),\n      issues_count: issues.length\n    },\n    campaigns: allCampaigns,\n    issues\n  }\n}];"
+      },
+      "name": "Analyze Performance",
+      "type": "n8n-nodes-base.function",
+      "typeVersion": 1,
+      "position": [650, 300]
+    },
+    {
+      "parameters": {
+        "operation": "text",
+        "resource": "completion",
+        "model": "gpt-4",
+        "prompt": "=Kampanya Analizi:\n\nToplam Kampanya: {{$json.summary.total_campaigns}}\nToplam Harcama: ₺{{$json.summary.total_spend}}\nDönüşüm: {{$json.summary.total_conversions}}\nOrtalama CPA: ₺{{$json.summary.avg_cpa}}\nSorunlu Kampanya: {{$json.summary.issues_count}}\n\nSorunlu Kampanyalar:\n{{JSON.stringify($json.issues, null, 2)}}\n\nLütfen:\n1. Genel durum değerlendirmesi yap\n2. Sorunlu kampanyalar için öneriler sun\n3. Optimizasyon stratejisi belirle\n4. Hangi kampanyalar durdurulmalı?\n5. Hangi kampanyalara bütçe artırılmalı?",
+        "options": {}
+      },
+      "name": "ChatGPT - Analyze",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [850, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "number": [
+            {
+              "value1": "={{$json.summary.issues_count}}",
+              "operation": "larger",
+              "value2": 0
+            }
+          ]
+        }
+      },
+      "name": "IF Issues Found",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 1,
+      "position": [1050, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://okandemir.org/api/whatsapp/send",
+        "authentication": "none",
+        "jsonParameters": true,
+        "options": {},
+        "bodyParametersJson": "={\n  \"to\": \"+905552677739\",\n  \"message\": \"🚨 Reklam Uyarısı\\n\\n{{$json.summary.issues_count}} kampanyada sorun tespit edildi!\\n\\nToplam Harcama: ₺{{$json.summary.total_spend}}\\nDönüşüm: {{$json.summary.total_conversions}}\\n\\nDetaylar email'de.\"\n}"
+      },
+      "name": "WhatsApp Alert",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 1,
+      "position": [1250, 200]
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "=INSERT INTO campaign_metrics (platform, campaign_name, impressions, clicks, conversions, spend, cpa, date) VALUES \n{{$json.campaigns.map(c => `('${c.platform}', '${c.name}', ${c.impressions}, ${c.clicks}, ${c.conversions}, ${c.spend}, ${c.cpa}, CURDATE())`).join(',\\n')}}"
+      },
+      "name": "Save to MySQL",
+      "type": "n8n-nodes-base.mySql",
+      "typeVersion": 1,
+      "position": [1250, 400]
+    },
+    {
+      "parameters": {
+        "fromEmail": "noreply@okandemir.org",
+        "toEmail": "okan@okandemir.org",
+        "subject": "=📊 Günlük Reklam Performans Raporu - {{$now.format('DD/MM/YYYY')}}",
+        "text": "",
+        "html": "=<h2>Günlük Reklam Raporu</h2>\n\n<h3>📊 Özet</h3>\n<ul>\n  <li><strong>Toplam Kampanya:</strong> {{$json.summary.total_campaigns}}</li>\n  <li><strong>Toplam Harcama:</strong> ₺{{$json.summary.total_spend}}</li>\n  <li><strong>Dönüşüm:</strong> {{$json.summary.total_conversions}}</li>\n  <li><strong>Ortalama CPA:</strong> ₺{{$json.summary.avg_cpa}}</li>\n  <li><strong>Sorunlu Kampanya:</strong> {{$json.summary.issues_count}}</li>\n</ul>\n\n<h3>🤖 AI Analizi</h3>\n<p>{{$('ChatGPT - Analyze').item.json.choices[0].message.content}}</p>\n\n<h3>⚠️ Dikkat Gereken Kampanyalar</h3>\n<ul>\n{{$json.issues.map(issue => `\n  <li>\n    <strong>${issue.platform} - ${issue.name}</strong><br>\n    CPA: ₺${issue.cpa} | ROAS: ${issue.roas || 'N/A'}\n  </li>\n`).join('')}}\n</ul>\n\n<p><small>Otomasyon: n8n | Kaynak: okandemir.org</small></p>"
+      },
+      "name": "Email Report",
+      "type": "n8n-nodes-base.emailSend",
+      "typeVersion": 2,
+      "position": [1450, 300]
+    }
+  ],
+  "connections": {
+    "Her Gün 08:00": {
+      "main": [
+        [
+          {
+            "node": "Google Ads - Get Campaigns",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Meta Ads - Get Campaigns",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Ads - Get Campaigns": {
+      "main": [
+        [
+          {
+            "node": "Analyze Performance",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Meta Ads - Get Campaigns": {
+      "main": [
+        [
+          {
+            "node": "Analyze Performance",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Analyze Performance": {
+      "main": [
+        [
+          {
+            "node": "ChatGPT - Analyze",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "ChatGPT - Analyze": {
+      "main": [
+        [
+          {
+            "node": "IF Issues Found",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IF Issues Found": {
+      "main": [
+        [
+          {
+            "node": "WhatsApp Alert",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Save to MySQL",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Email Report",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "timezone": "Europe/Istanbul",
+    "saveManualExecutions": true
+  }
+}
+

@@ -4,12 +4,12 @@ import pool from '@/lib/mysql'
 
 // Email konfigürasyonu - cPanel ayarlarına göre
 const transporter = nodemailer.createTransport({
-  host: 'okandemir.org',
-  port: 465,
+  host: process.env.EMAIL_HOST || 'okandemir.org',
+  port: parseInt(process.env.EMAIL_PORT || '465'),
   secure: true, // SSL/TLS kullan
   auth: {
-    user: 'info@okandemir.org',
-    pass: process.env.EMAIL_PASSWORD, // .env dosyasından alınacak
+    user: process.env.EMAIL_USER || 'info@okandemir.org',
+    pass: process.env.EMAIL_PASS || process.env.EMAIL_PASSWORD, // .env dosyasından alınacak
   },
 })
 
