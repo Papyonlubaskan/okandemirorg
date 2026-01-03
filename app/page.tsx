@@ -87,7 +87,7 @@ export default function Home() {
                 </h1>
                 
                 <p className="hero-description text-gray-100 leading-tight mb-12 font-black" style={{ fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize: '24px', fontWeight: '500' }}>
-                  Dijital dönüşüm uzmanı olarak doğru strateji + doğru araçlar = gerçek sonuçlar formülüyle çalışıyorum. Dijital pazarlama, dijital dönüşüm, sosyal medya yönetimi, SEO, Google Ads, Meta Business sistem kurulumu ve yüksek dönüşüm odaklı web tasarımı ile daha fazla trafik, daha çok lead, daha yüksek satış için yanınızdayım! Sizin için en iyisini gerçekleştirelim.
+                  Ben <strong>Okan Demir</strong>, dijital dönüşüm uzmanı olarak doğru strateji + doğru araçlar = gerçek sonuçlar formülüyle çalışıyorum. <strong>Okan Demir</strong> olarak dijital pazarlama, dijital dönüşüm, sosyal medya yönetimi, SEO, Google Ads, Meta Business sistem kurulumu ve yüksek dönüşüm odaklı web tasarımı ile daha fazla trafik, daha çok lead, daha yüksek satış için yanınızdayım! <strong>Okan Demir</strong> ile sizin için en iyisini gerçekleştirelim.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -109,7 +109,7 @@ export default function Home() {
               <div className="relative">
                   <Image
                   src="/Arka-Plansiz-Photoroom-576x1024.webp" 
-                  alt="Okan Demir - Dijital Pazarlama Uzmanı" 
+                  alt="Okan Demir - Türkiye'nin En İyi Dijital Pazarlama Uzmanı Okan Demir İzmir" 
                   width={576} 
                   height={1024}
                   className="w-auto h-auto max-h-[600px] lg:max-h-[800px] object-cover shadow-2xl"
@@ -130,10 +130,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6" id="services">
-              Sunduklarım
+              Okan Demir Sunduklarım
             </h2>
             <h3 className="text-2xl lg:text-3xl text-blue-600 dark:text-blue-400 font-black mb-8">
-              Tasarımla, Dijital Dönüşümle Markaları Güçlendirmek
+              Okan Demir ile Tasarımla, Dijital Dönüşümle Markaları Güçlendirmek
             </h3>
           </div>
           
@@ -299,7 +299,7 @@ export default function Home() {
               <span className="text-2xl lg:text-3xl xl:text-4xl">Neden Beni Seçmelisiniz?</span>
             </div>
             <h2 id="why-choose-me" className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white mb-8">
-              Neden Benimle Çalışmalısınız?
+              Neden Okan Demir ile Çalışmalısınız?
             </h2>
           </div>
           
@@ -309,9 +309,9 @@ export default function Home() {
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-pink-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <Image src="/custom-design-icon.png" alt="Custom Design" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Kişiye ve Markanıza Özel Tasarım</h3>
+              <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Okan Demir ile Kişiye ve Markanıza Özel Tasarım</h3>
               <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                Size Özel Tasarım Her markanın ve sizin eşsiz olduğunuza ve aynı derecede özgün bir web sitesini yada dijital pazarlama çözümlerini hak ettiğine inanıyorum. Dijital dönüşümde de dijital pazarlama uzmanı olarak, Size ve markanıza özel Google Ads & Meta Ads seçenekleri ile, markanızın öncü görünürlüğünü sağlar iken sizin hızlı dönüşüm almanızı sağlıyorum! Garantili stratejiler ile her daim önde ve öncü olacaksınız!
+                <strong>Okan Demir</strong> olarak size özel tasarım her markanın ve sizin eşsiz olduğunuza ve aynı derecede özgün bir web sitesini yada dijital pazarlama çözümlerini hak ettiğine inanıyorum. <strong>Okan Demir</strong> dijital dönüşümde de dijital pazarlama uzmanı olarak, Size ve markanıza özel Google Ads & Meta Ads seçenekleri ile, markanızın öncü görünürlüğünü sağlar iken sizin hızlı dönüşüm almanızı sağlıyorum! <strong>Okan Demir</strong> garantili stratejiler ile her daim önde ve öncü olacaksınız!
               </p>
             </div>
             
@@ -320,9 +320,9 @@ export default function Home() {
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-green-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <Image src="/user-focused-icon.png" alt="User Focused" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Kullanıcı Odaklı Yaklaşım</h3>
+              <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Okan Demir Kullanıcı Odaklı Yaklaşım</h3>
               <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                Kullanıcı ve İşletme, Marka Odaklı Yaklaşım; Kullanıcı deneyimine büyük önem vererek, sezgisel ve gezinmesi kolay isteğinize göre E-Ticaret siteleri veya kişisel web siteleri, sosyal medya görünürlüğü tasarlıyorum. Sizin için en iyi yönetimi sağlıyorum. Ayrıca sizin ve işletmeniz için en uygun dijital pazarlama tekniklerini harekete geçirerek dijital dönüşümde markanızın öne çıkmasını sağlıyorum!
+                <strong>Okan Demir</strong> kullanıcı ve işletme, marka odaklı yaklaşım; kullanıcı deneyimine büyük önem vererek, sezgisel ve gezinmesi kolay isteğinize göre E-Ticaret siteleri veya kişisel web siteleri, sosyal medya görünürlüğü tasarlıyorum. <strong>Okan Demir</strong> sizin için en iyi yönetimi sağlıyorum. Ayrıca <strong>Okan Demir</strong> sizin ve işletmeniz için en uygun dijital pazarlama tekniklerini harekete geçirerek dijital dönüşümde markanızın öne çıkmasını sağlıyorum!
               </p>
             </div>
             
@@ -331,9 +331,9 @@ export default function Home() {
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-orange-500 to-red-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <Image src="/trend-tech-icon.png" alt="Trend Tech" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
-              <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Trend Teknolojiler</h3>
+              <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Okan Demir Trend Teknolojiler</h3>
               <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                Size en yenilikçi çözümleri sunmak için web tasarım ve dijital pazarlama trendleri ve teknolojilerinin ön saflarında yer alıyorum. Dijital pazarlama uzmanı olarak en garantili yolu hedefleyen uygulamaları ve araçları süreklilik halinde tutabilmek adına teknolojiden yararlanıyorum.
+                <strong>Okan Demir</strong> size en yenilikçi çözümleri sunmak için web tasarım ve dijital pazarlama trendleri ve teknolojilerinin ön saflarında yer alıyorum. <strong>Okan Demir</strong> dijital pazarlama uzmanı olarak en garantili yolu hedefleyen uygulamaları ve araçları süreklilik halinde tutabilmek adına teknolojiden yararlanıyorum.
               </p>
             </div>
           </div>
@@ -670,7 +670,7 @@ export default function Home() {
               <div className="relative">
                 <Image
                   src="/okan-about-photo.webp"
-                  alt="Okan Demir"
+                  alt="Okan Demir - Türkiye'nin En İyi Dijital Pazarlama Uzmanı Okan Demir İzmir"
                   width={768}
                   height={894}
                   className="rounded-2xl shadow-2xl w-full h-auto object-contain max-w-md hover:shadow-3xl transition-shadow duration-300"
@@ -681,10 +681,10 @@ export default function Home() {
             {/* Right Content - Text */}
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl lg:text-2xl text-blue-100 leading-tight font-black">
-                Merhaba! Ben Okan Demir, görsel olarak çekici, kullanıcı dostu web siteleri ve markanız ile sizin için dijital pazarlama ihtiyaçlarınız konusunda 5 yılı aşkın deneyime sahip, tutkulu bir uzmanım. Misyonum, benzersiz ihtiyaçlarınıza göre uyarlanmış yenilikçi tasarım ve reklam kreatif çözümleriyle markanızı hayata geçirmek.
+                Merhaba! Ben <strong>Okan Demir</strong>, görsel olarak çekici, kullanıcı dostu web siteleri ve markanız ile sizin için dijital pazarlama ihtiyaçlarınız konusunda 5 yılı aşkın deneyime sahip, tutkulu bir uzmanım. <strong>Okan Demir</strong> misyonum, benzersiz ihtiyaçlarınıza göre uyarlanmış yenilikçi tasarım ve reklam kreatif çözümleriyle markanızı hayata geçirmek. <strong>Okan Demir</strong> olarak size en iyi hizmeti sunmak için buradayım.
               </p>
               <p className="text-lg text-blue-200 leading-tight font-black">
-                Vizyonum O Copyright Dijital Pazarlama & Yazılım Freelancer markasını şahıs şirketine dönüştürerek ülkemiz içerisinde istihdam yaratarak genç işsizliği azaltmak ve ülkemiz içerisinde güvenilirliğini ispatlamış lider bir şirket markası yaratmaktır!
+                <strong>Okan Demir</strong> vizyonum O Copyright Dijital Pazarlama & Yazılım Freelancer markasını şahıs şirketine dönüştürerek ülkemiz içerisinde istihdam yaratarak genç işsizliği azaltmak ve ülkemiz içerisinde güvenilirliğini ispatlamış lider bir şirket markası yaratmaktır! <strong>Okan Demir</strong> ile birlikte başarıya ulaşalım.
               </p>
             </div>
           </div>

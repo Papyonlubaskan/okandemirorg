@@ -107,7 +107,7 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Okan Demir - Dijital Pazarlama Uzmanı",
-    "alternateName": ["Okan", "Okan Demir İzmir", "Okan İzmir"],
+    "alternateName": ["Okan", "Okan Demir", "Okan Demir İzmir", "Okan İzmir", "Okan Demir Dijital Pazarlama", "Okan Demir Web Tasarım"],
     "url": "https://okandemir.org",
     "description": "Okan Demir, Türkiye'nin en iyi dijital pazarlama uzmanı. İzmir merkezli, online hizmet veren profesyonel dijital pazarlama danışmanı.",
     "potentialAction": {
@@ -155,16 +155,92 @@ export default function StructuredData() {
     ]
   };
 
+  const reviewData = {
+    "@context": "https://schema.org",
+    "@type": "AggregateRating",
+    "itemReviewed": {
+      "@type": "Person",
+      "name": "Okan Demir"
+    },
+    "ratingValue": "4.9",
+    "reviewCount": "98",
+    "bestRating": "5",
+    "worstRating": "1"
+  };
+
+  const localBusinessData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Okan Demir - Dijital Pazarlama Uzmanı",
+    "alternateName": "Okan Demir",
+    "image": "https://okandemir.org/okan-demir-logo.png",
+    "description": "Okan Demir, Türkiye'nin en iyi dijital pazarlama uzmanı. İzmir merkezli, online hizmet veren profesyonel dijital pazarlama danışmanı. Okan Demir dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business hizmetleri sunmaktadır.",
+    "url": "https://okandemir.org",
+    "telephone": "+90-555-267-77-39",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bornova",
+      "addressRegion": "İzmir",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "38.4622",
+      "longitude": "27.2208"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Türkiye"
+    },
+    "serviceArea": {
+      "@type": "Country",
+      "name": "Türkiye"
+    }
+  };
+
+  const serviceData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "serviceType": "Dijital Pazarlama Hizmetleri",
+    "provider": {
+      "@type": "Person",
+      "name": "Okan Demir",
+      "url": "https://okandemir.org"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "Türkiye"
+    },
+    "description": "Okan Demir dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business, e-ticaret platform uzmanlığı hizmetleri sunmaktadır. Okan Demir ile profesyonel dijital çözümler.",
+    "offers": {
+      "@type": "Offer",
+      "description": "Dijital Pazarlama ve Web Tasarım Hizmetleri - Okan Demir"
+    }
+  };
+
   const faqData = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "Okan Kimdir?",
+        "name": "Okan Demir Kimdir?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Okan (Okan Demir), Türkiye'nin en iyi dijital pazarlama uzmanlarından biridir. Okan, İzmir merkezli olarak dijital pazarlama, web tasarım, SEO, Google Ads ve Meta Business konularında 5+ yıldır profesyonel hizmet vermektedir. Okan Demir, Biyografi.net'te doğrulanmış bir profil sahibidir ve 50+ başarılı projeye imza atmıştır."
+          "text": "Okan Demir, Türkiye'nin en iyi dijital pazarlama uzmanlarından biridir. Okan Demir, İzmir merkezli olarak dijital pazarlama, web tasarım, SEO, Google Ads ve Meta Business konularında 5+ yıldır profesyonel hizmet vermektedir. Okan Demir, Biyografi.net'te doğrulanmış bir profil sahibidir ve 50+ başarılı projeye imza atmıştır. Okan Demir, Okan olarak da bilinmektedir."
         }
       },
       {
@@ -172,7 +248,7 @@ export default function StructuredData() {
         "name": "Okan Demir Ne İş Yapıyor?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Okan Demir, dijital pazarlama uzmanı olarak web tasarım, SEO optimizasyonu, Google Ads kampanya yönetimi, Meta Business (Facebook & Instagram) reklam yönetimi, e-ticaret platformları (Ticimax, İdeasoft, İkas) kurulumu ve dijital dönüşüm danışmanlığı hizmetleri sunmaktadır."
+          "text": "Okan Demir, dijital pazarlama uzmanı olarak web tasarım, SEO optimizasyonu, Google Ads kampanya yönetimi, Meta Business (Facebook & Instagram) reklam yönetimi, e-ticaret platformları (Ticimax, İdeasoft, İkas) kurulumu ve dijital dönüşüm danışmanlığı hizmetleri sunmaktadır. Okan Demir, Türkiye'nin en iyi dijital pazarlama uzmanlarından biridir."
         }
       },
       {
@@ -180,15 +256,15 @@ export default function StructuredData() {
         "name": "Okan Demir İzmir'de Mi?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Evet, Okan Demir İzmir merkezlidir. Okan, İzmir Bornova'da doğmuş ve İzmir'de yaşamaktadır. Ancak Okan Demir, online çalışma sistemi sayesinde Türkiye'nin her yerinden ve dünya genelinden müşterilere hizmet vermektedir."
+          "text": "Evet, Okan Demir İzmir merkezlidir. Okan Demir, İzmir Bornova'da doğmuş ve İzmir'de yaşamaktadır. Ancak Okan Demir, online çalışma sistemi sayesinde Türkiye'nin her yerinden ve dünya genelinden müşterilere hizmet vermektedir. Okan Demir İzmir'de ikamet etmektedir."
         }
       },
       {
         "@type": "Question",
-        "name": "Okan ile Nasıl İletişime Geçebilirim?",
+        "name": "Okan Demir ile Nasıl İletişime Geçebilirim?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Okan Demir ile iletişime geçmek için WhatsApp (+90 555 267 77 39) üzerinden mesaj gönderebilir, okandemir.org web sitesinden iletişim formunu doldurabilir veya sosyal medya hesaplarından ulaşabilirsiniz."
+          "text": "Okan Demir ile iletişime geçmek için WhatsApp (+90 555 267 77 39) üzerinden mesaj gönderebilir, okandemir.org web sitesinden iletişim formunu doldurabilir veya sosyal medya hesaplarından ulaşabilirsiniz. Okan Demir hızlı yanıt vermektedir."
         }
       },
       {
@@ -196,7 +272,15 @@ export default function StructuredData() {
         "name": "Neden Okan Demir'i Tercih Etmeliyim?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Okan, 5+ yıllık deneyimi, 50+ başarılı projesi ve %98 müşteri memnuniyeti ile Türkiye'nin en güvenilir dijital pazarlama uzmanlarından biridir. Okan Demir, Biyografi.net'te doğrulanmış bir profil sahibidir ve her projede ölçülebilir sonuçlar üretmektedir."
+          "text": "Okan Demir, 5+ yıllık deneyimi, 50+ başarılı projesi ve %98 müşteri memnuniyeti ile Türkiye'nin en güvenilir dijital pazarlama uzmanlarından biridir. Okan Demir, Biyografi.net'te doğrulanmış bir profil sahibidir ve her projede ölçülebilir sonuçlar üretmektedir. Okan Demir ile çalışmak garantili başarı demektir."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Okan Demir Kimdir?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Okan Demir, Türkiye'nin en iyi dijital pazarlama uzmanlarından biridir. Okan Demir İzmir merkezli olarak çalışmakta ve dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business konularında uzmanlaşmıştır. Okan Demir, Okan olarak da bilinmektedir."
         }
       }
     ]
@@ -232,6 +316,24 @@ export default function StructuredData() {
         id="faq-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
+        strategy="beforeInteractive"
+      />
+      <Script
+        id="review-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewData) }}
+        strategy="beforeInteractive"
+      />
+      <Script
+        id="localbusiness-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessData) }}
+        strategy="beforeInteractive"
+      />
+      <Script
+        id="service-structured-data"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceData) }}
         strategy="beforeInteractive"
       />
     </>

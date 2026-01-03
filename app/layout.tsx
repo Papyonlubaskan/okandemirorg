@@ -27,10 +27,10 @@ export const metadata: Metadata = {
     default: "Okan | Okan Demir | Okan Demir İzmir | Türkiye #1 Dijital Pazarlama Uzmanı",
     template: "%s | Okan Demir | Dijital Pazarlama Uzmanı"
   },
-  description: "Okan - Okan Demir - Okan Demir İzmir, Türkiye'nin #1 dijital pazarlama uzmanı. Okan olarak İzmir, İstanbul, Ankara genelinde dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business, e-ticaret (Ticimax, İdeasoft, İkas) 5+ yıl deneyim. Biyografi.net doğrulanmış profil. Okan Demir 50+ başarılı proje, %98 müşteri memnuniyeti. Okan ile garantili dijital dönüşüm.",
+  description: "Okan Demir - Türkiye'nin #1 dijital pazarlama uzmanı. Okan Demir İzmir merkezli, İstanbul, Ankara genelinde dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business, e-ticaret (Ticimax, İdeasoft, İkas) 5+ yıl deneyim. Okan Demir Biyografi.net doğrulanmış profil. Okan Demir 50+ başarılı proje, %98 müşteri memnuniyeti. Okan Demir ile garantili dijital dönüşüm. Okan Demir kimdir? Okan Demir hakkında bilgi.",
   keywords: [
     // Core Brand Keywords
-    "Okan", "Okan Demir", "Okan Demir İzmir", "Okan İzmir", "Okan Demir Bornova",
+    "Okan", "Okan Demir", "Okan Demir", "Okan Demir İzmir", "Okan İzmir", "Okan Demir Bornova", "Okan Demir kimdir", "Okan Demir hakkında", "Okan Demir biyografi", "Okan Demir dijital pazarlama uzmanı",
     // Primary Services with Name
     "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan", "SEO Uzmanı Okan",
     "Okan Dijital Pazarlama", "Okan Web Tasarım", "Okan SEO",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     "Dijital Pazarlama Danışmanı Okan", "E-ticaret Uzmanı Okan Demir",
     // Personal Brand Questions
     "Okan Kimdir", "Okan Demir Kimdir", "Okan Biyografi", "Okan Hakkında",
-    "Okan Demir Biyografi.net", "Okan Demir İzmir Bornova",
+    "Okan Demir Biyografi.net", "Okan Demir İzmir Bornova", "Okan Demir ne iş yapar", "Okan Demir iletişim", "Okan Demir telefon", "Okan Demir WhatsApp", "Okan Demir email",
     // Service Quality
     "En İyi Dijital Pazarlama Uzmanı", "En İyi Web Tasarımcı", "En İyi SEO Uzmanı",
     "Profesyonel Dijital Pazarlama", "Güvenilir Dijital Pazarlama Uzmanı"

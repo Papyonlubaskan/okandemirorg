@@ -282,20 +282,20 @@ export default function Hakkimda() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white dark:bg-gray-800/10 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-black mb-4">Amaçlı Deneyimler Yaratmak</h3>
-                <p className="text-blue-100 font-black">Her proje için anlamlı ve hedef odaklı deneyimler tasarlıyorum.</p>
+                <h3 className="text-2xl font-black mb-4 text-gray-900 dark:text-white">Amaçlı Deneyimler Yaratmak</h3>
+                <p className="text-gray-800 dark:text-blue-100 font-black">Her proje için anlamlı ve hedef odaklı deneyimler tasarlıyorum.</p>
               </div>
               <div className="bg-white dark:bg-gray-800/10 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-black mb-4">Kullanıcı Odaklı Yaklaşım</h3>
-                <p className="text-blue-100 font-black">Kullanıcı ihtiyaçlarını öncelikli tutarak çözümler geliştiriyorum.</p>
+                <h3 className="text-2xl font-black mb-4 text-gray-900 dark:text-white">Kullanıcı Odaklı Yaklaşım</h3>
+                <p className="text-gray-800 dark:text-blue-100 font-black">Kullanıcı ihtiyaçlarını öncelikli tutarak çözümler geliştiriyorum.</p>
               </div>
               <div className="bg-white dark:bg-gray-800/10 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-black mb-4">Yenilik ve Uyum, Süreklilik</h3>
-                <p className="text-blue-100 font-black">Sürekli öğrenme ve teknolojik yenilikleri takip ediyorum.</p>
+                <h3 className="text-2xl font-black mb-4 text-gray-900 dark:text-white">Yenilik ve Uyum, Süreklilik</h3>
+                <p className="text-gray-800 dark:text-blue-100 font-black">Sürekli öğrenme ve teknolojik yenilikleri takip ediyorum.</p>
               </div>
               <div className="bg-white dark:bg-gray-800/10 backdrop-blur-sm rounded-2xl p-8">
-                <h3 className="text-2xl font-black mb-4">İşbirliği ve Kesintisiz İletişim</h3>
-                <p className="text-blue-100 font-black">Müşterilerimle sürekli iletişim halinde kalarak başarıya ulaşıyorum.</p>
+                <h3 className="text-2xl font-black mb-4 text-gray-900 dark:text-white">İşbirliği ve Kesintisiz İletişim</h3>
+                <p className="text-gray-800 dark:text-blue-100 font-black">Müşterilerimle sürekli iletişim halinde kalarak başarıya ulaşıyorum.</p>
               </div>
             </div>
           </div>
