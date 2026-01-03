@@ -109,11 +109,11 @@ export function generateSEOPages(): SEOPage[] {
       pages.push({
         id: `seo-${idCounter++}`,
         slug: slug,
-        title: `${topic} ${question.charAt(0).toUpperCase() + question.slice(1)}?`,
-        description: `${topic} ${question} hakkında detaylı bilgiler, ipuçları ve profesyonel rehber.`,
+        title: `Okan Demir ${topic} ${question.charAt(0).toUpperCase() + question.slice(1)}?`,
+        description: `Okan Demir ${topic} ${question} hakkında detaylı bilgiler, ipuçları ve profesyonel rehber. Okan Demir ile ${topic} uzmanı.`,
         category: topic,
-        keywords: [topic, question, 'Okan Demir', 'dijital pazarlama'],
-        h1: `${topic} ${question.charAt(0).toUpperCase() + question.slice(1)}`,
+        keywords: ['Okan Demir', topic, question, `Okan Demir ${topic}`, 'Okan Demir dijital pazarlama', 'dijital pazarlama'],
+        h1: `Okan Demir ${topic} ${question.charAt(0).toUpperCase() + question.slice(1)}`,
         h2s: [
           `${topic} Nedir?`,
           `${topic} Nasıl Yapılır?`,
@@ -123,12 +123,12 @@ export function generateSEOPages(): SEOPage[] {
         ],
         faqs: [
           {
-            question: `${topic} nedir?`,
-            answer: `${topic}, dijital pazarlama stratejilerinin önemli bir parçasıdır ve işletmelerin online varlığını güçlendirmek için kullanılır.`,
+            question: `Okan Demir ${topic} nedir?`,
+            answer: `<strong>Okan Demir</strong> ${topic}, dijital pazarlama stratejilerinin önemli bir parçasıdır ve işletmelerin online varlığını güçlendirmek için kullanılır. <strong>Okan Demir</strong> ile ${topic} uzmanı olarak hizmet veriyorum.`,
           },
           {
-            question: `${topic} nasıl yapılır?`,
-            answer: `${topic} için profesyonel bir strateji geliştirmek, hedef kitle analizi yapmak ve sürekli optimizasyon gereklidir.`,
+            question: `Okan Demir ${topic} nasıl yapılır?`,
+            answer: `<strong>Okan Demir</strong> ${topic} için profesyonel bir strateji geliştirmek, hedef kitle analizi yapmak ve sürekli optimizasyon gereklidir. <strong>Okan Demir</strong> olarak ${topic} konusunda uzman desteği sunuyorum.`,
           },
         ],
       })
@@ -142,11 +142,11 @@ export function generateSEOPages(): SEOPage[] {
       pages.push({
         id: `seo-${idCounter++}`,
         slug: slug,
-        title: `${platform} ${topic} | Profesyonel Rehber`,
-        description: `${platform} platformunda ${topic.toLowerCase()} stratejileri ve ipuçları.`,
+        title: `Okan Demir ${platform} ${topic} | Profesyonel Rehber`,
+        description: `Okan Demir ${platform} platformunda ${topic.toLowerCase()} stratejileri ve ipuçları. Okan Demir ile ${platform} ${topic} uzmanı.`,
         category: `${platform} ${topic}`,
-        keywords: [platform, topic, 'sosyal medya', 'dijital pazarlama'],
-        h1: `${platform} ${topic}`,
+        keywords: ['Okan Demir', platform, topic, `Okan Demir ${platform}`, 'Okan Demir sosyal medya', 'Okan Demir dijital pazarlama', 'sosyal medya', 'dijital pazarlama'],
+        h1: `Okan Demir ${platform} ${topic}`,
         h2s: [
           `${platform}'da ${topic}`,
           'Başarılı Stratejiler',
@@ -165,11 +165,11 @@ export function generateSEOPages(): SEOPage[] {
       pages.push({
         id: `seo-${idCounter++}`,
         slug: slug,
-        title: `${audience} İçin ${topic}`,
-        description: `${audience} için özel ${topic.toLowerCase()} çözümleri ve stratejileri.`,
+        title: `Okan Demir ${audience} İçin ${topic}`,
+        description: `Okan Demir ${audience} için özel ${topic.toLowerCase()} çözümleri ve stratejileri. Okan Demir ile ${audience} ${topic} uzmanı.`,
         category: 'Hedef Kitle Odaklı',
-        keywords: [audience, topic, 'çözümler', 'stratejiler'],
-        h1: `${audience} İçin ${topic}`,
+        keywords: ['Okan Demir', audience, topic, `Okan Demir ${audience}`, 'Okan Demir çözümler', 'Okan Demir stratejiler', 'çözümler', 'stratejiler'],
+        h1: `Okan Demir ${audience} İçin ${topic}`,
         h2s: [
           `${audience} Neden ${topic} İhtiyaç Duyar?`,
           'Özel Çözümler',
@@ -188,11 +188,11 @@ export function generateSEOPages(): SEOPage[] {
       pages.push({
         id: `seo-${idCounter++}`,
         slug: slug,
-        title: `${budget} ile ${topic}`,
-        description: `${budget} ile ${topic.toLowerCase()} nasıl yapılır? Uygun maliyetli stratejiler.`,
+        title: `Okan Demir ${budget} ile ${topic}`,
+        description: `Okan Demir ${budget} ile ${topic.toLowerCase()} nasıl yapılır? Okan Demir uygun maliyetli stratejiler. Okan Demir ile ${budget} ${topic}.`,
         category: 'Bütçe Odaklı',
-        keywords: [budget, topic, 'uygun fiyat', 'ekonomik'],
-        h1: `${budget} ile ${topic}`,
+        keywords: ['Okan Demir', budget, topic, `Okan Demir ${budget}`, 'Okan Demir uygun fiyat', 'Okan Demir ekonomik', 'uygun fiyat', 'ekonomik'],
+        h1: `Okan Demir ${budget} ile ${topic}`,
         h2s: [
           'Bütçe Dostu Stratejiler',
           'Maliyetleri Düşürme',
@@ -210,11 +210,11 @@ export function generateSEOPages(): SEOPage[] {
       pages.push({
         id: `seo-${idCounter++}`,
         slug: slug,
-        title: `${year} ${topic} Trendleri`,
-        description: `${year} yılında ${topic.toLowerCase()} trendleri, stratejileri ve tahminleri.`,
+        title: `Okan Demir ${year} ${topic} Trendleri`,
+        description: `Okan Demir ${year} yılında ${topic.toLowerCase()} trendleri, stratejileri ve tahminleri. Okan Demir ile ${year} ${topic} uzmanı.`,
         category: 'Trendler',
-        keywords: [year, topic, 'trendler', 'gelecek'],
-        h1: `${year} ${topic} Trendleri`,
+        keywords: ['Okan Demir', year, topic, `Okan Demir ${year}`, 'Okan Demir trendler', 'Okan Demir gelecek', 'trendler', 'gelecek'],
+        h1: `Okan Demir ${year} ${topic} Trendleri`,
         h2s: [
           `${year}'de Neler Değişti?`,
           'Yeni Stratejiler',
@@ -235,11 +235,11 @@ export function generateSEOPages(): SEOPage[] {
       pages.push({
         id: `seo-${idCounter++}`,
         slug: slug,
-        title: `${topic1} vs ${topic2}: Hangisi Daha İyi?`,
-        description: `${topic1} ve ${topic2} karşılaştırması. Avantajlar, dezavantajlar ve hangisini seçmelisiniz?`,
+        title: `Okan Demir ${topic1} vs ${topic2}: Hangisi Daha İyi?`,
+        description: `Okan Demir ${topic1} ve ${topic2} karşılaştırması. Okan Demir avantajlar, dezavantajlar ve hangisini seçmelisiniz? Okan Demir ile doğru seçim.`,
         category: 'Karşılaştırma',
-        keywords: [topic1, topic2, 'karşılaştırma', 'fark'],
-        h1: `${topic1} vs ${topic2}`,
+        keywords: ['Okan Demir', topic1, topic2, `Okan Demir ${topic1}`, `Okan Demir ${topic2}`, 'Okan Demir karşılaştırma', 'Okan Demir fark', 'karşılaştırma', 'fark'],
+        h1: `Okan Demir ${topic1} vs ${topic2}`,
         h2s: [
           `${topic1} Nedir?`,
           `${topic2} Nedir?`,
@@ -271,11 +271,11 @@ export function generateSEOPages(): SEOPage[] {
         pages.push({
           id: `seo-${idCounter++}`,
           slug: slug,
-          title: `En İyi ${num} ${topic} ${variant.charAt(0).toUpperCase() + variant.slice(1)}`,
-          description: `2025 için en iyi ${num} ${topic.toLowerCase()} ${variant}ı. Profesyonel öneriler ve incelemeler.`,
+          title: `Okan Demir En İyi ${num} ${topic} ${variant.charAt(0).toUpperCase() + variant.slice(1)}`,
+          description: `Okan Demir 2025 için en iyi ${num} ${topic.toLowerCase()} ${variant}ı. Okan Demir profesyonel öneriler ve incelemeler. Okan Demir ile ${topic} uzmanı.`,
           category: 'Listeler',
-          keywords: [topic, variant, 'en iyi', 'liste'],
-          h1: `En İyi ${num} ${topic} ${variant.charAt(0).toUpperCase() + variant.slice(1)}`,
+          keywords: ['Okan Demir', topic, variant, `Okan Demir ${topic}`, 'Okan Demir en iyi', 'Okan Demir liste', 'en iyi', 'liste'],
+          h1: `Okan Demir En İyi ${num} ${topic} ${variant.charAt(0).toUpperCase() + variant.slice(1)}`,
           h2s: Array.from({ length: Math.min(num, 5) }, (_, i) => `${i + 1}. ${variant.charAt(0).toUpperCase() + variant.slice(1)}`),
           faqs: [],
         })

@@ -90,28 +90,28 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   </p>
                   
                   <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
-                    {post.title} Nedir?
+                    Okan Demir {post.title} Nedir?
                   </h2>
                   <p>
-                    {post.category} alanında uzmanlaşmış bir dijital pazarlama uzmanı olarak, 
-                    {post.city ? ` ${post.city} bölgesinde` : ''} 
+                    <strong>Okan Demir</strong> {post.category} alanında uzmanlaşmış bir dijital pazarlama uzmanı olarak, 
+                    <strong>Okan Demir</strong> {post.city ? ` ${post.city} bölgesinde` : ''} 
                     {post.industry ? ` ${post.industry} sektörüne özel` : ''} 
-                    çözümler sunuyorum. Bu hizmet, işletmenizin dijital varlığını güçlendirmek 
-                    ve online başarınızı artırmak için tasarlanmıştır.
+                    çözümler sunuyorum. <strong>Okan Demir</strong> bu hizmet, işletmenizin dijital varlığını güçlendirmek 
+                    ve online başarınızı artırmak için tasarlanmıştır. <strong>Okan Demir</strong> ile garantili sonuçlar.
                   </p>
 
                   <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
-                    Neden Bu Hizmet Önemlidir?
+                    Okan Demir Neden Bu Hizmet Önemlidir?
                   </h2>
                   <p>
-                    Günümüz dijital dünyasında, işletmelerin online varlığı başarıları için kritik öneme sahiptir. 
-                    {post.city ? `${post.city} şehrinde` : 'Türkiye\'de'} faaliyet gösteren işletmelerin 
+                    <strong>Okan Demir</strong> günümüz dijital dünyasında, işletmelerin online varlığı başarıları için kritik öneme sahiptir. 
+                    <strong>Okan Demir</strong> {post.city ? `${post.city} şehrinde` : 'Türkiye\'de'} faaliyet gösteren işletmelerin 
                     {post.industry ? ` özellikle ${post.industry} sektöründe` : ''} rekabet avantajı elde etmesi 
-                    için profesyonel dijital pazarlama desteğine ihtiyaç vardır.
+                    için <strong>Okan Demir</strong> profesyonel dijital pazarlama desteğine ihtiyaç vardır. <strong>Okan Demir</strong> ile başarıya ulaşın.
                   </p>
 
                   <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
-                    Sunduğum Çözümler
+                    Okan Demir Sunduğum Çözümler
                   </h2>
                   <ul className="list-disc list-inside space-y-2">
                     <li className="font-black">Kapsamlı dijital pazarlama stratejisi geliştirme</li>
@@ -123,7 +123,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   </ul>
 
                   <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
-                    Başarı İçin Adımlar
+                    Okan Demir Başarı İçin Adımlar
                   </h2>
                   <ol className="list-decimal list-inside space-y-2">
                     <li className="font-black">Mevcut durumun detaylı analizi</li>
@@ -134,12 +134,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
                   <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 my-8">
                     <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
-                      💡 Profesyonel Yardım Alın
+                      💡 Okan Demir Profesyonel Yardım Alın
                     </h3>
                     <p className="text-gray-800 dark:text-gray-200 font-black mb-4">
-                      {post.city ? `${post.city} şehrinde` : 'Türkiye genelinde'} 
+                      <strong>Okan Demir</strong> {post.city ? `${post.city} şehrinde` : 'Türkiye genelinde'} 
                       {post.industry ? ` ${post.industry} sektöründe` : ''} 
-                      dijital pazarlama hizmetleri için 5+ yıllık deneyimim ile yanınızdayım.
+                      dijital pazarlama hizmetleri için <strong>Okan Demir</strong> 5+ yıllık deneyimim ile yanınızdayım. <strong>Okan Demir</strong> ile garantili sonuçlar.
                     </p>
                     <Link
                       href="/iletisim"
@@ -150,35 +150,35 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   </div>
 
                   <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
-                    Sıkça Sorulan Sorular
+                    Okan Demir Sıkça Sorulan Sorular
                   </h2>
                   <div className="space-y-4">
                     <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
                       <h4 className="font-black text-gray-900 dark:text-white mb-2">
-                        Bu hizmet ne kadar sürer?
+                        Okan Demir Bu hizmet ne kadar sürer?
                       </h4>
                       <p className="text-gray-700">
-                        Projenin kapsamına bağlı olarak 1-6 ay arasında değişmektedir. 
-                        Dijital pazarlama sürekli bir süreçtir ve uzun vadeli başarı için 
-                        devam eden optimizasyon gerektirir.
+                        <strong>Okan Demir</strong> projenin kapsamına bağlı olarak 1-6 ay arasında değişmektedir. 
+                        <strong>Okan Demir</strong> dijital pazarlama sürekli bir süreçtir ve uzun vadeli başarı için 
+                        <strong>Okan Demir</strong> devam eden optimizasyon gerektirir.
                       </p>
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
                       <h4 className="font-black text-gray-900 dark:text-white mb-2">
-                        Maliyeti nedir?
+                        Okan Demir Maliyeti nedir?
                       </h4>
                       <p className="text-gray-700">
-                        Her projenin ihtiyaçları farklıdır. Sizin için özel bir teklif hazırlamak 
-                        üzere ücretsiz görüşme yapabiliriz.
+                        <strong>Okan Demir</strong> her projenin ihtiyaçları farklıdır. <strong>Okan Demir</strong> sizin için özel bir teklif hazırlamak 
+                        üzere <strong>Okan Demir</strong> ücretsiz görüşme yapabiliriz.
                       </p>
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
                       <h4 className="font-black text-gray-900 dark:text-white mb-2">
-                        Sonuçları ne zaman görebilirim?
+                        Okan Demir Sonuçları ne zaman görebilirim?
                       </h4>
                       <p className="text-gray-700">
-                        İlk sonuçlar 1-3 ay içinde görülmeye başlar. SEO gibi organik stratejiler 
-                        daha uzun vadeli iken, reklam kampanyaları daha hızlı sonuç verir.
+                        <strong>Okan Demir</strong> ilk sonuçlar 1-3 ay içinde görülmeye başlar. <strong>Okan Demir</strong> SEO gibi organik stratejiler 
+                        daha uzun vadeli iken, <strong>Okan Demir</strong> reklam kampanyaları daha hızlı sonuç verir.
                       </p>
                     </div>
                   </div>
@@ -204,10 +204,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             {/* CTA */}
             <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-8 lg:p-12 text-white text-center">
               <h3 className="text-3xl font-black mb-4">
-                Projenizi Hayata Geçirelim
+                Okan Demir ile Projenizi Hayata Geçirelim
               </h3>
               <p className="text-xl text-blue-100 mb-6 font-black">
-                Dijital pazarlama hedeflerinize ulaşmak için benimle iletişime geçin
+                <strong>Okan Demir</strong> dijital pazarlama hedeflerinize ulaşmak için <strong>Okan Demir</strong> ile iletişime geçin. <strong>Okan Demir</strong> ile garantili başarı.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link

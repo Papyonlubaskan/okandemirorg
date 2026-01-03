@@ -142,7 +142,7 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 dark:from-gray-600 dark:to-gray-700">
-                  <Image src="/web-design-icon.png" alt="Web Tasarımı" width={40} height={40} />
+                  <Image src="/web-design-icon.png" alt="Okan Demir Web Tasarımı" width={40} height={40} />
                 </div>
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Web Tasarımı & Dijital Pazarlama Kreatifleri</h3>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
@@ -176,7 +176,7 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 dark:from-gray-600 dark:to-gray-700">
-                  <Image src="/development-icon.png" alt="Gelişim" width={40} height={40} loading="lazy" />
+                  <Image src="/development-icon.png" alt="Okan Demir Gelişim" width={40} height={40} loading="lazy" />
                 </div>
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Gelişim</h3>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
@@ -210,7 +210,7 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 hover:shadow-2xl transition-shadow duration-300">
               <div className="text-center">
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-orange-500 to-orange-600 dark:from-gray-600 dark:to-gray-700">
-                  <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={40} height={40} />
+                  <Image src="/brand-identity-icon.png" alt="Okan Demir Marka Kimliği" width={40} height={40} />
                 </div>
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Marka Kimliği</h3>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
@@ -295,7 +295,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 text-blue-600 font-black mb-6">
-              <Image src="/star-icon.png" alt="Yıldız ikonu" width={32} height={32} />
+              <Image src="/star-icon.png" alt="Okan Demir Yıldız ikonu" width={32} height={32} />
               <span className="text-2xl lg:text-3xl xl:text-4xl">Neden Beni Seçmelisiniz?</span>
             </div>
             <h2 id="why-choose-me" className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white mb-8">
@@ -307,7 +307,7 @@ export default function Home() {
             {/* Card 1 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-pink-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
-                <Image src="/custom-design-icon.png" alt="Custom Design" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
+                <Image src="/custom-design-icon.png" alt="Okan Demir Custom Design" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
               <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Okan Demir ile Kişiye ve Markanıza Özel Tasarım</h3>
               <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
@@ -318,7 +318,7 @@ export default function Home() {
             {/* Card 2 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-blue-500 to-green-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
-                <Image src="/user-focused-icon.png" alt="User Focused" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
+                <Image src="/user-focused-icon.png" alt="Okan Demir User Focused" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
               <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Okan Demir Kullanıcı Odaklı Yaklaşım</h3>
               <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
@@ -329,7 +329,7 @@ export default function Home() {
             {/* Card 3 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-orange-500 to-red-500 dark:from-gray-600 dark:to-gray-700 shadow-md">
-                <Image src="/trend-tech-icon.png" alt="Trend Tech" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
+                <Image src="/trend-tech-icon.png" alt="Okan Demir Trend Tech" width={40} height={40} className="group-hover:scale-110 transition-transform duration-300" />
               </div>
               <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Okan Demir Trend Teknolojiler</h3>
               <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
@@ -345,7 +345,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <div className="inline-flex items-center space-x-2 text-blue-600 font-black mb-6">
-              <Image src="/services-icon.png" alt="Hizmetler ikonu" width={32} height={32} />
+              <Image src="/services-icon.png" alt="Okan Demir Hizmetler ikonu" width={32} height={32} />
               <span className="text-2xl lg:text-3xl xl:text-4xl">Sunduklarım</span>
             </div>
             <h2 id="services-heading" className="text-5xl lg:text-6xl xl:text-7xl font-black text-gray-900 dark:text-white mb-8">
@@ -360,7 +360,7 @@ export default function Home() {
             {/* Service Card 1: Web Tasarımı & Dijital Pazarlama Kreatifleri */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
               <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-6">
-                <Image src="/web-design-icon.png" alt="Web Tasarımı" width={60} height={60} />
+                <Image src="/web-design-icon.png" alt="Okan Demir Web Tasarımı" width={60} height={60} />
               </div>
               <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Web Tasarımı&nbsp;& Dijital Pazarlama Kreatifleri</h3>
               <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
@@ -399,7 +399,7 @@ export default function Home() {
             {/* Service Card 2: Gelişim */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
               <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mb-6">
-                <Image src="/development-icon.png" alt="Gelişim" width={60} height={60} loading="lazy" />
+                <Image src="/development-icon.png" alt="Okan Demir Gelişim" width={60} height={60} loading="lazy" />
               </div>
               <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Gelişim</h3>
               <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
@@ -438,7 +438,7 @@ export default function Home() {
             {/* Service Card 3: Marka Kimliği */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
               <div className="w-24 h-24 bg-orange-100 rounded-full flex items-center justify-center mb-6">
-                <Image src="/brand-identity-icon.png" alt="Marka Kimliği" width={60} height={60} />
+                <Image src="/brand-identity-icon.png" alt="Okan Demir Marka Kimliği" width={60} height={60} />
               </div>
               <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Marka Kimliği</h3>
               <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
@@ -494,7 +494,7 @@ export default function Home() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300">
               <div className="p-8">
                 <div className="flex items-center mb-6">
-                  <Image src="/digital-marketing-icon.png" alt="Dijital Pazarlama" width={60} height={60} className="mr-4" />
+                  <Image src="/digital-marketing-icon.png" alt="Okan Demir Dijital Pazarlama" width={60} height={60} className="mr-4" />
                   <h4 className="text-2xl font-black text-gray-900 dark:text-white">Dijital Pazarlama</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">

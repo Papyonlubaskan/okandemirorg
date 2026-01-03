@@ -99,13 +99,13 @@ export default function Iletisim() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black mb-6">
-              <span className="block">İletişime</span>
+              <span className="block">Okan Demir İletişime</span>
               <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                 Geçelim!
               </span>
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 leading-tight mb-8 font-black">
-              Projenizi hayata geçirmek için birlikte çalışalım. Size en uygun çözümü bulalım!
+              <strong>Okan Demir</strong> projenizi hayata geçirmek için <strong>Okan Demir</strong> ile birlikte çalışalım. <strong>Okan Demir</strong> size en uygun çözümü bulalım!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
@@ -134,7 +134,7 @@ export default function Iletisim() {
             {/* Contact Form */}
             <div className="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl p-8 lg:p-12">
               <h2 className="text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-8">
-                Mesaj Gönderin
+                Okan Demir Mesaj Gönderin
               </h2>
               
               {submitStatus === 'success' && (

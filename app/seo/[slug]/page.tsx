@@ -75,10 +75,10 @@ export default async function SEOPage({ params }: { params: Promise<{ slug: stri
                       {h2}
                     </h2>
                     <p className="text-lg text-gray-800 dark:text-gray-200 leading-relaxed font-black">
-                      {page.category} alanında uzman bir dijital pazarlama danışmanı olarak, 
-                      5+ yıllık deneyimimle işletmelere başarılı stratejiler sunuyorum. 
-                      Bu rehberde, {page.h1.toLowerCase()} konusunda bilmeniz gereken her şeyi 
-                      detaylı olarak anlatacağım.
+                      <strong>Okan Demir</strong> {page.category} alanında uzman bir dijital pazarlama danışmanı olarak, 
+                      <strong>Okan Demir</strong> 5+ yıllık deneyimimle işletmelere başarılı stratejiler sunuyorum. 
+                      <strong>Okan Demir</strong> bu rehberde, {page.h1.toLowerCase()} konusunda bilmeniz gereken her şeyi 
+                      detaylı olarak anlatacağım. <strong>Okan Demir</strong> ile profesyonel destek alabilirsiniz.
                     </p>
                     <ul className="list-disc list-inside space-y-2 mt-4 text-gray-700">
                       <li className="font-black">Kapsamlı strateji geliştirme</li>
@@ -92,11 +92,11 @@ export default async function SEOPage({ params }: { params: Promise<{ slug: stri
                 {/* CTA Box */}
                 <div className="bg-gradient-to-r from-blue-50 to-blue-100 rounded-2xl p-8 my-8">
                   <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
-                    💡 Profesyonel Destek Alın
+                    💡 Okan Demir Profesyonel Destek Alın
                   </h3>
                   <p className="text-gray-800 dark:text-gray-200 font-black mb-4">
-                    {page.h1} konusunda profesyonel yardım mı arıyorsunuz? 
-                    5+ yıllık deneyimim ile size özel stratejiler geliştirebilirim.
+                    <strong>Okan Demir</strong> {page.h1} konusunda profesyonel yardım mı arıyorsunuz? 
+                    <strong>Okan Demir</strong> 5+ yıllık deneyimim ile size özel stratejiler geliştirebilirim. <strong>Okan Demir</strong> ile başarıya ulaşın.
                   </p>
                   <Link
                     href="/iletisim"
@@ -147,10 +147,10 @@ export default async function SEOPage({ params }: { params: Promise<{ slug: stri
             {/* Final CTA */}
             <div className="mt-12 bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-8 lg:p-12 text-white text-center">
               <h3 className="text-3xl font-black mb-4">
-                Dijital Pazarlama Hedeflerinize Ulaşın
+                Okan Demir ile Dijital Pazarlama Hedeflerinize Ulaşın
               </h3>
               <p className="text-xl text-blue-100 mb-6 font-black">
-                {page.h1} konusunda uzman desteği için benimle iletişime geçin
+                <strong>Okan Demir</strong> {page.h1} konusunda uzman desteği için <strong>Okan Demir</strong> ile iletişime geçin. <strong>Okan Demir</strong> ile garantili sonuçlar.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link

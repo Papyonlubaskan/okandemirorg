@@ -13,10 +13,10 @@ export default function Hizmetler() {
               <span className="text-2xl lg:text-3xl xl:text-4xl">Sunduklarım</span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-black mb-6">
-              Profesyonel Hizmetlerim
+              Okan Demir Profesyonel Hizmetlerim
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 leading-tight mb-8">
-              Dijital dünyada markanızı öne çıkaran, yaratıcı çözümlerle işinizi büyüten profesyonel hizmetlerim.
+              <strong>Okan Demir</strong> olarak dijital dünyada markanızı öne çıkaran, yaratıcı çözümlerle işinizi büyüten profesyonel hizmetlerim. <strong>Okan Demir</strong> ile garantili sonuçlar.
             </p>
             <Link 
               href="https://wa.me/+905552677739"
@@ -34,10 +34,10 @@ export default function Hizmetler() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
-              Sunduğum Hizmetler
+              Okan Demir Sunduğum Hizmetler
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 leading-tight">
-              Her biri özel olarak tasarlanmış, sürdürülebilir sonuçlar veren profesyonel hizmetlerim.
+              <strong>Okan Demir</strong> olarak her biri özel olarak tasarlanmış, sürdürülebilir sonuçlar veren profesyonel hizmetlerim. <strong>Okan Demir</strong> ile başarıya ulaşın.
             </p>
           </div>
 
@@ -49,9 +49,9 @@ export default function Hizmetler() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Web Tasarımı & Dijital Pazarlama Kreatifleri</h3>
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Okan Demir Web Tasarımı & Dijital Pazarlama Kreatifleri</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Kalabalık bir pazarda öne çıkmak için güçlü bir web tasarımı ve dijital pazarlama stratejisi oluşturmak şarttır.
+                <strong>Okan Demir</strong> olarak kalabalık bir pazarda öne çıkmak için güçlü bir web tasarımı ve dijital pazarlama stratejisi oluşturmak şarttır. <strong>Okan Demir</strong> ile profesyonel çözümler.
               </p>
               <div className="space-y-2 mb-6">
                 <p className="text-gray-600 dark:text-gray-300">✓ Web Tasarımı&Geliştirme&Optimizasyon</p>
@@ -87,9 +87,9 @@ export default function Hizmetler() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Gelişim</h3>
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Okan Demir Gelişim</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır.
+                <strong>Okan Demir</strong> olarak kalabalık bir pazarda öne çıkmak için güçlü bir marka kimliği ve dijital dönüşüm oluşturmak şarttır. <strong>Okan Demir</strong> ile sürdürülebilir büyüme.
               </p>
               <div className="space-y-2 mb-6">
                 <p className="text-gray-600 dark:text-gray-300">✓ Strateji Geliştirme&Uygulama&Optimizasyon</p>

@@ -13,10 +13,10 @@ export default function Header() {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-28 md:h-32 lg:h-36 xl:h-40">
               {/* Logo */}
-              <Link href="/" className="flex items-center">
+              <Link href="/" className="flex items-center" title="Okan Demir - Dijital Pazarlama Uzmanı Ana Sayfa">
                 <Image
                   src="/okan-demir-logo.png"
-                  alt="Okan Demir"
+                  alt="Okan Demir - Türkiye'nin En İyi Dijital Pazarlama Uzmanı"
                   width={750}
                   height={750}
                   className="h-24 md:h-28 lg:h-32 xl:h-36 2xl:h-40 w-auto"
@@ -27,19 +27,19 @@ export default function Header() {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-6 xl:space-x-8" role="navigation" aria-label="Ana navigasyon">
-            <Link href="/" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
+            <Link href="/" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir Ana Sayfa">
               Anasayfa
             </Link>
-            <Link href="/projeler" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
+            <Link href="/projeler" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir Projeler">
               Projeler
             </Link>
-            <Link href="/hizmetler" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
+            <Link href="/hizmetler" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir Hizmetler">
               Hizmetler
             </Link>
-            <Link href="/hakkimda" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
+            <Link href="/hakkimda" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir Kimdir">
               Okan Demir Kimdir?
             </Link>
-            <Link href="/iletisim" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800">
+            <Link href="/iletisim" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir İletişim">
               İletişim
             </Link>
           </nav>
