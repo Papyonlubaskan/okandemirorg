@@ -26,7 +26,7 @@ const incompleteProjects = [
     title: 'Maral Atmaca',
     domain: 'maralatmaca.com',
     summary:
-      'Süreç zarfı içerisinde oluşan olumsuzluklar nedeniyle müşteri talebi üzerine tamamlanmamıştır. Kendisi için yapılan proje şablon olarak şuan tolgademir.org\'da kullanılmaktadır.',
+      'Proje sürecinde yaşanan olumsuzluklar ve müşteri talebiyle sonlandırılmıştır. Maral Atmaca için hazırlanan tasarım şablonu, metin ve hikâye yazarı Tolga Demir tarafından beğenilerek tolgademir.org üzerinde aktif olarak kullanılmaktadır.',
     note: 'Şablon: tolgademir.org',
   },
 ]
