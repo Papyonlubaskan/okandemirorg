@@ -573,7 +573,7 @@ export default function Home() {
 
           <div className="text-center mt-12">
             <Link
-              href="/projeler"
+              href="/projeler#tamamlanan-isler"
               className="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 dark:from-gray-700 dark:to-gray-800 hover:from-blue-700 hover:to-blue-800 dark:hover:from-gray-800 dark:hover:to-gray-900 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               Tüm Çalışmalarıma Göz Atın!

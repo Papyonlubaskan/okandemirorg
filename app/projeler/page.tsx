@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import PortfolioFilter from '@/components/PortfolioFilter'
+import ProjectDeliveryStatus from '@/components/ProjectDeliveryStatus'
 
 export default function Projeler() {
   return (
@@ -29,7 +30,20 @@ export default function Projeler() {
         </div>
       </section>
 
-      {/* Portfolio Filter with Grid */}
+      <ProjectDeliveryStatus />
+
+      {/* Hizmet Kategorileri */}
+      <section className="py-12 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-3">
+            Hizmet Alanlarım
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 font-medium">
+            Sunduğum dijital pazarlama ve web tasarım çözümleri
+          </p>
+        </div>
+      </section>
+
       <PortfolioFilter />
 
       {/* Stats Section */}

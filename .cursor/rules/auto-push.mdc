@@ -1,0 +1,16 @@
+---
+description: Her kod degisikliginden sonra otomatik git commit ve push
+alwaysApply: true
+---
+
+# Otomatik Push
+
+Bu projede kod degisikligi yapildiginda kullaniciya sormadan:
+
+1. Ilgili dosyalari stage et
+2. Anlamli bir commit mesaji yaz (Turkce veya Ingilizce, degisiklige uygun)
+3. `git push origin main` (veya aktif branch) calistir
+
+Kullanicidan ayri push/commit onayi isteme. Push basarisiz olursa hatayi bildir ve duzeltmeyi dene.
+
+Asla force push yapma. `.env`, `railway.env` ve gizli dosyalari commit etme.
