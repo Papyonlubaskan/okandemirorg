@@ -1,4 +1,5 @@
 import Script from 'next/script';
+import { OKAN_BIRTH_DATE } from '@/lib/profile';
 
 export default function StructuredData() {
   const structuredData = {
@@ -10,7 +11,7 @@ export default function StructuredData() {
     "description": "Okan Demir - Türkiye'nin en iyi dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. Okan olarak dijital pazarlama, SEO, web tasarım konularında uzman. Ticimax, İdeasoft, İkas uzmanı.",
     "url": "https://okandemir.org",
     "image": "https://okandemir.org/okan-about-photo.webp",
-    "birthDate": "1993-03-07",
+    "birthDate": OKAN_BIRTH_DATE,
     "birthPlace": {
       "@type": "Place",
       "name": "Bornova, İzmir, Türkiye"
