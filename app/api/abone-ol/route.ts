@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
 </html>
         `,
       })
-    } catch (_emailError) {
+    } catch {
       // Email gönderimi başarısız olsa bile abone kaydedildi
     }
 

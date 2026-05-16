@@ -90,10 +90,9 @@ async function processIncomingMessage(message: any) {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function processMessageStatus(_status: any) {
+async function processMessageStatus(status: unknown) {
   // Mesaj durumu işleme (delivered, read, failed)
-  // Status tracked for monitoring
+  void status
 }
 
 async function sendWhatsAppMessage(to: string, text: string) {
@@ -123,7 +122,7 @@ async function sendWhatsAppMessage(to: string, text: string) {
     const result = await response.json()
     // WhatsApp message sent successfully
     return result
-  } catch (_error) {
+  } catch {
     // Error sending WhatsApp message - silently handled
     return null
   }

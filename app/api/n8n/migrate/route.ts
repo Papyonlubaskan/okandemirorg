@@ -65,12 +65,12 @@ export async function GET() {
     // Tabloların varlığını kontrol et
     const { query } = await import('@/lib/mysql')
     
-    const tables = await query(`
+    const tables = await query<{ TABLE_NAME: string }>(`
       SELECT TABLE_NAME 
       FROM information_schema.TABLES 
       WHERE TABLE_SCHEMA = ? 
       AND TABLE_NAME IN ('campaign_metrics', 'audience_performance', 'n8n_workflow_logs')
-    `, [process.env.MYSQL_DATABASE]) as Array<{ TABLE_NAME: string }>
+    `, [process.env.MYSQL_DATABASE || ''])
 
     return NextResponse.json({
       success: true,

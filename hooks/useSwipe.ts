@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 interface SwipeInput {
   onSwipeLeft?: () => void
@@ -99,24 +99,35 @@ export function usePullToRefresh(onRefresh: () => Promise<void>) {
   const [isRefreshing, setIsRefreshing] = useState(false)
   const [pullDistance, setPullDistance] = useState(0)
   const startY = useRef(0)
+  const pullDistanceRef = useRef(0)
+  const isRefreshingRef = useRef(false)
   const threshold = 80
 
-  const handleTouchStart = (e: TouchEvent) => {
+  useEffect(() => {
+    pullDistanceRef.current = pullDistance
+  }, [pullDistance])
+
+  useEffect(() => {
+    isRefreshingRef.current = isRefreshing
+  }, [isRefreshing])
+
+  const handleTouchStart = useCallback((e: TouchEvent) => {
     if (window.scrollY === 0) {
       startY.current = e.touches[0].clientY
     }
-  }
+  }, [])
 
-  const handleTouchMove = (e: TouchEvent) => {
+  const handleTouchMove = useCallback((e: TouchEvent) => {
     if (window.scrollY === 0 && startY.current > 0) {
       const currentY = e.touches[0].clientY
       const distance = Math.max(0, currentY - startY.current)
       setPullDistance(Math.min(distance, threshold * 1.5))
     }
-  }
+  }, [threshold])
 
-  const handleTouchEnd = async () => {
-    if (pullDistance > threshold && !isRefreshing) {
+  const handleTouchEnd = useCallback(async () => {
+    const distance = pullDistanceRef.current
+    if (distance > threshold && !isRefreshingRef.current) {
       setIsRefreshing(true)
       try {
         await onRefresh()
@@ -128,7 +139,7 @@ export function usePullToRefresh(onRefresh: () => Promise<void>) {
       setPullDistance(0)
     }
     startY.current = 0
-  }
+  }, [onRefresh, threshold])
 
   useEffect(() => {
     document.addEventListener('touchstart', handleTouchStart)
@@ -140,7 +151,7 @@ export function usePullToRefresh(onRefresh: () => Promise<void>) {
       document.removeEventListener('touchmove', handleTouchMove)
       document.removeEventListener('touchend', handleTouchEnd)
     }
-  }, [pullDistance, isRefreshing])
+  }, [handleTouchStart, handleTouchMove, handleTouchEnd])
 
   return { isRefreshing, pullDistance }
 }

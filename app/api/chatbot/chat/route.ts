@@ -36,7 +36,6 @@ export async function POST(request: NextRequest) {
   }
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 async function generateChatbotResponse(message: string, _history: ChatMessage[]): Promise<string> {
   const lowerMessage = message.toLowerCase()
   

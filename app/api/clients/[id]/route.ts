@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { query } from '@/lib/mysql'
+import { execute, query, queryOne, type QueryParam } from '@/lib/mysql'
 
 /**
  * Single Client Management
@@ -16,7 +16,7 @@ export async function GET(
     const clientId = params.id
 
     // Müşteri bilgileri
-    const [client] = await query(`
+    const client = await queryOne(`
       SELECT * FROM clients WHERE id = ?
     `, [clientId])
 
@@ -73,7 +73,7 @@ export async function GET(
     `, [clientId])
 
     // Bu ayki fatura bilgisi
-    const [currentInvoice] = await query(`
+    const currentInvoice = await queryOne(`
       SELECT * FROM client_invoices
       WHERE client_id = ?
         AND period_start <= CURDATE()
@@ -83,7 +83,7 @@ export async function GET(
     `, [clientId])
 
     // Özet istatistikler
-    const [summary] = await query(`
+    const summary = await queryOne(`
       SELECT 
         SUM(CASE WHEN date = CURDATE() THEN spend ELSE 0 END) as today_spend,
         SUM(CASE WHEN date = CURDATE() THEN conversions ELSE 0 END) as today_conversions,
@@ -123,7 +123,7 @@ export async function PUT(
     const data = await request.json()
 
     // Müşteri var mı kontrol et
-    const [existing] = await query('SELECT id FROM clients WHERE id = ?', [clientId])
+    const existing = await queryOne<{ id: number }>('SELECT id FROM clients WHERE id = ?', [clientId])
     
     if (!existing) {
       return NextResponse.json({
@@ -134,7 +134,7 @@ export async function PUT(
 
     // Güncellenebilir alanlar
     const updates: string[] = []
-    const values: any[] = []
+    const values: QueryParam[] = []
 
     const updatableFields = [
       'name', 'email', 'phone', 'company_name', 'tax_number', 'tax_office', 'address',
@@ -164,7 +164,7 @@ export async function PUT(
 
     values.push(clientId)
 
-    await query(`
+    await execute(`
       UPDATE clients 
       SET ${updates.join(', ')}
       WHERE id = ?
@@ -201,7 +201,7 @@ export async function DELETE(
     const clientId = params.id
 
     // Soft delete (status = cancelled)
-    await query(`
+    await execute(`
       UPDATE clients 
       SET status = 'cancelled', cancelled_at = NOW()
       WHERE id = ?

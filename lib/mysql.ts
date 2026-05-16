@@ -1,4 +1,6 @@
-import mysql from 'mysql2/promise'
+import mysql, { RowDataPacket, ResultSetHeader } from 'mysql2/promise'
+
+export type QueryParam = string | number | boolean | null | Date | Buffer
 
 // MySQL bağlantı havuzu
 const pool = mysql.createPool({
@@ -132,14 +134,36 @@ export async function createTables() {
   }
 }
 
-// Query helper function
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export async function query(sql: string, params?: any[]) {
+export async function query<T = RowDataPacket>(
+  sql: string,
+  params?: QueryParam[]
+): Promise<T[]> {
   try {
-    const [rows] = await pool.execute(sql, params)
-    return rows
+    const [rows] = await pool.execute<RowDataPacket[]>(sql, params)
+    return rows as T[]
   } catch (error) {
     console.error('MySQL query error:', error)
+    throw error
+  }
+}
+
+export async function queryOne<T = RowDataPacket>(
+  sql: string,
+  params?: QueryParam[]
+): Promise<T | undefined> {
+  const rows = await query<T>(sql, params)
+  return rows[0]
+}
+
+export async function execute(
+  sql: string,
+  params?: QueryParam[]
+): Promise<ResultSetHeader> {
+  try {
+    const [result] = await pool.execute<ResultSetHeader>(sql, params)
+    return result
+  } catch (error) {
+    console.error('MySQL execute error:', error)
     throw error
   }
 }

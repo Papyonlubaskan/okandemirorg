@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+import path from "path";
+
+const projectRoot = path.resolve(__dirname);
 
 // Bundle analyzer (sadece ANALYZE=true ile çalışır)
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
@@ -6,18 +9,18 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const nextConfig: NextConfig = {
-  // TypeScript ve ESLint build hatalarını TAMAMEN görmezden gel (Railway için)
+  outputFileTracingRoot: projectRoot,
+
   typescript: {
-    ignoreBuildErrors: true,
+    ignoreBuildErrors: false,
   },
   eslint: {
-    // Build sırasında ESLint'i TAMAMEN devre dışı bırak
-    ignoreDuringBuilds: true,
+    ignoreDuringBuilds: false,
   },
   
   /* Turbopack Configuration */
   turbopack: {
-    // Turbopack ayarları
+    root: projectRoot,
     rules: {
       '*.svg': {
         loaders: ['@svgr/webpack'],

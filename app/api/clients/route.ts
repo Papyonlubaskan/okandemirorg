@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { query } from '@/lib/mysql'
+import { execute, query, queryOne, type QueryParam } from '@/lib/mysql'
 
 /**
  * Multi-Client Management API
@@ -28,7 +28,7 @@ export async function GET(request: NextRequest) {
       WHERE c.status = ?
     `
 
-    const params: any[] = [status]
+    const params: QueryParam[] = [status]
 
     if (package_type) {
       sql += ' AND c.package_type = ?'
@@ -40,7 +40,11 @@ export async function GET(request: NextRequest) {
     const clients = await query(sql, params)
 
     // Genel istatistikler
-    const [stats] = await query(`
+    const stats = await queryOne<{
+      total_clients: number
+      estimated_monthly_revenue: number
+      total_monthly_budget: number
+    }>(`
       SELECT 
         COUNT(*) as total_clients,
         SUM(monthly_fee + (monthly_budget_limit * management_fee_percent / 100)) as estimated_monthly_revenue,
@@ -83,7 +87,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Email kontrolü
-    const existingClient = await query(
+    const existingClient = await query<{ id: number }>(
       'SELECT id FROM clients WHERE email = ?',
       [data.email]
     )
@@ -99,7 +103,7 @@ export async function POST(request: NextRequest) {
     const portalToken = `client_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
 
     // Müşteri ekle
-    const result = await query(`
+    const result = await execute(`
       INSERT INTO clients 
       (name, email, phone, company_name, tax_number, tax_office, address,
        package_type, monthly_fee, management_fee_percent, setup_fee,

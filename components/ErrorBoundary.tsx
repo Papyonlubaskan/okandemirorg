@@ -22,10 +22,9 @@ export default class ErrorBoundary extends Component<Props, State> {
     return { hasError: true, error }
   }
 
-  componentDidCatch(_error: Error, _errorInfo: React.ErrorInfo) {
-    // Error caught by boundary - tracked for monitoring
+  componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     if (process.env.NODE_ENV === 'development') {
-      // Development: errors visible in server logs
+      console.error('ErrorBoundary:', error, errorInfo)
     }
   }
 

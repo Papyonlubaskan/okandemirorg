@@ -1,5 +1,40 @@
 import { NextRequest, NextResponse } from 'next/server'
 
+interface CampaignSummary {
+  name?: string
+  roas?: number
+}
+
+interface GroqClientData {
+  name?: string
+  company_name?: string
+  package_type?: string
+  platforms?: string[]
+  total_campaigns?: number
+  today_spend?: number
+  today_conversions?: number
+  today_roas?: number
+  month_spend?: number
+  monthly_budget_limit?: number
+  budget_usage_percent?: number
+  target_roas?: number
+  target_cpa?: number
+  issue_type?: string
+  campaign_name?: string
+  platform?: string
+  current_roas?: number
+  current_cpa?: number
+  daily_spend?: number
+  period_start?: string
+  period_end?: string
+  total_spend?: number
+  total_conversions?: number
+  avg_roas?: number
+  avg_cpa?: number
+  top_campaigns?: CampaignSummary[]
+  bottom_campaigns?: CampaignSummary[]
+}
+
 /**
  * Groq AI Analysis API
  * 100% Ücretsiz - Kredi kartı gerekmez
@@ -87,7 +122,7 @@ export async function POST(request: NextRequest) {
   }
 }
 
-function generatePrompt(clientData: any, analysisType: string): string {
+function generatePrompt(clientData: GroqClientData, analysisType: string): string {
   const baseInfo = `
 Müşteri: ${clientData.name || 'N/A'}
 Şirket: ${clientData.company_name || 'N/A'}
@@ -162,10 +197,10 @@ Toplam Performans:
 - CPA: ₺${clientData.avg_cpa || 0}
 
 En İyi Kampanyalar:
-${clientData.top_campaigns?.map((c: any) => `- ${c.name}: ROAS ${c.roas}x`).join('\n') || 'N/A'}
+${clientData.top_campaigns?.map((c) => `- ${c.name}: ROAS ${c.roas}x`).join('\n') || 'N/A'}
 
 En Kötü Kampanyalar:
-${clientData.bottom_campaigns?.map((c: any) => `- ${c.name}: ROAS ${c.roas}x`).join('\n') || 'N/A'}
+${clientData.bottom_campaigns?.map((c) => `- ${c.name}: ROAS ${c.roas}x`).join('\n') || 'N/A'}
 
 Müşteriye gönderilecek rapor için:
 1. 🎉 Başarılar (pozitif vurgula)

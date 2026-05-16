@@ -60,7 +60,7 @@ function parseRssToJson(rssText: string) {
     }
     
     return posts
-  } catch (_error) {
+  } catch {
     // RSS parsing error - return empty array
     return []
   }

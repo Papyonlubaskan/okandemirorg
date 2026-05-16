@@ -129,15 +129,9 @@ export default function RootLayout({
   return (
     <html lang="tr" suppressHydrationWarning>
       <head>
-        {/* DNS Prefetch */}
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        {/* DNS Prefetch (Google Fonts: next/font Inter handles preconnect) */}
         <link rel="dns-prefetch" href="https://i.ytimg.com" />
         <link rel="dns-prefetch" href="https://www.google-analytics.com" />
-        
-        {/* Preconnect - with rel="preconnect" for Google Fonts */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
         {/* RSS Feed */}
         <link rel="alternate" type="application/rss+xml" title="Okan Demir Blog RSS" href="https://okandemir.org/feed.xml" />

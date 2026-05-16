@@ -1,17 +1,6 @@
 // Jest setup file
 import '@testing-library/jest-dom'
 
-// Add custom matchers
-expect.extend({
-  toBeInTheDocument(received) {
-    const pass = received !== null && received !== undefined
-    return {
-      pass,
-      message: () => `expected ${received} ${pass ? 'not ' : ''}to be in the document`,
-    }
-  },
-})
-
 // Mock environment variables
 process.env.NEXT_PUBLIC_SITE_URL = 'http://localhost:3000'
 process.env.NEXT_PUBLIC_SITE_NAME = 'Test Site'
