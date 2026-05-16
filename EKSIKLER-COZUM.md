@@ -15,7 +15,7 @@
 
 ```typescript
 // ÖNCE (Tehlikeli)
-password: process.env.MYSQL_PASSWORD || 'dFTGoNAsywbEMGsQoojVBRnQYZsxIwUz'
+password: process.env.MYSQL_PASSWORD || 'hardcoded-password-removed'
 
 // SONRA (Güvenli)
 password: process.env.MYSQL_PASSWORD
