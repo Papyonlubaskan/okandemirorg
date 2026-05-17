@@ -1,39 +1,22 @@
 import Link from 'next/link'
-
-const completedProjects = [
-  {
-    title: 'Tolga Demir',
-    url: 'https://tolgademir.org',
-    domain: 'tolgademir.org',
-    summary:
-      'Kişisel marka ve profesyonel portfolyo sitesi. Modern arayüz, hızlı yükleme ve mobil uyumlu yapı ile hizmetlerin ve iletişim kanallarının net sunumu.',
-    tags: ['Next.js', 'Web Tasarım', 'Portfolyo'],
-    gradient: 'from-blue-600 to-indigo-700',
-  },
-  {
-    title: 'Hacettepe İşitme — Samsun',
-    url: 'https://hacettepeisitme-web-production.up.railway.app/',
-    domain: 'hacettepeisitme-web-production.up.railway.app',
-    summary:
-      'Samsun işitme merkezi kurumsal web sitesi. Hizmet tanıtımı, güven veren tasarım ve yerel arama odaklı yapı; Railway üzerinde canlı yayında.',
-    tags: ['Kurumsal Site', 'Sağlık', 'Railway'],
-    gradient: 'from-emerald-600 to-teal-700',
-  },
-]
-
-const incompleteProjects = [
-  {
-    title: 'Maral Atmaca',
-    domain: 'maralatmaca.com',
-    summary:
-      'Proje sürecinde yaşanan olumsuzluklar ve müşteri talebiyle sonlandırılmıştır. Maral Atmaca için hazırlanan tasarım şablonu, metin ve hikâye yazarı Tolga Demir tarafından beğenilerek tolgademir.org üzerinde aktif olarak kullanılmaktadır.',
-    note: 'Şablon: tolgademir.org',
-  },
-]
+import Script from 'next/script'
+import {
+  completedProjects,
+  incompleteProjects,
+  getPortfolioItemListSchema,
+} from '@/lib/portfolio-projects'
 
 export default function ProjectDeliveryStatus() {
+  const itemListSchema = getPortfolioItemListSchema()
+
   return (
     <div className="bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
+      <Script
+        id="portfolio-itemlist-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+
       <section id="tamamlanan-isler" className="py-20 scroll-mt-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
@@ -44,7 +27,15 @@ export default function ProjectDeliveryStatus() {
               Tamamlanan İşler
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-medium">
-              Canlıya alınmış, müşteri onayıyla teslim edilmiş web projeleri
+              Canlıya alınmış, müşteri onayıyla teslim edilmiş web projeleri —{' '}
+              <Link href="/case-studies/tolgademir-portfolyo" className="text-blue-600 dark:text-blue-400 hover:underline">
+                portfolyo
+              </Link>{' '}
+              ve{' '}
+              <Link href="/case-studies/hacettepe-isitme-samsun" className="text-blue-600 dark:text-blue-400 hover:underline">
+                kurumsal site
+              </Link>{' '}
+              case study detayları.
             </p>
           </div>
 
@@ -78,17 +69,27 @@ export default function ProjectDeliveryStatus() {
                   <p className="text-gray-600 dark:text-gray-300 font-medium leading-relaxed mb-6">
                     {project.summary}
                   </p>
-                  <Link
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-lg font-black transition-all hover:scale-[1.02]"
-                  >
-                    Canlı Siteyi Gör
-                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </Link>
+                  <div className="flex flex-wrap gap-3">
+                    <Link
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-6 py-3 rounded-lg font-black transition-all hover:scale-[1.02]"
+                    >
+                      Canlı Siteyi Gör
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </Link>
+                    {project.caseStudySlug && (
+                      <Link
+                        href={`/case-studies/${project.caseStudySlug}`}
+                        className="inline-flex items-center gap-2 border-2 border-blue-600 text-blue-600 dark:text-blue-400 dark:border-blue-400 hover:bg-blue-50 dark:hover:bg-gray-700 px-6 py-3 rounded-lg font-black transition-all"
+                      >
+                        Case Study
+                      </Link>
+                    )}
+                  </div>
                 </div>
               </article>
             ))}

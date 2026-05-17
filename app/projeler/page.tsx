@@ -1,7 +1,33 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import PortfolioFilter from '@/components/PortfolioFilter'
 import ProjectDeliveryStatus from '@/components/ProjectDeliveryStatus'
+
+export const metadata: Metadata = {
+  title: 'Projeler ve Portfolyo | Web Tasarım Referansları',
+  description:
+    'Okan Demir tamamlanan web projeleri: Tolga Demir portfolyo sitesi (tolgademir.org), Hacettepe İşitme Samsun kurumsal web sitesi. Next.js, SEO ve kurumsal tasarım case study.',
+  keywords: [
+    'Okan Demir projeler',
+    'web tasarım portfolyo',
+    'Tolga Demir web sitesi',
+    'Samsun işitme merkezi web sitesi',
+    'Next.js portfolyo',
+    'kurumsal web tasarım referans',
+  ],
+  openGraph: {
+    title: 'Okan Demir Projeler | Portfolyo ve Case Study',
+    description:
+      'Tamamlanan web projeleri: tolgademir.org portfolyo, Hacettepe İşitme Samsun kurumsal site.',
+    url: 'https://okandemir.org/projeler',
+    type: 'website',
+    images: [{ url: 'https://okandemir.org/okan-demir-profile.webp', width: 1200, height: 630 }],
+  },
+  alternates: {
+    canonical: 'https://okandemir.org/projeler',
+  },
+}
 
 export default function Projeler() {
   return (

@@ -1,4 +1,12 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Web Tasarımı ve Geliştirme',
+  description:
+    'Profesyonel web tasarım, Next.js geliştirme ve SEO. Tolga Demir portfolyo, Hacettepe İşitme Samsun gibi tamamlanan projeler — Okan Demir.',
+  alternates: { canonical: 'https://okandemir.org/hizmetler/web-tasarim' },
+}
 
 export default function WebTasarim() {
   return (
@@ -132,6 +140,25 @@ export default function WebTasarim() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-4 text-center max-w-3xl">
+          <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-3">Web Tasarım Referansları</h2>
+          <p className="text-gray-600 dark:text-gray-300 font-medium">
+            <Link href="/projeler#tamamlanan-isler" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
+              Tamamlanan projeler
+            </Link>
+            {' · '}
+            <Link href="/case-studies/tolgademir-portfolyo" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
+              Tolga Demir case study
+            </Link>
+            {' · '}
+            <Link href="/case-studies/hacettepe-isitme-samsun" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
+              Hacettepe İşitme Samsun
+            </Link>
+          </p>
         </div>
       </section>
 

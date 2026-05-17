@@ -328,6 +328,11 @@ Cumartesi: 10:00 - 16:00
 - RESTful API & GraphQL API geliştirmeleri
 - Admin panelli dinamik siteler
 
+**Tamamlanan Web Projeleri (Canlı):**
+- tolgademir.org — Tolga Demir portfolyo (Next.js)
+- Hacettepe İşitme Samsun — kurumsal sağlık sitesi
+- Detay: https://okandemir.org/projeler#tamamlanan-isler
+
 **Web Tasarım Projeleri:**
 - E-ticaret siteleri
 - Kurumsal web siteler
@@ -356,7 +361,8 @@ Kişiye ya da kuruma özel her türlü web projesini admin panelli ve dinamik ol
 • Veritabanı Tasarımı: Özel şema tasarımı, normalize edilmiş yapılar
 • Web: JavaScript & JQuery, HTML5 & CSS3, Responsive Web Design
 
-Detaylı portfolio için: https://okandemir.org/referanslar`
+Detaylı portfolio: https://okandemir.org/projeler#tamamlanan-isler
+Referanslar: https://okandemir.org/referanslar`
   }
 
   // Genel yanıt

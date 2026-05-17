@@ -103,6 +103,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/case-studies/tolgademir-portfolyo`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
+    {
+      url: `${baseUrl}/case-studies/hacettepe-isitme-samsun`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
   ]
 
   // Hizmet Sayfaları

@@ -571,7 +571,18 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-12 space-y-4">
+            <p className="text-gray-600 dark:text-gray-300 font-medium max-w-2xl mx-auto">
+              Tamamlanan referanslar:{' '}
+              <Link href="/case-studies/tolgademir-portfolyo" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
+                Tolga Demir portfolyo
+              </Link>
+              ,{' '}
+              <Link href="/case-studies/hacettepe-isitme-samsun" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
+                Hacettepe İşitme Samsun
+              </Link>
+              .
+            </p>
             <Link
               href="/projeler#tamamlanan-isler"
               className="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-700 dark:from-gray-700 dark:to-gray-800 hover:from-blue-700 hover:to-blue-800 dark:hover:from-gray-800 dark:hover:to-gray-900 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
