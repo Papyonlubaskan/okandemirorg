@@ -152,7 +152,7 @@ export default function WebTasarim() {
             </Link>
             {' · '}
             <Link href="/case-studies/tolgademir-portfolyo" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
-              Tolga Demir case study
+              Tolga Demir proje detayı
             </Link>
             {' · '}
             <Link href="/case-studies/hacettepe-isitme-samsun" className="text-blue-600 dark:text-blue-400 font-black hover:underline">

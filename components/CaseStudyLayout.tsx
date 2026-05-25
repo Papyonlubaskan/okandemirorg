@@ -68,7 +68,7 @@ export default function CaseStudyLayout({
 
               <header className="text-center mb-12">
                 <span className="inline-block bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-4 py-2 rounded-full text-sm font-black mb-4">
-                  Case Study
+                  Başarı Hikayesi
                 </span>
                 <h1 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-4 leading-tight">
                   {headline}

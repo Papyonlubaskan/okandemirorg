@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'kurumsal web tasarım referans',
   ],
   openGraph: {
-    title: 'Okan Demir Projeler | Portfolyo ve Case Study',
+    title: 'Okan Demir Projeler | Portfolyo ve Başarı Hikayeleri',
     description:
       'Tamamlanan web projeleri: tolgademir.org portfolyo, Hacettepe İşitme Samsun kurumsal site.',
     url: 'https://okandemir.org/projeler',

@@ -62,7 +62,7 @@ export default function TicimaxCaseStudyPage() {
               <header className="text-center mb-16">
                 <div className="mb-6">
                   <span className="inline-block bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-4 py-2 rounded-full text-sm font-black">
-                    Case Study
+                    Başarı Hikayesi
                   </span>
                 </div>
                 <h1 className="text-4xl lg:text-6xl font-black text-gray-900 dark:text-white mb-6 leading-tight">
