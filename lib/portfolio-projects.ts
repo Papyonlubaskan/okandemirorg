@@ -47,9 +47,11 @@ export function getPortfolioItemListSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
-    name: 'Okan Demir Tamamlanan Web Projeleri',
+    name: 'Okan Demir Tamamlanan Web Projeleri | Completed Web Projects',
+    alternateName: 'Okan Demir Web Design Portfolio Case Studies',
     description:
-      'Tolga Demir portfolyo sitesi ve Hacettepe İşitme Samsun kurumsal web sitesi dahil teslim edilmiş projeler.',
+      'Tolga Demir portfolyo sitesi ve Hacettepe İşitme Samsun kurumsal web sitesi. Completed projects: Tolga Demir portfolio and Hacettepe Hearing Center Samsun corporate website.',
+    inLanguage: ['tr-TR', 'en'],
     url: `${BASE_URL}/projeler#tamamlanan-isler`,
     numberOfItems: completedProjects.length,
     itemListElement: completedProjects.map((project, index) => ({

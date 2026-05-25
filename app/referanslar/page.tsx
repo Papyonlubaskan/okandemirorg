@@ -1,15 +1,27 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from 'next/script';
+import { bilingualDescription, bilingualKeywords } from '@/lib/seo-bilingual';
 
 export const metadata: Metadata = {
-  title: "Müşteri Yorumları ve Referanslar | Okan Demir",
-  description: "Okan Demir ile çalışan müşterilerin gerçek yorumları ve başarı hikayeleri. Dijital pazarlama, web tasarım ve e-ticaret projelerimizin sonuçları.",
-  keywords: ["Okan Demir Müşteri Yorumları", "Dijital Pazarlama Referanslar", "Web Tasarım Başarı Hikayeleri", "E-ticaret Müşteri Yorumları", "Okan Demir Referanslar"],
+  title: "Müşteri Yorumları ve Referanslar | Testimonials | Okan Demir",
+  description: bilingualDescription(
+    "Okan Demir müşteri yorumları ve başarı hikayeleri. Dijital pazarlama, web tasarım ve e-ticaret proje sonuçları.",
+    "Okan Demir client testimonials and success stories. Digital marketing, web design and e-commerce project results."
+  ),
+  keywords: bilingualKeywords(
+    ["Okan Demir Müşteri Yorumları", "Dijital Pazarlama Referanslar", "Web Tasarım Başarı Hikayeleri", "E-ticaret Müşteri Yorumları"],
+    ["Okan Demir testimonials", "digital marketing references", "web design case studies", "e-commerce client reviews", "Turkey marketing expert"]
+  ),
   openGraph: {
-    title: "Müşteri Yorumları ve Referanslar | Okan Demir",
-    description: "Gerçek müşteri yorumları ve başarı hikayeleri ile Okan Demir'in profesyonel hizmetleri.",
+    title: "Müşteri Yorumları | Testimonials | Okan Demir",
+    description: bilingualDescription(
+      "Gerçek müşteri yorumları ve tamamlanan projeler.",
+      "Real client reviews and completed web projects."
+    ),
     url: "https://okandemir.org/referanslar",
+    locale: "tr_TR",
+    alternateLocale: ["en_US"],
   },
 };
 

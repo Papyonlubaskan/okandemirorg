@@ -3,25 +3,45 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import PortfolioFilter from '@/components/PortfolioFilter'
 import ProjectDeliveryStatus from '@/components/ProjectDeliveryStatus'
+import { bilingualDescription, bilingualKeywords } from '@/lib/seo-bilingual'
 
 export const metadata: Metadata = {
-  title: 'Projeler ve Portfolyo | Web Tasarım Referansları',
-  description:
-    'Okan Demir tamamlanan web projeleri: Tolga Demir portfolyo sitesi (tolgademir.org), Hacettepe İşitme Samsun kurumsal web sitesi. Next.js, SEO ve kurumsal tasarım case study.',
-  keywords: [
-    'Okan Demir projeler',
-    'web tasarım portfolyo',
-    'Tolga Demir web sitesi',
-    'Samsun işitme merkezi web sitesi',
-    'Next.js portfolyo',
-    'kurumsal web tasarım referans',
-  ],
+  title: 'Projeler ve Portfolyo | Web Design Portfolio & Case Studies',
+  description: bilingualDescription(
+    'Okan Demir tamamlanan web projeleri: Tolga Demir portfolyo (tolgademir.org), Hacettepe İşitme Samsun kurumsal site. Next.js, SEO ve başarı hikayeleri.',
+    'Okan Demir completed web projects: Tolga Demir portfolio (tolgademir.org), Hacettepe Hearing Center Samsun corporate website. Next.js, SEO and case studies.'
+  ),
+  keywords: bilingualKeywords(
+    [
+      'Okan Demir projeler',
+      'web tasarım portfolyo',
+      'başarı hikayesi',
+      'Tolga Demir web sitesi',
+      'Samsun işitme merkezi web sitesi',
+      'Next.js portfolyo',
+      'kurumsal web tasarım referans',
+    ],
+    [
+      'Okan Demir projects',
+      'web design portfolio',
+      'case study',
+      'success story',
+      'Tolga Demir website',
+      'Samsun hearing center website',
+      'Next.js portfolio',
+      'corporate web design Turkey',
+    ]
+  ),
   openGraph: {
-    title: 'Okan Demir Projeler | Portfolyo ve Başarı Hikayeleri',
-    description:
-      'Tamamlanan web projeleri: tolgademir.org portfolyo, Hacettepe İşitme Samsun kurumsal site.',
+    title: 'Okan Demir Projeler | Portfolio & Case Studies | Portfolyo',
+    description: bilingualDescription(
+      'Tamamlanan web projeleri ve başarı hikayeleri.',
+      'Completed web projects and case studies by Okan Demir.'
+    ),
     url: 'https://okandemir.org/projeler',
     type: 'website',
+    locale: 'tr_TR',
+    alternateLocale: ['en_US'],
     images: [{ url: 'https://okandemir.org/okan-demir-profile.webp', width: 1200, height: 630 }],
   },
   alternates: {

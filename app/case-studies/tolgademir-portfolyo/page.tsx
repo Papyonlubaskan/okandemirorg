@@ -1,22 +1,45 @@
 import type { Metadata } from 'next'
 import CaseStudyLayout from '@/components/CaseStudyLayout'
+import { bilingualDescription, bilingualKeywords } from '@/lib/seo-bilingual'
 
 export const metadata: Metadata = {
-  title: 'Tolga Demir Portfolyo Web Sitesi Case Study',
-  description:
-    'Metin ve hikâye yazarı Tolga Demir için Next.js portfolyo sitesi. Kişisel marka, hızlı performans ve mobil uyumlu web tasarım projesi — Okan Demir.',
-  keywords: [
-    'Tolga Demir web sitesi',
-    'portfolyo web tasarım',
-    'Next.js portfolyo',
-    'Okan Demir projeler',
-    'kişisel marka web sitesi',
-  ],
+  title: 'Tolga Demir Portfolyo | Portfolio Case Study | Başarı Hikayesi',
+  description: bilingualDescription(
+    'Metin ve hikâye yazarı Tolga Demir için Next.js portfolyo sitesi (tolgademir.org). Kişisel marka ve mobil uyumlu web tasarım — Okan Demir.',
+    'Next.js portfolio website for author Tolga Demir (tolgademir.org). Personal brand, fast performance, mobile-first web design by Okan Demir.'
+  ),
+  keywords: bilingualKeywords(
+    [
+      'Tolga Demir web sitesi',
+      'portfolyo web tasarım',
+      'başarı hikayesi',
+      'Next.js portfolyo',
+      'Okan Demir projeler',
+      'kişisel marka web sitesi',
+    ],
+    [
+      'Tolga Demir website',
+      'portfolio web design',
+      'case study',
+      'Next.js portfolio',
+      'Okan Demir projects',
+      'personal brand website',
+      'writer portfolio Turkey',
+    ]
+  ),
   openGraph: {
-    title: 'Tolga Demir Portfolyo Sitesi | Okan Demir Case Study',
-    description: 'tolgademir.org — profesyonel portfolyo ve kişisel marka web sitesi projesi.',
+    title: 'Tolga Demir Portfolio | Case Study | Okan Demir',
+    description: bilingualDescription(
+      'tolgademir.org — profesyonel portfolyo ve kişisel marka sitesi.',
+      'tolgademir.org — professional portfolio and personal brand website project.'
+    ),
     url: 'https://okandemir.org/case-studies/tolgademir-portfolyo',
     type: 'article',
+    locale: 'tr_TR',
+    alternateLocale: ['en_US'],
+  },
+  alternates: {
+    canonical: 'https://okandemir.org/case-studies/tolgademir-portfolyo',
   },
 }
 

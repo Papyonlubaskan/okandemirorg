@@ -1,22 +1,45 @@
 import type { Metadata } from 'next'
 import CaseStudyLayout from '@/components/CaseStudyLayout'
+import { bilingualDescription, bilingualKeywords } from '@/lib/seo-bilingual'
 
 export const metadata: Metadata = {
-  title: 'Hacettepe İşitme Samsun Kurumsal Web Sitesi Case Study',
-  description:
-    'Samsun işitme merkezi Hacettepe İşitme için kurumsal web sitesi. Yerel SEO, hizmet tanıtımı ve güven odaklı tasarım — Okan Demir web tasarım projesi.',
-  keywords: [
-    'Samsun işitme merkezi web sitesi',
-    'kurumsal web tasarım Samsun',
-    'sağlık sektörü web sitesi',
-    'Okan Demir projeler',
-    'Hacettepe İşitme',
-  ],
+  title: 'Hacettepe İşitme Samsun | Corporate Website Case Study | Kurumsal Site',
+  description: bilingualDescription(
+    'Samsun işitme merkezi Hacettepe İşitme kurumsal web sitesi. Yerel SEO, hizmet tanıtımı ve güven odaklı tasarım — Okan Demir.',
+    'Corporate website for Hacettepe Hearing Center Samsun, Turkey. Local SEO, healthcare web design and trust-focused UX by Okan Demir.'
+  ),
+  keywords: bilingualKeywords(
+    [
+      'Samsun işitme merkezi web sitesi',
+      'kurumsal web tasarım Samsun',
+      'sağlık sektörü web sitesi',
+      'başarı hikayesi',
+      'Okan Demir projeler',
+      'Hacettepe İşitme',
+    ],
+    [
+      'Samsun hearing center website',
+      'corporate web design Samsun',
+      'healthcare website Turkey',
+      'case study',
+      'Okan Demir projects',
+      'Hacettepe Hearing Center',
+      'local SEO Samsun',
+    ]
+  ),
   openGraph: {
-    title: 'Hacettepe İşitme Samsun | Okan Demir Case Study',
-    description: 'Samsun işitme merkezi kurumsal web sitesi — yerel SEO ve hizmet odaklı tasarım.',
+    title: 'Hacettepe Hearing Center Samsun | Case Study | Okan Demir',
+    description: bilingualDescription(
+      'Samsun işitme merkezi kurumsal web sitesi — yerel SEO.',
+      'Corporate hearing center website in Samsun — local SEO and service-focused design.'
+    ),
     url: 'https://okandemir.org/case-studies/hacettepe-isitme-samsun',
     type: 'article',
+    locale: 'tr_TR',
+    alternateLocale: ['en_US'],
+  },
+  alternates: {
+    canonical: 'https://okandemir.org/case-studies/hacettepe-isitme-samsun',
   },
 }
 

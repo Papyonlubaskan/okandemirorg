@@ -1,10 +1,18 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 
+import { bilingualDescription, bilingualKeywords } from '@/lib/seo-bilingual'
+
 export const metadata: Metadata = {
-  title: 'Web Tasarımı ve Geliştirme',
-  description:
-    'Profesyonel web tasarım, Next.js geliştirme ve SEO. Tolga Demir portfolyo, Hacettepe İşitme Samsun gibi tamamlanan projeler — Okan Demir.',
+  title: 'Web Tasarımı ve Geliştirme | Web Design & Development',
+  description: bilingualDescription(
+    'Profesyonel web tasarım, Next.js ve SEO. Tamamlanan projeler: Tolga Demir portfolyo, Hacettepe İşitme Samsun — Okan Demir.',
+    'Professional web design, Next.js development and SEO. Portfolio: Tolga Demir, Hacettepe Hearing Center Samsun — Okan Demir.'
+  ),
+  keywords: bilingualKeywords(
+    ['web tasarım', 'Next.js', 'SEO', 'portfolyo', 'kurumsal site'],
+    ['web design', 'Next.js developer', 'SEO Turkey', 'portfolio website', 'corporate website']
+  ),
   alternates: { canonical: 'https://okandemir.org/hizmetler/web-tasarim' },
 }
 
