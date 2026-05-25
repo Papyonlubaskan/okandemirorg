@@ -114,14 +114,6 @@ const nextConfig: NextConfig = {
   /* Production Optimization */
   productionBrowserSourceMaps: false,
   
-  /* Output Configuration - Disabled for Railway compatibility */
-  // output: 'standalone', // Railway için kapatıldı
-  
-  /* Generate Build ID for cache busting */
-  generateBuildId: async () => {
-    return `build-${Date.now()}`
-  },
-  
   /* Compiler Options - Remove ALL console logs in production */
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? true : false,
