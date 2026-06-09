@@ -1,7 +1,11 @@
 import { NextResponse } from 'next/server'
 import { testConnection, createTables } from '@/lib/mysql'
+import { blockDevRouteInProduction } from '@/lib/api-security'
 
 export async function GET() {
+  const blocked = blockDevRouteInProduction()
+  if (blocked) return blocked
+
   try {
     // Bağlantıyı test et
     const connectionOk = await testConnection()

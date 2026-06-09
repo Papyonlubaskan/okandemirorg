@@ -102,6 +102,59 @@ export async function createTables() {
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
     `)
     
+    await connection.execute(`
+      CREATE TABLE IF NOT EXISTS newsletter_subscribers (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        email VARCHAR(255) NOT NULL UNIQUE,
+        name VARCHAR(255),
+        status ENUM('active', 'unsubscribed') DEFAULT 'active',
+        subscribed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        INDEX idx_status (status)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+    `)
+
+    await connection.execute(`
+      CREATE TABLE IF NOT EXISTS clients (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(255) NOT NULL,
+        email VARCHAR(255) NOT NULL,
+        phone VARCHAR(20),
+        company_name VARCHAR(255),
+        package_type ENUM('basic', 'standard', 'premium', 'custom') DEFAULT 'standard',
+        monthly_budget_limit DECIMAL(10,2),
+        target_roas DECIMAL(5,2) DEFAULT 3.00,
+        status ENUM('active', 'paused', 'cancelled', 'pending') DEFAULT 'pending',
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        UNIQUE KEY unique_email (email),
+        INDEX idx_status (status)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+    `)
+
+    await connection.execute(`
+      CREATE TABLE IF NOT EXISTS client_campaign_metrics (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        client_id INT NOT NULL,
+        platform VARCHAR(50) NOT NULL,
+        campaign_id VARCHAR(255),
+        campaign_name VARCHAR(255),
+        impressions INT DEFAULT 0,
+        clicks INT DEFAULT 0,
+        conversions INT DEFAULT 0,
+        spend DECIMAL(10,2) DEFAULT 0,
+        revenue DECIMAL(10,2) DEFAULT 0,
+        ctr DECIMAL(5,2) DEFAULT 0,
+        cpc DECIMAL(5,2) DEFAULT 0,
+        cpa DECIMAL(10,2) DEFAULT 0,
+        roas DECIMAL(5,2) DEFAULT 0,
+        date DATE NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        FOREIGN KEY (client_id) REFERENCES clients(id) ON DELETE CASCADE,
+        INDEX idx_client_date (client_id, date),
+        INDEX idx_platform (platform)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+    `)
+
     // n8n - Workflow Logs tablosu (opsiyonel)
     await connection.execute(`
       CREATE TABLE IF NOT EXISTS n8n_workflow_logs (

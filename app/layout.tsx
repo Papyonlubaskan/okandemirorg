@@ -6,12 +6,11 @@ import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import Loading from "@/components/Loading";
 import StructuredData from "./structured-data";
-import WhatsAppChatbot from "@/components/WhatsAppChatbot";
+import DeferredWidgets from "@/components/DeferredWidgets";
 import AccessibilityHelper from "@/components/AccessibilityHelper";
 import ConsoleErrorSuppressor from "@/components/ConsoleErrorSuppressor";
 import { ThemeProvider } from "@/contexts/ThemeContext";
 import GoogleAnalytics from "@/components/GoogleAnalytics";
-import ChatBot from "@/components/ChatBot";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -145,8 +144,7 @@ export default function RootLayout({
           <ConsoleErrorSuppressor />
           <AccessibilityHelper />
           <StructuredData />
-          <WhatsAppChatbot />
-          <ChatBot />
+          <DeferredWidgets />
           <Loading />
           <Header />
           <main id="main-content" className="flex-1" tabIndex={-1}>

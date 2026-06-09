@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { execute, query, queryOne, type QueryParam } from '@/lib/mysql'
+import { requireInternalApiKey } from '@/lib/api-security'
 
 /**
  * Single Client Management
@@ -12,6 +13,9 @@ export async function GET(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   try {
     const clientId = params.id
 
@@ -118,6 +122,9 @@ export async function PUT(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   try {
     const clientId = params.id
     const data = await request.json()
@@ -197,6 +204,9 @@ export async function DELETE(
   request: NextRequest,
   { params }: { params: { id: string } }
 ) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   try {
     const clientId = params.id
 

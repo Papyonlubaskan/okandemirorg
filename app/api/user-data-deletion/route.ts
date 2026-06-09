@@ -9,7 +9,10 @@ export async function GET(request: NextRequest) {
   const hubChallenge = searchParams.get('hub.challenge')
   const hubVerifyToken = searchParams.get('hub.verify_token')
 
-  if (hubMode === 'subscribe' && hubVerifyToken === 'facebook_verification_token') {
+  const verifyToken =
+    process.env.FACEBOOK_VERIFY_TOKEN || 'facebook_verification_token'
+
+  if (hubMode === 'subscribe' && hubVerifyToken === verifyToken) {
     return new NextResponse(hubChallenge, { status: 200 })
   }
 

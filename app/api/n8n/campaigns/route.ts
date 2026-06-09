@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { requireInternalApiKey } from '@/lib/api-security'
 
 /**
  * Kampanya verileri n8n'e gönderme API'si
@@ -6,6 +7,9 @@ import { NextRequest, NextResponse } from 'next/server'
  */
 
 export async function POST(request: NextRequest) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   try {
     const body = await request.json()
     const { 
@@ -66,6 +70,9 @@ export async function POST(request: NextRequest) {
  * GET - Mevcut kampanya durumları
  */
 export async function GET(request: NextRequest) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   const { searchParams } = new URL(request.url)
   const platform = searchParams.get('platform') || 'all'
 

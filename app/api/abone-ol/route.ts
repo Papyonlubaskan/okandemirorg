@@ -1,6 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { query } from '@/lib/mysql'
 import nodemailer from 'nodemailer'
+import {
+  checkRateLimit,
+  getClientIp,
+  rateLimitResponse,
+} from '@/lib/api-security'
 
 // Email transporter
 const transporter = nodemailer.createTransport({
@@ -14,6 +19,11 @@ const transporter = nodemailer.createTransport({
 })
 
 export async function POST(request: NextRequest) {
+  const ip = getClientIp(request)
+  if (!checkRateLimit(`subscribe:${ip}`, 5, 15 * 60 * 1000)) {
+    return rateLimitResponse()
+  }
+
   try {
     const body = await request.json()
     const { email, name } = body

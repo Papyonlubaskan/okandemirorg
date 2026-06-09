@@ -1,12 +1,20 @@
 import { NextResponse } from 'next/server'
 import { createTables, testConnection } from '@/lib/mysql'
+import { blockDevRouteInProduction, requireInternalApiKey } from '@/lib/api-security'
+import type { NextRequest } from 'next/server'
 
 /**
  * n8n Database Migration API
  * N8N için gerekli tabloları oluşturur
  */
 
-export async function POST() {
+export async function POST(request: NextRequest) {
+  const blocked = blockDevRouteInProduction()
+  if (blocked) return blocked
+
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   try {
     // Bağlantıyı test et
     const isConnected = await testConnection()
@@ -50,7 +58,10 @@ export async function POST() {
 /**
  * GET - Migration durumunu kontrol et
  */
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   try {
     const isConnected = await testConnection()
     

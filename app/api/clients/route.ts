@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { execute, query, queryOne, type QueryParam } from '@/lib/mysql'
+import { requireInternalApiKey } from '@/lib/api-security'
 
 /**
  * Multi-Client Management API
@@ -8,6 +9,9 @@ import { execute, query, queryOne, type QueryParam } from '@/lib/mysql'
 
 // GET /api/clients - Tüm müşterileri listele
 export async function GET(request: NextRequest) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   try {
     const { searchParams } = new URL(request.url)
     const status = searchParams.get('status') || 'active'
@@ -75,6 +79,9 @@ export async function GET(request: NextRequest) {
 
 // POST /api/clients - Yeni müşteri ekle
 export async function POST(request: NextRequest) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   try {
     const data = await request.json()
 

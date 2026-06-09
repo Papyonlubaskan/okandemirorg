@@ -1,6 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 import pool from '@/lib/mysql'
+import {
+  checkRateLimit,
+  escapeHtml,
+  getClientIp,
+  rateLimitResponse,
+} from '@/lib/api-security'
 
 // Email konfigürasyonu - cPanel ayarlarına göre
 const transporter = nodemailer.createTransport({
@@ -14,8 +20,20 @@ const transporter = nodemailer.createTransport({
 })
 
 export async function POST(request: NextRequest) {
+  const ip = getClientIp(request)
+  if (!checkRateLimit(`email:${ip}`, 8, 15 * 60 * 1000)) {
+    return rateLimitResponse()
+  }
+
   try {
     const { name, email, phone, subject, message, company } = await request.json()
+
+    const safeName = escapeHtml(name)
+    const safeEmail = escapeHtml(email)
+    const safePhone = escapeHtml(phone)
+    const safeCompany = escapeHtml(company)
+    const safeSubject = escapeHtml(subject)
+    const safeMessage = escapeHtml(message)
 
     // MySQL'e kaydet
     const connection = await pool.getConnection()
@@ -30,7 +48,7 @@ export async function POST(request: NextRequest) {
       from: 'info@okandemir.org',
       to: 'info@okandemir.org',
       replyTo: email,
-      subject: `İletişim Formu: ${subject || 'Yeni Mesaj'}`,
+      subject: `İletişim Formu: ${safeSubject || 'Yeni Mesaj'}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #2563eb; border-bottom: 3px solid #2563eb; padding-bottom: 10px;">
@@ -39,16 +57,16 @@ export async function POST(request: NextRequest) {
           
           <div style="background: #fff; padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #1f2937; margin-top: 0;">👤 Müşteri Bilgileri</h3>
-            <p><strong>Ad:</strong> ${name}</p>
-            <p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>
-            <p><strong>Telefon:</strong> ${phone || 'Belirtilmedi'}</p>
-            ${company ? `<p><strong>Şirket:</strong> ${company}</p>` : ''}
-            <p><strong>Konu:</strong> ${subject || 'Belirtilmedi'}</p>
+            <p><strong>Ad:</strong> ${safeName}</p>
+            <p><strong>Email:</strong> ${safeEmail}</p>
+            <p><strong>Telefon:</strong> ${safePhone || 'Belirtilmedi'}</p>
+            ${safeCompany ? `<p><strong>Şirket:</strong> ${safeCompany}</p>` : ''}
+            <p><strong>Konu:</strong> ${safeSubject || 'Belirtilmedi'}</p>
           </div>
           
           <div style="background: #fff; padding: 20px; border: 1px solid #e5e7eb; border-radius: 8px;">
             <h3 style="color: #1f2937; margin-top: 0;">💬 Mesaj İçeriği</h3>
-            <p style="line-height: 1.6; color: #374151;">${message.replace(/\n/g, '<br>')}</p>
+            <p style="line-height: 1.6; color: #374151;">${safeMessage.replace(/\n/g, '<br>')}</p>
           </div>
         </div>
       `,

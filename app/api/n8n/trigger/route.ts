@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { requireInternalApiKey } from '@/lib/api-security'
 
 /**
  * n8n Webhook Trigger API
@@ -6,6 +7,9 @@ import { NextRequest, NextResponse } from 'next/server'
  */
 
 export async function POST(request: NextRequest) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   try {
     const body = await request.json()
     const { action, data, priority = 'normal' } = body
@@ -69,7 +73,10 @@ export async function POST(request: NextRequest) {
 /**
  * GET endpoint - n8n health check
  */
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   const n8nWebhookUrl = process.env.N8N_WEBHOOK_URL
   
   return NextResponse.json({
