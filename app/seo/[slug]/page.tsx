@@ -1,8 +1,10 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { generateSEOPages } from '@/lib/seo-data-generator'
+import { generateSEOPages, getSEOPageBySlug } from '@/lib/seo-data-generator'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
+
+export const revalidate = 86400
 
 export async function generateStaticParams() {
   const pages = generateSEOPages()
@@ -13,8 +15,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params
-  const pages = generateSEOPages()
-  const page = pages.find((p) => p.slug === resolvedParams.slug)
+  const page = getSEOPageBySlug(resolvedParams.slug)
   
   if (!page) {
     return {
@@ -33,8 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function SEOPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params
-  const pages = generateSEOPages()
-  const page = pages.find((p) => p.slug === resolvedParams.slug)
+  const page = getSEOPageBySlug(resolvedParams.slug)
 
   if (!page) {
     notFound()

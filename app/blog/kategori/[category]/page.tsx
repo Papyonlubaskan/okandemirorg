@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { blogCategories, generateBlogPosts } from '@/lib/blog-data'
+import { blogCategories, getBlogPostsByCategory } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
 
@@ -37,8 +37,7 @@ export default async function CategoryPage({ params }: { params: Promise<{ categ
     notFound()
   }
 
-  const posts = generateBlogPosts()
-  const categoryPosts = posts.filter((p) => p.category === category.name).slice(0, 24)
+  const categoryPosts = getBlogPostsByCategory(category.name, 24)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { cities, serviceTypes, generateBlogPosts } from '@/lib/blog-data'
+import { cities, serviceTypes, getBlogPostsByCity } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
 
@@ -43,8 +43,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
     notFound()
   }
 
-  const posts = generateBlogPosts()
-  const cityPosts = posts.filter((p) => p.city === cityName).slice(0, 12)
+  const cityPosts = getBlogPostsByCity(cityName, 12)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">

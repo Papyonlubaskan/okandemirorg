@@ -1,8 +1,10 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { generateBlogPosts } from '@/lib/blog-data'
+import { generateBlogPosts, getBlogPostBySlug } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
+
+export const revalidate = 86400
 
 export async function generateStaticParams() {
   const posts = generateBlogPosts()
@@ -13,8 +15,7 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const resolvedParams = await params
-  const posts = generateBlogPosts()
-  const post = posts.find((p) => p.slug === resolvedParams.slug)
+  const post = getBlogPostBySlug(resolvedParams.slug)
   
   if (!post) {
     return {
@@ -33,8 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const resolvedParams = await params
-  const posts = generateBlogPosts()
-  const post = posts.find((p) => p.slug === resolvedParams.slug)
+  const post = getBlogPostBySlug(resolvedParams.slug)
 
   if (!post) {
     notFound()

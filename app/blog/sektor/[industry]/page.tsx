@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { industries, serviceTypes, generateBlogPosts } from '@/lib/blog-data'
+import { industries, serviceTypes, getBlogPostsByIndustry } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
 
@@ -43,8 +43,7 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
     notFound()
   }
 
-  const posts = generateBlogPosts()
-  const industryPosts = posts.filter((p) => p.industry === industryName).slice(0, 12)
+  const industryPosts = getBlogPostsByIndustry(industryName, 12)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">

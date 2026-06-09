@@ -172,12 +172,22 @@ export const seoKeywordCombinations = [
   'platformu'
 ]
 
-// Blog Post Generator
-export function generateBlogPosts(): BlogPost[] {
+const BLOG_GENERATED_DATE = '2025-01-01T00:00:00.000Z'
+
+type BlogCache = {
+  posts: BlogPost[]
+  bySlug: Map<string, BlogPost>
+  byCity: Map<string, BlogPost[]>
+  byCategory: Map<string, BlogPost[]>
+  byIndustry: Map<string, BlogPost[]>
+}
+
+let blogCache: BlogCache | null = null
+
+function buildBlogPosts(): BlogPost[] {
   const posts: BlogPost[] = []
   let idCounter = 1
 
-  // 1. Kategori bazlı blog postları
   blogCategories.forEach((category) => {
     for (let i = 0; i < 50; i++) {
       posts.push({
@@ -189,51 +199,100 @@ export function generateBlogPosts(): BlogPost[] {
         keywords: ['Okan Demir', category.slug, `Okan Demir ${category.name}`, seoKeywordCombinations[i % seoKeywordCombinations.length], 'Okan Demir dijital pazarlama'],
         content: `<strong>Okan Demir</strong> ${category.description} konusunda detaylı rehber. <strong>Okan Demir</strong> olarak ${category.name} alanında uzman hizmet veriyorum. <strong>Okan Demir</strong> ile ${category.name} konusunda profesyonel destek alabilirsiniz.`,
         author: 'Okan Demir',
-        date: new Date().toISOString(),
-        image: '/blog-default.jpg'
+        date: BLOG_GENERATED_DATE,
+        image: '/blog-default.jpg',
       })
     }
   })
 
-  // 2. Şehir bazlı hizmet sayfaları
-  cities.forEach(city => {
-    serviceTypes.slice(0, 10).forEach(service => {
+  cities.forEach((city) => {
+    serviceTypes.slice(0, 10).forEach((service) => {
       posts.push({
         id: `${idCounter++}`,
         slug: `${city.toLowerCase().replace(/ı/g, 'i').replace(/ş/g, 's').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ö/g, 'o')}-${service.toLowerCase().replace(/\s+/g, '-')}`,
         title: `Okan Demir ${city} ${service}`,
         excerpt: `Okan Demir ${city} için profesyonel ${service.toLowerCase()} hizmeti. Okan Demir ile ${city} bölgesinde dijital pazarlama uzmanı.`,
         category: 'Şehir Bazlı Hizmetler',
-        city: city,
+        city,
         keywords: ['Okan Demir', city, service, 'Okan Demir dijital pazarlama', `Okan Demir ${city}`, 'dijital pazarlama'],
         content: `<strong>Okan Demir</strong> ${city} bölgesinde ${service.toLowerCase()} arıyorsanız doğru yerdesiniz. <strong>Okan Demir</strong> olarak ${city} için profesyonel ${service.toLowerCase()} hizmeti sunuyorum. <strong>Okan Demir</strong> ile ${city} bölgesinde dijital pazarlama uzmanı olarak hizmet veriyorum.`,
         author: 'Okan Demir',
-        date: new Date().toISOString(),
-        image: '/blog-default.jpg'
+        date: BLOG_GENERATED_DATE,
+        image: '/blog-default.jpg',
       })
     })
   })
 
-  // 3. Sektör bazlı çözümler
-  industries.forEach(industry => {
-    serviceTypes.slice(0, 5).forEach(service => {
+  industries.forEach((industry) => {
+    serviceTypes.slice(0, 5).forEach((service) => {
       posts.push({
         id: `${idCounter++}`,
         slug: `${industry.toLowerCase().replace(/\s+/g, '-')}-${service.toLowerCase().replace(/\s+/g, '-')}`,
         title: `Okan Demir ${industry} Sektörü İçin ${service}`,
         excerpt: `Okan Demir ${industry} sektörüne özel ${service.toLowerCase()} çözümleri. Okan Demir ile ${industry} sektöründe dijital pazarlama.`,
         category: 'Sektör Çözümleri',
-        industry: industry,
+        industry,
         keywords: ['Okan Demir', industry, service, `Okan Demir ${industry}`, 'Okan Demir dijital çözümler', 'dijital çözümler'],
         content: `<strong>Okan Demir</strong> ${industry} sektöründe ${service.toLowerCase()} ile fark yaratın. <strong>Okan Demir</strong> olarak ${industry} sektörüne özel ${service.toLowerCase()} çözümleri sunuyorum. <strong>Okan Demir</strong> ile ${industry} sektöründe dijital pazarlama uzmanı olarak hizmet veriyorum.`,
         author: 'Okan Demir',
-        date: new Date().toISOString(),
-        image: '/blog-default.jpg'
+        date: BLOG_GENERATED_DATE,
+        image: '/blog-default.jpg',
       })
     })
   })
 
   return posts
+}
+
+function ensureBlogCache(): BlogCache {
+  if (blogCache) return blogCache
+
+  const posts = buildBlogPosts()
+  const bySlug = new Map<string, BlogPost>()
+  const byCity = new Map<string, BlogPost[]>()
+  const byCategory = new Map<string, BlogPost[]>()
+  const byIndustry = new Map<string, BlogPost[]>()
+
+  for (const post of posts) {
+    bySlug.set(post.slug, post)
+    if (post.city) {
+      const cityPosts = byCity.get(post.city) ?? []
+      cityPosts.push(post)
+      byCity.set(post.city, cityPosts)
+    }
+    const categoryPosts = byCategory.get(post.category) ?? []
+    categoryPosts.push(post)
+    byCategory.set(post.category, categoryPosts)
+    if (post.industry) {
+      const industryPosts = byIndustry.get(post.industry) ?? []
+      industryPosts.push(post)
+      byIndustry.set(post.industry, industryPosts)
+    }
+  }
+
+  blogCache = { posts, bySlug, byCity, byCategory, byIndustry }
+  return blogCache
+}
+
+/** Tüm blog postları — bellekte bir kez üretilir */
+export function generateBlogPosts(): BlogPost[] {
+  return ensureBlogCache().posts
+}
+
+export function getBlogPostBySlug(slug: string): BlogPost | undefined {
+  return ensureBlogCache().bySlug.get(slug)
+}
+
+export function getBlogPostsByCity(city: string, limit = 12): BlogPost[] {
+  return (ensureBlogCache().byCity.get(city) ?? []).slice(0, limit)
+}
+
+export function getBlogPostsByCategory(categoryName: string, limit = 24): BlogPost[] {
+  return (ensureBlogCache().byCategory.get(categoryName) ?? []).slice(0, limit)
+}
+
+export function getBlogPostsByIndustry(industry: string, limit = 12): BlogPost[] {
+  return (ensureBlogCache().byIndustry.get(industry) ?? []).slice(0, limit)
 }
 
 // Toplam sayfa sayısını hesapla

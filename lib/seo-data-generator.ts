@@ -97,8 +97,9 @@ const budgets = [
 ]
 
 
-// SEO sayfaları oluştur
-export function generateSEOPages(): SEOPage[] {
+let seoCache: { pages: SEOPage[]; bySlug: Map<string, SEOPage> } | null = null
+
+function buildSEOPages(): SEOPage[] {
   const pages: SEOPage[] = []
   let idCounter = 1
 
@@ -283,7 +284,27 @@ export function generateSEOPages(): SEOPage[] {
     })
   })
 
-  return pages.slice(0, 1500) // İlk 1500 sayfayı döndür
+  return pages.slice(0, 1500)
+}
+
+function ensureSEOCache() {
+  if (seoCache) return seoCache
+  const pages = buildSEOPages()
+  const bySlug = new Map<string, SEOPage>()
+  for (const page of pages) {
+    bySlug.set(page.slug, page)
+  }
+  seoCache = { pages, bySlug }
+  return seoCache
+}
+
+/** Tüm SEO sayfaları — bellekte bir kez üretilir */
+export function generateSEOPages(): SEOPage[] {
+  return ensureSEOCache().pages
+}
+
+export function getSEOPageBySlug(slug: string): SEOPage | undefined {
+  return ensureSEOCache().bySlug.get(slug)
 }
 
 // Toplam SEO sayfası sayısı
