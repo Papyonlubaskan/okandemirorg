@@ -16,7 +16,7 @@ export default function SSSPage() {
   const faqData = [
     {
       question: "Dijital pazarlama hizmetleri nelerdir?",
-      answer: "Dijital pazarlama hizmetlerim arasında SEO optimizasyonu, Google Ads yönetimi, sosyal medya pazarlama, içerik pazarlama, email pazarlama ve web analitik yer almaktadır. Her hizmet, işletmenizin hedeflerine göre özelleştirilir."
+      answer: "Dijital pazarlama hizmetlerim arasında SEO optimizasyonu, Google Ads yönetimi, sosyal medya pazarlama, içerik pazarlama, e-posta pazarlama ve web analitiği yer almaktadır. Her hizmet, işletmenizin hedeflerine göre özelleştirilir."
     },
     {
       question: "Web tasarım projesi ne kadar sürer?",
@@ -56,7 +56,7 @@ export default function SSSPage() {
     },
     {
       question: "İletişim kanallarınız nelerdir?",
-      answer: "WhatsApp (+90 555 267 77 39), email (info@okandemir.org), Instagram (@okandemirorg) ve web sitemdeki iletişim formu ile bana ulaşabilirsiniz. En hızlı yanıt WhatsApp üzerinden alırsınız."
+      answer: "WhatsApp (+90 555 267 77 39), e-posta (info@okandemir.org), Instagram (@okandemirorg) ve web sitemdeki iletişim formu ile bana ulaşabilirsiniz. En hızlı yanıt WhatsApp üzerinden alırsınız."
     },
     {
       question: "Referanslarınızı görebilir miyim?",

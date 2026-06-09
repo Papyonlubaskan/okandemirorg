@@ -62,7 +62,7 @@ export default function Hakkimda() {
                   href="/iletisim"
                   className="inline-flex items-center justify-center bg-white/20 dark:bg-gray-800/20 hover:bg-white/30 dark:hover:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm border-2 border-white/30"
                 >
-                  <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
+                  <Image src="/email-icon.png" alt="E-posta" width={24} height={24} className="mr-3" />
                   İletişime Geç
                 </Link>
               </div>
@@ -86,7 +86,7 @@ export default function Hakkimda() {
 
             <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-3xl p-8 lg:p-12 mb-16">
               <p className="text-lg text-gray-800 dark:text-gray-200 leading-tight font-black text-center mb-6">
-                Bugün, harika planlamaların ve tasarımın sadece estetikle ilgili olmadığına; markalar ve hedef kitleleri arasında anlamlı bağlantılar kurmakla ilgili olduğuna olan inancımla hareket ediyorum. Bu inancımı geçmiş tecrübelerim ve siyasi yaşamım ile elde ettiğimi düşünerek, vizyon ve misyon sorumluluğumu bir adım öteye sizin sayenizde taşıyabilirim!
+                Bugün, harika planlamaların ve tasarımın sadece estetikle ilgili olmadığına; markalar ve hedef kitleleri arasında anlamlı bağlantılar kurmakla ilgili olduğuna olan inancımla hareket ediyorum. Bu inancımı geçmiş tecrübelerim ve siyasi deneyimimle elde ettiğimi düşünerek, vizyon ve misyon sorumluluğumu bir adım öteye sizin sayenizde taşıyabilirim!
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
@@ -156,7 +156,7 @@ export default function Hakkimda() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-2">
-                      Tasarım - Web - Dijital Pazarlama Uzmanı & Streamer(Yayıncı) - LR Healty & Beauty(İş Ortağı)
+                      Tasarım - Web - Dijital Pazarlama Uzmanı ve Yayıncı - LR Healthy & Beauty (İş Ortağı)
                     </h3>
                     <p className="text-lg text-green-600 font-black mb-2">Freelancer</p>
                     <p className="text-gray-600 dark:text-gray-300 font-black">Kas 2008 - Haz 2025</p>
@@ -279,7 +279,7 @@ export default function Hakkimda() {
                 Dijital Dönüşüm Felsefem
               </h2>
               <p className="text-xl text-blue-100 leading-tight font-black">
-                Bugün, harika dijital pazarlama çözümleri ve kreatif tasarımın yalnızca estetikle ilgili olmadığına; markalar ve hedef kitleleri arasında anlamlı bağlantılar kurmakla ilgili olduğuna inanıyorum. Dünya genelinde yapılan çalışmalar bu inancımı destekleyen niteliktedir. Sürekli öğrenmeye ve yeniliğe kendimi adadım. Dijital dönüşüm çözümlerim ile tasarımlarımın sadece harika görünmekle kalmayıp aynı zamanda sonuç da vermesini sağlıyorum.
+                Bugün, harika dijital pazarlama çözümleri ve yaratıcı tasarımın yalnızca estetikle ilgili olmadığına; markalar ve hedef kitleleri arasında anlamlı bağlantılar kurmakla ilgili olduğuna inanıyorum. Dünya genelinde yapılan çalışmalar bu inancımı destekleyen niteliktedir. Sürekli öğrenmeye ve yeniliğe kendimi adadım. Dijital dönüşüm çözümlerim ile tasarımlarımın sadece harika görünmekle kalmayıp aynı zamanda sonuç da vermesini sağlıyorum.
               </p>
             </div>
 
@@ -411,8 +411,8 @@ export default function Hakkimda() {
                 href="mailto:info@okandemir.org"
                 className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
-                <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
-                Email Gönder
+                <Image src="/email-icon.png" alt="E-posta" width={24} height={24} className="mr-3" />
+                E-posta Gönder
               </Link>
               <Link
                 href="https://wa.me/+905552677739"

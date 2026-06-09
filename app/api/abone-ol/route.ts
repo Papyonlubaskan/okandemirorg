@@ -21,7 +21,7 @@ export async function POST(request: NextRequest) {
     if (!email) {
       return NextResponse.json({
         success: false,
-        error: 'Email adresi gerekli'
+        error: 'E-posta adresi gerekli'
       }, { status: 400 })
     }
 
@@ -30,7 +30,7 @@ export async function POST(request: NextRequest) {
     if (!emailRegex.test(email)) {
       return NextResponse.json({
         success: false,
-        error: 'Geçerli bir email adresi girin'
+        error: 'Geçerli bir e-posta adresi girin'
       }, { status: 400 })
     }
 
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     if (existing && existing.length > 0) {
       return NextResponse.json({
         success: false,
-        error: 'Bu email adresi zaten kayıtlı'
+        error: 'Bu e-posta adresi zaten kayıtlı'
       }, { status: 400 })
     }
 
@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
     </div>
     <div class="content">
       <p>Merhaba ${name || 'Değerli Abonemiz'},</p>
-      <p>Dijital pazarlama dünyasındaki en güncel bilgiler, özel teklifler ve blog yazılarımız artık email adresinize gelecek!</p>
+      <p>Dijital pazarlama dünyasındaki en güncel bilgiler, özel teklifler ve blog yazılarımız artık e-posta adresinize gelecek!</p>
       
       <h3>Ne Bekleyebilirsiniz?</h3>
       <ul>
@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
     <div class="footer">
       <p>© 2025 Okan Demir - Dijital Pazarlama Uzmanı</p>
       <p style="font-size: 12px; margin-top: 10px;">
-        Bu emaili almak istemiyor musunuz? 
+        Bu e-postayı almak istemiyor musunuz? 
         <a href="https://okandemir.org" style="color: #2563eb;">Abonelikten çık</a>
       </p>
     </div>
@@ -119,7 +119,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: 'Başarıyla abone oldunuz! Hoş geldiniz emaili gönderildi.'
+      message: 'Başarıyla abone oldunuz! Hoş geldiniz e-postası gönderildi.'
     })
 
   } catch (error) {

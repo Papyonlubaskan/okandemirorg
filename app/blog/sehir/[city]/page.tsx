@@ -143,7 +143,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
                   📈 Ölçülebilir Sonuçlar
                 </h3>
                 <p className="text-gray-800 dark:text-gray-200 font-black">
-                  Her kampanyayı detaylı analiz ediyor, ROI odaklı stratejiler ile somut sonuçlar sunuyorum.
+                  Her kampanyayı detaylı analiz ediyor, ROI odaklı stratejilerle somut sonuçlar sunuyorum.
                 </p>
               </div>
 

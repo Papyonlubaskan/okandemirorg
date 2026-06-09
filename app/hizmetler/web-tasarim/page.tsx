@@ -29,7 +29,7 @@ export default function WebTasarim() {
               </svg>
             </div>
             <h1 className="text-4xl lg:text-5xl font-black mb-6">
-              Web Tasarımı & Dijital Pazarlama Kreatifleri
+              Web Tasarımı ve Dijital Pazarlama Görselleri
             </h1>
             <p className="text-xl text-blue-100 leading-tight mb-8">
               Kalabalık bir pazarda öne çıkmak için güçlü bir web tasarımı ve dijital pazarlama stratejisi oluşturmak şarttır.
@@ -75,14 +75,14 @@ export default function WebTasarim() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Dijital Pazarlama Kreatifleri</h3>
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Dijital Pazarlama Görselleri</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Yaratıcı ve etkili dijital pazarlama kampanyaları ile markanızı hedef kitlenize ulaştırıyoruz. Grafik tasarım ve içerik üretimi dahil.
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                  Kreatif Tasarım
+                  Yaratıcı Tasarım
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>

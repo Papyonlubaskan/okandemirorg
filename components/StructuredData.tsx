@@ -162,7 +162,7 @@ export default function StructuredData() {
         "name": "Dijital pazarlama nedir?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Dijital pazarlama, internet ve dijital kanallar aracılığıyla ürün veya hizmetlerin tanıtımı ve satışının yapılması sürecidir. SEO, Google Ads, sosyal medya pazarlama, email pazarlama ve içerik pazarlaması gibi yöntemleri içerir."
+          "text": "Dijital pazarlama, internet ve dijital kanallar aracılığıyla ürün veya hizmetlerin tanıtımı ve satışının yapılması sürecidir. SEO, Google Ads, sosyal medya pazarlama, e-posta pazarlama ve içerik pazarlaması gibi yöntemleri içerir."
         }
       },
       {

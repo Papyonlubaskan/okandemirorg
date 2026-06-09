@@ -16,7 +16,7 @@ export default function DijitalDonusum() {
               Dijital Dönüşüm ve Süreklilik!
             </h1>
             <p className="text-xl text-orange-100 leading-tight mb-8">
-              Dijital dönüşüm çağında sürdürülebilir stratejiler ile daima sizin için en uygun seçenekleri sunarak markanızın öncü tanınır olmasını sağlıyorum.
+              Dijital dönüşüm çağında sürdürülebilir stratejilerle size en uygun seçenekleri sunarak markanızın tanınırlığını artırıyorum.
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@ export default function DijitalDonusum() {
               </div>
               <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">7/24 Canlı Yayın</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                En az iki platformda markanızın reklamını en iyi kreatifler ile 7/24 canlı olarak yayınlıyoruz. Sürekli görünürlük sağlıyoruz.
+                En az iki platformda markanızın reklamını en iyi görsellerle 7/24 canlı olarak yayınlıyoruz. Sürekli görünürlük sağlıyoruz.
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
@@ -99,7 +99,7 @@ export default function DijitalDonusum() {
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-                  En İyi Kreatifler
+                  En İyi Reklam Görselleri
                 </li>
               </ul>
             </div>

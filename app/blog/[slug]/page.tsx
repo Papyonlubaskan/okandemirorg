@@ -155,7 +155,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                   <div className="space-y-4">
                     <div className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6">
                       <h4 className="font-black text-gray-900 dark:text-white mb-2">
-                        Okan Demir Bu hizmet ne kadar sürer?
+                        Bu hizmet ne kadar sürer?
                       </h4>
                       <p className="text-gray-700">
                         <strong>Okan Demir</strong> projenin kapsamına bağlı olarak 1-6 ay arasında değişmektedir. 

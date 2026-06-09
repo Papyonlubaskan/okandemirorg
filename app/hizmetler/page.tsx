@@ -49,13 +49,13 @@ export default function Hizmetler() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
               </div>
-              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Okan Demir Web Tasarımı & Dijital Pazarlama Kreatifleri</h3>
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Okan Demir Web Tasarımı ve Dijital Pazarlama Görselleri</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 <strong>Okan Demir</strong> olarak kalabalık bir pazarda öne çıkmak için güçlü bir web tasarımı ve dijital pazarlama stratejisi oluşturmak şarttır. <strong>Okan Demir</strong> ile profesyonel çözümler.
               </p>
               <div className="space-y-2 mb-6">
                 <p className="text-gray-600 dark:text-gray-300">✓ Web Tasarımı&Geliştirme&Optimizasyon</p>
-                <p className="text-gray-600 dark:text-gray-300">✓ Dijital Pazarlama Kreatifleri</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Dijital Pazarlama Görselleri</p>
                 <p className="text-gray-600 dark:text-gray-300">✓ Sosyal Medya Yönetimi</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
@@ -132,7 +132,7 @@ export default function Hizmetler() {
               <div className="space-y-2 mb-6">
                 <p className="text-gray-600 dark:text-gray-300">✓ Logo Tasarımı&Tutarlı Renk Paletleri& Marka Yönergeleri</p>
                 <p className="text-gray-600 dark:text-gray-300">✓ Marka Kimliği Reklamları</p>
-                <p className="text-gray-600 dark:text-gray-300">✓ Marka Tanınırlığı İçin Platform Yayınları</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ Marka Bilinirliği İçin Platform Yayınları</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link 
@@ -176,7 +176,7 @@ export default function Hizmetler() {
               <div className="p-8">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Dijital Pazarlama</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 leading-tight">
-                  Meta Ads, Google Ads, TikTok ve LinkedIn platformlarında sürdürülebilir stratejiler ile mükemmel sonuçlar alıyorum.
+                  Meta Ads, Google Ads, TikTok ve LinkedIn platformlarında sürdürülebilir stratejilerle mükemmel sonuçlar alıyorum.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-600 dark:text-gray-300">
@@ -233,7 +233,7 @@ export default function Hizmetler() {
               <div className="p-8">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">WordPress Tasarım</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 leading-tight">
-                  Kişisel ve e-ticaret web tasarım çözümleri ile markanızı dijital dünyada öne çıkarıyorum.
+                  Kişisel ve e-ticaret web tasarım çözümleriyle markanızı dijital dünyada öne çıkarıyorum.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-600 dark:text-gray-300">
@@ -347,7 +347,7 @@ export default function Hizmetler() {
               <div className="p-8">
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Dijital Dönüşüm</h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6 leading-tight">
-                  Sürdürülebilir stratejiler ile markanızın dijital dünyada öncü olmasını sağlıyorum.
+                  Sürdürülebilir stratejilerle markanızın dijital dünyada öne çıkmasını sağlıyorum.
                 </p>
                 <ul className="space-y-2 mb-6">
                   <li className="flex items-center text-gray-600 dark:text-gray-300">
@@ -412,7 +412,7 @@ export default function Hizmetler() {
                 href="/iletisim"
                 className="inline-flex items-center justify-center bg-white/20 dark:bg-gray-800/20 hover:bg-white/30 dark:hover:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm border-2 border-white/30"
               >
-                <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
+                <Image src="/email-icon.png" alt="E-posta" width={24} height={24} className="mr-3" />
                 E-posta Gönder
               </Link>
             </div>

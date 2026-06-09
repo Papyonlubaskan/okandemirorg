@@ -107,7 +107,7 @@ export default function TicimaxCaseStudyPage() {
                     <h3 className="text-xl font-black text-gray-900 dark:text-white mb-4">Müşteri Profili</h3>
                     <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                       <li>• <strong>Sektör:</strong> Moda ve Tekstil</li>
-                      <li>• <strong>Lokasyon:</strong> İzmir</li>
+                      <li>• <strong>Konum:</strong> İzmir</li>
                       <li>• <strong>Hedef Kitle:</strong> 25-45 yaş arası kadınlar</li>
                       <li>• <strong>Ürün Sayısı:</strong> 500+ ürün</li>
                       <li>• <strong>Yıllık Ciro:</strong> 2M TL (proje öncesi)</li>

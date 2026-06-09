@@ -144,14 +144,14 @@ export default function Home() {
                 <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center bg-gradient-to-r from-blue-500 to-blue-600 dark:from-gray-600 dark:to-gray-700">
                   <Image src="/web-design-icon.png" alt="Okan Demir Web Tasarımı" width={40} height={40} />
                 </div>
-                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Web Tasarımı & Dijital Pazarlama Kreatifleri</h3>
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Web Tasarımı & Dijital Pazarlama Görselleri</h3>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
                   Yaptığım işin temelinde görsel olarak çarpıcı ve kullanıcı dostu eyleme çağrı odaklı dijital pazarlama stratejileri ve web siteleri, çözüm odakları oluşturmak yatıyor.
                 </p>
                 <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8">
                    <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                    Yaratıcı Kreatifler
+                    Yaratıcı Tasarımlar
                   </li>
                    <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
@@ -227,7 +227,7 @@ export default function Home() {
                   </li>
                    <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-5 h-5 text-orange-500 dark:text-orange-400 mr-3" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                    Marka Tanınırlığı İçin Platform Yayınları
+                    Marka Bilinirliği İçin Platform Yayınları
                   </li>
                 </ul>
                 <Link
@@ -311,7 +311,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Okan Demir ile Kişiye ve Markanıza Özel Tasarım</h3>
               <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                <strong>Okan Demir</strong> olarak size özel tasarım her markanın ve sizin eşsiz olduğunuza ve aynı derecede özgün bir web sitesini yada dijital pazarlama çözümlerini hak ettiğine inanıyorum. <strong>Okan Demir</strong> dijital dönüşümde de dijital pazarlama uzmanı olarak, Size ve markanıza özel Google Ads & Meta Ads seçenekleri ile, markanızın öncü görünürlüğünü sağlar iken sizin hızlı dönüşüm almanızı sağlıyorum! <strong>Okan Demir</strong> garantili stratejiler ile her daim önde ve öncü olacaksınız!
+                Her markanın ve sizin eşsiz olduğuna; özgün bir web sitesi ya da dijital pazarlama çözümünü hak ettiğinize inanıyorum. Size ve markanıza özel Google Ads ve Meta Ads seçenekleriyle görünürlüğünüzü artırırken hızlı dönüşüm almanızı sağlıyorum. Garantili stratejilerle her zaman önde olacaksınız!
               </p>
             </div>
             
@@ -322,7 +322,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Okan Demir Kullanıcı Odaklı Yaklaşım</h3>
               <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                <strong>Okan Demir</strong> kullanıcı ve işletme, marka odaklı yaklaşım; kullanıcı deneyimine büyük önem vererek, sezgisel ve gezinmesi kolay isteğinize göre E-Ticaret siteleri veya kişisel web siteleri, sosyal medya görünürlüğü tasarlıyorum. <strong>Okan Demir</strong> sizin için en iyi yönetimi sağlıyorum. Ayrıca <strong>Okan Demir</strong> sizin ve işletmeniz için en uygun dijital pazarlama tekniklerini harekete geçirerek dijital dönüşümde markanızın öne çıkmasını sağlıyorum!
+                <strong>Okan Demir</strong>, kullanıcı ve marka odaklı yaklaşımla; sezgisel, gezinmesi kolay e-ticaret ve kişisel web siteleri ile sosyal medya görünürlüğü tasarlıyorum. İşletmeniz için en uygun dijital pazarlama tekniklerini uygulayarak markanızın dijital dönüşümde öne çıkmasını sağlıyorum.
               </p>
             </div>
             
@@ -333,7 +333,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Okan Demir Trend Teknolojiler</h3>
               <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                <strong>Okan Demir</strong> size en yenilikçi çözümleri sunmak için web tasarım ve dijital pazarlama trendleri ve teknolojilerinin ön saflarında yer alıyorum. <strong>Okan Demir</strong> dijital pazarlama uzmanı olarak en garantili yolu hedefleyen uygulamaları ve araçları süreklilik halinde tutabilmek adına teknolojiden yararlanıyorum.
+                <strong>Okan Demir</strong>, en yenilikçi çözümleri sunmak için web tasarım ve dijital pazarlama trendlerini yakından takip ediyor. Hedefe yönelik uygulama ve araçları sürdürülebilir kılmak adına güncel teknolojilerden yararlanıyorum.
               </p>
             </div>
           </div>
@@ -357,12 +357,12 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {/* Service Card 1: Web Tasarımı & Dijital Pazarlama Kreatifleri */}
+            {/* Service Card 1: Web Tasarımı & Dijital Pazarlama Görselleri */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105 hover:shadow-2xl">
               <div className="w-24 h-24 bg-blue-100 rounded-full flex items-center justify-center mb-6">
                 <Image src="/web-design-icon.png" alt="Okan Demir Web Tasarımı" width={60} height={60} />
               </div>
-              <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Web Tasarımı&nbsp;& Dijital Pazarlama Kreatifleri</h3>
+              <h3 className="text-2xl lg:text-3xl font-black text-gray-900 dark:text-white mb-4 leading-tight">Web Tasarımı&nbsp;& Dijital Pazarlama Görselleri</h3>
               <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 flex-grow font-black">
                 Kalabalık bir pazarda öne çıkmak için güçlü bir web tasarımı ve dijital pazarlama stratejisi oluşturmak şarttır.
               </p>
@@ -373,7 +373,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start text-lg">
                   <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                  <span>Dijital Pazarlama Kreatifleri</span>
+                  <span>Dijital Pazarlama Görselleri</span>
                 </li>
                 <li className="flex items-start text-lg">
                   <svg className="w-5 h-5 text-blue-500 dark:text-blue-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
@@ -455,7 +455,7 @@ export default function Home() {
                 </li>
                 <li className="flex items-start text-lg">
                   <svg className="w-5 h-5 text-orange-500 dark:text-orange-400 mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                  <span>Marka Tanınırlığı İçin Platform Yayınları</span>
+                  <span>Marka Bilinirliği İçin Platform Yayınları</span>
                 </li>
               </ul>
               <div className="flex space-x-4 w-full">
@@ -482,7 +482,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-6">
-              Seçilebilir Çalışmalarım
+              Öne Çıkan Çalışmalarım
             </h2>
             <h3 className="text-2xl lg:text-3xl text-blue-600 font-black mb-8">
               Tasarım Harikalarıyla Dijital Pazarlama ile Markanızı ve Sizi Yükseltmek!
@@ -498,7 +498,7 @@ export default function Home() {
                   <h4 className="text-2xl font-black text-gray-900 dark:text-white">Dijital Pazarlama</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
-                  Siz ve İşletmeniz İçin Öncü Olma Zamanı Meta Ads & Google Ads & Tiktok & LinkedIn platformlarında sürdürülebilir stratejiler ile mükemmel sonuçları almanızı sağlıyorum! Aylık ve Yıllık Ödeme planları ile İndirimli avantajlar sizleri bekliyor!
+                  Siz ve işletmeniz için öncü olma zamanı! Meta Ads, Google Ads, TikTok ve LinkedIn platformlarında sürdürülebilir stratejilerle mükemmel sonuçlar almanızı sağlıyorum. Aylık ve yıllık ödeme planlarıyla indirimli avantajlar sizi bekliyor!
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
@@ -518,7 +518,7 @@ export default function Home() {
                   <h4 className="text-2xl font-black text-gray-900 dark:text-white">WordPress Web Tasarımı</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
-                  Siz ve Markanız İçin İster Kişisel, İsterseniz E-Ticaret Web Tasarım Çözümleri ile Yanınızdayım! Daha Kapsamlı E-ticaret kreatifleri için ise İkas, Ticimax, Digi gibi kendi alanlarında lider markalar ile çalışmanızı sağlıyorum.
+                  Siz ve markanız için ister kişisel, ister e-ticaret web tasarım çözümleriyle yanınızdayım. Daha kapsamlı e-ticaret görselleri için İkas, Ticimax ve Digi gibi alanlarında lider markalarla çalışmanızı sağlıyorum.
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
@@ -538,7 +538,7 @@ export default function Home() {
                   <h4 className="text-2xl font-black text-gray-900 dark:text-white">Dijital Dönüşüm ve Süreklilik!</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
-                  Dijital dönüşüm çağında sürdürülebilir stratejiler ile daima sizin için en uygun seçenekleri sunarak markanızın öncü tanınır olmasını sağlıyorum. En az iki platformda markanızın reklamını en iyi kreatifler ile 7/24 canlı olarak yayınlıyorum!
+                  Dijital dönüşüm çağında sürdürülebilir stratejilerle size en uygun seçenekleri sunarak markanızın tanınırlığını artırıyorum. En az iki platformda markanızın reklamını en iyi görsellerle 7/24 canlı yayınlıyorum!
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
@@ -558,7 +558,7 @@ export default function Home() {
                   <h4 className="text-2xl font-black text-gray-900 dark:text-white">Sizin İçin Markanızı Oluşturalım!</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
-                  Siz yada markanız için en iyi kurumsal tasarımlar ile lider olmanızı sağlıyorum. Her adım verimliliğe aşıktır.
+                  Siz ya da markanız için en iyi kurumsal tasarımlar ile lider olmanızı sağlıyorum. Her adım verimliliğe aşıktır.
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
@@ -613,7 +613,7 @@ export default function Home() {
               </div>
               <h4 className="text-2xl font-black mb-4 text-gray-900 dark:text-white transition-colors duration-300">Keşif</h4>
               <p className="text-lg font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                Markanızı, hedeflerinizi ve hedef kitlenizi derinlemesine anlamak için derinlemesine araştırmalar yapıyorum. Detaylı danışmanlık ve araştırmalar yoluyla, tüm tasarım yada dijital dönüşüm sürecini bilgilendiren temel iç görüler topluyorum.
+                Markanızı, hedeflerinizi ve hedef kitlenizi derinlemesine anlamak için kapsamlı araştırmalar yapıyorum. Danışmanlık sürecinde tasarım ve dijital dönüşüm yol haritasını şekillendiren temel içgörüler elde ediyorum.
               </p>
             </div>
 
@@ -624,7 +624,7 @@ export default function Home() {
               </div>
               <h4 className="text-2xl font-black mb-4 text-gray-900 dark:text-white transition-colors duration-300">Tasarım</h4>
               <p className="text-lg font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                Görsel olarak etkileyici ve stratejik tasarımlar oluşturmaya başlıyorum. Bu adım, fikirleri markanızla uyumlu, somut görsel konseptlere dönüştürmeye odaklanıyor. Bu görseller kişisel seçimlerinize kreatif çeşitlilik barındırıyor.
+                Görsel olarak etkileyici ve stratejik tasarımlar oluşturmaya başlıyorum. Bu adım, fikirleri markanızla uyumlu somut görsel konseptlere dönüştürmeye odaklanır. Görseller, kişisel tercihlerinize uygun yaratıcı çeşitlilik sunar.
               </p>
             </div>
 
@@ -635,7 +635,7 @@ export default function Home() {
               </div>
               <h4 className="text-2xl font-black mb-4 text-gray-900 dark:text-white transition-colors duration-300">Geliştirme</h4>
               <p className="text-lg font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                Görselleri tamamen işlevsel bir web sitesine yada seçmiş olduğunuz dijital pazarlama araçlarına dönüştürüyorum. Bu aşama, sitenizin yada dijital pazarlama araçlarınızın tüm cihazlarda ve platformlarda sorunsuz bir şekilde çalışmasını sağlamak için titiz bir kodlama süreci içerir.
+                Görselleri tamamen işlevsel bir web sitesine ya da seçmiş olduğunuz dijital pazarlama araçlarına dönüştürüyorum. Bu aşama, sitenizin ya da dijital pazarlama araçlarınızın tüm cihazlarda ve platformlarda sorunsuz bir şekilde çalışmasını sağlamak için titiz bir kodlama süreci içerir.
               </p>
             </div>
 
@@ -644,9 +644,9 @@ export default function Home() {
               <div className="w-20 h-20 mx-auto mb-6 rounded-full flex items-center justify-center group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 bg-gradient-to-r from-purple-500 to-purple-600 dark:from-gray-600 dark:to-gray-700 shadow-md">
                 <span className="text-white font-black text-2xl">4</span>
               </div>
-              <h4 className="text-2xl font-black mb-4 text-gray-900 dark:text-white transition-colors duration-300">Başlatma</h4>
+              <h4 className="text-2xl font-black mb-4 text-gray-900 dark:text-white transition-colors duration-300">Yayına Alma</h4>
               <p className="text-lg font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                Yayına girmeden önce her şeyin kusursuz çalıştığından emin olmak için web sitenizi yada dijital pazarlama uygulama ve araçlarını titizlikle test ediyorum. Lansman sonrasında ise, yeni çevrimiçi varlığınızı en üst düzeye çıkarmanıza yardımcı olmak için destek ve rehberlik sağlıyorum.
+                Yayına girmeden önce her şeyin kusursuz çalıştığından emin olmak için web sitenizi ya da dijital pazarlama uygulama ve araçlarını titizlikle test ediyorum. Lansman sonrasında ise, yeni çevrimiçi varlığınızı en üst düzeye çıkarmanıza yardımcı olmak için destek ve rehberlik sağlıyorum.
               </p>
             </div>
           </div>
@@ -670,7 +670,7 @@ export default function Home() {
               Hakkımda
             </h2>
             <h3 className="text-2xl lg:text-3xl text-blue-200 font-black mb-8">
-              Tasarım Ve Dijital Dönüşüm Yolculuğumu Keşfedin
+              Tasarım ve Dijital Dönüşüm Yolculuğumu Keşfedin
             </h3>
           </div>
           
@@ -692,10 +692,10 @@ export default function Home() {
             {/* Right Content - Text */}
             <div className="space-y-6 order-1 lg:order-2">
               <p className="text-xl lg:text-2xl text-blue-100 leading-tight font-black">
-                Merhaba! Ben <strong>Okan Demir</strong>, görsel olarak çekici, kullanıcı dostu web siteleri ve markanız ile sizin için dijital pazarlama ihtiyaçlarınız konusunda 5 yılı aşkın deneyime sahip, tutkulu bir uzmanım. <strong>Okan Demir</strong> misyonum, benzersiz ihtiyaçlarınıza göre uyarlanmış yenilikçi tasarım ve reklam kreatif çözümleriyle markanızı hayata geçirmek. <strong>Okan Demir</strong> olarak size en iyi hizmeti sunmak için buradayım.
+                Merhaba! Ben <strong>Okan Demir</strong>; görsel açıdan çekici, kullanıcı dostu web siteleri ve dijital pazarlama alanında 5 yılı aşkın deneyime sahip tutkulu bir uzmanım. Misyonum, benzersiz ihtiyaçlarınıza uygun yenilikçi tasarım ve reklam çözümleriyle markanızı hayata geçirmek.
               </p>
               <p className="text-lg text-blue-200 leading-tight font-black">
-                <strong>Okan Demir</strong> vizyonum O Copyright Dijital Pazarlama & Yazılım Freelancer markasını şahıs şirketine dönüştürerek ülkemiz içerisinde istihdam yaratarak genç işsizliği azaltmak ve ülkemiz içerisinde güvenilirliğini ispatlamış lider bir şirket markası yaratmaktır! <strong>Okan Demir</strong> ile birlikte başarıya ulaşalım.
+                Vizyonum; Okan Copyright Dijital Pazarlama ve Yazılım markasını şahıs şirketine dönüştürerek ülkemizde istihdam yaratmak, genç işsizliği azaltmak ve güvenilirliğini kanıtlamış lider bir marka oluşturmaktır. Birlikte başarıya ulaşalım!
               </p>
             </div>
           </div>
@@ -707,7 +707,7 @@ export default function Home() {
                 <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">05+</div>
                 <h4 className="text-2xl font-black mb-4">Yılların Deneyimi</h4>
                 <p className="text-lg text-blue-100">
-                  Olağanüstü projeler ve kreatif çözümler sunmada onlarca yıllık deneyim.
+                  Olağanüstü projeler ve yaratıcı çözümler sunmada 5 yılı aşkın deneyim.
                 </p>
               </div>
             </div>
@@ -718,7 +718,7 @@ export default function Home() {
                 <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">50+</div>
                 <h4 className="text-2xl font-black mb-4">Teslim Edilen Projeler</h4>
                 <p className="text-lg text-blue-100">
-                  Olağanüstü projeler teslim etmede onlarca yıllık deneyim.
+                  50&apos;den fazla projeyi başarıyla teslim etme deneyimi.
                 </p>
               </div>
             </div>
@@ -729,7 +729,7 @@ export default function Home() {
                 <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">98%</div>
                 <h4 className="text-2xl font-black mb-4">Müşteri Memnuniyeti</h4>
                 <p className="text-lg text-blue-100">
-                  Kanıtlanmış sonuçlarla uzun vadeli ortalıklar kuruyorum. Memnuniyet mükemmelliktir!
+                  Kanıtlanmış sonuçlarla uzun vadeli ortaklıklar kuruyorum. Memnuniyet mükemmelliktir!
                 </p>
               </div>
             </div>
@@ -738,7 +738,7 @@ export default function Home() {
           <div className="text-center">
             <h4 className="text-2xl lg:text-3xl font-black mb-8">Başarı Hikayelerim</h4>
             <p className="text-xl text-blue-100 leading-tight max-w-4xl mx-auto">
-              Hırslı girişimlerden köklü şirketlere ve markalara kadar çeşitli müşterilerle işbirliği yapmaktan gurur duyuyorum. Diğer başarı hikayem neden sizinle olmasın?
+              Hırslı girişimlerden köklü şirketlere ve markalara kadar çeşitli müşterilerle iş birliği yapmaktan gurur duyuyorum. Diğer başarı hikayem neden sizinle olmasın?
             </p>
           </div>
         </div>
@@ -830,8 +830,8 @@ export default function Home() {
                   href="mailto:info@okandemir.org"
                   className="inline-flex items-center bg-blue-600 hover:bg-blue-700  text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
-                  <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
-                  Email ile İletişime Geç
+                  <Image src="/email-icon.png" alt="E-posta" width={24} height={24} className="mr-3" />
+                  E-posta ile İletişime Geç
                 </Link>
               </div>
             </div>
@@ -933,8 +933,8 @@ export default function Home() {
                 href="mailto:info@okandemir.org"
                 className="inline-flex items-center bg-blue-600 hover:bg-blue-700  text-white px-8 py-4 rounded-full font-black text-xl transition-all duration-300 hover:scale-105 hover:shadow-lg"
               >
-                <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
-                Email Gönder
+                <Image src="/email-icon.png" alt="E-posta" width={24} height={24} className="mr-3" />
+                E-posta Gönder
               </Link>
               <Link
                 href="https://wa.me/+905552677739"

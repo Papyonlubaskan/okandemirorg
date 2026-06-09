@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     "Dijital Pazarlama Danışmanı Okan", "E-ticaret Uzmanı Okan Demir",
     // Personal Brand Questions
     "Okan Kimdir", "Okan Demir Kimdir", "Okan Biyografi", "Okan Hakkında",
-    "Okan Demir Biyografi.net", "Okan Demir İzmir Bornova", "Okan Demir ne iş yapar", "Okan Demir iletişim", "Okan Demir telefon", "Okan Demir WhatsApp", "Okan Demir email",
+    "Okan Demir Biyografi.net", "Okan Demir İzmir Bornova", "Okan Demir ne iş yapar", "Okan Demir iletişim", "Okan Demir telefon", "Okan Demir WhatsApp", "Okan Demir e-posta",
     // Service Quality
     "En İyi Dijital Pazarlama Uzmanı", "En İyi Web Tasarımcı", "En İyi SEO Uzmanı",
     "Profesyonel Dijital Pazarlama", "Güvenilir Dijital Pazarlama Uzmanı"

@@ -63,7 +63,7 @@ export async function POST(request: NextRequest) {
       console.error('Email gönderme hatası:', error)
     }
     return NextResponse.json(
-      { success: false, error: 'Email gönderilemedi' },
+      { success: false, error: 'E-posta gönderilemedi' },
       { status: 500 }
     )
   }

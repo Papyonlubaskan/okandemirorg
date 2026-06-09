@@ -16,7 +16,7 @@ export default function WordPressTasarim() {
               WordPress Tasarım
             </h1>
             <p className="text-xl text-blue-100 leading-tight mb-8">
-              Kişisel ve e-ticaret web tasarım çözümleri ile markanızı dijital dünyada öne çıkarıyorum.
+              Kişisel ve e-ticaret web tasarım çözümleriyle markanızı dijital dünyada öne çıkarıyorum.
             </p>
           </div>
         </div>

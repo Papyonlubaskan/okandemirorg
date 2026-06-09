@@ -213,7 +213,7 @@ export default function ETicaretPlatformlari() {
                 href="/iletisim"
                 className="inline-flex items-center justify-center bg-white/20 dark:bg-gray-800/20 hover:bg-white/30 dark:hover:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm border-2 border-white/30"
               >
-                <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
+                <Image src="/email-icon.png" alt="E-posta" width={24} height={24} className="mr-3" />
                 E-posta Gönder
               </Link>
             </div>

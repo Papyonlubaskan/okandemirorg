@@ -297,11 +297,11 @@ Detaylı bilgi için iletişime geçin! 📞`
   if (lowerMessage.includes('iletişim') || lowerMessage.includes('telefon') || lowerMessage.includes('email')) {
     return `📞 **İletişim Bilgileri:**
 
-📧 **Email:** info@okandemir.org
+📧 **E-posta:** info@okandemir.org
 📱 **Telefon:** +90 555 267 77 39
 💬 **WhatsApp:** +90 555 267 77 39
 🌐 **Website:** https://okandemir.org
-📍 **Lokasyon:** İzmir, Türkiye
+📍 **Konum:** İzmir, Türkiye
 
 **Çalışma Saatleri:**
 Pazartesi - Cuma: 09:00 - 18:00
@@ -309,7 +309,7 @@ Cumartesi: 10:00 - 16:00
 
 **Hızlı İletişim:**
 - WhatsApp'tan anında mesaj
-- Email'den 24 saat içinde yanıt
+- E-postadan 24 saat içinde yanıt
 - Telefon görüşmesi için randevu`
   }
 

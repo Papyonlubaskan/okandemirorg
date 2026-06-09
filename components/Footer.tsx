@@ -35,7 +35,7 @@ export default function Footer() {
               
               <div className="flex items-center space-x-3 p-3 bg-gray-800/50 rounded-lg hover:bg-gray-700/50 transition-colors group">
                 <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center group-hover:bg-red-500 transition-colors">
-                  <Image src="/email-icon.png" alt="Email" width={20} height={20} />
+                  <Image src="/email-icon.png" alt="E-posta" width={20} height={20} />
                 </div>
                 <div>
                   <p className="text-lg text-gray-400 dark:text-gray-300">E-posta</p>

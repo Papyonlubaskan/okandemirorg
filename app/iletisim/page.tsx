@@ -295,7 +295,7 @@ export default function Iletisim() {
                   
                   <div className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0">
-                      <Image src="/email-icon.png" alt="Email" width={24} height={24} />
+                      <Image src="/email-icon.png" alt="E-posta" width={24} height={24} />
                     </div>
                     <div>
                       <h4 className="text-xl font-black text-gray-900 dark:text-white mb-1">E-posta</h4>
@@ -369,7 +369,7 @@ export default function Iletisim() {
                   Hangi hizmetleri sunuyorsunuz?
                 </h3>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
-                  Web tasarımı, ön uç geliştirme, UX/UI tasarımı, duyarlı tasarım, e-ticaret çözümleri ve marka kimliği, dijital dönüşümde dijital pazarlama kreatifleri oluşturma gibi çeşitli hizmetler sunuyorum. Ayrıntılı bilgi için Hizmetler sayfamı ziyaret edin.
+                  Web tasarımı, ön yüz geliştirme, UX/UI tasarımı, duyarlı tasarım, e-ticaret çözümleri ve marka kimliği ile dijital pazarlama görselleri oluşturma gibi çeşitli hizmetler sunuyorum. Ayrıntılı bilgi için Hizmetler sayfamı ziyaret edin.
                 </p>
               </div>
 
@@ -379,7 +379,7 @@ export default function Iletisim() {
                   Yeni bir projeye nasıl yaklaşıyorsunuz?
                 </h3>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
-                  Web tasarımı, ön uç geliştirme, UX/UI tasarımı, duyarlı tasarım, e-ticaret çözümleri ve marka kimliği, dijital pazarlama kreatifleri ve reklam yayınları oluşturma gibi çeşitli hizmetler sunuyorum. Projeye yaklaşım ölçütü sizin mevcut durumunuzla doğrudan bağlantılıdır. Çünkü sahip olduklarınız ve olmadıklarınız üzerinden garantili strateji belirleyerek en iyi sonuca ulaşıyorum. Ayrıntılı bilgi için Hizmetler sayfamı ziyaret edin.
+                  Web tasarımı, ön yüz geliştirme, UX/UI tasarımı, duyarlı tasarım, e-ticaret çözümleri ve marka kimliği ile dijital pazarlama görselleri ve reklam yayınları oluşturma gibi çeşitli hizmetler sunuyorum. Projeye yaklaşım ölçütü mevcut durumunuzla doğrudan bağlantılıdır; sahip olduklarınız ve eksikleriniz üzerinden strateji belirleyerek en iyi sonuca ulaşıyorum. Ayrıntılı bilgi için Hizmetler sayfamı ziyaret edin.
                 </p>
               </div>
 
@@ -409,7 +409,7 @@ export default function Iletisim() {
                   Hangi platformlarla çalışıyorsunuz?
                 </h3>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
-                  Dijital dönüşüm artık çağın gerçek bir meselesidir. Bu gerçekliğin getirdiği gereklilikler için dijital pazarlama ve reklam kreatifleri için Google Ads & Meta Ads Business & TikTok Ads & LinkedIn & YouTube & Kick & Twitch & Yandex gibi platformlar üzerinde çalışmalarımı sürdürüyorum. Dijital pazarlama içerisinde sürekli önde olabilmek adına reklamların hiç durmadan devam ediyor olması siz ve markanız için mühim. Web sitesi tasarımlarında özel istek baz alınarak WordPress & Digi & Ticimax & İkas gibi kendisini ispatlamış ve dijital kreatiflerle son derece hızlı, uyumlu olan platformlar ile çalışmayı tercih ediyorum.
+                  Dijital dönüşüm artık çağın gerçek bir meselesidir. Google Ads, Meta Ads, TikTok Ads, LinkedIn, YouTube, Kick, Twitch ve Yandex gibi platformlarda dijital pazarlama ve reklam görselleri üzerinde çalışmalarımı sürdürüyorum. Dijital pazarlamada sürekli önde olabilmek için reklamların kesintisiz devam etmesi siz ve markanız için önemlidir. Web sitesi tasarımlarında özel isteklerinizi baz alarak WordPress, Digi, Ticimax ve İkas gibi kendini kanıtlamış, hızlı ve uyumlu platformlarla çalışmayı tercih ediyorum.
                 </p>
               </div>
             </div>
@@ -437,7 +437,7 @@ export default function Iletisim() {
                   href="mailto:info@okandemir.org"
                   className="inline-flex items-center justify-center bg-white/20 dark:bg-gray-800/20 hover:bg-white/30 dark:hover:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm border-2 border-white/30"
                 >
-                  <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
+                  <Image src="/email-icon.png" alt="E-posta" width={24} height={24} className="mr-3" />
                   E-posta Gönder
                 </Link>
               </div>

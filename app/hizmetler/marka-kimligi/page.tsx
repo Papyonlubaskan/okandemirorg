@@ -125,7 +125,7 @@ export default function MarkaKimligi() {
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                  Google Ads Kreatifleri
+                  Google Ads Reklam Görselleri
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>

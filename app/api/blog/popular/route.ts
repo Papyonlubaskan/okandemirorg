@@ -28,7 +28,7 @@ export async function GET() {
       'e-ticaret pazarlama',
       'Instagram algoritması',
       'YouTube SEO',
-      'email pazarlama',
+      'e-posta pazarlama',
       'dijital dönüşüm'
     ]
 

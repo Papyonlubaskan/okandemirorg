@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
     if (!data.name || !data.email) {
       return NextResponse.json({
         success: false,
-        error: 'İsim ve email gerekli'
+        error: 'İsim ve e-posta gerekli'
       }, { status: 400 })
     }
 
@@ -95,7 +95,7 @@ export async function POST(request: NextRequest) {
     if (existingClient.length > 0) {
       return NextResponse.json({
         success: false,
-        error: 'Bu email adresi zaten kayıtlı'
+        error: 'Bu e-posta adresi zaten kayıtlı'
       }, { status: 400 })
     }
 

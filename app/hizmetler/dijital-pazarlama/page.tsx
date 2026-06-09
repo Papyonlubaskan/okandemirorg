@@ -28,7 +28,7 @@ export default function DijitalPazarlama() {
               Dijital Pazarlama Hizmetleri | Okan Demir
             </h1>
             <p className="text-xl text-blue-100 leading-tight mb-8">
-              Okan Demir - Dijital pazarlama uzmanı olarak Meta Ads, Google Ads, TikTok ve LinkedIn platformlarında sürdürülebilir stratejiler ile mükemmel sonuçlar alıyorum. Okan ile dijital pazarlama dönüşümünüzü başlatın.
+              Okan Demir - Dijital pazarlama uzmanı olarak Meta Ads, Google Ads, TikTok ve LinkedIn platformlarında sürdürülebilir stratejilerle mükemmel sonuçlar alıyorum. Okan ile dijital pazarlama dönüşümünüzü başlatın.
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@ export default function DijitalPazarlama() {
               </div>
               <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Meta Ads Yönetimi</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Facebook ve Instagram platformlarında hedef kitleye ulaşan etkili reklam kampanyaları yönetiyoruz. ROI odaklı stratejiler ile maksimum verimlilik.
+                Facebook ve Instagram platformlarında hedef kitleye ulaşan etkili reklam kampanyaları yönetiyoruz. ROI odaklı stratejilerle maksimum verimlilik.
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">
@@ -165,7 +165,7 @@ export default function DijitalPazarlama() {
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>
-                  Kreatif Testleri
+                  Görsel Testleri
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-orange-500 rounded-full mr-3"></span>

@@ -57,7 +57,7 @@ export default function Projeler() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl lg:text-6xl xl:text-7xl font-black mb-6">
-              <span className="block">Seçilebilir</span>
+              <span className="block">Öne Çıkan</span>
               <span className="block bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent">
                 Çalışmalarım
               </span>
@@ -147,7 +147,7 @@ export default function Projeler() {
                 href="/iletisim"
                 className="inline-flex items-center justify-center bg-white/20 dark:bg-gray-800/20 hover:bg-white/30 dark:hover:bg-gray-800/30 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 backdrop-blur-sm border-2 border-white/30"
               >
-                <Image src="/email-icon.png" alt="Email" width={24} height={24} className="mr-3" />
+                <Image src="/email-icon.png" alt="E-posta" width={24} height={24} className="mr-3" />
                 E-posta Gönder
               </Link>
             </div>

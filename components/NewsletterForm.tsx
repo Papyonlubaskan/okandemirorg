@@ -65,7 +65,7 @@ export default function NewsletterForm() {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            placeholder="Email adresiniz *"
+            placeholder="E-posta adresiniz *"
             required
             className="w-full px-4 py-3 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
@@ -93,7 +93,7 @@ export default function NewsletterForm() {
       )}
 
       <p className="text-xs text-blue-100 dark:text-gray-400 text-center mt-4">
-        * Email adresinizi kimseyle paylaşmıyoruz. İstediğiniz zaman abonelikten çıkabilirsiniz.
+        * E-posta adresinizi kimseyle paylaşmıyoruz. İstediğiniz zaman abonelikten çıkabilirsiniz.
       </p>
     </div>
   )
