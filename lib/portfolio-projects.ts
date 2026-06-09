@@ -1,3 +1,7 @@
+/** Hacettepe İşitme canlı site (www ve apex aynı siteye yönlenir) */
+export const HACETTEPE_ISITME_URL = 'https://hacettepeisitme.com.tr/'
+export const HACETTEPE_ISITME_DOMAIN = 'hacettepeisitme.com.tr'
+
 export type CompletedProject = {
   title: string
   url: string
@@ -21,11 +25,11 @@ export const completedProjects: CompletedProject[] = [
   },
   {
     title: 'Hacettepe İşitme — Samsun',
-    url: 'https://hacettepeisitme-web-production.up.railway.app/',
-    domain: 'hacettepeisitme-web-production.up.railway.app',
+    url: HACETTEPE_ISITME_URL,
+    domain: HACETTEPE_ISITME_DOMAIN,
     summary:
-      'Samsun işitme merkezi kurumsal web sitesi. Hizmet tanıtımı, güven veren tasarım ve yerel arama odaklı yapı; Railway üzerinde canlı yayında.',
-    tags: ['Kurumsal Site', 'Sağlık', 'Railway'],
+      'Samsun işitme merkezi kurumsal web sitesi. Hizmet tanıtımı, güven veren tasarım ve yerel arama odaklı yapı; hacettepeisitme.com.tr üzerinde canlı yayında.',
+    tags: ['Kurumsal Site', 'Sağlık', 'Yerel SEO'],
     gradient: 'from-emerald-600 to-teal-700',
     caseStudySlug: 'hacettepe-isitme-samsun',
   },

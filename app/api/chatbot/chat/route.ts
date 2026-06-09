@@ -330,7 +330,7 @@ Cumartesi: 10:00 - 16:00
 
 **Tamamlanan Web Projeleri (Canlı):**
 - tolgademir.org — Tolga Demir portfolyo (Next.js)
-- Hacettepe İşitme Samsun — kurumsal sağlık sitesi
+- hacettepeisitme.com.tr — Hacettepe İşitme Samsun kurumsal sağlık sitesi
 - Detay: https://okandemir.org/projeler#tamamlanan-isler
 
 **Web Tasarım Projeleri:**

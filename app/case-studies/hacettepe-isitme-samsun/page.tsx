@@ -1,12 +1,13 @@
 import type { Metadata } from 'next'
 import CaseStudyLayout from '@/components/CaseStudyLayout'
 import { bilingualDescription, bilingualKeywords } from '@/lib/seo-bilingual'
+import { HACETTEPE_ISITME_URL } from '@/lib/portfolio-projects'
 
 export const metadata: Metadata = {
   title: 'Hacettepe İşitme Samsun | Corporate Website Case Study | Kurumsal Site',
   description: bilingualDescription(
-    'Samsun işitme merkezi Hacettepe İşitme kurumsal web sitesi. Yerel SEO, hizmet tanıtımı ve güven odaklı tasarım — Okan Demir.',
-    'Corporate website for Hacettepe Hearing Center Samsun, Turkey. Local SEO, healthcare web design and trust-focused UX by Okan Demir.'
+    'Samsun işitme merkezi Hacettepe İşitme kurumsal web sitesi (hacettepeisitme.com.tr). Yerel SEO, hizmet tanıtımı ve güven odaklı tasarım — Okan Demir.',
+    'Corporate website for Hacettepe Hearing Center Samsun at hacettepeisitme.com.tr. Local SEO, healthcare web design and trust-focused UX by Okan Demir.'
   ),
   keywords: bilingualKeywords(
     [
@@ -16,9 +17,11 @@ export const metadata: Metadata = {
       'başarı hikayesi',
       'Okan Demir projeler',
       'Hacettepe İşitme',
+      'hacettepeisitme.com.tr',
     ],
     [
       'Samsun hearing center website',
+      'hacettepeisitme.com.tr',
       'corporate web design Samsun',
       'healthcare website Turkey',
       'case study',
@@ -50,8 +53,8 @@ export default function HacettepeIsitmeCaseStudyPage() {
       headline="Hacettepe İşitme — Samsun Kurumsal Web Sitesi"
       subtitle="Samsun işitme merkezi için güven veren, yerel arama odaklı kurumsal web deneyimi"
       tags={['Kurumsal Site', 'Sağlık', 'Yerel SEO', 'Samsun']}
-      liveUrl="https://hacettepeisitme-web-production.up.railway.app/"
-      liveLabel="Canlı Siteyi Gör"
+      liveUrl={HACETTEPE_ISITME_URL}
+      liveLabel="hacettepeisitme.com.tr — Canlı Site"
       datePublished="2025-08-01"
       aboutName="Hacettepe İşitme Samsun"
     >
@@ -68,7 +71,8 @@ export default function HacettepeIsitmeCaseStudyPage() {
         <p>
           Kurumsal web sitesi; hizmet tanıtımı, merkez bilgileri ve güven unsurlarını öne çıkaran bir
           bilgi mimarisiyle tasarlandı. Yerel arama (Samsun işitme merkezi vb.) için sayfa yapısı ve
-          içerik başlıkları SEO uyumlu kurgulandı. Site Railway üzerinde canlı yayına alındı.
+          içerik başlıkları SEO uyumlu kurgulandı. Site hacettepeisitme.com.tr ve www.hacettepeisitme.com.tr
+          adreslerinde canlı yayına alındı.
         </p>
       </section>
       <section>

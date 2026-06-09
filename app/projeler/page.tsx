@@ -8,8 +8,8 @@ import { bilingualDescription, bilingualKeywords } from '@/lib/seo-bilingual'
 export const metadata: Metadata = {
   title: 'Projeler ve Portfolyo | Web Design Portfolio & Case Studies',
   description: bilingualDescription(
-    'Okan Demir tamamlanan web projeleri: Tolga Demir portfolyo (tolgademir.org), Hacettepe İşitme Samsun kurumsal site. Next.js, SEO ve başarı hikayeleri.',
-    'Okan Demir completed web projects: Tolga Demir portfolio (tolgademir.org), Hacettepe Hearing Center Samsun corporate website. Next.js, SEO and case studies.'
+    'Okan Demir tamamlanan web projeleri: Tolga Demir portfolyo (tolgademir.org), Hacettepe İşitme Samsun (hacettepeisitme.com.tr). Next.js, SEO ve başarı hikayeleri.',
+    'Okan Demir completed web projects: Tolga Demir portfolio (tolgademir.org), Hacettepe Hearing Center Samsun (hacettepeisitme.com.tr). Next.js, SEO and case studies.'
   ),
   keywords: bilingualKeywords(
     [
