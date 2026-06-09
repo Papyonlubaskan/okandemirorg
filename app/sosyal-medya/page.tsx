@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     description: "Dijital pazarlama uzmanı Okan Demir&apos;in tüm sosyal medya hesapları ve içerikleri.",
     url: "https://okandemir.org/sosyal-medya",
   },
+  alternates: { canonical: 'https://okandemir.org/sosyal-medya' },
 };
 
 export default function SosyalMedyaPage() {

@@ -32,7 +32,7 @@ export default function DigitalMarketingTrends2025Page() {
       "name": "Okan Demir",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://okandemir.org/logo.png"
+        "url": "https://okandemir.org/okan-demir-logo.png"
       }
     },
     "datePublished": "2025-01-15",

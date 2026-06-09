@@ -1,3 +1,12 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Kullanım Şartları | Okan Demir',
+  description: 'okandemir.org web sitesi kullanım şartları ve koşulları.',
+  alternates: { canonical: 'https://okandemir.org/terms-conditions' },
+  robots: { index: true, follow: true },
+}
+
 export default function TermsConditionsPage() {
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20">

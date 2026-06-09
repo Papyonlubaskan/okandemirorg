@@ -111,7 +111,7 @@ export default function Hakkimda() {
 
               <div className="text-center mt-8">
                 <Link 
-                  href="https://www.biyografiler.com/kimdir/okan-demir"
+                  href="https://biyografi.net/okan-demir"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"

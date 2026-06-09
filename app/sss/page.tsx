@@ -10,6 +10,7 @@ export const metadata: Metadata = {
     description: "Dijital pazarlama, web tasarım ve e-ticaret konularında sık sorulan sorular ve detaylı cevapları.",
     url: "https://okandemir.org/sss",
   },
+  alternates: { canonical: 'https://okandemir.org/sss' },
 };
 
 export default function SSSPage() {

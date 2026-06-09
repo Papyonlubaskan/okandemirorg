@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     url: "https://okandemir.org/case-studies/ticimax-e-ticaret-basarisi",
     type: "article",
   },
+  alternates: { canonical: 'https://okandemir.org/case-studies/ticimax-e-ticaret-basarisi' },
 };
 
 export default function TicimaxCaseStudyPage() {

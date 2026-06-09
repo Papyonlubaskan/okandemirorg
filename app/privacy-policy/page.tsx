@@ -1,3 +1,12 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Gizlilik Politikası | Okan Demir',
+  description: 'okandemir.org gizlilik politikası ve kişisel verilerin korunması.',
+  alternates: { canonical: 'https://okandemir.org/privacy-policy' },
+  robots: { index: true, follow: true },
+}
+
 export default function PrivacyPolicyPage() {
   return (
     <main className="min-h-screen bg-gray-50 dark:bg-gray-900 py-20">

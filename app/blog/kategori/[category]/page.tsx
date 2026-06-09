@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { blogCategories, getBlogPostsByCategory } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
-import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
+import { PROGRAMMATIC_NOINDEX } from '@/lib/seo-constants'
 
 export async function generateStaticParams() {
   return blogCategories.map((category) => ({
@@ -25,7 +25,6 @@ export async function generateMetadata({ params }: { params: Promise<{ category:
     description: category.description,
     keywords: `${category.name}, ${category.slug}, dijital pazarlama, SEO`,
     robots: PROGRAMMATIC_NOINDEX,
-    alternates: { canonical: `${SITE_BASE}/blog/kategori/${category.slug}` },
   }
 }
 

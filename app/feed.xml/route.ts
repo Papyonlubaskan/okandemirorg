@@ -1,8 +1,15 @@
-import { generateBlogPosts } from '@/lib/blog-data'
+const INDEXABLE_BLOG_POSTS = [
+  {
+    title: '2025 Dijital Pazarlama Trendleri | Okan Demir Blog',
+    excerpt:
+      '2025 yılında dijital pazarlama dünyasında öne çıkacak trendler. AI, video pazarlama, sesli arama ve kişiselleştirme stratejileri.',
+    slug: 'dijital-pazarlama-trendleri-2025',
+    category: 'Dijital Pazarlama',
+    date: '2025-01-15T00:00:00.000Z',
+  },
+]
 
 export async function GET() {
-  const posts = generateBlogPosts().slice(0, 100)
-  
   const feed = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -15,8 +22,8 @@ export async function GET() {
     <webMaster>info@okandemir.org (Okan Demir)</webMaster>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>
     <generator>Next.js</generator>
-    
-    ${posts.map(post => `
+    ${INDEXABLE_BLOG_POSTS.map(
+      (post) => `
     <item>
       <title><![CDATA[${post.title}]]></title>
       <description><![CDATA[${post.excerpt}]]></description>
@@ -25,8 +32,8 @@ export async function GET() {
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
       <category>${post.category}</category>
       <author>info@okandemir.org (Okan Demir)</author>
-    </item>
-    `).join('')}
+    </item>`
+    ).join('')}
   </channel>
 </rss>`
 

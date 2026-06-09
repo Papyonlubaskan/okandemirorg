@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     locale: "tr_TR",
     alternateLocale: ["en_US"],
   },
+  alternates: { canonical: 'https://okandemir.org/referanslar' },
 };
 
 export default function ReferanslarPage() {

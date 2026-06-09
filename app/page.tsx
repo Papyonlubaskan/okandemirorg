@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Okan | Okan Demir | Dijital Pazarlama Uzmanı',
-    description: 'Okan - Okan Demir İzmir, Türkiye\'nin #1 dijital pazarlama uzmanı. Biyografi.net doğrulanmış.',
+    description: 'Okan Demir — İzmir merkezli dijital pazarlama uzmanı. Resmi site: okandemir.org',
     images: ['https://okandemir.org/okan-demir-profile.jpg'],
   },
   robots: {

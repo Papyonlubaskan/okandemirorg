@@ -1,27 +1,34 @@
 import { MetadataRoute } from 'next'
 
+const PROGRAMMATIC_DISALLOW = [
+  '/seo/',
+  '/blog/sehir/',
+  '/blog/sektor/',
+  '/blog/kategori/',
+]
+
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/_next/', '/admin/'],
+        disallow: ['/api/', '/_next/', '/admin/', ...PROGRAMMATIC_DISALLOW],
       },
       {
         userAgent: 'Googlebot',
         allow: '/',
-        crawlDelay: 0,
+        disallow: ['/api/', '/_next/', '/admin/', ...PROGRAMMATIC_DISALLOW],
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
-        crawlDelay: 0,
+        disallow: ['/api/', '/_next/', '/admin/', ...PROGRAMMATIC_DISALLOW],
       },
       {
         userAgent: 'Yandex',
         allow: '/',
-        crawlDelay: 0,
+        disallow: ['/api/', '/_next/', '/admin/', ...PROGRAMMATIC_DISALLOW],
       },
     ],
     sitemap: 'https://okandemir.org/sitemap.xml',

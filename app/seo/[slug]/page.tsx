@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { generateSEOPages, getSEOPageBySlug } from '@/lib/seo-data-generator'
 import { notFound } from 'next/navigation'
-import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
+import { PROGRAMMATIC_NOINDEX } from '@/lib/seo-constants'
 
 export const revalidate = 86400
 
@@ -28,7 +28,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     description: page.description,
     keywords: page.keywords.join(', '),
     robots: PROGRAMMATIC_NOINDEX,
-    alternates: { canonical: `${SITE_BASE}/seo/${page.slug}` },
   }
 }
 

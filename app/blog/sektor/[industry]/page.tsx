@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { industries, serviceTypes, getBlogPostsByIndustry } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
-import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
+import { PROGRAMMATIC_NOINDEX } from '@/lib/seo-constants'
 
 export async function generateStaticParams() {
   return industries.map((industry) => ({
@@ -31,7 +31,6 @@ export async function generateMetadata({ params }: { params: Promise<{ industry:
     description: `${industryName} sektörüne özel dijital pazarlama çözümleri. SEO, Google Ads, sosyal medya yönetimi ve web tasarım hizmetleri.`,
     keywords: `${industryName} dijital pazarlama, ${industryName} SEO, ${industryName} reklam, ${industryName} web tasarım`,
     robots: PROGRAMMATIC_NOINDEX,
-    alternates: { canonical: `${SITE_BASE}/blog/sektor/${resolvedParams.industry}` },
   }
 }
 

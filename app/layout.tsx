@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     default: "Okan Demir | Dijital Pazarlama Uzmanı — İzmir",
     template: "%s | Okan Demir"
   },
-  description: "Okan Demir - Türkiye'nin #1 dijital pazarlama uzmanı. Okan Demir İzmir merkezli, İstanbul, Ankara genelinde dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business, e-ticaret (Ticimax, İdeasoft, İkas) 5+ yıl deneyim. Okan Demir Biyografi.net doğrulanmış profil. Okan Demir 50+ başarılı proje, %98 müşteri memnuniyeti. Okan Demir ile garantili dijital dönüşüm. Okan Demir kimdir? Okan Demir hakkında bilgi.",
+  description: "Okan Demir — İzmir merkezli dijital pazarlama uzmanı. Web tasarım, SEO, Google Ads, Meta Ads ve e-ticaret (Ticimax, İkas). 5+ yıl deneyim, 50+ proje. Resmi site: okandemir.org",
   keywords: [
     // Core Brand Keywords
     "Okan", "Okan Demir", "Okan Demir", "Okan Demir İzmir", "Okan İzmir", "Okan Demir Bornova", "Okan Demir kimdir", "Okan Demir hakkında", "Okan Demir biyografi", "Okan Demir dijital pazarlama uzmanı",
@@ -80,15 +80,15 @@ export const metadata: Metadata = {
     locale: 'tr_TR',
     alternateLocale: ['en_US', 'en_GB'],
     url: 'https://okandemir.org',
-    title: 'Okan | Okan Demir | Okan Demir İzmir - Türkiye #1 Dijital Pazarlama Uzmanı',
-    description: 'Okan - Okan Demir - Okan Demir İzmir, Türkiye\'nin en iyi dijital pazarlama uzmanı. Biyografi.net doğrulanmış. 50+ başarılı proje, %98 müşteri memnuniyeti. Okan ile garantili dijital dönüşüm.',
+    title: 'Okan Demir | Dijital Pazarlama Uzmanı — İzmir',
+    description: 'Okan Demir resmi web sitesi. Dijital pazarlama, web tasarım, SEO ve e-ticaret hizmetleri.',
     siteName: 'Okan Demir - Dijital Pazarlama Uzmanı',
     images: [
       {
         url: 'https://okandemir.org/okan-demir-profile.jpg',
         width: 1200,
         height: 630,
-        alt: 'Okan Demir - Türkiye #1 Dijital Pazarlama Uzmanı',
+        alt: 'Okan Demir — Dijital Pazarlama Uzmanı',
       },
       {
         url: 'https://okandemir.org/okan-about-photo.webp',
@@ -103,18 +103,18 @@ export const metadata: Metadata = {
     site: '@okandemirorg',
     creator: '@okandemirorg',
     title: 'Okan | Okan Demir | Dijital Pazarlama Uzmanı',
-    description: 'Okan - Okan Demir İzmir, Türkiye\'nin #1 dijital pazarlama uzmanı. Biyografi.net doğrulanmış. 50+ proje, %98 memnuniyet.',
+    description: 'Okan Demir — İzmir merkezli dijital pazarlama uzmanı. Resmi site: okandemir.org',
     images: {
       url: 'https://okandemir.org/okan-demir-profile.jpg',
       alt: 'Okan Demir - Dijital Pazarlama Uzmanı',
     },
   },
-  verification: {
-    google: process.env.GOOGLE_SITE_VERIFICATION || 'google-site-verification-code',
-  },
-  other: {
-    'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION || 'google-site-verification-code',
-  },
+  ...(process.env.GOOGLE_SITE_VERIFICATION
+    ? {
+        verification: { google: process.env.GOOGLE_SITE_VERIFICATION },
+        other: { 'google-site-verification': process.env.GOOGLE_SITE_VERIFICATION },
+      }
+    : {}),
 };
 
 export const viewport: Viewport = {

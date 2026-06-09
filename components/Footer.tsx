@@ -177,7 +177,7 @@ export default function Footer() {
             {/* Social Media Grid */}
             <div className="grid grid-cols-2 gap-3">
               <a 
-                href="https://www.facebook.com/profile.php?id=61579389067135" 
+                href="https://www.facebook.com/okandemirorg" 
                 className="flex items-center justify-center p-3 bg-gray-800/50 rounded-lg hover:bg-blue-600/20 transition-all group"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -185,7 +185,7 @@ export default function Footer() {
                 <Image src="/facebook-icon.png" alt="Facebook" width={20} height={20} className="group-hover:scale-110 transition-transform" />
               </a>
               <a 
-                href="https://x.com/papyonlubaskan" 
+                href="https://x.com/okandemirorg" 
                 className="flex items-center justify-center p-3 bg-gray-800/50 rounded-lg hover:bg-blue-400/20 transition-all group"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -193,7 +193,7 @@ export default function Footer() {
                 <Image src="/twitter-icon.png" alt="Twitter" width={20} height={20} className="group-hover:scale-110 transition-transform" />
               </a>
               <a 
-                href="https://www.instagram.com/okandemirorg?igsh=MW14MDNkZG10OWF0ZA==" 
+                href="https://www.instagram.com/okandemirorg" 
                 className="flex items-center justify-center p-3 bg-gray-800/50 rounded-lg hover:bg-pink-600/20 transition-all group"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -262,7 +262,7 @@ export default function Footer() {
                 Kullanım Şartları
               </Link>
               <span className="text-gray-600">|</span>
-              <Link href="https://www.biyografiler.com/kimdir/okan-demir" target="_blank" rel="noopener noreferrer" className="text-gray-400 dark:text-gray-300 hover:text-white transition-colors text-lg">
+              <Link href="https://biyografi.net/okan-demir" target="_blank" rel="noopener noreferrer" className="text-gray-400 dark:text-gray-300 hover:text-white transition-colors text-lg">
                 Biyografi
               </Link>
             </div>
