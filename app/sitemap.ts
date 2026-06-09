@@ -28,8 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/hakkimda`,
       lastModified: now,
-      changeFrequency: 'monthly',
-      priority: 0.9,
+      changeFrequency: 'weekly',
+      priority: 1,
     },
     {
       url: `${baseUrl}/iletisim`,
@@ -40,8 +40,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/blog`,
       lastModified: now,
-      changeFrequency: 'daily',
-      priority: 0.95,
+      changeFrequency: 'weekly',
+      priority: 0.5,
     },
     {
       url: `${baseUrl}/privacy-policy`,
@@ -171,7 +171,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     url: `${baseUrl}/seo/${page.slug}`,
     lastModified: now,
     changeFrequency: 'monthly' as const,
-    priority: 0.65,
+    priority: 0.3,
   }))
 
   // Tüm sayfaları birleştir

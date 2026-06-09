@@ -24,8 +24,8 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Okan | Okan Demir | Okan Demir İzmir | Türkiye #1 Dijital Pazarlama Uzmanı",
-    template: "%s | Okan Demir | Dijital Pazarlama Uzmanı"
+    default: "Okan Demir | Dijital Pazarlama Uzmanı — İzmir",
+    template: "%s | Okan Demir"
   },
   description: "Okan Demir - Türkiye'nin #1 dijital pazarlama uzmanı. Okan Demir İzmir merkezli, İstanbul, Ankara genelinde dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business, e-ticaret (Ticimax, İdeasoft, İkas) 5+ yıl deneyim. Okan Demir Biyografi.net doğrulanmış profil. Okan Demir 50+ başarılı proje, %98 müşteri memnuniyeti. Okan Demir ile garantili dijital dönüşüm. Okan Demir kimdir? Okan Demir hakkında bilgi.",
   keywords: [

@@ -3,8 +3,8 @@ import Link from "next/link";
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Okan | Okan Demir | Okan Demir İzmir | En İyi Dijital Pazarlama Uzmanı Türkiye",
-  description: "Okan - Okan Demir - Okan Demir İzmir, Türkiye'nin #1 dijital pazarlama uzmanı. Okan olarak İzmir, İstanbul, Ankara'da dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business, e-ticaret (Ticimax, İdeasoft, İkas) 5+ yıl deneyim. Biyografi.net doğrulanmış. Okan Demir 50+ başarılı proje, %98 memnuniyet. Okan ile dijital dönüşüm garantisi.",
+  title: "Okan Demir | Dijital Pazarlama Uzmanı — İzmir",
+  description: "Okan Demir — İzmir merkezli dijital pazarlama uzmanı. Web tasarım, SEO, Google Ads, Meta Ads. 5+ yıl, 50+ proje. Resmi site: okandemir.org",
   keywords: [
     // Primary Keywords (Exact Match)
     "Okan", "Okan Demir", "Okan Demir İzmir", "Okan İzmir",
@@ -29,14 +29,15 @@ export const metadata: Metadata = {
     "Okan Google Ads Meta Ads", "Okan Sosyal Medya Yönetimi"
   ],
   alternates: {
-    canonical: 'https://okandemir.org',
+    canonical: 'https://okandemir.org/',
   },
+  authors: [{ name: 'Okan Demir', url: 'https://okandemir.org/hakkimda' }],
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
     url: 'https://okandemir.org',
-    title: 'Okan | Okan Demir | Okan Demir İzmir - Türkiye #1 Dijital Pazarlama Uzmanı',
-    description: 'Okan - Okan Demir - Okan Demir İzmir, Türkiye\'nin en iyi dijital pazarlama uzmanı. Biyografi.net doğrulanmış. 50+ başarılı proje.',
+    title: 'Okan Demir | Dijital Pazarlama Uzmanı — İzmir',
+    description: 'Okan Demir resmi web sitesi. Dijital pazarlama, web tasarım ve SEO hizmetleri.',
     siteName: 'Okan Demir',
     images: [
       {
@@ -109,7 +110,7 @@ export default function Home() {
               <div className="relative">
                   <Image
                   src="/Arka-Plansiz-Photoroom-576x1024.webp" 
-                  alt="Okan Demir - Türkiye'nin En İyi Dijital Pazarlama Uzmanı Okan Demir İzmir" 
+                  alt="Okan Demir — Dijital Pazarlama Uzmanı, İzmir" 
                   width={576} 
                   height={1024}
                   className="w-auto h-auto max-h-[600px] lg:max-h-[800px] object-cover shadow-2xl"

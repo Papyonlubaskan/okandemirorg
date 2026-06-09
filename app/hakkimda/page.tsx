@@ -1,12 +1,14 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import YouTubeFeed from '@/components/YouTubeFeed'
+import OkanDemirProfileSchema from '@/components/OkanDemirProfileSchema'
 import { calculateAge, OKAN_BIRTH_DATE_DISPLAY } from '@/lib/profile'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: "Okan Demir Kimdir? - Okan İzmir | Dijital Pazarlama Uzmanı Hakkında",
-  description: "Okan Demir kimdir? Okan - Türkiye'nin en iyi dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. İzmir merkezli, 5+ yıl deneyim, 50+ proje. Ticimax, İdeasoft, İkas uzmanı. Biyografi.net'te doğrulanmış profil. Okan Demir İzmir ile tanışın.",
+  title: "Okan Demir Kimdir? | Dijital Pazarlama Uzmanı — İzmir",
+  description: "Okan Demir kimdir? İzmir Bornova merkezli dijital pazarlama uzmanı. Web tasarım, SEO, Google Ads, Meta Ads. 5+ yıl deneyim, 50+ proje. okandemir.org resmi profil.",
+  alternates: { canonical: 'https://okandemir.org/hakkimda' },
   keywords: ["Okan Demir", "Okan", "Okan İzmir", "Okan Demir İzmir", "Dijital Pazarlama Uzmanı", "Dijital Pazarlama", "Web Tasarımcı", "E-ticaret Uzmanı", "Ticimax", "İdeasoft", "İkas", "SEO Uzmanı", "Okan SEO", "Okan Web Tasarım", "Okan Dijital Pazarlama", "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan", "Biyografi.net Okan Demir"],
   openGraph: {
     title: "Okan Demir Kimdir? - Okan İzmir | Dijital Pazarlama Uzmanı",
@@ -18,6 +20,8 @@ export default function Hakkimda() {
   const age = calculateAge()
 
   return (
+    <>
+    <OkanDemirProfileSchema />
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-700 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
@@ -28,7 +32,7 @@ export default function Hakkimda() {
               <div className="relative">
                 <Image
                   src="/okan-about-photo.webp"
-                  alt="Okan Demir"
+                  alt="Okan Demir — Dijital Pazarlama Uzmanı, İzmir Bornova"
                   width={768}
                   height={894}
                   className="rounded-2xl shadow-2xl w-full h-auto object-contain max-w-md"
@@ -426,5 +430,6 @@ export default function Hakkimda() {
         </div>
       </section>
     </div>
+    </>
   )
 }

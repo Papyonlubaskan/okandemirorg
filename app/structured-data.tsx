@@ -1,31 +1,28 @@
 import Script from 'next/script';
 import { OKAN_BIRTH_DATE } from '@/lib/profile';
+import { OKAN_DEMIR, PERSON_ID, SITE_URL } from '@/lib/brand-seo';
 
 export default function StructuredData() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Okan Demir",
-    "alternateName": "Okan",
-    "jobTitle": "Dijital Pazarlama Uzmanı",
-    "description": "Okan Demir - Türkiye'nin en iyi dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. Okan olarak dijital pazarlama, SEO, web tasarım konularında uzman. Ticimax, İdeasoft, İkas uzmanı.",
-    "url": "https://okandemir.org",
-    "image": "https://okandemir.org/okan-about-photo.webp",
+    "@id": PERSON_ID,
+    "name": OKAN_DEMIR.name,
+    "alternateName": OKAN_DEMIR.alternateName,
+    "jobTitle": OKAN_DEMIR.jobTitle,
+    "description": OKAN_DEMIR.description,
+    "url": SITE_URL,
+    "image": OKAN_DEMIR.image,
+    "email": OKAN_DEMIR.email,
+    "telephone": OKAN_DEMIR.phoneDisplay,
     "birthDate": OKAN_BIRTH_DATE,
     "birthPlace": {
       "@type": "Place",
-      "name": "Bornova, İzmir, Türkiye"
+      "name": OKAN_DEMIR.birthPlace
     },
-    "nationality": "Turkish",
-    "sameAs": [
-      "https://biyografi.net/okan-demir",
-      "https://wa.me/+905552677739",
-      "https://www.instagram.com/okandemirorg",
-      "https://www.youtube.com/@PapyonluBaskan",
-      "https://www.linkedin.com/in/okan-demir",
-      "https://twitter.com/okandemirorg",
-      "https://www.facebook.com/okandemirorg"
-    ],
+    "nationality": { "@type": "Country", "name": "Türkiye" },
+    "mainEntityOfPage": SITE_URL,
+    "sameAs": OKAN_DEMIR.sameAs,
     "address": {
       "@type": "PostalAddress",
       "addressCountry": "TR",
@@ -107,9 +104,10 @@ export default function StructuredData() {
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Okan Demir - Dijital Pazarlama Uzmanı",
-    "alternateName": ["Okan", "Okan Demir", "Okan Demir İzmir", "Okan İzmir", "Okan Demir Dijital Pazarlama", "Okan Demir Web Tasarım"],
-    "url": "https://okandemir.org",
+    "name": "Okan Demir — Resmi Web Sitesi",
+    "alternateName": ["Okan Demir", "Okan", "okandemir.org"],
+    "url": SITE_URL,
+    "author": { "@id": PERSON_ID },
     "description": "Okan Demir, Türkiye'nin en iyi dijital pazarlama uzmanı. İzmir merkezli, online hizmet veren profesyonel dijital pazarlama danışmanı.",
     "potentialAction": {
       "@type": "SearchAction",
