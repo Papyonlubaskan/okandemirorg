@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: "İzmir'de profesyonel dijital pazarlama, web tasarım ve e-ticaret hizmetleri. Bornova merkezli uzman çözümler.",
     url: "https://okandemir.org/hizmetler/izmir-dijital-pazarlama",
   },
+  alternates: { canonical: 'https://okandemir.org/hizmetler/izmir-dijital-pazarlama' },
 };
 
 export default function IzmirDigitalMarketingPage() {

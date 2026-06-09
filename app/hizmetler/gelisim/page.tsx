@@ -1,4 +1,11 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Gelişim ve Optimizasyon | Okan Demir',
+  description: 'Okan Demir ile web sitesi gelişim, performans optimizasyonu ve dijital büyüme hizmetleri.',
+  alternates: { canonical: 'https://okandemir.org/hizmetler/gelisim' },
+}
 
 export default function Gelisim() {
   return (

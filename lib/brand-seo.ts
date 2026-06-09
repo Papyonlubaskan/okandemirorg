@@ -17,7 +17,7 @@ export const OKAN_DEMIR = {
   sameAs: [
     'https://biyografi.net/okan-demir',
     'https://www.instagram.com/okandemirorg',
-    'https://www.linkedin.com/in/okan-demir',
+    'https://www.linkedin.com/in/okan-demir-55a022224/',
     'https://www.youtube.com/@PapyonluBaskan',
     'https://x.com/okandemirorg',
     'https://www.facebook.com/okandemirorg',

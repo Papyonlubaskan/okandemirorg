@@ -1,5 +1,13 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Profesyonel Hizmetler | Okan Demir',
+  description:
+    'Okan Demir dijital pazarlama, web tasarım, SEO, Google Ads, Meta Ads ve e-ticaret hizmetleri. İzmir merkezli, Türkiye geneli profesyonel dijital çözümler.',
+  alternates: { canonical: 'https://okandemir.org/hizmetler' },
+}
 
 export default function Hizmetler() {
   return (

@@ -36,6 +36,9 @@ export default function Header() {
             <Link href="/hizmetler" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir Hizmetler">
               Hizmetler
             </Link>
+            <Link href="/blog" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir Blog">
+              Blog
+            </Link>
             <Link href="/hakkimda" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir Kimdir">
               Okan Demir Kimdir?
             </Link>
@@ -93,6 +96,13 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Hizmetler
+                  </Link>
+                  <Link
+                    href="/blog"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Blog
                   </Link>
                   <Link
                     href="/hakkimda"

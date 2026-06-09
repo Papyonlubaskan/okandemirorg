@@ -217,7 +217,7 @@ export default function Footer() {
                 <Image src="/youtube-icon.png" alt="YouTube" width={20} height={20} className="group-hover:scale-110 transition-transform" />
               </a>
               <a 
-                href="https://www.linkedin.com/in/okan-demir-55a022224/" 
+                href="https://www.linkedin.com/in/okan-demir-55a022224" 
                 className="flex items-center justify-center p-3 bg-gray-800/50 rounded-lg hover:bg-blue-700/20 transition-all group"
                 target="_blank"
                 rel="noopener noreferrer"

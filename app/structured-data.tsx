@@ -82,15 +82,7 @@ export default function StructuredData() {
       "contactType": "customer service",
       "availableLanguage": "Turkish"
     },
-    "sameAs": [
-      "https://biyografi.net/okan-demir",
-      "https://wa.me/+905552677739",
-      "https://www.instagram.com/okandemirorg",
-      "https://www.youtube.com/@PapyonluBaskan",
-      "https://www.linkedin.com/in/okan-demir",
-      "https://twitter.com/okandemirorg",
-      "https://www.facebook.com/okandemirorg"
-    ],
+    "sameAs": OKAN_DEMIR.sameAs,
     "serviceType": [
       "Dijital Pazarlama",
       "Web Tasarım",
@@ -152,19 +144,6 @@ export default function StructuredData() {
         "item": "https://okandemir.org/iletisim"
       }
     ]
-  };
-
-  const reviewData = {
-    "@context": "https://schema.org",
-    "@type": "AggregateRating",
-    "itemReviewed": {
-      "@type": "Person",
-      "name": "Okan Demir"
-    },
-    "ratingValue": "4.9",
-    "reviewCount": "98",
-    "bestRating": "5",
-    "worstRating": "1"
   };
 
   const localBusinessData = {
@@ -273,14 +252,6 @@ export default function StructuredData() {
           "@type": "Answer",
           "text": "Okan Demir, 5+ yıllık deneyimi, 50+ başarılı projesi ve %98 müşteri memnuniyeti ile Türkiye'nin en güvenilir dijital pazarlama uzmanlarından biridir. Okan Demir, Biyografi.net'te doğrulanmış bir profil sahibidir ve her projede ölçülebilir sonuçlar üretmektedir. Okan Demir ile çalışmak garantili başarı demektir."
         }
-      },
-      {
-        "@type": "Question",
-        "name": "Okan Demir Kimdir?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Okan Demir, Türkiye'nin en iyi dijital pazarlama uzmanlarından biridir. Okan Demir İzmir merkezli olarak çalışmakta ve dijital pazarlama, web tasarım, SEO, Google Ads, Meta Business konularında uzmanlaşmıştır. Okan Demir, Okan olarak da bilinmektedir."
-        }
       }
     ]
   };
@@ -315,12 +286,6 @@ export default function StructuredData() {
         id="faq-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
-        strategy="beforeInteractive"
-      />
-      <Script
-        id="review-structured-data"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewData) }}
         strategy="beforeInteractive"
       />
       <Script

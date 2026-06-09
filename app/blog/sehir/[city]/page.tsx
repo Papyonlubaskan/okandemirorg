@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { cities, serviceTypes, generateBlogPosts } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
+import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
 
 export async function generateStaticParams() {
   return cities.map((city) => ({
@@ -29,6 +30,8 @@ export async function generateMetadata({ params }: { params: Promise<{ city: str
     title: `${cityName} Dijital Pazarlama Hizmetleri | Okan Demir`,
     description: `${cityName} için profesyonel dijital pazarlama, SEO, web tasarım ve sosyal medya yönetimi hizmetleri. Google Ads ve Meta Ads uzmanı.`,
     keywords: `${cityName} dijital pazarlama, ${cityName} SEO, ${cityName} web tasarım, ${cityName} Google Ads, ${cityName} sosyal medya`,
+    robots: PROGRAMMATIC_NOINDEX,
+    alternates: { canonical: `${SITE_BASE}/blog/sehir/${resolvedParams.city}` },
   }
 }
 

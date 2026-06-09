@@ -1,4 +1,11 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Marka Kimliği Tasarımı | Okan Demir',
+  description: 'Okan Demir ile marka kimliği, logo ve kurumsal görsel tasarım hizmetleri.',
+  alternates: { canonical: 'https://okandemir.org/hizmetler/marka-kimligi' },
+}
 
 export default function MarkaKimligi() {
   return (

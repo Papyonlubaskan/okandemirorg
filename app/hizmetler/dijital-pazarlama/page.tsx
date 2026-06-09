@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: "Dijital Pazarlama Hizmetleri İzmir | Okan Demir - Okan",
     description: "Dijital pazarlama hizmetleri İzmir - Okan Demir ile Meta Ads, Google Ads, TikTok, LinkedIn pazarlama. Okan olarak İzmir'de dijital pazarlama uzmanı.",
   },
+  alternates: { canonical: 'https://okandemir.org/hizmetler/dijital-pazarlama' },
 }
 
 export default function DijitalPazarlama() {

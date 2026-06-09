@@ -1,5 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'E-Ticaret Platformları | Okan Demir',
+  description: 'Okan Demir ile Ticimax, İdeasoft ve İkas e-ticaret platform kurulumu ve yönetimi.',
+  alternates: { canonical: 'https://okandemir.org/hizmetler/e-ticaret-platformlari' },
+}
 
 export default function ETicaretPlatformlari() {
   return (

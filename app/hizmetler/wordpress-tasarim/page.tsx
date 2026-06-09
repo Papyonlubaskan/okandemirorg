@@ -1,4 +1,11 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'WordPress Tasarım ve Geliştirme | Okan Demir',
+  description: 'Okan Demir ile profesyonel WordPress web sitesi tasarımı ve geliştirme hizmetleri.',
+  alternates: { canonical: 'https://okandemir.org/hizmetler/wordpress-tasarim' },
+}
 
 export default function WordPressTasarim() {
   return (

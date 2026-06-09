@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { generateSEOPages } from '@/lib/seo-data-generator'
 import { notFound } from 'next/navigation'
+import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
 
 export async function generateStaticParams() {
   const pages = generateSEOPages()
@@ -25,6 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${page.title} | Okan Demir`,
     description: page.description,
     keywords: page.keywords.join(', '),
+    robots: PROGRAMMATIC_NOINDEX,
+    alternates: { canonical: `${SITE_BASE}/seo/${page.slug}` },
   }
 }
 

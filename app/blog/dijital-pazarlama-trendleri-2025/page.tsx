@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     url: "https://okandemir.org/blog/dijital-pazarlama-trendleri-2025",
     type: "article",
   },
+  alternates: { canonical: 'https://okandemir.org/blog/dijital-pazarlama-trendleri-2025' },
 };
 
 export default function DigitalMarketingTrends2025Page() {

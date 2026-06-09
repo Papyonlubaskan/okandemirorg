@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description: "İstanbul'da profesyonel dijital pazarlama, web tasarım ve e-ticaret hizmetleri. Türkiye'nin ticaret merkezinde uzman çözümler.",
     url: "https://okandemir.org/hizmetler/istanbul-dijital-pazarlama",
   },
+  alternates: { canonical: 'https://okandemir.org/hizmetler/istanbul-dijital-pazarlama' },
 };
 
 export default function IstanbulDigitalMarketingPage() {

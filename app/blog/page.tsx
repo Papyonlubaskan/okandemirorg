@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   title: 'Blog - Dijital Pazarlama ve SEO İçerikleri | Okan Demir',
   description: `${getTotalPageCount()}+ dijital pazarlama, SEO, web tasarım ve sosyal medya makalesi. Okan Demir'in profesyonel blog içerikleri.`,
   keywords: 'dijital pazarlama blog, SEO makaleler, web tasarım rehberleri, sosyal medya ipuçları',
+  alternates: { canonical: 'https://okandemir.org/blog' },
 }
 
 export default function BlogPage() {

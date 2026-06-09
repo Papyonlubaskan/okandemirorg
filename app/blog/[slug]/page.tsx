@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import Link from 'next/link'
 import { generateBlogPosts } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
+import { PROGRAMMATIC_NOINDEX, SITE_BASE } from '@/lib/seo-constants'
 
 export async function generateStaticParams() {
   const posts = generateBlogPosts()
@@ -25,6 +26,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title: `${post.title} | Okan Demir`,
     description: post.excerpt,
     keywords: post.keywords.join(', '),
+    robots: PROGRAMMATIC_NOINDEX,
+    alternates: { canonical: `${SITE_BASE}/blog/${post.slug}` },
   }
 }
 

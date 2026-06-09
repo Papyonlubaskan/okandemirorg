@@ -1,4 +1,11 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Dijital Dönüşüm Danışmanlığı | Okan Demir',
+  description: 'Okan Demir ile dijital dönüşüm stratejisi, süreç optimizasyonu ve teknoloji danışmanlığı.',
+  alternates: { canonical: 'https://okandemir.org/hizmetler/dijital-donusum' },
+}
 
 export default function DijitalDonusum() {
   return (
