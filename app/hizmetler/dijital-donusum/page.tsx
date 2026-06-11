@@ -93,7 +93,7 @@ export default function DijitalDonusum() {
               </div>
               <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">7/24 Canlı Yayın</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                En az iki platformda markanızın reklamını en iyi görsellerle 7/24 canlı olarak yayınlıyoruz. Sürekli görünürlük sağlıyoruz.
+                En az iki platformda markanızın reklamını etkili görsellerle 7/24 canlı olarak yayınlıyoruz. Sürekli görünürlük sağlıyoruz.
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">

@@ -45,7 +45,7 @@ const portfolioItems = [
     id: 5,
     title: 'Marka Kimliği',
     category: 'Marka Kimliği',
-    description: 'En iyi kurumsal tasarımlar ile lider olmanızı sağlıyorum.',
+    description: 'Profesyonel kurumsal tasarımlar ile markanızı öne çıkarıyorum.',
     image: '/brand-identity-icon.png',
     gradient: 'from-orange-500 to-orange-600',
     link: '/hizmetler/marka-kimligi',

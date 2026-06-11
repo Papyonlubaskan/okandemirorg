@@ -88,7 +88,7 @@ export default function Home() {
                 </h1>
                 
                 <p className="hero-description text-gray-100 leading-tight mb-12 font-black" style={{ fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif", fontSize: '24px', fontWeight: '500' }}>
-                  Ben <strong>Okan Demir</strong>, dijital dönüşüm uzmanı olarak doğru strateji + doğru araçlar = gerçek sonuçlar formülüyle çalışıyorum. <strong>Okan Demir</strong> olarak dijital pazarlama, dijital dönüşüm, sosyal medya yönetimi, SEO, Google Ads, Meta Business sistem kurulumu ve yüksek dönüşüm odaklı web tasarımı ile daha fazla trafik, daha çok lead, daha yüksek satış için yanınızdayım! <strong>Okan Demir</strong> ile sizin için en iyisini gerçekleştirelim.
+                  Ben <strong>Okan Demir</strong>, dijital dönüşüm uzmanı olarak doğru strateji + doğru araçlar = gerçek sonuçlar formülüyle çalışıyorum. <strong>Okan Demir</strong> olarak dijital pazarlama, dijital dönüşüm, sosyal medya yönetimi, SEO, Google Ads, Meta Business sistem kurulumu ve yüksek dönüşüm odaklı web tasarımı ile daha fazla trafik, daha çok lead, daha yüksek satış için yanınızdayım! <strong>Okan Demir</strong> ile hedeflerinize birlikte ulaşalım.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4">
@@ -539,7 +539,7 @@ export default function Home() {
                   <h4 className="text-2xl font-black text-gray-900 dark:text-white">Dijital Dönüşüm ve Süreklilik!</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
-                  Dijital dönüşüm çağında sürdürülebilir stratejilerle size en uygun seçenekleri sunarak markanızın tanınırlığını artırıyorum. En az iki platformda markanızın reklamını en iyi görsellerle 7/24 canlı yayınlıyorum!
+                  Dijital dönüşüm çağında sürdürülebilir stratejilerle size en uygun seçenekleri sunarak markanızın tanınırlığını artırıyorum. En az iki platformda markanızın reklamını etkili görsellerle 7/24 canlı yayınlıyorum!
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"
@@ -559,7 +559,7 @@ export default function Home() {
                   <h4 className="text-2xl font-black text-gray-900 dark:text-white">Sizin İçin Markanızı Oluşturalım!</h4>
                 </div>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
-                  Siz ya da markanız için en iyi kurumsal tasarımlar ile lider olmanızı sağlıyorum. Her adım verimliliğe aşıktır.
+                  Siz ya da markanız için profesyonel kurumsal tasarımlar ile öne çıkmanızı sağlıyorum. Her adım verimliliğe aşıktır.
                 </p>
                 <Link
                   href="https://wa.me/+905552677739"

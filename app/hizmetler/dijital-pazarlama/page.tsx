@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: "Dijital Pazarlama Hizmetleri İzmir | Okan Demir - Okan | Dijital Pazarlama Uzmanı",
-  description: "Dijital pazarlama hizmetleri İzmir - Okan Demir ile Meta Ads, Google Ads, TikTok, LinkedIn pazarlama. Okan olarak İzmir'de dijital pazarlama uzmanı. SEO, sosyal medya yönetimi, reklam kampanyaları. En iyi dijital pazarlama hizmetleri.",
+  description: "Dijital pazarlama hizmetleri İzmir - Okan Demir ile Meta Ads, Google Ads, TikTok, LinkedIn pazarlama. Okan olarak İzmir'de dijital pazarlama uzmanı. SEO, sosyal medya yönetimi, reklam kampanyaları. Profesyonel dijital pazarlama hizmetleri.",
   keywords: ["Dijital Pazarlama", "Dijital Pazarlama Hizmetleri", "Dijital Pazarlama İzmir", "Okan Demir", "Okan", "Okan İzmir", "Okan Demir İzmir", "Meta Ads", "Google Ads", "TikTok Pazarlama", "LinkedIn Pazarlama", "SEO", "Sosyal Medya Yönetimi", "Reklam Kampanyaları", "Dijital Pazarlama Uzmanı", "Okan Dijital Pazarlama"],
   openGraph: {
     title: "Dijital Pazarlama Hizmetleri İzmir | Okan Demir - Okan",

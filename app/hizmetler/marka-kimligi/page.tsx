@@ -41,7 +41,7 @@ export default function MarkaKimligi() {
               </div>
               <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Logo Tasarımı</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Markanızı en iyi şekilde temsil eden, unutulmaz ve etkili logo tasarımları oluşturuyoruz. Yaratıcılık ve profesyonellik bir arada.
+                Markanızı doğru şekilde temsil eden, unutulmaz ve etkili logo tasarımları oluşturuyoruz. Yaratıcılık ve profesyonellik bir arada.
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">

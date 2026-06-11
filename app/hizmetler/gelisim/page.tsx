@@ -67,7 +67,7 @@ export default function Gelisim() {
               </div>
               <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Uygulama & Optimizasyon</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Geliştirdiğimiz stratejileri adım adım uyguluyoruz ve sürekli optimizasyon yaparak en iyi sonuçları elde ediyoruz.
+                Geliştirdiğimiz stratejileri adım adım uyguluyoruz ve sürekli optimizasyon yaparak ölçülebilir sonuçlar elde ediyoruz.
               </p>
               <ul className="space-y-2 text-gray-600 dark:text-gray-300">
                 <li className="flex items-center">

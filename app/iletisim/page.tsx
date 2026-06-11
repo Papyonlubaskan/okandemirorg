@@ -379,7 +379,7 @@ export default function Iletisim() {
                   Yeni bir projeye nasıl yaklaşıyorsunuz?
                 </h3>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-tight font-black">
-                  Web tasarımı, ön yüz geliştirme, UX/UI tasarımı, duyarlı tasarım, e-ticaret çözümleri ve marka kimliği ile dijital pazarlama görselleri ve reklam yayınları oluşturma gibi çeşitli hizmetler sunuyorum. Projeye yaklaşım ölçütü mevcut durumunuzla doğrudan bağlantılıdır; sahip olduklarınız ve eksikleriniz üzerinden strateji belirleyerek en iyi sonuca ulaşıyorum. Ayrıntılı bilgi için Hizmetler sayfamı ziyaret edin.
+                  Web tasarımı, ön yüz geliştirme, UX/UI tasarımı, duyarlı tasarım, e-ticaret çözümleri ve marka kimliği ile dijital pazarlama görselleri ve reklam yayınları oluşturma gibi çeşitli hizmetler sunuyorum. Projeye yaklaşım ölçütü mevcut durumunuzla doğrudan bağlantılıdır; sahip olduklarınız ve eksikleriniz üzerinden strateji belirleyerek doğru sonuca ulaşıyorum. Ayrıntılı bilgi için Hizmetler sayfamı ziyaret edin.
                 </p>
               </div>
 

@@ -151,7 +151,7 @@ function buildSEOPages(): SEOPage[] {
         h2s: [
           `${platform}'da ${topic}`,
           'Başarılı Stratejiler',
-          'En İyi Uygulamalar',
+          'Önerilen Uygulamalar',
           'Yaygın Hatalar',
         ],
         faqs: [],
@@ -197,7 +197,7 @@ function buildSEOPages(): SEOPage[] {
         h2s: [
           'Bütçe Dostu Stratejiler',
           'Maliyetleri Düşürme',
-          'En İyi ROI',
+          'Yüksek ROI',
         ],
         faqs: [],
       })
@@ -272,11 +272,11 @@ function buildSEOPages(): SEOPage[] {
         pages.push({
           id: `seo-${idCounter++}`,
           slug: slug,
-          title: `Okan Demir En İyi ${num} ${topic} ${variant.charAt(0).toUpperCase() + variant.slice(1)}`,
-          description: `Okan Demir 2025 için en iyi ${num} ${topic.toLowerCase()} ${variant}ı. Okan Demir profesyonel öneriler ve incelemeler. Okan Demir ile ${topic} uzmanı.`,
+          title: `Okan Demir Öne Çıkan ${num} ${topic} ${variant.charAt(0).toUpperCase() + variant.slice(1)}`,
+          description: `Okan Demir 2025 için öne çıkan ${num} ${topic.toLowerCase()} ${variant}ı. Okan Demir profesyonel öneriler ve incelemeler. Okan Demir ile ${topic} uzmanı.`,
           category: 'Listeler',
-          keywords: ['Okan Demir', topic, variant, `Okan Demir ${topic}`, 'Okan Demir en iyi', 'Okan Demir liste', 'en iyi', 'liste'],
-          h1: `Okan Demir En İyi ${num} ${topic} ${variant.charAt(0).toUpperCase() + variant.slice(1)}`,
+          keywords: ['Okan Demir', topic, variant, `Okan Demir ${topic}`, 'Okan Demir liste', 'öne çıkan', 'liste'],
+          h1: `Okan Demir Öne Çıkan ${num} ${topic} ${variant.charAt(0).toUpperCase() + variant.slice(1)}`,
           h2s: Array.from({ length: Math.min(num, 5) }, (_, i) => `${i + 1}. ${variant.charAt(0).toUpperCase() + variant.slice(1)}`),
           faqs: [],
         })
