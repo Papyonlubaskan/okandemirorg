@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { checkRateLimit, getClientIp, rateLimitResponse } from '@/lib/api-security'
 
 interface ChatMessage {
   role: 'user' | 'assistant'
@@ -6,6 +7,11 @@ interface ChatMessage {
 }
 
 export async function POST(request: NextRequest) {
+  const ip = getClientIp(request)
+  if (!checkRateLimit(`chatbot:${ip}`, 30, 15 * 60 * 1000)) {
+    return rateLimitResponse()
+  }
+
   try {
     const body = await request.json()
     const { message, conversationHistory = [] } = body

@@ -152,7 +152,7 @@ export default async function SEOPage({ params }: { params: Promise<{ slug: stri
                 Okan Demir ile Dijital Pazarlama Hedeflerinize Ulaşın
               </h3>
               <p className="text-xl text-blue-100 mb-6 font-black">
-                <strong>Okan Demir</strong> {page.h1} konusunda uzman desteği için <strong>Okan Demir</strong> ile iletişime geçin. <strong>Okan Demir</strong> ile garantili sonuçlar.
+                <strong>Okan Demir</strong> {page.h1} konusunda uzman desteği için <strong>Okan Demir</strong> ile iletişime geçin. <strong>Okan Demir</strong> ile profesyonel destek.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link

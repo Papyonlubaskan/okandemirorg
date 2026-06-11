@@ -24,7 +24,7 @@ export default function Hizmetler() {
               Okan Demir Profesyonel Hizmetlerim
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 leading-tight mb-8">
-              <strong>Okan Demir</strong> olarak dijital dünyada markanızı öne çıkaran, yaratıcı çözümlerle işinizi büyüten profesyonel hizmetlerim. <strong>Okan Demir</strong> ile garantili sonuçlar.
+              <strong>Okan Demir</strong> olarak dijital dünyada markanızı öne çıkaran, yaratıcı çözümlerle işinizi büyüten profesyonel hizmetlerim. <strong>Okan Demir</strong> ile ölçülebilir sonuçlar.
             </p>
             <Link 
               href="https://wa.me/+905552677739"

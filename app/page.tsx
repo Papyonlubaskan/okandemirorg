@@ -109,7 +109,7 @@ export default function Home() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                   <Image
-                  src="/Arka-Plansiz-Photoroom-576x1024.webp" 
+                  src="/okan-demir-profile.jpg" 
                   alt="Okan Demir — Dijital Pazarlama Uzmanı, İzmir" 
                   width={576} 
                   height={1024}
@@ -181,7 +181,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Gelişim</h3>
                 <p className="text-lg text-gray-800 dark:text-gray-200 mb-6 leading-tight font-black">
-                  Tasarımlarınızı ve Dijital dönüşüm ihtiyaçlarınızı temiz,verimli,garantili yüksek performanlı kodlarla hayata geçirerek öncü olmanızı sağlıyorum.
+                  Tasarımlarınızı ve Dijital dönüşüm ihtiyaçlarınızı temiz, verimli, yüksek performanslı kodlarla hayata geçirerek öncü olmanızı sağlıyorum.
                 </p>
                 <ul className="text-left text-gray-600 dark:text-gray-300 space-y-2 mb-8">
                    <li className="flex items-center text-lg dark:text-gray-300">
@@ -194,7 +194,7 @@ export default function Home() {
                   </li>
                    <li className="flex items-center text-lg dark:text-gray-300">
                     <svg className="w-6 h-6 text-green-500 dark:text-green-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                    Dijital Pazarlamada Süreklilik & Garantili Gelişim
+                    Dijital Pazarlamada Süreklilik ve Ölçülebilir Gelişim
                   </li>
                 </ul>
                 <Link
@@ -312,7 +312,7 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-black mb-6 text-gray-900 dark:text-white transition-colors duration-300">Okan Demir ile Kişiye ve Markanıza Özel Tasarım</h3>
               <p className="text-xl font-black leading-tight text-gray-600 dark:text-gray-300 transition-colors duration-300">
-                Her markanın ve sizin eşsiz olduğuna; özgün bir web sitesi ya da dijital pazarlama çözümünü hak ettiğinize inanıyorum. Size ve markanıza özel Google Ads ve Meta Ads seçenekleriyle görünürlüğünüzü artırırken hızlı dönüşüm almanızı sağlıyorum. Garantili stratejilerle her zaman önde olacaksınız!
+                Her markanın ve sizin eşsiz olduğuna; özgün bir web sitesi ya da dijital pazarlama çözümünü hak ettiğinize inanıyorum. Size ve markanıza özel Google Ads ve Meta Ads seçenekleriyle görünürlüğünüzü artırırken hızlı dönüşüm almanızı sağlıyorum. Veriye dayalı stratejilerle görünürlüğünüzü artırıyoruz.
               </p>
             </div>
             
@@ -681,7 +681,7 @@ export default function Home() {
             <div className="flex justify-center lg:justify-start order-2 lg:order-1">
               <div className="relative">
                 <Image
-                  src="/okan-about-photo.webp"
+                  src="/okan-demir-about.jpg"
                   alt="Okan Demir - Türkiye'nin En İyi Dijital Pazarlama Uzmanı Okan Demir İzmir"
                   width={768}
                   height={894}
@@ -813,7 +813,7 @@ export default function Home() {
                     </li>
                     <li className="flex items-center text-lg font-black text-gray-700">
                       <svg className="w-6 h-6 text-blue-500 dark:text-blue-400 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path></svg>
-                      Garantili Sonuçlar
+                      Ölçülebilir Sonuçlar
                     </li>
                   </ul>
                 </div>
@@ -947,33 +947,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center max-w-4xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-black mb-6">
-              Dijital Pazarlama İpuçları
-            </h2>
-            <p className="text-xl lg:text-2xl text-blue-100 leading-tight mb-8 font-black">
-              Dijital pazarlama dünyasındaki en güncel trendler, ipuçları ve stratejiler için e-bültenimize abone olun.
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="E-posta adresiniz"
-                className="flex-1 px-4 py-3 rounded-lg bg-white dark:bg-gray-700 text-lg focus:outline-none focus:ring-2 focus:ring-yellow-400 dark:focus:ring-gray-500 w-full"
-              />
-              <button className="bg-yellow-400 hover:bg-yellow-500  text-gray-900 dark:text-white px-8 py-3 rounded-lg font-black text-lg transition-all duration-300 hover:scale-105 w-full sm:w-auto">
-                Abone Ol
-              </button>
-            </div>
-            <p className="text-blue-200 text-sm mt-4">
-              Spam göndermiyoruz. İstediğiniz zaman abonelikten çıkabilirsiniz.
-            </p>
-          </div>
-    </div>
       </section>
     </>
   );

@@ -32,7 +32,7 @@ export default function CaseStudyLayout({
     '@type': 'CaseStudy',
     headline,
     description: subtitle,
-    image: 'https://okandemir.org/okan-demir-profile.webp',
+    image: 'https://okandemir.org/okan-demir-profile.jpg',
     author: {
       '@type': 'Person',
       name: 'Okan Demir',

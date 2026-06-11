@@ -1,12 +1,12 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
-import { blogCategories, generateBlogPosts, getTotalPageCount } from '@/lib/blog-data'
+import { blogCategories, generateBlogPosts } from '@/lib/blog-data'
 import BlogSearch from '@/components/BlogSearch'
 import PopularPosts from '@/components/PopularPosts'
 
 export const metadata: Metadata = {
   title: 'Blog - Dijital Pazarlama ve SEO İçerikleri | Okan Demir',
-  description: `${getTotalPageCount()}+ dijital pazarlama, SEO, web tasarım ve sosyal medya makalesi. Okan Demir'in profesyonel blog içerikleri.`,
+  description: 'Okan Demir dijital pazarlama blogu. SEO, web tasarım ve sosyal medya rehberleri.',
   keywords: 'dijital pazarlama blog, SEO makaleler, web tasarım rehberleri, sosyal medya ipuçları',
   alternates: { canonical: 'https://okandemir.org/blog' },
 }
@@ -14,7 +14,6 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const allPosts = generateBlogPosts()
   const recentPosts = allPosts.slice(0, 12)
-  const totalCount = getTotalPageCount()
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
@@ -26,7 +25,7 @@ export default function BlogPage() {
               Dijital Pazarlama Blog
             </h1>
             <p className="text-xl lg:text-2xl text-blue-100 font-black mb-8">
-              {totalCount}+ Makale ile Dijital Dünyada Uzmanlaşın
+              Dijital pazarlama rehberleri ve güncel içerikler
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               {blogCategories.slice(0, 6).map((category) => (
@@ -146,7 +145,7 @@ export default function BlogPage() {
 
           <div className="text-center mt-12">
             <p className="text-2xl font-black text-gray-700 dark:text-gray-300">
-              Ve daha {totalCount - 12}+ makale...
+              Kategorilerden daha fazla rehber keşfedin
             </p>
           </div>
         </div>

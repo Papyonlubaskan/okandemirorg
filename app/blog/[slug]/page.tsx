@@ -99,7 +99,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     <strong>Okan Demir</strong> {post.city ? ` ${post.city} bölgesinde` : ''} 
                     {post.industry ? ` ${post.industry} sektörüne özel` : ''} 
                     çözümler sunuyorum. <strong>Okan Demir</strong> bu hizmet, işletmenizin dijital varlığını güçlendirmek 
-                    ve online başarınızı artırmak için tasarlanmıştır. <strong>Okan Demir</strong> ile garantili sonuçlar.
+                    ve online başarınızı artırmak için tasarlanmıştır. <strong>Okan Demir</strong> ile profesyonel destek.
                   </p>
 
                   <h2 className="text-3xl font-black text-gray-900 dark:text-white mt-8 mb-4">
@@ -141,7 +141,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                     <p className="text-gray-800 dark:text-gray-200 font-black mb-4">
                       <strong>Okan Demir</strong> {post.city ? `${post.city} şehrinde` : 'Türkiye genelinde'} 
                       {post.industry ? ` ${post.industry} sektöründe` : ''} 
-                      dijital pazarlama hizmetleri için <strong>Okan Demir</strong> 5+ yıllık deneyimim ile yanınızdayım. <strong>Okan Demir</strong> ile garantili sonuçlar.
+                      dijital pazarlama hizmetleri için <strong>Okan Demir</strong> 5+ yıllık deneyimim ile yanınızdayım. <strong>Okan Demir</strong> ile profesyonel destek.
                     </p>
                     <Link
                       href="/iletisim"
@@ -209,7 +209,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 Okan Demir ile Projenizi Hayata Geçirelim
               </h3>
               <p className="text-xl text-blue-100 mb-6 font-black">
-                <strong>Okan Demir</strong> dijital pazarlama hedeflerinize ulaşmak için <strong>Okan Demir</strong> ile iletişime geçin. <strong>Okan Demir</strong> ile garantili başarı.
+                <strong>Okan Demir</strong> dijital pazarlama hedeflerinize ulaşmak için <strong>Okan Demir</strong> ile iletişime geçin. <strong>Okan Demir</strong> ile birlikte hedeflerinize ulaşın.
               </p>
               <div className="flex flex-col sm:flex-row justify-center gap-4">
                 <Link

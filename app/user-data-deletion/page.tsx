@@ -1,3 +1,11 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Kullanıcı Verisi Silme | Okan Demir',
+  description: 'Facebook ve Meta platformları için kullanıcı verisi silme bilgilendirme sayfası.',
+  robots: { index: false, follow: false },
+}
+
 export default function UserDataDeletionPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

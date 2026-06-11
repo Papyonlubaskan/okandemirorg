@@ -29,70 +29,70 @@ export const blogCategories: BlogCategory[] = [
     name: 'Dijital Pazarlama',
     slug: 'dijital-pazarlama',
     description: 'Dijital pazarlama stratejileri, ipuçları ve güncel trendler',
-    count: 500
+    count: 50
   },
   {
     id: '2',
     name: 'SEO Optimizasyonu',
     slug: 'seo-optimizasyonu',
     description: 'Arama motoru optimizasyonu rehberleri ve teknikleri',
-    count: 400
+    count: 50
   },
   {
     id: '3',
     name: 'Web Tasarım',
     slug: 'web-tasarim',
     description: 'Modern web tasarım trendleri ve UX/UI ipuçları',
-    count: 300
+    count: 50
   },
   {
     id: '4',
     name: 'Sosyal Medya',
     slug: 'sosyal-medya',
     description: 'Sosyal medya stratejileri ve platform rehberleri',
-    count: 350
+    count: 50
   },
   {
     id: '5',
     name: 'Google Ads',
     slug: 'google-ads',
     description: 'Google reklamcılık stratejileri ve kampanya yönetimi',
-    count: 250
+    count: 50
   },
   {
     id: '6',
     name: 'Meta Business',
     slug: 'meta-business',
     description: 'Facebook ve Instagram reklam yönetimi',
-    count: 250
+    count: 50
   },
   {
     id: '7',
     name: 'E-Ticaret',
     slug: 'e-ticaret',
     description: 'E-ticaret stratejileri ve online satış artırma',
-    count: 200
+    count: 50
   },
   {
     id: '8',
     name: 'İçerik Pazarlama',
     slug: 'icerik-pazarlama',
     description: 'İçerik stratejileri ve blog yazımı teknikleri',
-    count: 200
+    count: 50
   },
   {
     id: '9',
     name: 'Dijital Dönüşüm',
     slug: 'dijital-donusum',
     description: 'İşletmelerde dijital dönüşüm süreçleri',
-    count: 150
+    count: 50
   },
   {
     id: '10',
     name: 'Marka Kimliği',
     slug: 'marka-kimligi',
     description: 'Marka oluşturma ve kimlik tasarımı',
-    count: 150
+    count: 50
   }
 ]
 
@@ -116,7 +116,7 @@ export const industries = [
   'Üretim', 'Gıda', 'İçecek', 'Enerji', 'Tarım', 'Hayvancılık', 'Su Ürünleri', 'Orman', 'Maden',
   'Kimya', 'Plastik', 'Kağıt', 'Ambalaj', 'Baskı', 'Reklam', 'Organizasyon', 'Etkinlik', 'Düğün',
   'Fotoğrafçılık', 'Video Prodüksiyon', 'Müzik', 'Sanat', 'Tasarım', 'Mimarlık', 'İç Mimarlık',
-  'Peyzaj', 'Güvenlik', 'Temizlik', 'Bakım', 'Onarım', 'Servis', 'Danışmanlık', 'Eğitim', 'Kurs'
+  'Peyzaj', 'Güvenlik', 'Temizlik', 'Bakım', 'Onarım', 'Servis', 'Kurs'
 ]
 
 // Hizmet Tipleri
@@ -296,10 +296,11 @@ export function getBlogPostsByIndustry(industry: string, limit = 12): BlogPost[]
 }
 
 // Toplam sayfa sayısını hesapla
+export function getIndexableBlogCount(): number {
+  return 1
+}
+
 export function getTotalPageCount(): number {
-  const categoryPosts = blogCategories.reduce((sum) => sum + 50, 0) // 500
-  const cityPosts = cities.length * 10 // 810
-  const industryPosts = industries.length * 5 // 315
-  return categoryPosts + cityPosts + industryPosts // 1625+ 
+  return generateBlogPosts().length
 }
 

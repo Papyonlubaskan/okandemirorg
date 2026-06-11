@@ -1,6 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { requireInternalApiKey } from '@/lib/api-security'
 
 export async function POST(request: NextRequest) {
+  const authError = requireInternalApiKey(request)
+  if (authError) return authError
+
   try {
     const body = await request.json()
     const { to, message } = body

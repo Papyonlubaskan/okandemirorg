@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'tr_TR',
     alternateLocale: ['en_US'],
-    images: [{ url: 'https://okandemir.org/okan-demir-profile.webp', width: 1200, height: 630 }],
+    images: [{ url: 'https://okandemir.org/okan-demir-profile.jpg', width: 1200, height: 630 }],
   },
   alternates: {
     canonical: 'https://okandemir.org/projeler',

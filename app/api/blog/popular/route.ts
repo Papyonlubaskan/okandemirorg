@@ -1,7 +1,13 @@
-import { NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { generateBlogPosts } from '@/lib/blog-data'
+import { checkRateLimit, getClientIp, rateLimitResponse } from '@/lib/api-security'
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const ip = getClientIp(request)
+  if (!checkRateLimit(`blog-popular:${ip}`, 60, 15 * 60 * 1000)) {
+    return rateLimitResponse()
+  }
+
   try {
     const allPosts = generateBlogPosts()
     

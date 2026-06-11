@@ -1,3 +1,11 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Veri Silme Durumu | Okan Demir',
+  description: 'Kullanıcı veri silme talebinizin işlem durumu ve süreç bilgileri.',
+  robots: { index: false, follow: false },
+}
+
 export default function DataDeletionStatusPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">

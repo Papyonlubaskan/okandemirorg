@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from "next";
+import { Suspense } from "react";
 import { Inter } from "next/font/google";
+import AnalyticsRouteTracker from "@/components/AnalyticsRouteTracker";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -90,7 +92,7 @@ export const metadata: Metadata = {
         alt: 'Okan Demir — Dijital Pazarlama Uzmanı',
       },
       {
-        url: 'https://okandemir.org/okan-about-photo.webp',
+        url: 'https://okandemir.org/okan-demir-about.jpg',
         width: 800,
         height: 600,
         alt: 'Okan - Dijital Pazarlama ve Web Tasarım Uzmanı',
@@ -141,6 +143,9 @@ export default function RootLayout({
       <body className={`${inter.variable} antialiased flex flex-col min-h-screen`} suppressHydrationWarning>
         <ThemeProvider>
           <GoogleAnalytics measurementId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID || ''} />
+          <Suspense fallback={null}>
+            <AnalyticsRouteTracker />
+          </Suspense>
           <ConsoleErrorSuppressor />
           <AccessibilityHelper />
           <StructuredData />

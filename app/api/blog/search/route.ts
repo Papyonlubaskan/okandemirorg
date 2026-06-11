@@ -1,7 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { generateBlogPosts, blogCategories } from '@/lib/blog-data'
+import { checkRateLimit, getClientIp, rateLimitResponse } from '@/lib/api-security'
 
 export async function GET(request: NextRequest) {
+  const ip = getClientIp(request)
+  if (!checkRateLimit(`blog-search:${ip}`, 60, 15 * 60 * 1000)) {
+    return rateLimitResponse()
+  }
+
   const { searchParams } = new URL(request.url)
   const query = searchParams.get('q') || ''
   const category = searchParams.get('category') || ''

@@ -11,7 +11,7 @@ export const OKAN_DEMIR = {
   phone: '+905552677739',
   phoneDisplay: '+90 555 267 77 39',
   birthPlace: 'Bornova, İzmir, Türkiye',
-  image: `${SITE_URL}/okan-about-photo.webp`,
+  image: `${SITE_URL}/okan-demir-about.jpg`,
   profileImage: `${SITE_URL}/okan-demir-profile.jpg`,
   logo: `${SITE_URL}/okan-demir-logo.png`,
   sameAs: [
