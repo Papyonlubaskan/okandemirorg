@@ -56,6 +56,10 @@ EMAIL_PASSWORD=your-app-specific-password
 EMAIL_FROM=noreply@okandemir.org
 EMAIL_TO=okan@okandemir.org
 
+# ----- okandemir.org API (n8n → site istekleri) -----
+# okandemir.org Railway servisiyle AYNI değer olmalı
+INTERNAL_API_KEY=your-internal-api-key-same-as-okandemir-org
+
 # ----- Webhook Security -----
 WEBHOOK_SECRET=your-random-secret-string-for-verification
 
@@ -95,7 +99,7 @@ API_RATE_LIMIT_PER_DAY=10000
 # 4. Database Tables:
 #    - N8N-DIJITAL-PAZARLAMA-OTOMASYON.md'deki SQL'leri çalıştır
 
-# 5. Test:
-#    - GET https://okandemir.org/api/n8n/trigger (health check)
-#    - POST https://okandemir.org/api/n8n/campaigns (test workflow)
+# 5. Test (INTERNAL_API_KEY header zorunlu):
+#    - curl https://okandemir.org/api/n8n/trigger -H "x-api-key: YOUR_INTERNAL_API_KEY"
+#    - curl -X POST https://okandemir.org/api/n8n/campaigns -H "x-api-key: YOUR_INTERNAL_API_KEY" ...
 

@@ -134,7 +134,17 @@ curl -X POST https://n8n-xxxx.up.railway.app/webhook/test \
 
 ---
 
-## 📊 ADIM 5: Database Bağlantısı (Opsiyonel - Sonra Yapabilirsin)
+## 🔐 ADIM 5: INTERNAL_API_KEY (okandemir.org + n8n)
+
+1. **okandemir.org Railway servisi** → Variables → `INTERNAL_API_KEY` ekle  
+   (Proje kökündeki `railway.env` dosyasından kopyalayabilirsin — git'e gitmez)
+2. **n8n Railway servisi** → Variables → **aynı** `INTERNAL_API_KEY` değerini ekle
+3. n8n'de workflow import et: `N8N-WORKFLOW-ORNEKLERI.json`  
+   WhatsApp node'u otomatik `x-api-key: {{$env.INTERNAL_API_KEY}}` header'ı gönderir
+
+---
+
+## 📊 ADIM 6: Database Bağlantısı (Opsiyonel - Sonra Yapabilirsin)
 
 Şimdilik gerek yok. İlk önce N8N'in çalıştığından emin ol.
 

@@ -103,13 +103,28 @@
         "method": "POST",
         "url": "https://okandemir.org/api/whatsapp/send",
         "authentication": "none",
-        "jsonParameters": true,
-        "options": {},
-        "bodyParametersJson": "={\n  \"to\": \"+905552677739\",\n  \"message\": \"🚨 Reklam Uyarısı\\n\\n{{$json.summary.issues_count}} kampanyada sorun tespit edildi!\\n\\nToplam Harcama: ₺{{$json.summary.total_spend}}\\nDönüşüm: {{$json.summary.total_conversions}}\\n\\nDetaylar email'de.\"\n}"
+        "sendHeaders": true,
+        "specifyHeaders": "keypair",
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "x-api-key",
+              "value": "={{$env.INTERNAL_API_KEY}}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"to\": \"+905552677739\",\n  \"message\": \"🚨 Reklam Uyarısı\\n\\n{{$json.summary.issues_count}} kampanyada sorun tespit edildi!\\n\\nToplam Harcama: ₺{{$json.summary.total_spend}}\\nDönüşüm: {{$json.summary.total_conversions}}\\n\\nDetaylar email'de.\"\n}",
+        "options": {}
       },
       "name": "WhatsApp Alert",
       "type": "n8n-nodes-base.httpRequest",
-      "typeVersion": 1,
+      "typeVersion": 4.2,
       "position": [1250, 200]
     },
     {

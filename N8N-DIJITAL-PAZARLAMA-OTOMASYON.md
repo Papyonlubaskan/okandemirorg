@@ -682,7 +682,10 @@ CREATE TABLE campaign_metrics (
 async function sendWhatsAppAlert(message) {
   await fetch('https://okandemir.org/api/whatsapp/send', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': process.env.INTERNAL_API_KEY!,
+    },
     body: JSON.stringify({
       to: '+905552677739',
       message: `🚨 ${message}`

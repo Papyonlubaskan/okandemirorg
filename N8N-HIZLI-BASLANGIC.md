@@ -168,12 +168,14 @@ CREATE TABLE IF NOT EXISTS audience_performance (
 
 ### API Test
 ```bash
-# Health check
-curl https://okandemir.org/api/n8n/trigger
+# Health check (INTERNAL_API_KEY tanımlıysa header zorunlu)
+curl https://okandemir.org/api/n8n/trigger \
+  -H "x-api-key: YOUR_INTERNAL_API_KEY"
 
 # Manuel kampanya kontrolü
 curl -X POST https://okandemir.org/api/n8n/campaigns \
   -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_INTERNAL_API_KEY" \
   -d '{
     "platform": "all",
     "action": "check_performance"
@@ -237,6 +239,7 @@ n8n Dashboard > "Dijital Pazarlama Master Workflow" > Active: ON
 ```bash
 curl -X POST https://okandemir.org/api/whatsapp/send \
   -H "Content-Type: application/json" \
+  -H "x-api-key: YOUR_INTERNAL_API_KEY" \
   -d '{
     "to": "+905552677739",
     "message": "🤖 n8n test mesajı"
