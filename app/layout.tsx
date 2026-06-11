@@ -92,7 +92,7 @@ export const metadata: Metadata = {
         alt: 'Okan Demir — Dijital Pazarlama Uzmanı',
       },
       {
-        url: 'https://okandemir.org/okan-demir-about.jpg',
+        url: 'https://okandemir.org/okan-about-photo.webp',
         width: 800,
         height: 600,
         alt: 'Okan - Dijital Pazarlama ve Web Tasarım Uzmanı',

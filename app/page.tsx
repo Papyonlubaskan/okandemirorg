@@ -109,7 +109,7 @@ export default function Home() {
             <div className="flex justify-center lg:justify-end">
               <div className="relative">
                   <Image
-                  src="/okan-demir-profile.jpg" 
+                  src="/Arka-Plansiz-Photoroom-576x1024.webp" 
                   alt="Okan Demir — Dijital Pazarlama Uzmanı, İzmir" 
                   width={576} 
                   height={1024}
@@ -681,7 +681,7 @@ export default function Home() {
             <div className="flex justify-center lg:justify-start order-2 lg:order-1">
               <div className="relative">
                 <Image
-                  src="/okan-demir-about.jpg"
+                  src="/okan-about-photo.webp"
                   alt="Okan Demir - Türkiye'nin En İyi Dijital Pazarlama Uzmanı Okan Demir İzmir"
                   width={768}
                   height={894}

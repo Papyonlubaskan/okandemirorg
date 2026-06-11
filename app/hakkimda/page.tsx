@@ -31,7 +31,7 @@ export default function Hakkimda() {
             <div className="flex justify-center lg:justify-start order-2 lg:order-1">
               <div className="relative">
                 <Image
-                  src="/okan-demir-about.jpg"
+                  src="/okan-about-photo.webp"
                   alt="Okan Demir — Dijital Pazarlama Uzmanı, İzmir Bornova"
                   width={768}
                   height={894}
