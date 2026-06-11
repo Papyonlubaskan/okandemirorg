@@ -22,11 +22,14 @@ export async function POST(request: NextRequest) {
     if (!accessToken || !phoneNumberId) {
       return NextResponse.json({
         success: false,
-        error: 'WhatsApp credentials bulunamadı'
-      }, { status: 500 })
+        error: 'WhatsApp credentials bulunamadı',
+        hint: 'Railway Variables: WHATSAPP_ACCESS_TOKEN ve WHATSAPP_PHONE_NUMBER_ID ekleyin',
+      }, { status: 503 })
     }
 
-    const response = await fetch(`https://graph.facebook.com/v18.0/${phoneNumberId}/messages`, {
+    const recipient = String(to).replace(/\D/g, '')
+
+    const response = await fetch(`https://graph.facebook.com/v21.0/${phoneNumberId}/messages`, {
       method: 'POST',
       headers: {
         'Authorization': `Bearer ${accessToken}`,
@@ -34,7 +37,7 @@ export async function POST(request: NextRequest) {
       },
       body: JSON.stringify({
         messaging_product: 'whatsapp',
-        to: to,
+        to: recipient,
         type: 'text',
         text: { body: message }
       })
