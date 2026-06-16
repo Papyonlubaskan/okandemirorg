@@ -15,7 +15,8 @@
     "test:coverage": "jest --coverage",
     "railway:build": "npm run build",
     "railway:start": "npm run start",
-    "videos:instagram": "python scripts/generate-instagram-videos.py"
+    "videos:instagram": "python scripts/generate-instagram-videos.py",
+    "videos:film": "python scripts/generate-instagram-film.py"
   },
   "dependencies": {
     "clsx": "^2.1.1",
