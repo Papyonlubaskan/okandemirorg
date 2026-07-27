@@ -210,17 +210,25 @@ export default function DigitalMarketingTrends2025Page() {
                 </div>
               </div>
 
-              {/* Related Posts */}
+              {/* İlgili içerikler — yalnızca gerçek, dolu sayfalar */}
               <div className="mt-12">
-                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-8">İlgili Yazılar</h3>
+                <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-8">İlgili İçerikler</h3>
                 <div className="grid md:grid-cols-2 gap-6">
-                  <Link href="/blog/seo-optimizasyonu-2025" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <h4 className="text-lg font-black text-gray-900 dark:text-white mb-2">2025 SEO Optimizasyonu Rehberi</h4>
-                    <p className="text-gray-600 dark:text-gray-400">Yeni SEO trendleri ve stratejileri</p>
+                  <Link href="/hizmetler/dijital-pazarlama" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <h4 className="text-lg font-black text-gray-900 dark:text-white mb-2">Dijital Pazarlama Hizmetleri</h4>
+                    <p className="text-gray-600 dark:text-gray-400">SEO, Google Ads, Meta Ads ve sosyal medya yönetimi</p>
                   </Link>
-                  <Link href="/blog/e-ticaret-platform-secimi" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                    <h4 className="text-lg font-black text-gray-900 dark:text-white mb-2">E-ticaret Platform Seçimi</h4>
-                    <p className="text-gray-600 dark:text-gray-400">Ticimax, İdeasoft, İkas karşılaştırması</p>
+                  <Link href="/hizmetler/e-ticaret-platformlari" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <h4 className="text-lg font-black text-gray-900 dark:text-white mb-2">E-ticaret Platformları</h4>
+                    <p className="text-gray-600 dark:text-gray-400">Ticimax, İdeasoft, İkas kurulum ve optimizasyon</p>
+                  </Link>
+                  <Link href="/case-studies/ticimax-e-ticaret-basarisi" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <h4 className="text-lg font-black text-gray-900 dark:text-white mb-2">Ticimax Başarı Hikayesi</h4>
+                    <p className="text-gray-600 dark:text-gray-400">E-ticaret proje örneği ve sonuçlar</p>
+                  </Link>
+                  <Link href="/sss" className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
+                    <h4 className="text-lg font-black text-gray-900 dark:text-white mb-2">Sık Sorulan Sorular</h4>
+                    <p className="text-gray-600 dark:text-gray-400">Dijital pazarlama ve web tasarım hakkında SSS</p>
                   </Link>
                 </div>
               </div>

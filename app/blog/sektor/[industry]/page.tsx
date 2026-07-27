@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { industries, serviceTypes, getBlogPostsByIndustry } from '@/lib/blog-data'
+import { industries, serviceTypes } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX } from '@/lib/seo-constants'
 
@@ -41,8 +41,6 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
   if (!industryName) {
     notFound()
   }
-
-  const industryPosts = getBlogPostsByIndustry(industryName, 12)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
@@ -166,35 +164,52 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
         </div>
       </section>
 
-      {/* Related Posts */}
-      {industryPosts.length > 0 && (
-        <section className="py-20 bg-white dark:bg-gray-800">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
-              {industryName} İçin İçerikler
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {industryPosts.map((post) => (
-                <Link
-                  key={post.id}
-                  href={`/blog/${post.slug}`}
-                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                >
-                  <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    {post.excerpt}
-                  </p>
-                  <span className="text-green-600 font-black">
-                    Devamını Oku →
-                  </span>
-                </Link>
-              ))}
-            </div>
+      {/* Gerçek site sayfalarına yönlendir — 404 / thin blog yok */}
+      <section className="py-20 bg-white dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
+            {industryName} İçin Hizmetler
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Link
+              href="/hizmetler/dijital-pazarlama"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+            >
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
+                Dijital Pazarlama
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Sektöre özel görünürlük ve dönüşüm stratejileri
+              </p>
+              <span className="text-green-600 font-black">İncele →</span>
+            </Link>
+            <Link
+              href="/hizmetler/e-ticaret-platformlari"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+            >
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
+                E-ticaret Platformları
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Ticimax, İdeasoft, İkas kurulum ve optimizasyon
+              </p>
+              <span className="text-green-600 font-black">İncele →</span>
+            </Link>
+            <Link
+              href="/blog/dijital-pazarlama-trendleri-2025"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 border border-gray-100 dark:border-gray-700"
+            >
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
+                2025 Trendleri
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Güncel dijital pazarlama rehberi
+              </p>
+              <span className="text-green-600 font-black">Oku →</span>
+            </Link>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">
@@ -211,26 +226,6 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
           >
             Ücretsiz Teklif Alın
           </Link>
-        </div>
-      </section>
-
-      {/* Other Industries */}
-      <section className="py-20 bg-white dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
-            Diğer Sektörler
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {industries.slice(0, 24).filter(i => i !== industryName).map((industry) => (
-              <Link
-                key={industry}
-                href={`/blog/sektor/${industry.toLowerCase().replace(/\s+/g, '-')}`}
-                className="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
-                <span className="font-black text-gray-900 dark:text-white text-sm">{industry}</span>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
     </div>

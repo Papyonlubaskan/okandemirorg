@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { cities, serviceTypes, getBlogPostsByCity } from '@/lib/blog-data'
+import { cities, serviceTypes } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX } from '@/lib/seo-constants'
 
@@ -41,8 +41,6 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
   if (!cityName) {
     notFound()
   }
-
-  const cityPosts = getBlogPostsByCity(cityName, 12)
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
@@ -161,35 +159,52 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
         </div>
       </section>
 
-      {/* Related Posts */}
-      {cityPosts.length > 0 && (
-        <section className="py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
-              {cityName} İçin İçerikler
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {cityPosts.map((post) => (
-                <Link
-                  key={post.id}
-                  href={`/blog/${post.slug}`}
-                  className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300 hover:scale-105"
-                >
-                  <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
-                    {post.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    {post.excerpt}
-                  </p>
-                  <span className="text-blue-600 dark:text-blue-400 font-black">
-                    Devamını Oku →
-                  </span>
-                </Link>
-              ))}
-            </div>
+      {/* Gerçek site sayfalarına yönlendir — 404 / thin blog yok */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
+            {cityName} İçin Hizmetler
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <Link
+              href="/hizmetler/dijital-pazarlama"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300"
+            >
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
+                Dijital Pazarlama
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                SEO, Google Ads ve Meta Ads ile görünürlük
+              </p>
+              <span className="text-blue-600 dark:text-blue-400 font-black">İncele →</span>
+            </Link>
+            <Link
+              href="/hizmetler/web-tasarim"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300"
+            >
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
+                Web Tasarım
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Dönüşüm odaklı kurumsal ve e-ticaret siteleri
+              </p>
+              <span className="text-blue-600 dark:text-blue-400 font-black">İncele →</span>
+            </Link>
+            <Link
+              href="/blog/dijital-pazarlama-trendleri-2025"
+              className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-300"
+            >
+              <h3 className="text-xl font-black text-gray-900 dark:text-white mb-3">
+                2025 Dijital Pazarlama Trendleri
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                Güncel stratejiler ve uygulama notları
+              </p>
+              <span className="text-blue-600 dark:text-blue-400 font-black">Oku →</span>
+            </Link>
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 text-white">
@@ -198,7 +213,7 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             {cityName} İşletmenizi Dijital Dünyada Büyütün
           </h2>
           <p className="text-xl text-blue-100 mb-8 font-black max-w-3xl mx-auto">
-            {cityName} bölgesinde dijital pazarlama hizmetleri için ücretsiz danışmanlık alın. 
+            {cityName} bölgesinde dijital pazarlama hizmetleri için ücretsiz danışmanlık alın.
             İşletmeniz için özel strateji oluşturalım.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -214,26 +229,6 @@ export default async function CityPage({ params }: { params: Promise<{ city: str
             >
               WhatsApp&apos;tan Yazın
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Other Cities */}
-      <section className="py-20 bg-white dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-black text-gray-900 dark:text-white mb-12 text-center">
-            Diğer Şehirler
-          </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {cities.slice(0, 24).filter(c => c !== cityName).map((city) => (
-              <Link
-                key={city}
-                href={`/blog/sehir/${city.toLowerCase().replace(/ı/g, 'i').replace(/ş/g, 's').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ö/g, 'o')}`}
-                className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-700 dark:to-gray-600 rounded-xl p-4 text-center hover:shadow-lg transition-all duration-300 hover:scale-105"
-              >
-                <span className="font-black text-gray-900 dark:text-white">{city}</span>
-              </Link>
-            ))}
           </div>
         </div>
       </section>
