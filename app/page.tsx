@@ -682,7 +682,7 @@ export default function Home() {
               <div className="relative">
                 <Image
                   src="/okan-about-photo.webp"
-                  alt="Okan Demir - Türkiye'nin En İyi Dijital Pazarlama Uzmanı Okan Demir İzmir"
+                  alt="Okan Demir - Dijital Pazarlama Uzmanı, İzmir"
                   width={768}
                   height={894}
                   className="rounded-2xl shadow-2xl w-full h-auto object-contain max-w-md hover:shadow-3xl transition-shadow duration-300"
@@ -727,10 +727,10 @@ export default function Home() {
             {/* Stat 3 */}
             <div className="text-center group hover:transform hover:scale-105 transition-all duration-500 ease-out">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
-                <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">98%</div>
-                <h4 className="text-2xl font-black mb-4">Müşteri Memnuniyeti</h4>
+                <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">50+</div>
+                <h4 className="text-2xl font-black mb-4">Tamamlanan Proje</h4>
                 <p className="text-lg text-blue-100">
-                  Kanıtlanmış sonuçlarla uzun vadeli ortaklıklar kuruyorum. Memnuniyet mükemmelliktir!
+                  Ölçülebilir sonuçlarla uzun vadeli ortaklıklar kuruyorum.
                 </p>
               </div>
             </div>

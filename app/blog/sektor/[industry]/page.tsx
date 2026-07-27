@@ -146,20 +146,20 @@ export default async function IndustryPage({ params }: { params: Promise<{ indus
               {industryName} Sektöründe Başarı
             </h2>
             <p className="text-xl text-green-100 mb-8 font-black">
-              50+ {industryName} sektörü işletmesine dijital pazarlama hizmeti verdim
+              {industryName} sektöründe dijital görünürlük ve dönüşüm odaklı çalışmalar
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white dark:bg-gray-800/20 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-4xl font-black mb-2">300%</div>
-                <p className="font-black">Ortalama Trafik Artışı</p>
+                <div className="text-4xl font-black mb-2">SEO</div>
+                <p className="font-black">Organik görünürlük</p>
               </div>
               <div className="bg-white dark:bg-gray-800/20 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-4xl font-black mb-2">5x</div>
-                <p className="font-black">ROI Artışı</p>
+                <div className="text-4xl font-black mb-2">Ads</div>
+                <p className="font-black">Ölçülebilir kampanyalar</p>
               </div>
               <div className="bg-white dark:bg-gray-800/20 backdrop-blur-sm rounded-2xl p-6">
-                <div className="text-4xl font-black mb-2">98%</div>
-                <p className="font-black">Müşteri Memnuniyeti</p>
+                <div className="text-4xl font-black mb-2">Web</div>
+                <p className="font-black">Dönüşüm odaklı tasarım</p>
               </div>
             </div>
           </div>

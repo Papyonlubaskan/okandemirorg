@@ -7,6 +7,26 @@ export const metadata: Metadata = {
   description:
     'Okan Demir dijital pazarlama, web tasarım, SEO, Google Ads, Meta Ads ve e-ticaret hizmetleri. İzmir merkezli, Türkiye geneli profesyonel dijital çözümler.',
   alternates: { canonical: 'https://okandemir.org/hizmetler' },
+  openGraph: {
+    title: 'Profesyonel Hizmetler | Okan Demir',
+    description:
+      'Dijital pazarlama, web tasarım, SEO, Google Ads, Meta Ads ve e-ticaret hizmetleri.',
+    url: 'https://okandemir.org/hizmetler',
+    type: 'website',
+    images: [
+      {
+        url: 'https://okandemir.org/okan-demir-profile.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Okan Demir Hizmetler',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Profesyonel Hizmetler | Okan Demir',
+    description: 'Dijital pazarlama, web tasarım, SEO ve e-ticaret hizmetleri.',
+  },
 }
 
 export default function Hizmetler() {

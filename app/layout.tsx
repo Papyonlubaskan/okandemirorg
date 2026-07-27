@@ -24,38 +24,32 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://okandemir.org"),
   title: {
     default: "Okan Demir | Dijital Pazarlama Uzmanı — İzmir",
     template: "%s | Okan Demir"
   },
   description: "Okan Demir — İzmir merkezli dijital pazarlama uzmanı. Web tasarım, SEO, Google Ads, Meta Ads ve e-ticaret (Ticimax, İkas). 5+ yıl deneyim, 50+ proje. Resmi site: okandemir.org",
   keywords: [
-    // Core Brand Keywords
-    "Okan", "Okan Demir", "Okan Demir", "Okan Demir İzmir", "Okan İzmir", "Okan Demir Bornova", "Okan Demir kimdir", "Okan Demir hakkında", "Okan Demir biyografi", "Okan Demir dijital pazarlama uzmanı",
-    // Primary Services with Name
+    "Okan", "Okan Demir", "Okan Demir İzmir", "Okan İzmir", "Okan Demir Bornova",
+    "Okan Demir kimdir", "Okan Demir hakkında", "Okan Demir biyografi",
+    "Okan Demir dijital pazarlama uzmanı",
     "Dijital Pazarlama Uzmanı Okan", "Web Tasarım Uzmanı Okan", "SEO Uzmanı Okan",
     "Okan Dijital Pazarlama", "Okan Web Tasarım", "Okan SEO",
-    // Service Combinations
     "Okan Google Ads", "Okan Meta Business", "Okan Facebook Ads", "Okan Instagram Ads",
     "Okan TikTok Ads", "Okan LinkedIn Ads", "Okan YouTube Ads",
-    // E-commerce Platforms
     "Okan Ticimax", "Okan İdeasoft", "Okan İkas", "Okan Shopify", "Okan WooCommerce",
     "Okan E-ticaret", "Okan E-ticaret Uzmanı",
-    // Location-based
     "Dijital Pazarlama İzmir Okan", "Web Tasarım İzmir Okan", "SEO İzmir Okan",
-    "Okan Dijital Pazarlama İzmir", "Okan Web Tasarım İzmir",
-    // Long-tail Professional
     "Dijital Pazarlama Uzmanı Okan Demir", "Web Tasarım Uzmanı Okan Demir",
     "SEO Uzmanı Okan Demir", "Freelance Dijital Pazarlama Okan",
     "Dijital Pazarlama Danışmanı Okan", "E-ticaret Uzmanı Okan Demir",
-    // Personal Brand Questions
     "Okan Kimdir", "Okan Demir Kimdir", "Okan Biyografi", "Okan Hakkında",
-    "Okan Demir Biyografi.net", "Okan Demir İzmir Bornova", "Okan Demir ne iş yapar", "Okan Demir iletişim", "Okan Demir telefon", "Okan Demir WhatsApp", "Okan Demir e-posta",
-    // Service Quality
-    "En İyi Dijital Pazarlama Uzmanı", "En İyi Web Tasarımcı", "En İyi SEO Uzmanı",
-    "Profesyonel Dijital Pazarlama", "Güvenilir Dijital Pazarlama Uzmanı"
+    "Okan Demir Biyografi.net", "Okan Demir İzmir Bornova", "Okan Demir ne iş yapar",
+    "Okan Demir iletişim", "Okan Demir telefon", "Okan Demir WhatsApp", "Okan Demir e-posta",
+    "Profesyonel Dijital Pazarlama", "Dijital Pazarlama Uzmanı İzmir"
   ],
-  authors: [{ name: "Okan Demir" }],
+  authors: [{ name: "Okan Demir", url: "https://okandemir.org/hakkimda" }],
   creator: "Okan Demir",
   publisher: "Okan Demir",
   icons: {

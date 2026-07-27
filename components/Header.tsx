@@ -16,7 +16,7 @@ export default function Header() {
               <Link href="/" className="flex items-center" title="Okan Demir - Dijital Pazarlama Uzmanı Ana Sayfa">
                 <Image
                   src="/okan-demir-logo.png"
-                  alt="Okan Demir - Türkiye'nin En İyi Dijital Pazarlama Uzmanı"
+                  alt="Okan Demir - Dijital Pazarlama Uzmanı"
                   width={750}
                   height={750}
                   className="h-24 md:h-28 lg:h-32 xl:h-36 2xl:h-40 w-auto"
@@ -39,8 +39,14 @@ export default function Header() {
             <Link href="/blog" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir Blog">
               Blog
             </Link>
+            <Link href="/referanslar" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir Referanslar">
+              Referanslar
+            </Link>
             <Link href="/hakkimda" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir Kimdir">
               Okan Demir Kimdir?
+            </Link>
+            <Link href="/sss" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Sıkça Sorulan Sorular">
+              SSS
             </Link>
             <Link href="/iletisim" prefetch={true} className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-xl xl:text-2xl transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800" title="Okan Demir İletişim">
               İletişim
@@ -105,11 +111,25 @@ export default function Header() {
                     Blog
                   </Link>
                   <Link
+                    href="/referanslar"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Referanslar
+                  </Link>
+                  <Link
                     href="/hakkimda"
                     className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Okan Demir Kimdir?
+                  </Link>
+                  <Link
+                    href="/sss"
+                    className="text-gray-800 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 font-black text-lg transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    SSS
                   </Link>
                   <Link
                     href="/iletisim"

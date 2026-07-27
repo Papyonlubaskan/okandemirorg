@@ -19,6 +19,7 @@ export const OKAN_DEMIR = {
     'https://www.instagram.com/okandemirorg',
     'https://www.linkedin.com/in/okan-demir-55a022224/',
     'https://www.youtube.com/@PapyonluBaskan',
+    'https://www.tiktok.com/@papyonlubaskan',
     'https://x.com/okandemirorg',
     'https://www.facebook.com/okandemirorg',
     'https://wa.me/+905552677739',

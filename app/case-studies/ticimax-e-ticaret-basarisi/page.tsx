@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from 'next/script';
+import { PERSON_ID, OKAN_DEMIR, SITE_URL } from '@/lib/brand-seo';
 
 export const metadata: Metadata = {
   title: "Ticimax E-ticaret Başarı Hikayesi | Okan Demir Case Study",
-  description: "Ticimax platformunda kurduğumuz e-ticaret sitesinin %300 satış artışı hikayesi. Kurulum, tasarım, SEO ve pazarlama stratejilerinin detaylı analizi.",
+  description: "Ticimax platformunda kurduğumuz e-ticaret sitesinin satış artışı hikayesi. Kurulum, tasarım, SEO ve pazarlama stratejilerinin detaylı analizi.",
   keywords: ["Ticimax Case Study", "E-ticaret Başarı Hikayesi", "Ticimax SEO", "E-ticaret Optimizasyonu", "Okan Demir Projeler"],
   openGraph: {
     title: "Ticimax E-ticaret Başarı Hikayesi | Okan Demir",
-    description: "Ticimax platformunda %300 satış artışı elde eden e-ticaret projesi detayları.",
+    description: "Ticimax platformunda ölçülebilir satış artışı elde eden e-ticaret projesi detayları.",
     url: "https://okandemir.org/case-studies/ticimax-e-ticaret-basarisi",
     type: "article",
   },
@@ -19,18 +20,19 @@ export default function TicimaxCaseStudyPage() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "CaseStudy",
-    "headline": "Ticimax E-ticaret Başarı Hikayesi: %300 Satış Artışı",
+    "headline": "Ticimax E-ticaret Başarı Hikayesi",
     "description": "Ticimax platformunda kurduğumuz e-ticaret sitesinin başarı hikayesi",
-    "image": "https://okandemir.org/case-studies/ticimax-success.jpg",
+    "image": `${SITE_URL}/okan-demir-profile.jpg`,
     "author": {
       "@type": "Person",
-      "name": "Okan Demir",
-      "url": "https://okandemir.org/hakkimda"
+      "@id": PERSON_ID,
+      "name": OKAN_DEMIR.name,
+      "url": `${SITE_URL}/hakkimda`
     },
     "datePublished": "2025-01-15",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://okandemir.org/case-studies/ticimax-e-ticaret-basarisi"
+      "@id": `${SITE_URL}/case-studies/ticimax-e-ticaret-basarisi`
     },
     "about": {
       "@type": "Product",

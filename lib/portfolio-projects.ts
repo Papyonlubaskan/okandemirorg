@@ -1,3 +1,5 @@
+import { PERSON_ID, OKAN_DEMIR, SITE_URL } from '@/lib/brand-seo'
+
 /** Hacettepe İşitme canlı site (www ve apex aynı siteye yönlenir) */
 export const HACETTEPE_ISITME_URL = 'https://hacettepeisitme.com.tr/'
 export const HACETTEPE_ISITME_DOMAIN = 'hacettepeisitme.com.tr'
@@ -45,8 +47,6 @@ export const incompleteProjects = [
   },
 ]
 
-const BASE_URL = 'https://okandemir.org'
-
 export function getPortfolioItemListSchema() {
   return {
     '@context': 'https://schema.org',
@@ -56,7 +56,7 @@ export function getPortfolioItemListSchema() {
     description:
       'Tolga Demir portfolyo sitesi ve Hacettepe İşitme Samsun kurumsal web sitesi. Completed projects: Tolga Demir portfolio and Hacettepe Hearing Center Samsun corporate website.',
     inLanguage: ['tr-TR', 'en'],
-    url: `${BASE_URL}/projeler#tamamlanan-isler`,
+    url: `${SITE_URL}/projeler#tamamlanan-isler`,
     numberOfItems: completedProjects.length,
     itemListElement: completedProjects.map((project, index) => ({
       '@type': 'ListItem',
@@ -68,14 +68,15 @@ export function getPortfolioItemListSchema() {
         url: project.url,
         creator: {
           '@type': 'Person',
-          name: 'Okan Demir',
-          url: `${BASE_URL}/hakkimda`,
+          '@id': PERSON_ID,
+          name: OKAN_DEMIR.name,
+          url: `${SITE_URL}/hakkimda`,
         },
         ...(project.caseStudySlug
           ? {
               mainEntityOfPage: {
                 '@type': 'WebPage',
-                '@id': `${BASE_URL}/case-studies/${project.caseStudySlug}`,
+                '@id': `${SITE_URL}/case-studies/${project.caseStudySlug}`,
               },
             }
           : {}),

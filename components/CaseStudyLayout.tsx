@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Script from 'next/script'
 import type { ReactNode } from 'react'
+import { PERSON_ID, OKAN_DEMIR, SITE_URL } from '@/lib/brand-seo'
 
 type CaseStudyLayoutProps = {
   slug: string
@@ -25,18 +26,19 @@ export default function CaseStudyLayout({
   aboutName,
   children,
 }: CaseStudyLayoutProps) {
-  const pageUrl = `https://okandemir.org/case-studies/${slug}`
+  const pageUrl = `${SITE_URL}/case-studies/${slug}`
 
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'CaseStudy',
     headline,
     description: subtitle,
-    image: 'https://okandemir.org/okan-demir-profile.webp',
+    image: `${SITE_URL}/okan-demir-profile.webp`,
     author: {
       '@type': 'Person',
-      name: 'Okan Demir',
-      url: 'https://okandemir.org/hakkimda',
+      '@id': PERSON_ID,
+      name: OKAN_DEMIR.name,
+      url: `${SITE_URL}/hakkimda`,
     },
     datePublished,
     mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },

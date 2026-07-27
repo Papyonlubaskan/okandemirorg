@@ -235,7 +235,7 @@ export default function Footer() {
             <Link href="/" title="Okan Demir - Dijital Pazarlama Uzmanı">
               <Image
                 src="/okan-demir-logo.png"
-                alt="Okan Demir - Türkiye'nin En İyi Dijital Pazarlama Uzmanı"
+                alt="Okan Demir - Dijital Pazarlama Uzmanı"
                 width={1000}
                 height={1000}
                 className="h-32 w-auto"

@@ -1,35 +1,36 @@
 import { MetadataRoute } from 'next'
 
-const PROGRAMMATIC_DISALLOW = [
+/**
+ * Programatik thin content crawl'ını kes.
+ * /blog (trailing slash yok) ve tek indexable yazı Allow ile açık kalır.
+ */
+const DISALLOW = [
+  '/api/',
+  '/_next/',
+  '/admin/',
   '/seo/',
+  '/blog/',
   '/blog/sehir/',
   '/blog/sektor/',
   '/blog/kategori/',
+  '/data-deletion-status',
+  '/user-data-deletion',
 ]
 
+const ALLOW = ['/', '/blog/dijital-pazarlama-trendleri-2025']
+
 export default function robots(): MetadataRoute.Robots {
+  const rule = {
+    allow: ALLOW,
+    disallow: DISALLOW,
+  }
+
   return {
     rules: [
-      {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/api/', '/_next/', '/admin/', ...PROGRAMMATIC_DISALLOW],
-      },
-      {
-        userAgent: 'Googlebot',
-        allow: '/',
-        disallow: ['/api/', '/_next/', '/admin/', ...PROGRAMMATIC_DISALLOW],
-      },
-      {
-        userAgent: 'Bingbot',
-        allow: '/',
-        disallow: ['/api/', '/_next/', '/admin/', ...PROGRAMMATIC_DISALLOW],
-      },
-      {
-        userAgent: 'Yandex',
-        allow: '/',
-        disallow: ['/api/', '/_next/', '/admin/', ...PROGRAMMATIC_DISALLOW],
-      },
+      { userAgent: '*', ...rule },
+      { userAgent: 'Googlebot', ...rule },
+      { userAgent: 'Bingbot', ...rule },
+      { userAgent: 'Yandex', ...rule },
     ],
     sitemap: 'https://okandemir.org/sitemap.xml',
     host: 'https://okandemir.org',

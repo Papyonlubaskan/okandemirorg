@@ -13,6 +13,21 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Okan Demir Kimdir? - Okan İzmir | Dijital Pazarlama Uzmanı",
     description: "Okan Demir kimdir? İzmir merkezli dijital pazarlama uzmanı, web tasarımcı ve e-ticaret platform uzmanı. 5+ yıl deneyim, 50+ proje.",
+    url: "https://okandemir.org/hakkimda",
+    type: "profile",
+    images: [
+      {
+        url: "https://okandemir.org/okan-about-photo.webp",
+        width: 800,
+        height: 600,
+        alt: "Okan Demir",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Okan Demir Kimdir? | Dijital Pazarlama Uzmanı",
+    description: "İzmir merkezli dijital pazarlama uzmanı. 5+ yıl deneyim, 50+ proje.",
   },
 }
 

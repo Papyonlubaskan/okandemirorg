@@ -106,7 +106,7 @@ export default function DijitalDonusum() {
                 </li>
                 <li className="flex items-center">
                   <span className="w-2 h-2 bg-pink-500 rounded-full mr-3"></span>
-                  En İyi Reklam Görselleri
+                  Etkili Reklam Görselleri
                 </li>
               </ul>
             </div>

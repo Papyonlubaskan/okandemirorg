@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Script from 'next/script';
+import { PERSON_ID, OKAN_DEMIR, SITE_URL } from '@/lib/brand-seo';
 
 export const metadata: Metadata = {
   title: "2025 Dijital Pazarlama Trendleri | Okan Demir Blog",
@@ -21,25 +22,26 @@ export default function DigitalMarketingTrends2025Page() {
     "@type": "BlogPosting",
     "headline": "2025 Dijital Pazarlama Trendleri",
     "description": "2025 yılında dijital pazarlama dünyasında öne çıkacak trendler ve stratejiler",
-    "image": "https://okandemir.org/blog/dijital-pazarlama-trendleri-2025.jpg",
+    "image": `${SITE_URL}/okan-demir-profile.jpg`,
     "author": {
       "@type": "Person",
-      "name": "Okan Demir",
-      "url": "https://okandemir.org/hakkimda"
+      "@id": PERSON_ID,
+      "name": OKAN_DEMIR.name,
+      "url": `${SITE_URL}/hakkimda`
     },
     "publisher": {
       "@type": "Organization",
-      "name": "Okan Demir",
+      "name": OKAN_DEMIR.name,
       "logo": {
         "@type": "ImageObject",
-        "url": "https://okandemir.org/okan-demir-logo.png"
+        "url": OKAN_DEMIR.logo
       }
     },
     "datePublished": "2025-01-15",
     "dateModified": "2025-01-15",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://okandemir.org/blog/dijital-pazarlama-trendleri-2025"
+      "@id": `${SITE_URL}/blog/dijital-pazarlama-trendleri-2025`
     }
   };
 

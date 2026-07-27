@@ -94,13 +94,7 @@ export default function ReferanslarPage() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Okan Demir - Dijital Pazarlama Uzmanı",
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "reviewCount": testimonials.length,
-      "bestRating": "5",
-      "worstRating": "1"
-    },
+    "url": "https://okandemir.org",
     "review": testimonials.map(testimonial => ({
       "@type": "Review",
       "author": {

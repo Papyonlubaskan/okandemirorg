@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
 
-/** Programatik (şablon) sayfalar — canlı kalır, Google dizine almaz */
+/** Programatik thin content — index ve follow kapalı (crawl hygiene) */
 export const PROGRAMMATIC_NOINDEX: NonNullable<Metadata['robots']> = {
   index: false,
-  follow: true,
+  follow: false,
 }
 
 export const SITE_BASE = 'https://okandemir.org'
