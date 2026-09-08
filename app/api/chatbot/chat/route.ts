@@ -346,16 +346,16 @@ Cumartesi: 10:00 - 16:00
 - Blog platformları
 
 **Başarılı SEO Projeleri:**
-- Google'da 1. sayfa başarıları
-- %300+ trafik artışları
+- Google görünürlük iyileştirmeleri
+- Ölçülebilir organik trafik büyümesi
 - Yerel SEO optimizasyonları
 
 **Sosyal Medya Başarıları:**
-- 10K+ takipçi artışları
-- Viral içerik kampanyaları
-- Marka bilinirliği artışları
+- Takipçi ve etkileşim artışı
+- İçerik kampanyaları
+- Marka bilinirliği çalışmaları
 
-**%100 Müşteri Memnuniyeti!**
+**Ölçülebilir sonuç odaklı çalışıyorum.**
 
 Kişiye ya da kuruma özel her türlü web projesini admin panelli ve dinamik olarak kodlayarak hizmete sunuyorum. Web sitenizi teslim ettiğimde bütün içerikleri ve detayları tek bir panelden hızlı bir şekilde kendiniz düzenleyip sitenizde yayınlayabileceksiniz.
 

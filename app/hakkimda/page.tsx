@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import YouTubeFeed from '@/components/YouTubeFeed'
 import OkanDemirProfileSchema from '@/components/OkanDemirProfileSchema'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { calculateAge, OKAN_BIRTH_DATE_DISPLAY } from '@/lib/profile'
 import type { Metadata } from 'next'
 
@@ -37,6 +38,7 @@ export default function Hakkimda() {
   return (
     <>
     <OkanDemirProfileSchema />
+    <BreadcrumbJsonLd id="hakkimda-breadcrumb" items={[{ name: 'Hakkımda', path: '/hakkimda' }]} />
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-700 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">

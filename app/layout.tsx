@@ -6,7 +6,6 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
-import Loading from "@/components/Loading";
 import StructuredData from "./structured-data";
 import DeferredWidgets from "@/components/DeferredWidgets";
 import AccessibilityHelper from "@/components/AccessibilityHelper";
@@ -144,7 +143,6 @@ export default function RootLayout({
           <AccessibilityHelper />
           <StructuredData />
           <DeferredWidgets />
-          <Loading />
           <Header />
           <main id="main-content" className="flex-1" tabIndex={-1}>
             {children}

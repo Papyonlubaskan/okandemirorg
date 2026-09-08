@@ -4,10 +4,10 @@ import { industries, serviceTypes } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX } from '@/lib/seo-constants'
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
-  return industries.map((industry) => ({
-    industry: industry.toLowerCase().replace(/\s+/g, '-'),
-  }))
+  return []
 }
 
 function findIndustryBySlug(slug: string): string | undefined {

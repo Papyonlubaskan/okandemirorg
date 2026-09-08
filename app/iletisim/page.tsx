@@ -3,6 +3,7 @@
 import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { validateContactForm, checkRateLimit, isLikelySpam, formatPhoneNumber } from '@/lib/formValidation'
 
 export default function Iletisim() {
@@ -93,6 +94,8 @@ export default function Iletisim() {
   }
 
   return (
+    <>
+    <BreadcrumbJsonLd id="iletisim-breadcrumb" items={[{ name: 'İletişim', path: '/iletisim' }]} />
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-700 text-white">
@@ -446,5 +449,6 @@ export default function Iletisim() {
         </div>
       </section>
     </div>
+    </>
   )
 }

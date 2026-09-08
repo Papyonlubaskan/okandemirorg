@@ -34,9 +34,9 @@ export default function ReferanslarPage() {
       position: "CEO",
       image: "/testimonials/ayse-yilmaz.jpg",
       rating: 5,
-      text: "Okan Demir ile çalışmak işimizi tamamen dönüştürdü. Ticimax platformunda kurduğu e-ticaret sitemiz sayesinde satışlarımız %300 arttı. Profesyonel yaklaşımı ve teknik uzmanlığı gerçekten etkileyici.",
+      text: "Okan Demir ile çalışmak işimizi tamamen dönüştürdü. Ticimax platformunda kurduğu e-ticaret sitemiz sayesinde satışlarımız belirgin şekilde arttı. Profesyonel yaklaşımı ve teknik uzmanlığı gerçekten etkileyici.",
       project: "E-ticaret Platform Kurulumu",
-      results: "Satışlarda %300 artış, organik trafikte %250 büyüme"
+      results: "Ölçülebilir satış artışı ve organik trafik büyümesi"
     },
     {
       name: "Mehmet Kaya",
@@ -74,9 +74,9 @@ export default function ReferanslarPage() {
       position: "Kurucu",
       image: "/testimonials/zeynep-aktas.jpg",
       rating: 5,
-      text: "Online kurs platformumuzu kurmak için Okan'ın uzmanlığına başvurduk. İdeasoft platformunda harika bir eğitim sitesi oluşturduk. Öğrenci kayıtlarımız %400 arttı.",
+      text: "Online kurs platformumuzu kurmak için Okan'ın uzmanlığına başvurduk. İdeasoft platformunda sağlam bir eğitim sitesi oluşturduk. Öğrenci kayıtlarımızda ölçülebilir artış gördük.",
       project: "Eğitim Platformu Kurulumu",
-      results: "Öğrenci kayıtlarında %400 artış, platform kullanımında %250 büyüme"
+      results: "Öğrenci kayıtlarında artış, platform kullanımında büyüme"
     },
     {
       name: "Can Yıldız",
@@ -86,7 +86,7 @@ export default function ReferanslarPage() {
       rating: 5,
       text: "İnşaat projelerimizi tanıtmak için profesyonel bir web sitesi ve dijital pazarlama stratejisi istiyorduk. Okan, hem teknik hem de pazarlama konularında mükemmel çözümler sundu.",
       project: "Kurumsal Web Sitesi",
-      results: "Web trafiğinde %300 artış, potansiyel müşteri sayısında %250 büyüme"
+      results: "Web trafiğinde belirgin artış, potansiyel müşteri sayısında büyüme"
     }
   ];
 
@@ -210,23 +210,23 @@ export default function ReferanslarPage() {
 
               {/* Success Statistics */}
               <div className="bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8 lg:p-12 text-white mb-16">
-                <h2 className="text-3xl font-black mb-8 text-center">Müşteri Memnuniyeti İstatistikleri</h2>
+                <h2 className="text-3xl font-black mb-8 text-center">Çalışma Özeti</h2>
                 <div className="grid md:grid-cols-4 gap-6">
                   <div className="text-center">
-                    <div className="text-4xl font-black mb-2">%98</div>
-                    <div className="text-blue-100 dark:text-gray-300">Müşteri Memnuniyeti</div>
+                    <div className="text-4xl font-black mb-2">5+</div>
+                    <div className="text-blue-100 dark:text-gray-300">Yıl deneyim</div>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-black mb-2">50+</div>
-                    <div className="text-purple-100 dark:text-gray-300">Tamamlanan Proje</div>
+                    <div className="text-purple-100 dark:text-gray-300">Tamamlanan proje</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-black mb-2">%85</div>
-                    <div className="text-green-100 dark:text-gray-300">Tekrar Çalışma Oranı</div>
+                    <div className="text-4xl font-black mb-2">Tekrar</div>
+                    <div className="text-green-100 dark:text-gray-300">İş birlikleri</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-black mb-2">24/7</div>
-                    <div className="text-orange-100 dark:text-gray-300">Destek Hizmeti</div>
+                    <div className="text-4xl font-black mb-2">Hızlı</div>
+                    <div className="text-orange-100 dark:text-gray-300">İletişim desteği</div>
                   </div>
                 </div>
               </div>

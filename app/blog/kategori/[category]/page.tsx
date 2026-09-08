@@ -4,10 +4,10 @@ import { blogCategories } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX } from '@/lib/seo-constants'
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
-  return blogCategories.map((category) => ({
-    category: category.slug,
-  }))
+  return []
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ category: string }> }): Promise<Metadata> {

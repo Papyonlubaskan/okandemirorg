@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 
 export const metadata: Metadata = {
   title: 'Blog - Dijital Pazarlama ve SEO İçerikleri',
@@ -47,6 +48,8 @@ const INDEXABLE_POSTS = [
 
 export default function BlogPage() {
   return (
+    <>
+    <BreadcrumbJsonLd id="blog-breadcrumb" items={[{ name: 'Blog', path: '/blog' }]} />
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
         <div className="container mx-auto px-4">
@@ -121,5 +124,6 @@ export default function BlogPage() {
         </div>
       </section>
     </div>
+    </>
   )
 }

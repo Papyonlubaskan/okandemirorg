@@ -2,6 +2,7 @@
 
 export const SITE_URL = 'https://okandemir.org'
 export const PERSON_ID = `${SITE_URL}/#okan-demir`
+export const ORGANIZATION_ID = `${SITE_URL}/#organization`
 
 export const OKAN_DEMIR = {
   name: 'Okan Demir',

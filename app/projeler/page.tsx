@@ -3,6 +3,7 @@ import Link from 'next/link'
 import type { Metadata } from 'next'
 import PortfolioFilter from '@/components/PortfolioFilter'
 import ProjectDeliveryStatus from '@/components/ProjectDeliveryStatus'
+import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import { bilingualDescription, bilingualKeywords } from '@/lib/seo-bilingual'
 
 export const metadata: Metadata = {
@@ -51,6 +52,8 @@ export const metadata: Metadata = {
 
 export default function Projeler() {
   return (
+    <>
+    <BreadcrumbJsonLd id="projeler-breadcrumb" items={[{ name: 'Projeler', path: '/projeler' }]} />
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-700 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
@@ -107,19 +110,19 @@ export default function Projeler() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">50+</div>
-              <div className="text-xl text-blue-100">Tamamlanan Proje</div>
+              <div className="text-xl text-blue-100">Proje Deneyimi</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">%300</div>
-              <div className="text-xl text-blue-100">Ortalama Satış Artışı</div>
+              <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">5+</div>
+              <div className="text-xl text-blue-100">Yıl Tecrübe</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">100%</div>
-              <div className="text-xl text-blue-100">Müşteri Memnuniyeti</div>
+              <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">3</div>
+              <div className="text-xl text-blue-100">Canlı Referans</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">24/7</div>
-              <div className="text-xl text-blue-100">Destek Hizmeti</div>
+              <div className="text-5xl lg:text-6xl font-black text-yellow-400 mb-4">7/24</div>
+              <div className="text-xl text-blue-100">İletişim Desteği</div>
             </div>
           </div>
         </div>
@@ -155,6 +158,7 @@ export default function Projeler() {
         </div>
       </section>
     </div>
+    </>
   )
 }
 

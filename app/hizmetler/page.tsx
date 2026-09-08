@@ -1,6 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import Script from 'next/script'
 import type { Metadata } from 'next'
+import { buildBreadcrumbList } from '@/lib/breadcrumb-schema'
 
 export const metadata: Metadata = {
   title: 'Profesyonel Hizmetler | Okan Demir',
@@ -30,7 +32,15 @@ export const metadata: Metadata = {
 }
 
 export default function Hizmetler() {
+  const breadcrumb = buildBreadcrumbList([{ name: 'Hizmetler', path: '/hizmetler' }])
+
   return (
+    <>
+    <Script
+      id="hizmetler-breadcrumb"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+    />
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800 dark:from-gray-800 dark:via-gray-700 dark:to-gray-800 text-white">
@@ -448,5 +458,6 @@ export default function Hizmetler() {
         </div>
       </section>
     </div>
+    </>
   )
 }

@@ -72,12 +72,12 @@ export default function TicimaxCaseStudyPage() {
                   Ticimax E-ticaret Başarı Hikayesi
                 </h1>
                 <p className="text-xl lg:text-2xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8">
-                  %300 Satış Artışı ile Dönüştürülen E-ticaret Platformu
+                  Ticimax üzerinde kurulum, tasarım, SEO ve reklamla büyüyen e-ticaret platformu
                 </p>
                 <div className="flex flex-wrap justify-center gap-4 text-gray-600 dark:text-gray-400">
                   <span>• Ticimax Platformu</span>
                   <span>• 6 Ay Süre</span>
-                  <span>• %300 Büyüme</span>
+                  <span>• Ölçülebilir büyüme</span>
                   <span>• E-ticaret Uzmanlığı</span>
                 </div>
               </header>
@@ -85,16 +85,16 @@ export default function TicimaxCaseStudyPage() {
               {/* Success Metrics */}
               <div className="grid md:grid-cols-4 gap-6 mb-16">
                 <div className="bg-gradient-to-br from-green-500 to-green-600 text-white rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-black mb-2">%300</div>
-                  <div className="text-green-100">Satış Artışı</div>
+                  <div className="text-3xl font-black mb-2">↑</div>
+                  <div className="text-green-100">Satış artışı</div>
                 </div>
                 <div className="bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-black mb-2">6 Ay</div>
                   <div className="text-blue-100">Proje Süresi</div>
                 </div>
                 <div className="bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-2xl p-6 text-center">
-                  <div className="text-3xl font-black mb-2">%85</div>
-                  <div className="text-purple-100">Dönüşüm Oranı</div>
+                  <div className="text-3xl font-black mb-2">↑</div>
+                  <div className="text-purple-100">Dönüşüm iyileşmesi</div>
                 </div>
                 <div className="bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-2xl p-6 text-center">
                   <div className="text-3xl font-black mb-2">24/7</div>
@@ -203,20 +203,20 @@ export default function TicimaxCaseStudyPage() {
                 <h2 className="text-3xl font-black mb-8 text-center">Elde Edilen Sonuçlar</h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
                   <div className="text-center">
-                    <div className="text-4xl font-black mb-2">%300</div>
-                    <div className="text-green-100 dark:text-gray-300">Satış Artışı</div>
+                    <div className="text-4xl font-black mb-2">↑</div>
+                    <div className="text-green-100 dark:text-gray-300">Satış artışı</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-black mb-2">%250</div>
-                    <div className="text-blue-100 dark:text-gray-300">Organik Trafik Artışı</div>
+                    <div className="text-4xl font-black mb-2">↑</div>
+                    <div className="text-blue-100 dark:text-gray-300">Organik trafik</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-black mb-2">%85</div>
-                    <div className="text-purple-100 dark:text-gray-300">Dönüşüm Oranı</div>
+                    <div className="text-4xl font-black mb-2">↑</div>
+                    <div className="text-purple-100 dark:text-gray-300">Dönüşüm iyileşmesi</div>
                   </div>
                   <div className="text-center">
                     <div className="text-4xl font-black mb-2">2.5s</div>
-                    <div className="text-orange-100 dark:text-gray-300">Sayfa Yükleme Süresi</div>
+                    <div className="text-orange-100 dark:text-gray-300">Sayfa yükleme</div>
                   </div>
                 </div>
               </div>
@@ -230,8 +230,8 @@ export default function TicimaxCaseStudyPage() {
                     </svg>
                   </div>
                   <blockquote className="text-xl lg:text-2xl text-gray-700 dark:text-gray-300 mb-6 font-medium italic">
-                    &ldquo;Okan Demir ile çalışmak işimizi tamamen dönüştürdü. Ticimax platformunda kurduğu e-ticaret sitemiz 
-                    sayesinde satışlarımız %300 arttı. Profesyonel yaklaşımı ve teknik uzmanlığı gerçekten etkileyici.&rdquo;
+                    &ldquo;Okan Demir ile çalışmak işimizi ileri taşıdı. Ticimax platformunda kurduğu e-ticaret sitemiz
+                    sayesinde satışlarımızda ölçülebilir bir artış gördük. Profesyonel yaklaşımı ve teknik uzmanlığı etkileyici.&rdquo;
                   </blockquote>
                   <div className="text-gray-600 dark:text-gray-400">
                     <div className="font-black text-lg">Ayşe Yılmaz</div>

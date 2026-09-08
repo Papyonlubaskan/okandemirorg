@@ -17,7 +17,7 @@ const DISALLOW = [
   '/user-data-deletion',
 ]
 
-const ALLOW = ['/', '/blog/dijital-pazarlama-trendleri-2025']
+const ALLOW = ['/', '/blog', '/blog/dijital-pazarlama-trendleri-2025']
 
 export default function robots(): MetadataRoute.Robots {
   const rule = {

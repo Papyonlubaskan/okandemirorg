@@ -1,16 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { generateBlogPosts, getBlogPostBySlug } from '@/lib/blog-data'
+import { getBlogPostBySlug } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX } from '@/lib/seo-constants'
 
-export const revalidate = 86400
+/** Programatik thin content: SSG yok, on-demand de kapalı → 404 (crawl hygiene) */
+export const dynamicParams = false
 
 export async function generateStaticParams() {
-  const posts = generateBlogPosts()
-  return posts.slice(0, 100).map((post) => ({
-    slug: post.slug,
-  }))
+  return []
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

@@ -4,10 +4,10 @@ import { cities, serviceTypes } from '@/lib/blog-data'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX } from '@/lib/seo-constants'
 
+export const dynamicParams = false
+
 export async function generateStaticParams() {
-  return cities.map((city) => ({
-    city: city.toLowerCase().replace(/ı/g, 'i').replace(/ş/g, 's').replace(/ç/g, 'c').replace(/ğ/g, 'g').replace(/ü/g, 'u').replace(/ö/g, 'o'),
-  }))
+  return []
 }
 
 function findCityBySlug(slug: string): string | undefined {

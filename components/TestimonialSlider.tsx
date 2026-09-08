@@ -9,7 +9,7 @@ const testimonials = [
     name: 'Selin Görkem',
     title: 'Girişimci',
     image: '/selin-gorkem.jpg',
-    text: 'Okan Demir ile çalışmak inanılmaz bir deneyimdi. Dijital pazarlama stratejileri sayesinde satışlarımız %300 arttı. Profesyonelliği ve yaratıcılığı takdire şayan.',
+    text: 'Okan Demir ile çalışmak inanılmaz bir deneyimdi. Dijital pazarlama stratejileri sayesinde satışlarımızda ölçülebilir artış gördük. Profesyonelliği ve yaratıcılığı takdire şayan.',
     rating: 5,
     company: 'Selingoal',
   },
@@ -45,7 +45,7 @@ const testimonials = [
     name: 'Mehmet Demir',
     title: 'Yazılım Firması CEO',
     image: '/testimonial-2-3.jpg',
-    text: 'Google Ads kampanyalarımız sayesinde yatırım getirimiz %400 arttı. Bütçe optimizasyonu ve hedef kitle analizindeki uzmanlığı etkileyici.',
+    text: 'Google Ads kampanyalarımız sayesinde yatırım getirimiz belirgin şekilde arttı. Bütçe optimizasyonu ve hedef kitle analizindeki uzmanlığı etkileyici.',
     rating: 5,
     company: 'TechSolutions',
   },
@@ -217,16 +217,16 @@ export default function TestimonialSlider() {
             <div className="text-gray-600 dark:text-gray-300 font-medium">Mutlu Müşteri</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-black text-blue-600 mb-2">5.0</div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">Ortalama Puan</div>
+            <div className="text-4xl font-black text-blue-600 mb-2">5+</div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium">Yıl Deneyim</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-black text-blue-600 mb-2">%98</div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">Memnuniyet</div>
+            <div className="text-4xl font-black text-blue-600 mb-2">50+</div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium">Proje Deneyimi</div>
           </div>
           <div className="text-center">
-            <div className="text-4xl font-black text-blue-600 mb-2">100%</div>
-            <div className="text-gray-600 dark:text-gray-300 font-medium">Tavsiye Oranı</div>
+            <div className="text-4xl font-black text-blue-600 mb-2">3</div>
+            <div className="text-gray-600 dark:text-gray-300 font-medium">Canlı Referans</div>
           </div>
         </div>
       </div>

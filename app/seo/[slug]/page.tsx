@@ -1,16 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
-import { generateSEOPages, getSEOPageBySlug } from '@/lib/seo-data-generator'
+import { getSEOPageBySlug } from '@/lib/seo-data-generator'
 import { notFound } from 'next/navigation'
 import { PROGRAMMATIC_NOINDEX } from '@/lib/seo-constants'
 
-export const revalidate = 86400
+/** Programatik thin content: SSG yok, on-demand kapalı → 404 */
+export const dynamicParams = false
 
 export async function generateStaticParams() {
-  const pages = generateSEOPages()
-  return pages.slice(0, 100).map((page) => ({
-    slug: page.slug,
-  }))
+  return []
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {

@@ -1,6 +1,6 @@
-import Script from 'next/script';
-import { OKAN_BIRTH_DATE } from '@/lib/profile';
-import { OKAN_DEMIR, PERSON_ID, SITE_URL } from '@/lib/brand-seo';
+import Script from 'next/script'
+import { OKAN_BIRTH_DATE } from '@/lib/profile'
+import { OKAN_DEMIR, PERSON_ID, ORGANIZATION_ID, SITE_URL } from '@/lib/brand-seo'
 
 export default function StructuredData() {
   const personData = {
@@ -19,6 +19,7 @@ export default function StructuredData() {
     birthPlace: { '@type': 'Place', name: OKAN_DEMIR.birthPlace },
     nationality: { '@type': 'Country', name: 'Türkiye' },
     sameAs: OKAN_DEMIR.sameAs,
+    worksFor: { '@id': ORGANIZATION_ID },
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'TR',
@@ -34,11 +35,12 @@ export default function StructuredData() {
       'Ticimax',
       'İkas',
     ],
-  };
+  }
 
   const organizationData = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': ORGANIZATION_ID,
     name: 'Okan Demir — Dijital Pazarlama',
     alternateName: OKAN_DEMIR.name,
     url: SITE_URL,
@@ -52,18 +54,20 @@ export default function StructuredData() {
       availableLanguage: 'Turkish',
     },
     sameAs: OKAN_DEMIR.sameAs,
-  };
+  }
 
   const websiteData = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
+    '@id': `${SITE_URL}/#website`,
     name: 'Okan Demir — Resmi Web Sitesi',
     alternateName: ['Okan Demir', 'okandemir.org'],
     url: SITE_URL,
     author: { '@id': PERSON_ID },
+    publisher: { '@id': ORGANIZATION_ID },
     description: OKAN_DEMIR.description,
     inLanguage: 'tr-TR',
-  };
+  }
 
   const serviceData = {
     '@context': 'https://schema.org',
@@ -72,7 +76,7 @@ export default function StructuredData() {
     provider: { '@id': PERSON_ID },
     areaServed: { '@type': 'Country', name: 'Türkiye' },
     description: OKAN_DEMIR.description,
-  };
+  }
 
   return (
     <>
@@ -101,5 +105,5 @@ export default function StructuredData() {
         strategy="beforeInteractive"
       />
     </>
-  );
+  )
 }
