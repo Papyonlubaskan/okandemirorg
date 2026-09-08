@@ -37,6 +37,28 @@ export const completedProjects: CompletedProject[] = [
   },
 ]
 
+export type InProgressProject = {
+  title: string
+  url: string
+  domain: string
+  summary: string
+  tags: string[]
+  gradient: string
+}
+
+/** Teslime yakın / canlıda olup son rötuşları süren işler */
+export const inProgressProjects: InProgressProject[] = [
+  {
+    title: 'İzmir İş İlanları 35',
+    url: 'https://izmirisilanlari35.com/',
+    domain: 'izmirisilanlari35.com',
+    summary:
+      'İzmir ve Türkiye geneli iş ilanı platformu. Aday ve işveren panelleri, sektör filtreleri, ilan yayınlama ve başvuru akışı — canlıda; son iyileştirmeler ve teslim hazırlığı sürüyor.',
+    tags: ['İş İlanı', 'Web Platform', 'İzmir'],
+    gradient: 'from-orange-500 to-amber-600',
+  },
+]
+
 export const incompleteProjects = [
   {
     title: 'Maral Atmaca',

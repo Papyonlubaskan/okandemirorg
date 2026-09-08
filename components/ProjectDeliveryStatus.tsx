@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import {
   completedProjects,
+  inProgressProjects,
   incompleteProjects,
   getPortfolioItemListSchema,
 } from '@/lib/portfolio-projects'
@@ -90,6 +91,68 @@ export default function ProjectDeliveryStatus() {
                       </Link>
                     )}
                   </div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="tamamlanmak-uzere" className="py-20 scroll-mt-24 border-t border-gray-200 dark:border-gray-700">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-1.5 rounded-full bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-300 text-sm font-black mb-4">
+              Teslime Yakın
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-900 dark:text-white mb-4">
+              Tamamlanmak Üzere Olan İşler
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-medium">
+              Canlıda yayınlanmış veya son rötuşları süren, teslime yakın projeler
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {inProgressProjects.map((project) => (
+              <article
+                key={project.domain}
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden border border-orange-100 dark:border-orange-900/30 hover:shadow-2xl transition-shadow duration-300"
+              >
+                <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
+                <div className="p-8">
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <span className="px-3 py-1 rounded-full bg-orange-500 text-white text-xs font-black uppercase tracking-wide">
+                      Tamamlanmak üzere
+                    </span>
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 rounded-full bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 text-xs font-black"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                  <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-sm font-black text-orange-600 dark:text-orange-400 mb-4">
+                    {project.domain}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-300 font-medium leading-relaxed mb-6">
+                    {project.summary}
+                  </p>
+                  <Link
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-amber-600 hover:from-orange-600 hover:to-amber-700 text-white px-6 py-3 rounded-lg font-black transition-all hover:scale-[1.02]"
+                  >
+                    Canlı Siteyi Gör
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </Link>
                 </div>
               </article>
             ))}
