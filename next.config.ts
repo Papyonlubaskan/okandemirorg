@@ -113,6 +113,21 @@ const nextConfig: NextConfig = {
   
   /* Production Optimization */
   productionBrowserSourceMaps: false,
+
+  async redirects() {
+    return [
+      {
+        source: '/kit',
+        destination: '/hizmetler/dijital-baslangic-kiti',
+        permanent: true,
+      },
+      {
+        source: '/kit/tesekkur',
+        destination: '/hizmetler/dijital-baslangic-kiti/tesekkur',
+        permanent: true,
+      },
+    ]
+  },
   
   /* Compiler Options - Remove ALL console logs in production */
   compiler: {
