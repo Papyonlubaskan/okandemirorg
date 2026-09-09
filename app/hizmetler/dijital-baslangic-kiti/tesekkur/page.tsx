@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { formatIban, getBankTransferInfo } from '@/lib/bank-transfer'
+import { dekontWhatsAppUrl, paymentWhatsAppUrl } from '@/lib/bank-transfer'
 import { DIGITAL_PRODUCTS, formatTry } from '@/lib/digital-products'
 
 export const metadata: Metadata = {
@@ -16,12 +16,13 @@ export default async function DijitalKitTesekkurPage({ searchParams }: Props) {
   const { code } = await searchParams
   const orderCode = (code || '').trim().toUpperCase()
   const product = DIGITAL_PRODUCTS[0]
-  const bank = getBankTransferInfo()
-  const waText = encodeURIComponent(
-    orderCode
-      ? `Merhaba, ${orderCode} siparişi için havale yaptım. Dekont ekliyorum.`
-      : 'Merhaba, KOBİ Dijital Başlangıç Kiti için havale bilgisi / dekont.'
-  )
+  const amountLabel = formatTry(product.priceTry)
+  const paymentWa = orderCode
+    ? paymentWhatsAppUrl(orderCode, amountLabel)
+    : `https://wa.me/905552677739?text=${encodeURIComponent('Merhaba, KOBİ Dijital Başlangıç Kiti için ödeme bilgisi istiyorum.')}`
+  const dekontWa = orderCode
+    ? dekontWhatsAppUrl(orderCode)
+    : `https://wa.me/905552677739?text=${encodeURIComponent('Merhaba, KOBİ Dijital Başlangıç Kiti için dekont gönderiyorum.')}`
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16">
@@ -38,7 +39,7 @@ export default async function DijitalKitTesekkurPage({ searchParams }: Props) {
           </p>
           <h1 className="text-3xl font-black text-gray-900 dark:text-white">Siparişiniz alındı</h1>
           <p className="text-gray-600 dark:text-gray-300">
-            {product.name} · {formatTry(product.priceTry)}
+            {product.name} · {amountLabel}
           </p>
 
           {orderCode ? (
@@ -51,40 +52,30 @@ export default async function DijitalKitTesekkurPage({ searchParams }: Props) {
             </p>
           )}
 
-          <div className="rounded-xl bg-gray-50 dark:bg-gray-900 p-5 space-y-2 text-gray-800 dark:text-gray-200">
-            <h2 className="font-black text-xl mb-2">Havale / EFT</h2>
-            <p>
-              <span className="font-black">Alıcı:</span> {bank.accountHolder}
-            </p>
-            {bank.bankName ? (
-              <p>
-                <span className="font-black">Banka:</span> {bank.bankName}
-              </p>
-            ) : null}
-            {bank.configured ? (
-              <p className="break-all">
-                <span className="font-black">IBAN:</span> {formatIban(bank.iban)}
-              </p>
-            ) : (
-              <p className="text-amber-700 dark:text-amber-300">
-                IBAN henüz sistemde tanımlı değil. WhatsApp’tan sipariş kodunuzla IBAN isteyin.
-              </p>
-            )}
-            {orderCode ? (
-              <p>
-                <span className="font-black">Açıklama:</span> {orderCode}
-              </p>
-            ) : null}
-            <p>
-              <span className="font-black">Tutar:</span> {formatTry(product.priceTry)}
+          <div className="rounded-xl bg-gray-50 dark:bg-gray-900 p-5 space-y-3 text-gray-800 dark:text-gray-200">
+            <h2 className="font-black text-xl">Sonraki adım</h2>
+            <ol className="list-decimal list-inside space-y-2 text-sm">
+              <li>WhatsApp’tan sipariş kodunuzla ödeme bilgisini isteyin</li>
+              <li>Size özel olarak iletilen hesaba havale / EFT yapın</li>
+              <li>Açıklamaya sipariş kodunu yazın</li>
+              <li>Dekontu WhatsApp’tan gönderin</li>
+            </ol>
+            <p className="text-sm text-gray-500 dark:text-gray-400">
+              Ödeme bilgileri sitede yayınlanmaz; yalnızca sipariş sonrası özel olarak paylaşılır.
             </p>
           </div>
 
           <a
-            href={`https://wa.me/905552677739?text=${waText}`}
+            href={paymentWa}
             className="inline-flex w-full justify-center items-center bg-green-600 hover:bg-green-700 text-white font-black py-4 rounded-full transition"
           >
-            WhatsApp’tan dekont gönder
+            WhatsApp’tan ödeme bilgisi iste
+          </a>
+          <a
+            href={dekontWa}
+            className="inline-flex w-full justify-center items-center bg-blue-600 hover:bg-blue-700 text-white font-black py-4 rounded-full transition"
+          >
+            Havale yaptım — dekont gönder
           </a>
 
           <p className="text-sm text-gray-500 dark:text-gray-400">

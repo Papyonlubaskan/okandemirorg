@@ -8,7 +8,7 @@ import {
   rateLimitResponse,
 } from '@/lib/api-security'
 import { getProductBySlug, formatTry } from '@/lib/digital-products'
-import { getBankTransferInfo, buildTransferDescription } from '@/lib/bank-transfer'
+import { paymentWhatsAppUrl } from '@/lib/bank-transfer'
 import { createMailTransporter, MAIL_ADMIN, MAIL_FROM } from '@/lib/mailer'
 
 function generateOrderCode(): string {
@@ -79,8 +79,8 @@ export async function POST(request: NextRequest) {
 
     const orderCode = generateOrderCode()
     const accessToken = generateAccessToken()
-    const bank = getBankTransferInfo()
-    const transferNote = buildTransferDescription(orderCode)
+    const amountLabel = formatTry(product.priceTry)
+    const waPayment = paymentWhatsAppUrl(orderCode, amountLabel)
 
     const connection = await pool.getConnection()
     try {
@@ -108,22 +108,6 @@ export async function POST(request: NextRequest) {
     const safeName = escapeHtml(name)
     const safeEmail = escapeHtml(email)
     const safePhone = escapeHtml(phone)
-    const amountLabel = formatTry(product.priceTry)
-
-    const bankBlock = bank.configured
-      ? `
-        <p><strong>Alıcı:</strong> ${escapeHtml(bank.accountHolder)}</p>
-        ${bank.bankName ? `<p><strong>Banka:</strong> ${escapeHtml(bank.bankName)}</p>` : ''}
-        <p><strong>IBAN:</strong> ${escapeHtml(bank.iban)}</p>
-        <p><strong>Açıklama (zorunlu):</strong> ${escapeHtml(transferNote)}</p>
-        <p><strong>Tutar:</strong> ${amountLabel}</p>
-      `
-      : `
-        <p>IBAN henüz sistemde tanımlı değil. Havale bilgisi için WhatsApp:
-        <a href="https://wa.me/905552677739?text=${encodeURIComponent(`Merhaba, ${orderCode} siparişi için IBAN istiyorum.`)}">+90 555 267 77 39</a></p>
-        <p><strong>Sipariş kodu:</strong> ${escapeHtml(orderCode)}</p>
-        <p><strong>Tutar:</strong> ${amountLabel}</p>
-      `
 
     const transporter = createMailTransporter()
 
@@ -137,8 +121,9 @@ export async function POST(request: NextRequest) {
           <p>Merhaba ${safeName},</p>
           <p><strong>${escapeHtml(product.name)}</strong> için siparişiniz oluşturuldu.</p>
           <p><strong>Sipariş kodu:</strong> ${escapeHtml(orderCode)}</p>
-          <h3>Havale / EFT bilgileri</h3>
-          ${bankBlock}
+          <p><strong>Tutar:</strong> ${amountLabel}</p>
+          <p>Ödeme bilgileri sitede veya bu e-postada yer almaz. Güvenlik için WhatsApp üzerinden özel olarak iletilir.</p>
+          <p><a href="${waPayment}">WhatsApp’tan ödeme bilgisi iste</a></p>
           <p>Ödeme sonrası dekontu WhatsApp’tan gönderin; onaylanınca indirme linki e-posta ile gelir.</p>
           <p><a href="${thankYouUrl}">Sipariş özetini aç</a></p>
         </div>
@@ -151,14 +136,14 @@ export async function POST(request: NextRequest) {
       subject: `Yeni dijital sipariş: ${orderCode} — ${amountLabel}`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
-          <h2>Yeni havale siparişi</h2>
+          <h2>Yeni sipariş (ödeme bilgisi WhatsApp)</h2>
           <p><strong>Kod:</strong> ${escapeHtml(orderCode)}</p>
           <p><strong>Ürün:</strong> ${escapeHtml(product.name)}</p>
           <p><strong>Tutar:</strong> ${amountLabel}</p>
           <p><strong>Ad:</strong> ${safeName}</p>
           <p><strong>E-posta:</strong> ${safeEmail}</p>
           <p><strong>Telefon:</strong> ${safePhone || '-'}</p>
-          <p>Ödeme gelince fulfill API ile onaylayın (INTERNAL_API_KEY).</p>
+          <p>Müşteri WhatsApp’tan yazınca ödeme bilgisini özel mesajla gönderin. Onay sonrası fulfill API.</p>
         </div>
       `,
     })
@@ -195,13 +180,6 @@ export async function POST(request: NextRequest) {
       orderCode,
       thankYouUrl,
       amountTry: product.priceTry,
-      bank: {
-        accountHolder: bank.accountHolder,
-        bankName: bank.bankName,
-        iban: bank.iban,
-        configured: bank.configured,
-        transferDescription: transferNote,
-      },
     })
   } catch (error) {
     if (process.env.NODE_ENV === 'development') {

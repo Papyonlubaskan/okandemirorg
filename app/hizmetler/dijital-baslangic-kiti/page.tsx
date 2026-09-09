@@ -85,8 +85,8 @@ export default function DijitalBaslangicKitiPage() {
               <div className="rounded-2xl bg-blue-50 dark:bg-gray-800 p-5 text-sm text-gray-700 dark:text-gray-300">
                 <p className="font-black text-gray-900 dark:text-white mb-2">Nasıl çalışır?</p>
                 <ol className="list-decimal list-inside space-y-1">
-                  <li>Siparişi oluşturursunuz</li>
-                  <li>IBAN’a havale yaparsınız (açıklama = sipariş kodu)</li>
+                  <li>WhatsApp’tan ödeme bilgisini alırsınız</li>
+                  <li>Havale / EFT yaparsınız (açıklama = sipariş kodu)</li>
                   <li>Dekontu WhatsApp’tan gönderirsiniz</li>
                   <li>Onay sonrası indirme linki e-postanıza gelir</li>
                 </ol>
