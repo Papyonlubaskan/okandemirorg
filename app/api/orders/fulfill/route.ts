@@ -68,20 +68,29 @@ export async function POST(request: NextRequest) {
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://okandemir.org'
     const downloadUrl = `${siteUrl}/api/orders/download?token=${order.access_token}`
     const amountLabel = formatTry(Number(order.amount_try))
+    const isDownload = product?.kind === 'digital_download' && product.contentFile
 
     const transporter = createMailTransporter()
     await transporter.sendMail({
       from: MAIL_FROM,
       to: order.customer_email,
-      subject: `Ürününüz hazır — ${order.product_name} (${order.order_code})`,
-      html: `
+      subject: `Ödeme onaylandı — ${order.product_name} (${order.order_code})`,
+      html: isDownload
+        ? `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
           <h2>Ödemeniz onaylandı</h2>
           <p>Merhaba ${escapeHtml(order.customer_name)},</p>
           <p><strong>${escapeHtml(order.product_name)}</strong> indirmeye hazır.</p>
           <p><a href="${downloadUrl}" style="display:inline-block;background:#2563eb;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none">Ürünü indir</a></p>
           <p>Sipariş: ${escapeHtml(order.order_code)} · ${amountLabel}</p>
-          ${product ? `<p>İçerik: ${escapeHtml(product.includes.slice(0, 4).join(', '))}…</p>` : ''}
+        </div>
+      `
+        : `
+        <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
+          <h2>Ödemeniz onaylandı</h2>
+          <p>Merhaba ${escapeHtml(order.customer_name)},</p>
+          <p><strong>${escapeHtml(order.product_name)}</strong> kaydınız aktif. Süreç başlıyor; kısa sürede sizinle iletişime geçilecek.</p>
+          <p>Sipariş: ${escapeHtml(order.order_code)} · ${amountLabel}</p>
         </div>
       `,
     })
@@ -89,14 +98,14 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail({
       from: MAIL_FROM,
       to: MAIL_ADMIN,
-      subject: `Teslim edildi: ${order.order_code}`,
-      html: `<p>${escapeHtml(order.customer_email)} — ${escapeHtml(order.product_name)} teslim edildi.</p>`,
+      subject: `Onaylandı: ${order.order_code}`,
+      html: `<p>${escapeHtml(order.customer_email)} — ${escapeHtml(order.product_name)} ödeme onaylandı (${isDownload ? 'indirme' : 'hizmet'}).</p>`,
     })
 
     return NextResponse.json({
       success: true,
       orderCode: order.order_code,
-      downloadUrl,
+      downloadUrl: isDownload ? downloadUrl : null,
     })
   } catch (error) {
     if (process.env.NODE_ENV === 'development') {

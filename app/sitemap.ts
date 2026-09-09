@@ -52,6 +52,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'dijital-donusum',
     'e-ticaret-platformlari',
     'dijital-baslangic-kiti',
+    'ucretsiz-seo-rehberi',
+    'dijital-isletme-denetimi',
+    'dijital-bakim',
     'izmir-dijital-pazarlama',
     'istanbul-dijital-pazarlama',
   ].map((service) => ({
@@ -61,7 +64,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority:
       service === 'dijital-pazarlama'
         ? 0.95
-        : service === 'dijital-baslangic-kiti'
+        : service === 'dijital-baslangic-kiti' ||
+            service === 'dijital-isletme-denetimi' ||
+            service === 'ucretsiz-seo-rehberi'
           ? 0.9
           : 0.85,
   }))

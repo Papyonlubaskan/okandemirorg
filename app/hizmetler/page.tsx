@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Script from 'next/script'
 import type { Metadata } from 'next'
 import { buildBreadcrumbList } from '@/lib/breadcrumb-schema'
+import IncomeFunnelSection from '@/components/IncomeFunnelSection'
 
 export const metadata: Metadata = {
   title: 'Profesyonel Hizmetler | Okan Demir',
@@ -436,7 +437,7 @@ export default function Hizmetler() {
                 SEO, Google İşletme, Instagram, Ads ve AI prompt kontrol listeleri. Havale ile satın alıp hemen teslim alın.
               </p>
               <div className="space-y-2 mb-6">
-                <p className="text-gray-600 dark:text-gray-300">✓ 399₺ tek seferlik dijital ürün</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ 890₺ tek seferlik dijital ürün</p>
                 <p className="text-gray-600 dark:text-gray-300">✓ Kontrol listeleri ve şablonlar</p>
                 <p className="text-gray-600 dark:text-gray-300">✓ Havale sonrası e-posta teslimatı</p>
               </div>
@@ -462,9 +463,68 @@ export default function Hizmetler() {
               </div>
             </div>
 
+            {/* Ücretsiz rehber */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 mb-6 bg-gradient-to-br from-sky-500 to-blue-600 rounded-full flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Ücretsiz SEO Rehberi</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                KOBİ’lerin 7 SEO hatası. E-posta ile anında teslim — huninin ilk adımı.
+              </p>
+              <Link
+                href="/hizmetler/ucretsiz-seo-rehberi"
+                className="inline-flex items-center justify-center bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-full font-black transition-colors"
+              >
+                Ücretsiz al
+              </Link>
+            </div>
+
+            {/* Denetim */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 mb-6 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-full flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Dijital İşletme Denetimi</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Site, SEO, Google, Instagram ve dönüşüm odaklı yazılı rapor. 3.900₺.
+              </p>
+              <Link
+                href="/hizmetler/dijital-isletme-denetimi"
+                className="inline-flex items-center justify-center bg-violet-600 hover:bg-violet-700 text-white px-6 py-3 rounded-full font-black transition-colors"
+              >
+                Başvur
+              </Link>
+            </div>
+
+            {/* Bakım */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 mb-6 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-full flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Dijital Bakım</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                Aylık takip: Light 4.900₺ · Standart 7.900₺. Tekrarlayan gelir paketi.
+              </p>
+              <Link
+                href="/hizmetler/dijital-bakim"
+                className="inline-flex items-center justify-center bg-teal-600 hover:bg-teal-700 text-white px-6 py-3 rounded-full font-black transition-colors"
+              >
+                Paketleri gör
+              </Link>
+            </div>
+
           </div>
         </div>
       </section>
+
+      <IncomeFunnelSection title="Satış hunisi — adım adım" />
 
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-600 dark:from-gray-800 dark:to-gray-800">

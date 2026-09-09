@@ -57,6 +57,12 @@ export default function Header() {
           <div className="hidden lg:flex items-center space-x-3 shrink-0">
             <ThemeToggle />
             <Link
+              href="/hizmetler/ucretsiz-seo-rehberi"
+              className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-4 xl:px-6 py-2 xl:py-3 rounded-full font-black transition-all duration-300 hover:scale-105 hover:shadow-lg"
+            >
+              Ücretsiz Rehber
+            </Link>
+            <Link
               href="https://wa.me/+905552677739"
               className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-4 xl:px-6 py-2 xl:py-3 rounded-full font-black transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
@@ -102,6 +108,13 @@ export default function Header() {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Hizmetler
+                  </Link>
+                  <Link
+                    href="/hizmetler/ucretsiz-seo-rehberi"
+                    className="text-blue-700 dark:text-blue-300 hover:text-blue-600 font-black text-lg transition-colors py-3 px-4 rounded-lg hover:bg-blue-50 dark:hover:bg-gray-800 touch-manipulation"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Ücretsiz SEO Rehberi
                   </Link>
                   <Link
                     href="/blog"

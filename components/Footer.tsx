@@ -139,6 +139,30 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/hizmetler/ucretsiz-seo-rehberi" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group" title="Ücretsiz SEO Rehberi">
+                  <svg className="w-4 h-4 mr-3 group-hover:text-sky-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                  Ücretsiz SEO Rehberi
+                </Link>
+              </li>
+              <li>
+                <Link href="/hizmetler/dijital-isletme-denetimi" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group" title="Dijital İşletme Denetimi">
+                  <svg className="w-4 h-4 mr-3 group-hover:text-violet-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4" />
+                  </svg>
+                  Dijital İşletme Denetimi
+                </Link>
+              </li>
+              <li>
+                <Link href="/hizmetler/dijital-bakim" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group" title="Dijital Bakım">
+                  <svg className="w-4 h-4 mr-3 group-hover:text-teal-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                  Dijital Bakım
+                </Link>
+              </li>
+              <li>
                    <Link href="/hakkimda" prefetch={true} className="flex items-center text-gray-400 dark:text-gray-300 hover:text-white transition-colors group" title="Okan Demir Kimdir">
                      <svg className="w-4 h-4 mr-3 group-hover:text-orange-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />

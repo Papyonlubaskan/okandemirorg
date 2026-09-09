@@ -223,7 +223,16 @@ export default function SosyalMedyaPage() {
                   </svg>
                   YouTube Kanalını Ziyaret Et
                 </a>
+                <a
+                  href="/hizmetler/ucretsiz-seo-rehberi"
+                  className="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-black text-lg transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  Ücretsiz SEO Rehberi
+                </a>
               </div>
+              <p className="mt-6 text-sm text-gray-500 dark:text-gray-400">
+                Papyonlu Başkan videolarında tek CTA: okandemir.org/hizmetler/ucretsiz-seo-rehberi
+              </p>
             </div>
           </div>
         </div>
