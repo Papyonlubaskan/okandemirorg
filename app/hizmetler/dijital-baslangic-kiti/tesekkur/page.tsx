@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { getBankTransferInfo } from '@/lib/bank-transfer'
+import { formatIban, getBankTransferInfo } from '@/lib/bank-transfer'
 import { DIGITAL_PRODUCTS, formatTry } from '@/lib/digital-products'
 
 export const metadata: Metadata = {
@@ -63,7 +63,7 @@ export default async function DijitalKitTesekkurPage({ searchParams }: Props) {
             ) : null}
             {bank.configured ? (
               <p className="break-all">
-                <span className="font-black">IBAN:</span> {bank.iban}
+                <span className="font-black">IBAN:</span> {formatIban(bank.iban)}
               </p>
             ) : (
               <p className="text-amber-700 dark:text-amber-300">
