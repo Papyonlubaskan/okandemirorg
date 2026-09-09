@@ -19,7 +19,7 @@ export const DIGITAL_PRODUCTS: DigitalProduct[] = [
     shortDescription:
       'Küçük işletmeler için SEO, Google İşletme, Instagram, Ads ve AI prompt kontrol listeleri.',
     description:
-      'Bir kez hazırlanan, havale sonrası anında (ödeme onayıyla) teslim edilen dijital ürün. Hastanede çalışırken bile sipariş alıp onaylayabilirsiniz.',
+      'Havale sonrası onayla teslim edilen dijital ürün. SEO, Google İşletme, Instagram, Ads ve AI prompt kontrol listeleri tek pakette.',
     includes: [
       'SEO kontrol listesi',
       'Google İşletme Profili kontrol listesi',

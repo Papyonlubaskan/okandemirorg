@@ -7,20 +7,21 @@ import { DIGITAL_PRODUCTS, formatTry } from '@/lib/digital-products'
 import { PERSON_ID, SITE_URL } from '@/lib/brand-seo'
 
 const product = DIGITAL_PRODUCTS[0]
+const PAGE_PATH = '/hizmetler/dijital-baslangic-kiti'
 
 export const metadata: Metadata = {
-  title: `${product.name} | Okan Demir`,
+  title: `${product.name} | Okan Demir Hizmetler`,
   description: product.shortDescription,
-  alternates: { canonical: `${SITE_URL}/kit` },
+  alternates: { canonical: `${SITE_URL}${PAGE_PATH}` },
   openGraph: {
     title: `${product.name} | Okan Demir`,
     description: product.shortDescription,
-    url: `${SITE_URL}/kit`,
+    url: `${SITE_URL}${PAGE_PATH}`,
     type: 'website',
   },
 }
 
-export default function KitPage() {
+export default function DijitalBaslangicKitiPage() {
   const productSchema = {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -32,16 +33,22 @@ export default function KitPage() {
       priceCurrency: 'TRY',
       price: product.priceTry,
       availability: 'https://schema.org/InStock',
-      url: `${SITE_URL}/kit`,
+      url: `${SITE_URL}${PAGE_PATH}`,
       seller: { '@id': PERSON_ID },
     },
   }
 
   return (
     <>
-      <BreadcrumbJsonLd id="kit-breadcrumb" items={[{ name: 'Dijital Kit', path: '/kit' }]} />
+      <BreadcrumbJsonLd
+        id="dijital-kit-breadcrumb"
+        items={[
+          { name: 'Hizmetler', path: '/hizmetler' },
+          { name: product.name, path: PAGE_PATH },
+        ]}
+      />
       <Script
-        id="kit-product-schema"
+        id="dijital-kit-product-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
       />
@@ -49,7 +56,13 @@ export default function KitPage() {
       <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900">
         <section className="py-16 lg:py-20 bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-800 text-white">
           <div className="container mx-auto px-4 max-w-5xl text-center">
-            <p className="text-blue-100 font-medium mb-3">Dijital ürün · Havale ile teslimat</p>
+            <p className="text-blue-100 font-medium mb-3">
+              <Link href="/hizmetler" className="underline hover:text-white">
+                Hizmetler
+              </Link>
+              {' · '}
+              Dijital ürün · Havale ile teslimat
+            </p>
             <h1 className="text-4xl lg:text-6xl font-black mb-4">{product.name}</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">{product.shortDescription}</p>
             <p className="text-3xl font-black">{formatTry(product.priceTry)}</p>
@@ -63,10 +76,7 @@ export default function KitPage() {
               <p className="text-gray-600 dark:text-gray-300">{product.description}</p>
               <ul className="space-y-3">
                 {product.includes.map((item) => (
-                  <li
-                    key={item}
-                    className="flex gap-3 text-gray-800 dark:text-gray-200 font-medium"
-                  >
+                  <li key={item} className="flex gap-3 text-gray-800 dark:text-gray-200 font-medium">
                     <span className="text-blue-600 shrink-0">✓</span>
                     <span>{item}</span>
                   </li>
@@ -81,9 +91,14 @@ export default function KitPage() {
                   <li>Onay sonrası indirme linki e-postanıza gelir</li>
                 </ol>
               </div>
-              <Link href="/iletisim" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
-                Sorunuz mu var? İletişime geçin →
-              </Link>
+              <div className="flex flex-wrap gap-4">
+                <Link href="/hizmetler" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
+                  ← Tüm hizmetler
+                </Link>
+                <Link href="/iletisim" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
+                  İletişim →
+                </Link>
+              </div>
             </div>
 
             <KitOrderForm

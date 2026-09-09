@@ -104,7 +104,7 @@ export async function POST(request: NextRequest) {
     }
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://okandemir.org'
-    const thankYouUrl = `${siteUrl}/kit/tesekkur?code=${encodeURIComponent(orderCode)}`
+    const thankYouUrl = `${siteUrl}/hizmetler/dijital-baslangic-kiti/tesekkur?code=${encodeURIComponent(orderCode)}`
     const safeName = escapeHtml(name)
     const safeEmail = escapeHtml(email)
     const safePhone = escapeHtml(phone)

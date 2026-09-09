@@ -15,7 +15,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/sss`, lastModified, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/sosyal-medya`, lastModified, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/blog`, lastModified, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/kit`, lastModified, changeFrequency: 'weekly', priority: 0.85 },
     {
       url: `${baseUrl}/blog/dijital-pazarlama-trendleri-2025`,
       lastModified,
@@ -52,13 +51,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'wordpress-tasarim',
     'dijital-donusum',
     'e-ticaret-platformlari',
+    'dijital-baslangic-kiti',
     'izmir-dijital-pazarlama',
     'istanbul-dijital-pazarlama',
   ].map((service) => ({
     url: `${baseUrl}/hizmetler/${service}`,
     lastModified,
     changeFrequency: 'monthly' as const,
-    priority: service === 'dijital-pazarlama' ? 0.95 : 0.85,
+    priority:
+      service === 'dijital-pazarlama'
+        ? 0.95
+        : service === 'dijital-baslangic-kiti'
+          ? 0.9
+          : 0.85,
   }))
 
   return [...staticPages, ...servicePages]

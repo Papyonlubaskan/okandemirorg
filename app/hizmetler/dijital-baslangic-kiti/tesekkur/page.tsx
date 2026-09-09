@@ -12,7 +12,7 @@ type Props = {
   searchParams: Promise<{ code?: string }>
 }
 
-export default async function KitTesekkurPage({ searchParams }: Props) {
+export default async function DijitalKitTesekkurPage({ searchParams }: Props) {
   const { code } = await searchParams
   const orderCode = (code || '').trim().toUpperCase()
   const product = DIGITAL_PRODUCTS[0]
@@ -27,6 +27,15 @@ export default async function KitTesekkurPage({ searchParams }: Props) {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-16">
       <div className="container mx-auto px-4 max-w-2xl">
         <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8 space-y-6 border border-gray-100 dark:border-gray-700">
+          <p className="text-sm text-gray-500 dark:text-gray-400">
+            <Link href="/hizmetler" className="hover:underline">
+              Hizmetler
+            </Link>
+            {' / '}
+            <Link href="/hizmetler/dijital-baslangic-kiti" className="hover:underline">
+              Dijital Başlangıç Kiti
+            </Link>
+          </p>
           <h1 className="text-3xl font-black text-gray-900 dark:text-white">Siparişiniz alındı</h1>
           <p className="text-gray-600 dark:text-gray-300">
             {product.name} · {formatTry(product.priceTry)}
@@ -58,7 +67,7 @@ export default async function KitTesekkurPage({ searchParams }: Props) {
               </p>
             ) : (
               <p className="text-amber-700 dark:text-amber-300">
-                IBAN henüz ENV’de tanımlı değil. WhatsApp’tan sipariş kodunuzla IBAN isteyin.
+                IBAN henüz sistemde tanımlı değil. WhatsApp’tan sipariş kodunuzla IBAN isteyin.
               </p>
             )}
             {orderCode ? (
@@ -79,10 +88,13 @@ export default async function KitTesekkurPage({ searchParams }: Props) {
           </a>
 
           <p className="text-sm text-gray-500 dark:text-gray-400">
-            Ödeme onaylanınca indirme linki e-posta adresinize gelir. Kartlı ödeme kullanılmaz.
+            Ödeme onaylanınca indirme linki e-posta adresinize gelir.
           </p>
 
-          <Link href="/kit" className="block text-center text-blue-600 dark:text-blue-400 font-black">
+          <Link
+            href="/hizmetler/dijital-baslangic-kiti"
+            className="block text-center text-blue-600 dark:text-blue-400 font-black"
+          >
             ← Ürün sayfasına dön
           </Link>
         </div>

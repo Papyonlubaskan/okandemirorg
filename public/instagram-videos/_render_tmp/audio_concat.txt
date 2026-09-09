@@ -1,0 +1,7 @@
+file 'voice_00_01.mp3'
+file 'voice_01_02.mp3'
+file 'voice_02_03.mp3'
+file 'voice_03_04.mp3'
+file 'voice_04_05.mp3'
+file 'voice_05_06.mp3'
+file 'voice_06_07.mp3'

@@ -32,7 +32,7 @@ export default function KitOrderForm({ productSlug, priceTry, productName }: Pro
         setError(data.error || 'Sipariş oluşturulamadı')
         return
       }
-      window.location.href = `/kit/tesekkur?code=${encodeURIComponent(data.orderCode)}`
+      window.location.href = `/hizmetler/dijital-baslangic-kiti/tesekkur?code=${encodeURIComponent(data.orderCode)}`
     } catch {
       setError('Bağlantı hatası. Lütfen tekrar deneyin.')
     } finally {
