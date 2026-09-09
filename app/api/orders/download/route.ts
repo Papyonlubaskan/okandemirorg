@@ -51,8 +51,11 @@ export async function GET(request: NextRequest) {
     }
 
     const product = getProductBySlug(row.product_slug)
-    if (!product) {
-      return NextResponse.json({ error: 'Ürün dosyası yok' }, { status: 404 })
+    if (!product?.contentFile || product.kind !== 'digital_download') {
+      return NextResponse.json(
+        { error: 'Bu sipariş indirme ürünü değil. Hizmet süreci e-posta / WhatsApp ile yürür.' },
+        { status: 400 }
+      )
     }
 
     const filePath = path.join(process.cwd(), 'content', 'digital-products', product.contentFile)

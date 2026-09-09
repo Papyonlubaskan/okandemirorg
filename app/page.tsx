@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from 'next';
+import IncomeFunnelSection from '@/components/IncomeFunnelSection';
 
 export const metadata: Metadata = {
   title: "Okan Demir | Dijital Pazarlama Uzmanı — İzmir",
@@ -915,6 +916,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <IncomeFunnelSection title="Nasıl çalışmaya başlarız?" />
 
       {/* Final CTA Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white">

@@ -62,6 +62,9 @@ export async function POST(request: NextRequest) {
     const email = String(body.email || '').trim().toLowerCase()
     const phone = String(body.phone || '').trim()
     const productSlug = String(body.productSlug || 'kobi-dijital-baslangic-kiti').trim()
+    const website = String(body.website || '').trim()
+    const extraNotes = String(body.notes || '').trim()
+    const notes = [website && `Website: ${website}`, extraNotes].filter(Boolean).join('\n') || null
 
     if (name.length < 2 || !email.includes('@')) {
       return NextResponse.json(
@@ -86,8 +89,8 @@ export async function POST(request: NextRequest) {
     try {
       await connection.execute(
         `INSERT INTO digital_orders
-          (order_code, access_token, product_slug, product_name, amount_try, customer_name, customer_email, customer_phone, status)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pending_payment')`,
+          (order_code, access_token, product_slug, product_name, amount_try, customer_name, customer_email, customer_phone, notes, status)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, 'pending_payment')`,
         [
           orderCode,
           accessToken,
@@ -97,6 +100,7 @@ export async function POST(request: NextRequest) {
           name,
           email,
           phone || null,
+          notes,
         ]
       )
     } finally {
@@ -104,10 +108,11 @@ export async function POST(request: NextRequest) {
     }
 
     const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://okandemir.org'
-    const thankYouUrl = `${siteUrl}/hizmetler/dijital-baslangic-kiti/tesekkur?code=${encodeURIComponent(orderCode)}`
+    const thankYouUrl = `${siteUrl}/hizmetler/siparis-alindi?code=${encodeURIComponent(orderCode)}`
     const safeName = escapeHtml(name)
     const safeEmail = escapeHtml(email)
     const safePhone = escapeHtml(phone)
+    const safeNotes = escapeHtml(notes || '')
 
     const transporter = createMailTransporter()
 
@@ -119,12 +124,11 @@ export async function POST(request: NextRequest) {
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
           <h2>Siparişiniz alındı</h2>
           <p>Merhaba ${safeName},</p>
-          <p><strong>${escapeHtml(product.name)}</strong> için siparişiniz oluşturuldu.</p>
+          <p><strong>${escapeHtml(product.name)}</strong> için kaydınız oluştu.</p>
           <p><strong>Sipariş kodu:</strong> ${escapeHtml(orderCode)}</p>
           <p><strong>Tutar:</strong> ${amountLabel}</p>
-          <p>Ödeme bilgileri sitede veya bu e-postada yer almaz. Güvenlik için WhatsApp üzerinden özel olarak iletilir.</p>
+          <p>Ödeme bilgileri sitede veya bu e-postada yer almaz. WhatsApp üzerinden özel olarak iletilir.</p>
           <p><a href="${waPayment}">WhatsApp’tan ödeme bilgisi iste</a></p>
-          <p>Ödeme sonrası dekontu WhatsApp’tan gönderin; onaylanınca indirme linki e-posta ile gelir.</p>
           <p><a href="${thankYouUrl}">Sipariş özetini aç</a></p>
         </div>
       `,
@@ -133,17 +137,18 @@ export async function POST(request: NextRequest) {
     await transporter.sendMail({
       from: MAIL_FROM,
       to: MAIL_ADMIN,
-      subject: `Yeni dijital sipariş: ${orderCode} — ${amountLabel}`,
+      subject: `Yeni sipariş: ${orderCode} — ${amountLabel}`,
       html: `
         <div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto">
-          <h2>Yeni sipariş (ödeme bilgisi WhatsApp)</h2>
+          <h2>Yeni sipariş</h2>
           <p><strong>Kod:</strong> ${escapeHtml(orderCode)}</p>
-          <p><strong>Ürün:</strong> ${escapeHtml(product.name)}</p>
+          <p><strong>Ürün:</strong> ${escapeHtml(product.name)} (${escapeHtml(product.kind)})</p>
           <p><strong>Tutar:</strong> ${amountLabel}</p>
           <p><strong>Ad:</strong> ${safeName}</p>
           <p><strong>E-posta:</strong> ${safeEmail}</p>
           <p><strong>Telefon:</strong> ${safePhone || '-'}</p>
-          <p>Müşteri WhatsApp’tan yazınca ödeme bilgisini özel mesajla gönderin. Onay sonrası fulfill API.</p>
+          ${safeNotes ? `<p><strong>Not:</strong> ${safeNotes.replace(/\n/g, '<br>')}</p>` : ''}
+          <p>WhatsApp’tan ödeme bilgisini özel gönderin. Onay sonrası fulfill API.</p>
         </div>
       `,
     })
@@ -163,10 +168,12 @@ export async function POST(request: NextRequest) {
             data: {
               orderCode,
               productSlug: product.slug,
+              kind: product.kind,
               amountTry: product.priceTry,
               name,
               email,
               phone,
+              notes,
             },
           }),
         })

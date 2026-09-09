@@ -123,7 +123,12 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/kit/tesekkur',
-        destination: '/hizmetler/dijital-baslangic-kiti/tesekkur',
+        destination: '/hizmetler/siparis-alindi',
+        permanent: true,
+      },
+      {
+        source: '/hizmetler/dijital-baslangic-kiti/tesekkur',
+        destination: '/hizmetler/siparis-alindi',
         permanent: true,
       },
     ]

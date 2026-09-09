@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
-import KitOrderForm from '@/components/KitOrderForm'
+import ProductOrderForm from '@/components/ProductOrderForm'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
-import { DIGITAL_PRODUCTS, formatTry } from '@/lib/digital-products'
+import { getProductBySlug, FUNNEL, formatTry } from '@/lib/digital-products'
 import { PERSON_ID, SITE_URL } from '@/lib/brand-seo'
 
-const product = DIGITAL_PRODUCTS[0]
-const PAGE_PATH = '/hizmetler/dijital-baslangic-kiti'
+const product = getProductBySlug('kobi-dijital-baslangic-kiti')!
+const PAGE_PATH = FUNNEL.kitHref
 
 export const metadata: Metadata = {
   title: `${product.name} | Okan Demir Hizmetler`,
@@ -61,7 +61,7 @@ export default function DijitalBaslangicKitiPage() {
                 Hizmetler
               </Link>
               {' · '}
-              Dijital ürün · Havale ile teslimat
+              Adım 1 · Dijital ürün
             </p>
             <h1 className="text-4xl lg:text-6xl font-black mb-4">{product.name}</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">{product.shortDescription}</p>
@@ -82,29 +82,28 @@ export default function DijitalBaslangicKitiPage() {
                   </li>
                 ))}
               </ul>
-              <div className="rounded-2xl bg-blue-50 dark:bg-gray-800 p-5 text-sm text-gray-700 dark:text-gray-300">
-                <p className="font-black text-gray-900 dark:text-white mb-2">Nasıl çalışır?</p>
-                <ol className="list-decimal list-inside space-y-1">
-                  <li>WhatsApp’tan ödeme bilgisini alırsınız</li>
-                  <li>Havale / EFT yaparsınız (açıklama = sipariş kodu)</li>
-                  <li>Dekontu WhatsApp’tan gönderirsiniz</li>
-                  <li>Onay sonrası indirme linki e-postanıza gelir</li>
-                </ol>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                <Link href="/hizmetler" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
-                  ← Tüm hizmetler
-                </Link>
-                <Link href="/iletisim" className="text-blue-600 dark:text-blue-400 font-black hover:underline">
-                  İletişim →
-                </Link>
+              <div className="rounded-2xl bg-blue-50 dark:bg-gray-800 p-5 text-sm text-gray-700 dark:text-gray-300 space-y-2">
+                <p className="font-black text-gray-900 dark:text-white">Hunideki yeriniz</p>
+                <p>
+                  ←{' '}
+                  <Link href={FUNNEL.leadHref} className="text-blue-600 font-black">
+                    Ücretsiz rehber
+                  </Link>
+                </p>
+                <p>
+                  →{' '}
+                  <Link href={FUNNEL.auditHref} className="text-blue-600 font-black">
+                    Dijital İşletme Denetimi ({formatTry(3900)})
+                  </Link>
+                </p>
               </div>
             </div>
 
-            <KitOrderForm
+            <ProductOrderForm
               productSlug={product.slug}
               priceTry={product.priceTry}
               productName={product.name}
+              thankYouPath="/hizmetler/siparis-alindi?code="
             />
           </div>
         </section>
