@@ -114,6 +114,28 @@ export async function createTables() {
     `)
 
     await connection.execute(`
+      CREATE TABLE IF NOT EXISTS digital_orders (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        order_code VARCHAR(32) NOT NULL UNIQUE,
+        access_token VARCHAR(64) NOT NULL UNIQUE,
+        product_slug VARCHAR(120) NOT NULL,
+        product_name VARCHAR(255) NOT NULL,
+        amount_try DECIMAL(10,2) NOT NULL,
+        customer_name VARCHAR(255) NOT NULL,
+        customer_email VARCHAR(255) NOT NULL,
+        customer_phone VARCHAR(50),
+        status ENUM('pending_payment', 'paid', 'cancelled') DEFAULT 'pending_payment',
+        notes TEXT,
+        paid_at TIMESTAMP NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        INDEX idx_status (status),
+        INDEX idx_email (customer_email),
+        INDEX idx_product (product_slug)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci
+    `)
+
+    await connection.execute(`
       CREATE TABLE IF NOT EXISTS clients (
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(255) NOT NULL,
