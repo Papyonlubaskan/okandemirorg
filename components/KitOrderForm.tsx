@@ -98,7 +98,7 @@ export default function KitOrderForm({ productSlug, priceTry, productName }: Pro
       </button>
 
       <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
-        Kartlı ödeme yok. Havale sonrası onayla ürün e-postanıza gelir.
+        Kartlı ödeme yok. Sipariş sonrası ödeme bilgisi WhatsApp ile özel olarak iletilir.
       </p>
     </form>
   )
