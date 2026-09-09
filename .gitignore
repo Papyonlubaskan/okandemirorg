@@ -47,3 +47,10 @@ public/instagram-videos/*.mp4
 next-env.d.ts
 
 /app/generated/prisma
+
+# Secrets / local
+railway-n8n-service.env
+railway*.env
+
+# Render temp media
+public/instagram-videos/_render_tmp/
