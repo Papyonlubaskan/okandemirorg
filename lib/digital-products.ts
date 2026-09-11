@@ -32,7 +32,7 @@ export const DIGITAL_PRODUCTS: DigitalProduct[] = [
     shortDescription:
       'SEO, Google İşletme, Instagram, Ads ve AI prompt kontrol listeleri — hazır dijital paket.',
     description:
-      'Ödeme onayı sonrası e-posta ile teslim. Küçük işletmeler için uygulanabilir kontrol listeleri ve şablonlar.',
+      'WhatsApp sipariş sonrası özel teslim. Küçük işletmeler için uygulanabilir kontrol listeleri ve şablonlar.',
     includes: [
       'SEO kontrol listesi',
       'Google İşletme Profili kontrol listesi',
