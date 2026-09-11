@@ -1,9 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
-import ProductOrderForm from '@/components/ProductOrderForm'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
+import WhatsAppCtaCard from '@/components/WhatsAppCtaCard'
 import { getProductBySlug, FUNNEL, formatTry } from '@/lib/digital-products'
+import { productWhatsAppUrl } from '@/lib/bank-transfer'
 import { PERSON_ID, SITE_URL } from '@/lib/brand-seo'
 
 const product = getProductBySlug('kobi-dijital-baslangic-kiti')!
@@ -38,6 +39,8 @@ export default function DijitalBaslangicKitiPage() {
     },
   }
 
+  const wa = productWhatsAppUrl(product.name, formatTry(product.priceTry))
+
   return (
     <>
       <BreadcrumbJsonLd
@@ -61,7 +64,7 @@ export default function DijitalBaslangicKitiPage() {
                 Hizmetler
               </Link>
               {' · '}
-              Adım 1 · Dijital ürün
+              Adım 1 · WhatsApp
             </p>
             <h1 className="text-4xl lg:text-6xl font-black mb-4">{product.name}</h1>
             <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-6">{product.shortDescription}</p>
@@ -82,7 +85,7 @@ export default function DijitalBaslangicKitiPage() {
                   </li>
                 ))}
               </ul>
-              <div className="rounded-2xl bg-blue-50 dark:bg-gray-800 p-5 text-sm text-gray-700 dark:text-gray-300 space-y-2">
+              <div className="rounded-2xl bg-blue-50 dark:bg-gray-800 p-5 text-sm space-y-2">
                 <p className="font-black text-gray-900 dark:text-white">Hunideki yeriniz</p>
                 <p>
                   ←{' '}
@@ -99,11 +102,11 @@ export default function DijitalBaslangicKitiPage() {
               </div>
             </div>
 
-            <ProductOrderForm
-              productSlug={product.slug}
-              priceTry={product.priceTry}
-              productName={product.name}
-              thankYouPath="/hizmetler/siparis-alindi?code="
+            <WhatsAppCtaCard
+              href={wa}
+              title="WhatsApp’tan sipariş ver"
+              subtitle={`${formatTry(product.priceTry)} · Ödeme bilgisi özel mesajla iletilir.`}
+              label="WhatsApp’tan yaz — Kit"
             />
           </div>
         </section>

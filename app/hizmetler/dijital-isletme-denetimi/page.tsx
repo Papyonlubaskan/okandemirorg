@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Script from 'next/script'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
-import ProductOrderForm from '@/components/ProductOrderForm'
+import WhatsAppCtaCard from '@/components/WhatsAppCtaCard'
 import { getProductBySlug, FUNNEL, formatTry } from '@/lib/digital-products'
+import { productWhatsAppUrl } from '@/lib/bank-transfer'
 import { PERSON_ID, SITE_URL } from '@/lib/brand-seo'
 
 const product = getProductBySlug('dijital-isletme-denetimi')!
@@ -64,23 +65,14 @@ export default function DijitalIsletmeDenetimiPage() {
                 ))}
               </ul>
               <p className="text-sm text-gray-500">
-                Önce kit almak zorunlu değil. İsterseniz{' '}
-                <Link href={FUNNEL.kitHref} className="text-blue-600 font-black">
-                  Kiti
-                </Link>{' '}
-                veya{' '}
-                <Link href={FUNNEL.leadHref} className="text-blue-600 font-black">
-                  ücretsiz rehberi
-                </Link>{' '}
-                inceleyin.
+                Website ve Instagram bilginizi WhatsApp mesajında yazmanız yeterli.
               </p>
             </div>
-            <ProductOrderForm
-              productSlug={product.slug}
-              priceTry={product.priceTry}
-              productName={product.name}
-              thankYouPath="/hizmetler/siparis-alindi?code="
-              extraFields
+            <WhatsAppCtaCard
+              href={productWhatsAppUrl(product.name, formatTry(product.priceTry))}
+              title="WhatsApp’tan başvur"
+              subtitle="Site URL + Instagram hesabınızı mesaja ekleyin."
+              label="WhatsApp’tan denetim iste"
             />
           </div>
         </section>
