@@ -3,8 +3,9 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
-import ProductOrderForm from '@/components/ProductOrderForm'
+import WhatsAppCtaCard from '@/components/WhatsAppCtaCard'
 import { getProductBySlug, FUNNEL, formatTry } from '@/lib/digital-products'
+import { productWhatsAppUrl } from '@/lib/bank-transfer'
 
 const light = getProductBySlug('dijital-bakim-light')!
 const standart = getProductBySlug('dijital-bakim-standart')!
@@ -30,11 +31,11 @@ export default function DijitalBakimClient() {
                 Hizmetler
               </Link>
               {' · '}
-              Adım 3 — Aylık gelir
+              Adım 3 — Aylık
             </p>
             <h1 className="text-4xl lg:text-5xl font-black mb-4">Dijital Bakım</h1>
             <p className="text-xl text-teal-50">
-              Aylık SEO / Google İşletme kontrolü, rapor ve görüşme. Tek seferlik iş değil; düzenli takip.
+              Paketi seçin, WhatsApp’tan yazın. Ödeme bilgisi özel mesajla gelir.
             </p>
           </div>
         </section>
@@ -77,20 +78,13 @@ export default function DijitalBakimClient() {
                   ))}
                 </ul>
               </button>
-              <p className="text-sm text-gray-500">
-                Önce{' '}
-                <Link href={FUNNEL.auditHref} className="text-blue-600 font-black">
-                  Dijital İşletme Denetimi
-                </Link>{' '}
-                ile durum tespiti önerilir.
-              </p>
             </div>
-            <ProductOrderForm
+            <WhatsAppCtaCard
               key={selected.slug}
-              productSlug={selected.slug}
-              priceTry={selected.priceTry}
-              productName={selected.name}
-              thankYouPath="/hizmetler/siparis-alindi?code="
+              href={productWhatsAppUrl(selected.name, `${formatTry(selected.priceTry)}/ay`)}
+              title={selected.name}
+              subtitle={`${formatTry(selected.priceTry)}/ay · WhatsApp ile başlatın.`}
+              label="WhatsApp’tan bakım iste"
             />
           </div>
         </section>

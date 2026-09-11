@@ -439,7 +439,7 @@ export default function Hizmetler() {
               <div className="space-y-2 mb-6">
                 <p className="text-gray-600 dark:text-gray-300">✓ 890₺ tek seferlik dijital ürün</p>
                 <p className="text-gray-600 dark:text-gray-300">✓ Kontrol listeleri ve şablonlar</p>
-                <p className="text-gray-600 dark:text-gray-300">✓ Havale sonrası e-posta teslimatı</p>
+                <p className="text-gray-600 dark:text-gray-300">✓ WhatsApp ile sipariş / teslimat</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3">
                 <Link
@@ -472,7 +472,7 @@ export default function Hizmetler() {
               </div>
               <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">Ücretsiz SEO Rehberi</h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                KOBİ’lerin 7 SEO hatası. E-posta ile anında teslim — huninin ilk adımı.
+                KOBİ’lerin 7 SEO hatası. WhatsApp’tan ücretsiz rehber isteyin — huninin ilk adımı.
               </p>
               <Link
                 href="/hizmetler/ucretsiz-seo-rehberi"

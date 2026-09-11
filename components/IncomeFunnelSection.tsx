@@ -7,7 +7,7 @@ const STEPS = [
     title: 'Ücretsiz rehber',
     price: '0₺',
     href: FUNNEL.leadHref,
-    desc: '7 SEO hatası — e-posta ile teslim',
+    desc: '7 SEO hatası — WhatsApp’tan iste',
   },
   {
     n: '1',
@@ -28,7 +28,7 @@ const STEPS = [
     title: 'Dijital Bakım',
     price: `${formatTry(4900)} / ${formatTry(7900)}`,
     href: FUNNEL.careHref,
-    desc: 'Aylık takip ve rapor — Light veya Standart',
+    desc: 'Aylık takip — Light veya Standart · WhatsApp',
   },
 ]
 
@@ -43,7 +43,7 @@ export default function IncomeFunnelSection({
         <div className="text-center mb-10">
           <h2 className="text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-3">{title}</h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Ücretsiz başlangıç → dijital ürün → denetim → aylık bakım. Ödeme bilgisi sitede yayınlanmaz; WhatsApp ile özel iletilir.
+            Ücretsiz → kit → denetim → bakım. Tüm iletişim WhatsApp. Ödeme bilgisi sitede yok.
           </p>
         </div>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
