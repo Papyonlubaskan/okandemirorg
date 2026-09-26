@@ -182,6 +182,6 @@ function buildFallbackReport(s: CrawlSignals): string {
     `4. Alt metinleri tamamlayın`,
     `5. Canonical ve OG etiketlerini kontrol edin`,
     ``,
-    `*Tüm AI sağlayıcılar yanıt vermezse bu crawl şablonu kullanılır — müşteri askıda kalmaz.*`,
+    `*Bu rapor canlı crawl sinyallerinden üretilir. Harici AI kotası gerekmez.*`,
   ].join('\n')
 }

@@ -1,4 +1,4 @@
-/** AI tek sayfa HTML üretici */
+/** Otomatik tek sayfa HTML üretici — varsayılan şablon (kota yok) */
 
 import { chatWithFailover } from '@/lib/ai-chat'
 
@@ -11,8 +11,13 @@ export type LandingBrief = {
   highlights?: string
 }
 
+function llmEnabled(): boolean {
+  return process.env.USE_LLM === '1' || process.env.USE_LLM === 'true'
+}
+
 export async function generateLandingHtml(brief: LandingBrief): Promise<string> {
   const fallback = buildFallbackHtml(brief)
+  if (!llmEnabled()) return fallback
 
   const prompt = `Tek dosyalık, modern, mobil uyumlu HTML landing page üret (sadece HTML, markdown yok).
 Kurallar:
