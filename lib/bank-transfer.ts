@@ -21,7 +21,6 @@ export function leadWhatsAppUrl(): string {
 }
 
 export function productWhatsAppUrl(productName: string, priceLabel: string): string {
-  return waUrl(
-    `Merhaba, ${productName} (${priceLabel}) hakkında bilgi / satın alma için yazıyorum.`
-  )
+  // Bot anahtar kelimeyle eşleşsin diye ürün adını net yaz
+  return waUrl(`${productName}\nFiyat: ${priceLabel}\nSatın almak istiyorum.`)
 }

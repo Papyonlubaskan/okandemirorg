@@ -482,6 +482,44 @@ export default function Hizmetler() {
               </Link>
             </div>
 
+            {/* AI SEO Denetim */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 mb-6 bg-gradient-to-br from-teal-600 to-slate-800 rounded-full flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">AI SEO Denetim</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                URL yapıştır → AI rapor. Hesap şifresi yok. 1.490₺ · self-serve.
+              </p>
+              <Link
+                href="/hizmetler/ai-denetim"
+                className="inline-flex items-center justify-center bg-teal-700 hover:bg-teal-800 text-white px-6 py-3 rounded-full font-black transition-colors"
+              >
+                İncele
+              </Link>
+            </div>
+
+            {/* AI Landing */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="w-16 h-16 mb-6 bg-gradient-to-br from-cyan-700 to-slate-900 rounded-full flex items-center justify-center">
+                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4">AI Landing Sayfa</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
+                İş + şehir + hizmet → tek sayfa HTML/zip. 2.490₺ · self-serve.
+              </p>
+              <Link
+                href="/hizmetler/ai-landing"
+                className="inline-flex items-center justify-center bg-cyan-800 hover:bg-cyan-900 text-white px-6 py-3 rounded-full font-black transition-colors"
+              >
+                İncele
+              </Link>
+            </div>
+
             {/* Denetim */}
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow">
               <div className="w-16 h-16 mb-6 bg-gradient-to-br from-violet-500 to-indigo-600 rounded-full flex items-center justify-center">
