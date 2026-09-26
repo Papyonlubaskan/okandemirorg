@@ -1,4 +1,6 @@
-/** Basit HTML crawl sinyalleri + Groq rapor */
+/** Basit HTML crawl sinyalleri + AI rapor */
+
+import { chatWithFailover } from '@/lib/ai-chat'
 
 export type CrawlSignals = {
   url: string
@@ -116,8 +118,6 @@ export async function crawlUrl(inputUrl: string): Promise<CrawlSignals> {
     errors,
   }
 }
-
-import { chatWithFailover } from '@/lib/ai-chat'
 
 export async function generateAuditReport(signals: CrawlSignals): Promise<string> {
   const fallback = buildFallbackReport(signals)
