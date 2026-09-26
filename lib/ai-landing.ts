@@ -1,5 +1,7 @@
 /** AI tek sayfa HTML üretici */
 
+import { chatWithFailover } from '@/lib/ai-chat'
+
 export type LandingBrief = {
   businessName: string
   city: string
@@ -10,9 +12,7 @@ export type LandingBrief = {
 }
 
 export async function generateLandingHtml(brief: LandingBrief): Promise<string> {
-  const groqApiKey = process.env.GROQ_API_KEY
   const fallback = buildFallbackHtml(brief)
-  if (!groqApiKey) return fallback
 
   const prompt = `Tek dosyalık, modern, mobil uyumlu HTML landing page üret (sadece HTML, markdown yok).
 Kurallar:
@@ -29,37 +29,23 @@ Kurallar:
 - WhatsApp CTA varsa wa.me linki kullan
 - Footer'da "okandemir.org AI ile üretildi" küçük not`
 
-  try {
-    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${groqApiKey}`,
-        'Content-Type': 'application/json',
+  const ai = await chatWithFailover(
+    [
+      {
+        role: 'system',
+        content: 'Sadece geçerli HTML çıktısı ver. Açıklama yazma. ``` kullanma.',
       },
-      body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
-        messages: [
-          {
-            role: 'system',
-            content: 'Sadece geçerli HTML çıktısı ver. Açıklama yazma. ``` kullanma.',
-          },
-          { role: 'user', content: prompt },
-        ],
-        temperature: 0.5,
-        max_tokens: 4000,
-      }),
-    })
-    if (!response.ok) return fallback
-    const data = await response.json()
-    let content = String(data?.choices?.[0]?.message?.content || '').trim()
-    content = content.replace(/^```html?\s*/i, '').replace(/```$/i, '').trim()
-    if (!content.includes('<html') && !content.includes('<!DOCTYPE')) {
-      return fallback
-    }
-    return content
-  } catch {
+      { role: 'user', content: prompt },
+    ],
+    { temperature: 0.5, maxTokens: 4000 }
+  )
+
+  if (!ai?.content) return fallback
+  let content = ai.content.replace(/^```html?\s*/i, '').replace(/```$/i, '').trim()
+  if (!content.includes('<html') && !content.includes('<!DOCTYPE')) {
     return fallback
   }
+  return content
 }
 
 function buildFallbackHtml(b: LandingBrief): string {
