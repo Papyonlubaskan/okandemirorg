@@ -1,5 +1,9 @@
 import Link from 'next/link'
-import { DIGITAL_PRODUCTS, FUNNEL, formatTry } from '@/lib/digital-products'
+import { getProductBySlug, FUNNEL, formatTry } from '@/lib/digital-products'
+
+const kit = getProductBySlug('kobi-dijital-baslangic-kiti')!
+const aiAudit = getProductBySlug('ai-seo-denetim')!
+const audit = getProductBySlug('dijital-isletme-denetimi')!
 
 const STEPS = [
   {
@@ -11,17 +15,24 @@ const STEPS = [
   },
   {
     n: '1',
-    title: DIGITAL_PRODUCTS[0].name,
-    price: formatTry(DIGITAL_PRODUCTS[0].priceTry),
+    title: kit.name,
+    price: formatTry(kit.priceTry),
     href: FUNNEL.kitHref,
-    desc: DIGITAL_PRODUCTS[0].shortDescription,
+    desc: kit.shortDescription,
+  },
+  {
+    n: '2a',
+    title: aiAudit.name,
+    price: formatTry(aiAudit.priceTry),
+    href: FUNNEL.aiAuditHref,
+    desc: aiAudit.shortDescription,
   },
   {
     n: '2',
-    title: DIGITAL_PRODUCTS[1].name,
-    price: formatTry(DIGITAL_PRODUCTS[1].priceTry),
+    title: audit.name,
+    price: formatTry(audit.priceTry),
     href: FUNNEL.auditHref,
-    desc: DIGITAL_PRODUCTS[1].shortDescription,
+    desc: audit.shortDescription,
   },
   {
     n: '3',
@@ -43,10 +54,10 @@ export default function IncomeFunnelSection({
         <div className="text-center mb-10">
           <h2 className="text-3xl lg:text-4xl font-black text-gray-900 dark:text-white mb-3">{title}</h2>
           <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Ücretsiz → kit → denetim → bakım. Tüm iletişim WhatsApp. Ödeme bilgisi sitede yok.
+            Ücretsiz → kit → AI/insanlı denetim → bakım. WhatsApp sipariş; ödeme bilgisi sitede yok.
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">
           {STEPS.map((s) => (
             <Link
               key={s.href + s.n}
@@ -60,6 +71,11 @@ export default function IncomeFunnelSection({
             </Link>
           ))}
         </div>
+        <p className="text-center mt-8">
+          <Link href={FUNNEL.aiLandingHref} className="text-cyan-800 dark:text-cyan-300 font-bold underline">
+            AI Landing Sayfa ({formatTry(2490)})
+          </Link>
+        </p>
       </div>
     </section>
   )

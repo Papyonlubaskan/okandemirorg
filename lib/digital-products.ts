@@ -1,6 +1,6 @@
 /** Gelir hunisi ürün katalogu — IBAN public yok; WhatsApp ödeme */
 
-export type ProductKind = 'digital_download' | 'service'
+export type ProductKind = 'digital_download' | 'service' | 'self_serve'
 
 export type DigitalProduct = {
   slug: string
@@ -20,6 +20,8 @@ export const FUNNEL = {
   kitHref: '/hizmetler/dijital-baslangic-kiti',
   auditHref: '/hizmetler/dijital-isletme-denetimi',
   careHref: '/hizmetler/dijital-bakim',
+  aiAuditHref: '/hizmetler/ai-denetim',
+  aiLandingHref: '/hizmetler/ai-landing',
 } as const
 
 export const DIGITAL_PRODUCTS: DigitalProduct[] = [
@@ -45,6 +47,42 @@ export const DIGITAL_PRODUCTS: DigitalProduct[] = [
       'Teklif ve fiyatlandırma şablonları',
     ],
     contentFile: 'kobi-dijital-baslangic-kiti.md',
+  },
+  {
+    slug: 'ai-seo-denetim',
+    name: 'AI SEO Denetim',
+    priceTry: 1490,
+    kind: 'self_serve',
+    href: FUNNEL.aiAuditHref,
+    shortDescription:
+      'Ödeme sonrası URL yapıştırın — AI title/H1/hız/CTA/mobil raporu üretir. Hesap şifresi gerekmez.',
+    description:
+      'Self-serve denetim. Ödeme onayından sonra panel linki gelir; site URL’nizi girersiniz, Groq tabanlı rapor üretilir.',
+    includes: [
+      'Title / meta / H1 kontrolü',
+      'Temel hız ve mobil sinyalleri',
+      'CTA ve dönüşüm notları',
+      'Markdown rapor (indirme + WhatsApp)',
+      'Hesap şifresi yok — sadece URL',
+    ],
+  },
+  {
+    slug: 'ai-landing-sayfa',
+    name: 'AI Landing Sayfa',
+    priceTry: 2490,
+    kind: 'self_serve',
+    href: FUNNEL.aiLandingHref,
+    shortDescription:
+      'İş + şehir + hizmet → AI tek sayfalık HTML üretir, zip indirirsiniz.',
+    description:
+      'Ödeme sonrası panelde formu doldurun. Tek sayfalık landing HTML zip olarak teslim edilir. Yayınlama/domain ayrı upsell.',
+    includes: [
+      'Tek sayfalık HTML',
+      'Mobil uyumlu şablon',
+      'WhatsApp CTA alanı',
+      'Zip indirme',
+      'Yayınlama isterseniz ayrıca teklif',
+    ],
   },
   {
     slug: 'dijital-isletme-denetimi',

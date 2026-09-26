@@ -53,6 +53,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'e-ticaret-platformlari',
     'dijital-baslangic-kiti',
     'ucretsiz-seo-rehberi',
+    'ai-denetim',
+    'ai-landing',
     'dijital-isletme-denetimi',
     'dijital-bakim',
     'izmir-dijital-pazarlama',
@@ -66,6 +68,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
         ? 0.95
         : service === 'dijital-baslangic-kiti' ||
             service === 'dijital-isletme-denetimi' ||
+            service === 'ai-denetim' ||
+            service === 'ai-landing' ||
             service === 'ucretsiz-seo-rehberi'
           ? 0.9
           : 0.85,
