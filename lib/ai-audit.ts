@@ -121,6 +121,10 @@ export async function crawlUrl(inputUrl: string): Promise<CrawlSignals> {
 
 export async function generateAuditReport(signals: CrawlSignals): Promise<string> {
   const fallback = buildFallbackReport(signals)
+  // Varsayılan KAPALI — kota yakmaz. Railway: USE_LLM=1
+  if (process.env.USE_LLM !== '1' && process.env.USE_LLM !== 'true') {
+    return fallback
+  }
 
   const prompt = `Sen Türkçe yazan bir SEO/dijital denetim uzmanısın. Aşağıdaki crawl sinyallerine göre kısa, aksiyon odaklı bir Markdown rapor yaz.
 Başlıklar: Özet, Güçlü yönler, Kritik sorunlar, Öncelikli aksiyonlar (max 7), Skor tahmini (/100).
