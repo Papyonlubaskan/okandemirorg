@@ -117,10 +117,10 @@ export async function crawlUrl(inputUrl: string): Promise<CrawlSignals> {
   }
 }
 
+import { chatWithFailover } from '@/lib/ai-chat'
+
 export async function generateAuditReport(signals: CrawlSignals): Promise<string> {
-  const groqApiKey = process.env.GROQ_API_KEY
   const fallback = buildFallbackReport(signals)
-  if (!groqApiKey) return fallback
 
   const prompt = `Sen Türkçe yazan bir SEO/dijital denetim uzmanısın. Aşağıdaki crawl sinyallerine göre kısa, aksiyon odaklı bir Markdown rapor yaz.
 Başlıklar: Özet, Güçlü yönler, Kritik sorunlar, Öncelikli aksiyonlar (max 7), Skor tahmini (/100).
@@ -129,30 +129,15 @@ Başlıklar: Özet, Güçlü yönler, Kritik sorunlar, Öncelikli aksiyonlar (ma
 Sinyaller (JSON):
 ${JSON.stringify(signals, null, 2)}`
 
-  try {
-    const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${groqApiKey}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
-        messages: [
-          { role: 'system', content: 'Kısa, net, Türkçe Markdown rapor üret. Abartma.' },
-          { role: 'user', content: prompt },
-        ],
-        temperature: 0.3,
-        max_tokens: 2200,
-      }),
-    })
-    if (!response.ok) return fallback
-    const data = await response.json()
-    const content = data?.choices?.[0]?.message?.content
-    return typeof content === 'string' && content.trim() ? content.trim() : fallback
-  } catch {
-    return fallback
-  }
+  const ai = await chatWithFailover(
+    [
+      { role: 'system', content: 'Kısa, net, Türkçe Markdown rapor üret. Abartma.' },
+      { role: 'user', content: prompt },
+    ],
+    { temperature: 0.3, maxTokens: 2200 }
+  )
+
+  return ai?.content || fallback
 }
 
 function buildFallbackReport(s: CrawlSignals): string {
@@ -197,6 +182,6 @@ function buildFallbackReport(s: CrawlSignals): string {
     `4. Alt metinleri tamamlayın`,
     `5. Canonical ve OG etiketlerini kontrol edin`,
     ``,
-    `*Groq anahtarı yoksa veya AI yanıt vermezse bu şablon kullanılır.*`,
+    `*Tüm AI sağlayıcılar yanıt vermezse bu crawl şablonu kullanılır — müşteri askıda kalmaz.*`,
   ].join('\n')
 }
