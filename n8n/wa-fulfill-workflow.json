@@ -1,0 +1,63 @@
+{
+  "name": "WA ONAY → Fulfill (opsiyonel)",
+  "notes": "Asıl satış botu Next.js WhatsApp webhook içinde (handleWaSalesBot). Bu workflow: n8n'den manuel/HTTP ile fulfill tetiklemek veya cron yedek için. INTERNAL_API_KEY gerekli.",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "wa-fulfill",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SITE_URL || 'https://okandemir.org' }}/api/orders/fulfill",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-api-key",
+              "value": "={{ $env.INTERNAL_API_KEY }}"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"orderCode\": \"{{ $json.orderCode || $json.body.orderCode }}\"\n}",
+        "options": {}
+      },
+      "name": "Fulfill API",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [260, 0]
+    },
+    {
+      "parameters": {
+        "respondWith": "json",
+        "responseBody": "={{ $json }}"
+      },
+      "name": "Respond",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [520, 0]
+    }
+  ],
+  "connections": {
+    "Webhook": {
+      "main": [[{ "node": "Fulfill API", "type": "main", "index": 0 }]]
+    },
+    "Fulfill API": {
+      "main": [[{ "node": "Respond", "type": "main", "index": 0 }]]
+    }
+  }
+}

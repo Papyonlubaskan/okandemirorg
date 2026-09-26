@@ -1,16 +1,13 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { handleWaSalesBot } from '@/lib/wa-sales-bot'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
-  
-  // WhatsApp webhook verification
   const hubMode = searchParams.get('hub.mode')
   const hubChallenge = searchParams.get('hub.challenge')
   const hubVerifyToken = searchParams.get('hub.verify_token')
 
-  // Verify token kontrolü
   if (hubMode === 'subscribe' && hubVerifyToken === process.env.WHATSAPP_VERIFY_TOKEN) {
-    // Webhook verified successfully
     return new NextResponse(hubChallenge, { status: 200 })
   }
 
@@ -20,12 +17,10 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json()
-    // Webhook received and processing
 
-    // Webhook events'ini işle
     if (body.object === 'whatsapp_business_account') {
-      for (const entry of body.entry) {
-        for (const change of entry.changes) {
+      for (const entry of body.entry || []) {
+        for (const change of entry.changes || []) {
           if (change.field === 'messages') {
             await handleMessages(change.value)
           }
@@ -35,95 +30,42 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ status: 'ok' })
   } catch (error) {
-    // Error handled silently
-    return NextResponse.json({ 
-      error: 'Internal server error',
-      details: error instanceof Error ? error.message : 'Unknown error'
-    }, { status: 500 })
+    return NextResponse.json(
+      {
+        error: 'Internal server error',
+        details: error instanceof Error ? error.message : 'Unknown error',
+      },
+      { status: 500 }
+    )
   }
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 async function handleMessages(value: any) {
-  if (value.messages) {
-    for (const message of value.messages) {
-      await processIncomingMessage(message)
+  if (!value?.messages) return
+
+  for (const message of value.messages) {
+    const from = String(message.from || '')
+    if (!from) continue
+
+    let text = ''
+    if (message.type === 'text') {
+      text = String(message.text?.body || '')
+    } else if (message.type === 'button') {
+      text = String(message.button?.text || message.button?.payload || '')
+    } else if (message.type === 'interactive') {
+      text = String(
+        message.interactive?.button_reply?.title ||
+          message.interactive?.list_reply?.title ||
+          ''
+      )
+    } else if (message.type === 'image' || message.type === 'document') {
+      // Dekont görseli → ödeme sinyali
+      text = 'dekont gönderildi'
     }
-  }
 
-  if (value.statuses) {
-    for (const status of value.statuses) {
-      await processMessageStatus(status)
+    if (text) {
+      await handleWaSalesBot(from, text)
     }
-  }
-}
-
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-async function processIncomingMessage(message: any) {
-  // Processing incoming WhatsApp message
-  
-  const { from, text, type } = message
-  
-  // Basit otomatik yanıt sistemi
-  let responseText = ''
-  
-  if (type === 'text') {
-    const messageText = text?.body?.toLowerCase() || ''
-    
-    // Anahtar kelime tabanlı yanıtlar
-    if (messageText.includes('merhaba') || messageText.includes('selam')) {
-      responseText = 'Merhaba! Okan Demir Dijital Pazarlama hizmetleri için hoş geldiniz. Size nasıl yardımcı olabilirim?'
-    } else if (messageText.includes('fiyat') || messageText.includes('ücret')) {
-      responseText = 'Hizmet fiyatlarımız proje kapsamına göre değişmektedir. Detaylı bilgi için info@okandemir.org adresinden iletişime geçebilirsiniz.'
-    } else if (messageText.includes('web tasarım') || messageText.includes('website')) {
-      responseText = 'Web tasarım ve geliştirme hizmetlerimiz için portföyümüzü inceleyebilirsiniz: https://okandemir.org'
-    } else if (messageText.includes('seo') || messageText.includes('google')) {
-      responseText = 'SEO ve Google Ads hizmetlerimiz hakkında bilgi almak için web sitemizi ziyaret edebilirsiniz: https://okandemir.org'
-    } else if (messageText.includes('sosyal medya') || messageText.includes('instagram')) {
-      responseText = 'Sosyal medya yönetimi hizmetlerimiz için Instagram hesabımızı takip edebilirsiniz: @okandemirorg'
-    } else {
-      responseText = 'Mesajınız için teşekkürler! Size en kısa sürede dönüş yapacağım. Detaylı bilgi için: info@okandemir.org'
-    }
-    
-    // WhatsApp'a yanıt gönder
-    await sendWhatsAppMessage(from, responseText)
-  }
-}
-
-async function processMessageStatus(status: unknown) {
-  // Mesaj durumu işleme (delivered, read, failed)
-  void status
-}
-
-async function sendWhatsAppMessage(to: string, text: string) {
-  const accessToken = process.env.WHATSAPP_ACCESS_TOKEN
-  const phoneNumberId = process.env.WHATSAPP_PHONE_NUMBER_ID
-  
-  if (!accessToken || !phoneNumberId) {
-    // WhatsApp credentials missing - operation aborted
-    return
-  }
-
-  try {
-    const response = await fetch(`https://graph.facebook.com/v18.0/${phoneNumberId}/messages`, {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${accessToken}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        messaging_product: 'whatsapp',
-        to: to,
-        type: 'text',
-        text: { body: text }
-      })
-    })
-
-    const result = await response.json()
-    // WhatsApp message sent successfully
-    return result
-  } catch {
-    // Error sending WhatsApp message - silently handled
-    return null
   }
 }
