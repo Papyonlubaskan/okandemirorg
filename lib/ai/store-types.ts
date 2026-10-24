@@ -10,6 +10,38 @@ export type WorkspaceRow = {
   plan: 'free' | 'starter' | 'pro' | 'agency'
   status: 'active' | 'suspended' | 'cancelled'
   monthlyBudgetUsd: number
+  planExpiresAt: Date | null
+}
+
+export type SiteRow = {
+  id: string
+  workspaceId: string
+  slug: string
+  name: string
+  status: 'draft' | 'published' | 'suspended'
+  currentVersion: number
+  publishedVersion: number | null
+  publishedAt: Date | null
+  createdAt: Date
+}
+
+export type SiteVersionRow = {
+  siteId: string
+  version: number
+  schema: import('@/lib/sites/schema').SiteSchema
+  contentHash: string
+  source: 'ai' | 'template' | 'manual'
+  createdAt: Date
+}
+
+export type SiteLeadRow = {
+  id: number
+  siteId: string
+  name: string
+  phone: string | null
+  email: string | null
+  message: string
+  createdAt: Date
 }
 
 export type MembershipRow = { workspaceId: string; name: string; role: WorkspaceRole; plan: WorkspaceRow['plan'] }
@@ -194,6 +226,11 @@ export interface TaskStore {
   /** Aktif ücretli planlara bu ayın hibesini bir kez yazar */
   grantMonthlyPlanCredits(grants: Record<WorkspaceRow['plan'], number>): Promise<number>
   setWorkspacePlan(workspaceId: string, plan: WorkspaceRow['plan'], monthlyBudgetUsd?: number): Promise<boolean>
+  /** Planı ayarlar ve bitişi (mevcut bitiş veya şimdiden) periodMs uzatır */
+  extendWorkspacePlan(workspaceId: string, plan: WorkspaceRow['plan'], periodMs: number): Promise<boolean>
+  /** Süresi (ek süre dahil) dolan planları free'ye düşürür, sitelerini askıya alır */
+  expireWorkspacePlans(graceMs: number): Promise<number>
+  getWorkspaceOwnerEmail(workspaceId: string): Promise<string | null>
   /** Yönetim: sahibin e-postasından ilk (kişisel) workspace */
   findWorkspaceIdByOwnerEmail(email: string): Promise<string | null>
 
@@ -209,4 +246,28 @@ export interface TaskStore {
   getPublishedDraftBySlug(slug: string): Promise<DraftRow | null>
   /** Yalnızca içerik hash'i eşleşirse yayınlar; aynı hash ile tekrar çağrı etkisizdir */
   publishDraft(draftId: string, workspaceId: string, contentHash: string): Promise<boolean>
+
+  // Siteler (migration 007)
+  /** Aynı görev için tekrar çağrılırsa mevcut siteyi döndürür (idempotent) */
+  createSite(s: { id: string; workspaceId: string; slug: string; name: string; taskId: string | null }): Promise<SiteRow>
+  getSite(siteId: string, workspaceId: string): Promise<SiteRow | null>
+  getSiteBySlug(slug: string): Promise<SiteRow | null>
+  listSites(workspaceId: string): Promise<SiteRow[]>
+  /** Yeni sürüm ekler ve current_version'ı günceller. taskId verilirse aynı görev ikinci sürüm üretmez */
+  addSiteVersion(v: {
+    siteId: string
+    workspaceId: string
+    schema: SiteVersionRow['schema']
+    contentHash: string
+    source: SiteVersionRow['source']
+    taskId: string | null
+    createdBy: string | null
+  }): Promise<number>
+  getSiteVersion(siteId: string, version: number): Promise<SiteVersionRow | null>
+  /** Sürüm hash'i eşleşirse yayınlar */
+  publishSiteVersion(siteId: string, workspaceId: string, version: number, contentHash: string): Promise<boolean>
+  unpublishSite(siteId: string, workspaceId: string): Promise<boolean>
+  countPublishedSites(workspaceId: string): Promise<number>
+  addSiteLead(l: { siteId: string; workspaceId: string; name: string; phone: string | null; email: string | null; message: string; ipHash: string }): Promise<void>
+  listSiteLeads(workspaceId: string, siteId: string, limit: number): Promise<SiteLeadRow[]>
 }

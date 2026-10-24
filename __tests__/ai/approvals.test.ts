@@ -16,22 +16,23 @@ function setup() {
   const publish = jest.fn(async (i: { site: string }) => ({ published: i.site }))
   const publishTool: ToolDef<{ site: string }, { published: string }> = {
     name: 'site.publish',
-    description: 'Siteyi herkese aÃ§Ä±k yayÄ±nlar',
+    description: 'Siteyi herkese açýk yayýnlar',
     risk: 'publish',
     inputSchema: z.object({ site: z.string() }).strict(),
     timeoutMs: 1000,
-    describeAction: (i) => ({ summary: `${i.site} yayÄ±nlanacak`, target: i.site, effects: ['Herkese aÃ§Ä±k olur'] }),
+    describeAction: (i) => ({ summary: `${i.site} yayýnlanacak`, target: i.site, effects: ['Herkese açýk olur'] }),
     run: publish,
   }
   const types: Record<string, TaskTypeDef> = {
     publish: {
       type: 'publish',
-      label: 'yayÄ±n',
+      label: 'yayýn',
       planner: 'static',
       allowedTools: ['site.publish'],
       inputSchema: z.object({ site: z.string() }).strict(),
       staticPlan: (input) => ({ version: 1, taskType: 'publish', steps: [{ key: 'pub', tool: 'site.publish', input }] }),
       creditCost: 0,
+      userCreatable: false,
     },
   }
   const deps: OrchestratorDeps = {
@@ -51,8 +52,8 @@ async function seed(store: MemoryTaskStore) {
   await store.createTask({ id: 't1', workspaceId: 'ws1', createdBy: 'owner', taskType: 'publish', input: { site: 'demo' }, idempotencyKey: null, budgetUsd: 0, maxAttempts: 3 })
 }
 
-describe('onay politikasÄ±', () => {
-  it('onay yokken yayÄ±n aracÄ± Ã§alÄ±ÅŸmaz; Ã¶zetli onay kaydÄ± oluÅŸur', async () => {
+describe('onay politikasý', () => {
+  it('onay yokken yayýn aracý çalýþmaz; özetli onay kaydý oluþur', async () => {
     const { store, deps, publish } = setup()
     await seed(store)
     await runWorkerTick(store, { deps })
@@ -60,16 +61,16 @@ describe('onay politikasÄ±', () => {
     expect(publish).not.toHaveBeenCalled()
     expect(store.tasks.get('t1')!.status).toBe('awaiting_approval')
     const [approval] = await store.listPendingApprovals('ws1')
-    expect(approval.summary).toMatchObject({ tool: 'site.publish', summary: 'demo yayÄ±nlanacak', target: 'demo' })
+    expect(approval.summary).toMatchObject({ tool: 'site.publish', summary: 'demo yayýnlanacak', target: 'demo' })
     expect(approval.payloadHash).toBe(computePayloadHash('t1', { key: 'pub', tool: 'site.publish', input: { site: 'demo' } }))
 
-    // Tekrar tick: yeni onay oluÅŸturmaz, araÃ§ hÃ¢lÃ¢ Ã§alÄ±ÅŸmaz
+    // Tekrar tick: yeni onay oluþturmaz, araç hâlâ çalýþmaz
     await runWorkerTick(store, { deps })
     expect(publish).not.toHaveBeenCalled()
     expect(store.approvals.size).toBe(1)
   })
 
-  it('Ã¼ye rolÃ¼ onay veremez; yanlÄ±ÅŸ hash reddedilir', async () => {
+  it('üye rolü onay veremez; yanlýþ hash reddedilir', async () => {
     const { store, deps } = setup()
     await seed(store)
     await runWorkerTick(store, { deps })
@@ -85,7 +86,7 @@ describe('onay politikasÄ±', () => {
     expect(otherWs).toMatchObject({ ok: false, code: 'not_found' })
   })
 
-  it('onaydan sonra araÃ§ tam bir kez Ã§alÄ±ÅŸÄ±r ve onay tÃ¼ketilir', async () => {
+  it('onaydan sonra araç tam bir kez çalýþýr ve onay tüketilir', async () => {
     const { store, deps, publish } = setup()
     await seed(store)
     await runWorkerTick(store, { deps })
@@ -103,14 +104,14 @@ describe('onay politikasÄ±', () => {
     expect(store.audits.map((x) => x.action)).toEqual(expect.arrayContaining(['approval.requested', 'approval.approved']))
   })
 
-  it('payload deÄŸiÅŸirse eski onay geÃ§ersiz kalÄ±r ve yeniden onay istenir', async () => {
+  it('payload deðiþirse eski onay geçersiz kalýr ve yeniden onay istenir', async () => {
     const { store, deps, publish } = setup()
     await seed(store)
     await runWorkerTick(store, { deps })
     const [a] = await store.listPendingApprovals('ws1')
     await decideApproval({ store, approvalId: a.id, workspaceId: 'ws1', userId: 'owner', role: 'owner', decision: 'approve', payloadHash: a.payloadHash })
 
-    // Onaydan sonra plan girdisi deÄŸiÅŸti
+    // Onaydan sonra plan girdisi deðiþti
     store.tasks.get('t1')!.plan!.steps[0].input = { site: 'baska-site' }
     await runWorkerTick(store, { deps })
 
@@ -122,7 +123,7 @@ describe('onay politikasÄ±', () => {
     expect(pending[0].payloadHash).not.toBe(a.payloadHash)
   })
 
-  it('sÃ¼resi dolan onay gÃ¶revi expired yapar', async () => {
+  it('süresi dolan onay görevi expired yapar', async () => {
     const { store, deps, advance, publish } = setup()
     await seed(store)
     await runWorkerTick(store, { deps })
@@ -136,7 +137,7 @@ describe('onay politikasÄ±', () => {
     expect(publish).not.toHaveBeenCalled()
   })
 
-  it('ret gÃ¶revi baÅŸarÄ±sÄ±z kapatÄ±r', async () => {
+  it('ret görevi baþarýsýz kapatýr', async () => {
     const { store, deps, publish } = setup()
     await seed(store)
     await runWorkerTick(store, { deps })
@@ -147,7 +148,7 @@ describe('onay politikasÄ±', () => {
     expect(publish).not.toHaveBeenCalled()
   })
 
-  it('onay sonrasÄ± workspace askÄ±ya alÄ±ndÄ±ysa araÃ§ Ã§alÄ±ÅŸmaz; onaylayan artÄ±k yetkili deÄŸilse yeniden onay istenir', async () => {
+  it('onay sonrasý workspace askýya alýndýysa araç çalýþmaz; onaylayan artýk yetkili deðilse yeniden onay istenir', async () => {
     const { store, deps, publish } = setup()
     await seed(store)
     store.addMember('ws1', 'admin2', 'admin')
@@ -155,13 +156,13 @@ describe('onay politikasÄ±', () => {
     const [a] = await store.listPendingApprovals('ws1')
     await decideApproval({ store, approvalId: a.id, workspaceId: 'ws1', userId: 'admin2', role: 'admin', decision: 'approve', payloadHash: a.payloadHash })
 
-    // Onaylayan admin Ã¼yelikten Ã§Ä±karÄ±ldÄ± â†’ onay tÃ¼ketilmez, yeni onay istenir
+    // Onaylayan admin üyelikten çýkarýldý › onay tüketilmez, yeni onay istenir
     store.members.delete('ws1|admin2')
     await runWorkerTick(store, { deps })
     expect(publish).not.toHaveBeenCalled()
     expect(store.tasks.get('t1')!.status).toBe('awaiting_approval')
 
-    // Workspace askÄ±ya alÄ±ndÄ± â†’ yeni onay verilse bile Ã§alÄ±ÅŸmaz
+    // Workspace askýya alýndý › yeni onay verilse bile çalýþmaz
     const [b] = await store.listPendingApprovals('ws1')
     await decideApproval({ store, approvalId: b.id, workspaceId: 'ws1', userId: 'owner', role: 'owner', decision: 'approve', payloadHash: b.payloadHash })
     store.workspaces.get('ws1')!.status = 'suspended'
@@ -170,7 +171,7 @@ describe('onay politikasÄ±', () => {
     expect(store.tasks.get('t1')).toMatchObject({ status: 'failed', errorCode: 'workspace_inactive' })
   })
 
-  it('stableStringify anahtar sÄ±rasÄ±ndan baÄŸÄ±msÄ±zdÄ±r', () => {
+  it('stableStringify anahtar sýrasýndan baðýmsýzdýr', () => {
     expect(stableStringify({ b: 1, a: { d: 2, c: 3 } })).toBe(stableStringify({ a: { c: 3, d: 2 }, b: 1 }))
   })
 })

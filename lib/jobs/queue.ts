@@ -49,6 +49,11 @@ export async function enqueueTask(i: EnqueueInput): Promise<EnqueueResult> {
   const ws = await i.store.getWorkspace(i.workspaceId)
   if (!ws || ws.status !== 'active') return { ok: false, status: 403, code: 'workspace_inactive', message: 'Workspace aktif değil' }
 
+  if (def.precheck) {
+    const denied = await def.precheck(i.store, i.workspaceId, parsed.data)
+    if (denied) return { ok: false, status: 409, code: 'precheck_failed', message: denied }
+  }
+
   // Aylık bütçe yalnızca ücretli model harcamasını sınırlar; ücretsiz/şablon yol her zaman açık
   const spent = await i.store.workspaceSpendThisMonth(i.workspaceId)
   const remaining = Math.max(0, ws.monthlyBudgetUsd - spent)

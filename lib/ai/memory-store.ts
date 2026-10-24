@@ -10,6 +10,9 @@ import type {
   DraftRow,
   MembershipRow,
   NewTask,
+  SiteLeadRow,
+  SiteRow,
+  SiteVersionRow,
   StepRow,
   TaskPatch,
   TaskRow,
@@ -57,7 +60,7 @@ export class MemoryTaskStore implements TaskStore {
     return out
   }
   async createWorkspace(ws: { id: string; name: string; ownerUserId: string }) {
-    this.workspaces.set(ws.id, { ...ws, plan: 'free', status: 'active', monthlyBudgetUsd: 0.5 })
+    this.workspaces.set(ws.id, { ...ws, plan: 'free', status: 'active', monthlyBudgetUsd: 0.5, planExpiresAt: null })
     this.members.set(`${ws.id}|${ws.ownerUserId}`, 'owner')
   }
   addMember(workspaceId: string, userId: string, role: WorkspaceRole) {
@@ -381,6 +384,102 @@ export class MemoryTaskStore implements TaskStore {
     if (!d || d.workspaceId !== workspaceId || d.contentHash !== contentHash) return false
     if (d.status !== 'published') Object.assign(d, { status: 'published', publishedHash: contentHash, publishedAt: this.now() })
     return true
+  }
+
+  async extendWorkspacePlan(workspaceId: string, plan: WorkspaceRow['plan'], periodMs: number) {
+    const w = this.workspaces.get(workspaceId)
+    if (!w) return false
+    const base = w.planExpiresAt && w.planExpiresAt.getTime() > this.now().getTime() ? w.planExpiresAt.getTime() : this.now().getTime()
+    w.plan = plan
+    w.planExpiresAt = new Date(base + periodMs)
+    return true
+  }
+  async expireWorkspacePlans(graceMs: number) {
+    let n = 0
+    for (const w of this.workspaces.values()) {
+      if (w.plan !== 'free' && w.planExpiresAt && w.planExpiresAt.getTime() + graceMs < this.now().getTime()) {
+        w.plan = 'free'
+        for (const s of this.sites.values()) if (s.workspaceId === w.id && s.status === 'published') s.status = 'suspended'
+        n++
+      }
+    }
+    return n
+  }
+  async getWorkspaceOwnerEmail(workspaceId: string) {
+    const w = this.workspaces.get(workspaceId)
+    for (const [email, uid] of this.ownerEmails) if (uid === w?.ownerUserId) return email
+    return null
+  }
+
+  // --- Siteler
+  sites = new Map<string, SiteRow & { taskId: string | null }>()
+  siteVersions: (SiteVersionRow & { taskId: string | null })[] = []
+  siteLeads: (SiteLeadRow & { workspaceId: string })[] = []
+
+  private publicSite(s: SiteRow & { taskId: string | null }): SiteRow {
+    const { taskId: _t, ...rest } = s
+    return structuredClone(rest)
+  }
+  async createSite(s: { id: string; workspaceId: string; slug: string; name: string; taskId: string | null }) {
+    const existing = [...this.sites.values()].find((x) => s.taskId && x.taskId === s.taskId)
+    if (existing) return this.publicSite(existing)
+    if ([...this.sites.values()].some((x) => x.slug === s.slug)) throw Object.assign(new Error('dup slug'), { errno: 1062 })
+    const row = { ...s, status: 'draft' as const, currentVersion: 0, publishedVersion: null, publishedAt: null, createdAt: this.now() }
+    this.sites.set(s.id, row)
+    return this.publicSite(row)
+  }
+  async getSite(siteId: string, workspaceId: string) {
+    const s = this.sites.get(siteId)
+    return s && s.workspaceId === workspaceId ? this.publicSite(s) : null
+  }
+  async getSiteBySlug(slug: string) {
+    const s = [...this.sites.values()].find((x) => x.slug === slug)
+    return s ? this.publicSite(s) : null
+  }
+  async listSites(workspaceId: string) {
+    return [...this.sites.values()].filter((s) => s.workspaceId === workspaceId).map((s) => this.publicSite(s))
+  }
+  async addSiteVersion(v: { siteId: string; workspaceId: string; schema: SiteVersionRow['schema']; contentHash: string; source: SiteVersionRow['source']; taskId: string | null; createdBy: string | null }) {
+    const s = this.sites.get(v.siteId)
+    if (!s || s.workspaceId !== v.workspaceId) throw new Error('Site bulunamadı')
+    const dup = this.siteVersions.find((x) => v.taskId && x.taskId === v.taskId)
+    if (dup) return dup.version
+    const version = s.currentVersion + 1
+    this.siteVersions.push({ siteId: v.siteId, version, schema: structuredClone(v.schema), contentHash: v.contentHash, source: v.source, taskId: v.taskId, createdAt: this.now() })
+    s.currentVersion = version
+    return version
+  }
+  async getSiteVersion(siteId: string, version: number) {
+    const v = this.siteVersions.find((x) => x.siteId === siteId && x.version === version)
+    if (!v) return null
+    const { taskId: _t, ...rest } = v
+    return structuredClone(rest)
+  }
+  async publishSiteVersion(siteId: string, workspaceId: string, version: number, contentHash: string) {
+    const s = this.sites.get(siteId)
+    const v = this.siteVersions.find((x) => x.siteId === siteId && x.version === version)
+    if (!s || s.workspaceId !== workspaceId || !v || v.contentHash !== contentHash) return false
+    Object.assign(s, { status: 'published', publishedVersion: version, publishedAt: s.publishedAt ?? this.now() })
+    return true
+  }
+  async unpublishSite(siteId: string, workspaceId: string) {
+    const s = this.sites.get(siteId)
+    if (!s || s.workspaceId !== workspaceId) return false
+    s.status = 'draft'
+    return true
+  }
+  async countPublishedSites(workspaceId: string) {
+    return [...this.sites.values()].filter((s) => s.workspaceId === workspaceId && s.status === 'published').length
+  }
+  async addSiteLead(l: { siteId: string; workspaceId: string; name: string; phone: string | null; email: string | null; message: string; ipHash: string }) {
+    this.siteLeads.push({ id: this.siteLeads.length + 1, siteId: l.siteId, workspaceId: l.workspaceId, name: l.name, phone: l.phone, email: l.email, message: l.message, createdAt: this.now() })
+  }
+  async listSiteLeads(workspaceId: string, siteId: string, limit: number) {
+    return this.siteLeads
+      .filter((l) => l.workspaceId === workspaceId && l.siteId === siteId)
+      .slice(-limit)
+      .reverse()
+      .map(({ workspaceId: _w, ...rest }) => structuredClone(rest))
   }
 
   ownerEmails = new Map<string, string>() // email → userId (test)

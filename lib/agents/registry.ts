@@ -1,6 +1,7 @@
 import { echoTool } from './tools/echo'
 import { landingDraftTool, landingPublishTool } from './tools/landing'
 import { seoAuditTool } from './tools/seo-audit'
+import { siteEditTool, siteGenerateTool, sitePublishTool } from './tools/site'
 import type { ToolDef } from './types'
 
 /**
@@ -8,7 +9,15 @@ import type { ToolDef } from './types'
  * rastgele fonksiyon, SQL veya shell komutu çalıştırılmaz.
  */
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-const TOOLS: ToolDef<any, any>[] = [echoTool, seoAuditTool, landingDraftTool, landingPublishTool]
+const TOOLS: ToolDef<any, any>[] = [
+  echoTool,
+  seoAuditTool,
+  landingDraftTool,
+  landingPublishTool,
+  siteGenerateTool,
+  siteEditTool,
+  sitePublishTool,
+]
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type AnyTool = ToolDef<any, any>

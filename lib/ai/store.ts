@@ -14,6 +14,8 @@ import type {
   DraftRow,
   MembershipRow,
   NewTask,
+  SiteRow,
+  SiteVersionRow,
   StepRow,
   TaskPatch,
   TaskRow,
@@ -90,10 +92,7 @@ const placeholders = (n: number) => Array.from({ length: n }, () => '?').join(',
 export class MysqlTaskStore implements TaskStore {
   // --- Workspace
   async getWorkspace(workspaceId: string): Promise<WorkspaceRow | null> {
-    const r = await queryOne<Row>(
-      'SELECT id, name, owner_user_id, plan, status, monthly_budget_usd FROM workspaces WHERE id = ? LIMIT 1',
-      [workspaceId]
-    )
+    const r = await queryOne<Row>('SELECT * FROM workspaces WHERE id = ? LIMIT 1', [workspaceId])
     if (!r) return null
     return {
       id: String(r.id),
@@ -102,6 +101,7 @@ export class MysqlTaskStore implements TaskStore {
       plan: r.plan as WorkspaceRow['plan'],
       status: r.status as WorkspaceRow['status'],
       monthlyBudgetUsd: Number(r.monthly_budget_usd),
+      planExpiresAt: (r.plan_expires_at as Date) ?? null,
     }
   }
 
@@ -545,6 +545,172 @@ export class MysqlTaskStore implements TaskStore {
         ? await execute('UPDATE workspaces SET plan = ? WHERE id = ?', [plan, workspaceId])
         : await execute('UPDATE workspaces SET plan = ?, monthly_budget_usd = ? WHERE id = ?', [plan, monthlyBudgetUsd, workspaceId])
     return res.affectedRows === 1
+  }
+
+  async extendWorkspacePlan(workspaceId: string, plan: WorkspaceRow['plan'], periodMs: number) {
+    const res = await execute(
+      `UPDATE workspaces SET plan = ?,
+         plan_expires_at = DATE_ADD(IF(plan_expires_at IS NOT NULL AND plan_expires_at > NOW(3), plan_expires_at, NOW(3)), INTERVAL ? MICROSECOND)
+       WHERE id = ?`,
+      [plan, periodMs * 1000, workspaceId]
+    )
+    return res.affectedRows === 1
+  }
+
+  async expireWorkspacePlans(graceMs: number) {
+    const cond = `plan <> 'free' AND plan_expires_at IS NOT NULL AND DATE_ADD(plan_expires_at, INTERVAL ? MICROSECOND) < NOW(3)`
+    await execute(
+      `UPDATE sites SET status = 'suspended' WHERE status = 'published' AND workspace_id IN (SELECT id FROM (SELECT id FROM workspaces WHERE ${cond}) x)`,
+      [graceMs * 1000]
+    )
+    const res = await execute(`UPDATE workspaces SET plan = 'free' WHERE ${cond}`, [graceMs * 1000])
+    return res.affectedRows
+  }
+
+  async getWorkspaceOwnerEmail(workspaceId: string) {
+    const r = await queryOne<Row>('SELECT u.email FROM workspaces w JOIN users u ON u.id = w.owner_user_id WHERE w.id = ? LIMIT 1', [workspaceId])
+    return r ? String(r.email) : null
+  }
+
+  // --- Siteler
+  private toSite(r: Row): SiteRow {
+    return {
+      id: String(r.id),
+      workspaceId: String(r.workspace_id),
+      slug: String(r.slug),
+      name: String(r.name),
+      status: r.status as SiteRow['status'],
+      currentVersion: Number(r.current_version),
+      publishedVersion: r.published_version == null ? null : Number(r.published_version),
+      publishedAt: (r.published_at as Date) ?? null,
+      createdAt: r.created_at as Date,
+    }
+  }
+
+  async createSite(s: { id: string; workspaceId: string; slug: string; name: string; taskId: string | null }) {
+    if (s.taskId) {
+      const existing = await queryOne<Row>('SELECT * FROM sites WHERE created_task_id = ? LIMIT 1', [s.taskId])
+      if (existing) return this.toSite(existing)
+    }
+    await execute('INSERT INTO sites (id, workspace_id, created_task_id, slug, name) VALUES (?, ?, ?, ?, ?)', [
+      s.id,
+      s.workspaceId,
+      s.taskId,
+      s.slug,
+      s.name.slice(0, 120),
+    ])
+    return (await this.getSite(s.id, s.workspaceId))!
+  }
+
+  async getSite(siteId: string, workspaceId: string) {
+    const r = await queryOne<Row>('SELECT * FROM sites WHERE id = ? AND workspace_id = ? LIMIT 1', [siteId, workspaceId])
+    return r ? this.toSite(r) : null
+  }
+
+  async getSiteBySlug(slug: string) {
+    const r = await queryOne<Row>('SELECT * FROM sites WHERE slug = ? LIMIT 1', [slug])
+    return r ? this.toSite(r) : null
+  }
+
+  async listSites(workspaceId: string) {
+    const rows = await query<Row>('SELECT * FROM sites WHERE workspace_id = ? ORDER BY created_at DESC LIMIT 100', [workspaceId])
+    return rows.map((r) => this.toSite(r))
+  }
+
+  /** Sürüm numarası site satırı kilitlenerek atanır (eşzamanlı düzenlemede çakışma olmaz) */
+  async addSiteVersion(v: {
+    siteId: string
+    workspaceId: string
+    schema: SiteVersionRow['schema']
+    contentHash: string
+    source: SiteVersionRow['source']
+    taskId: string | null
+    createdBy: string | null
+  }) {
+    if (v.taskId) {
+      const dup = await queryOne<Row>('SELECT version FROM site_versions WHERE task_id = ? LIMIT 1', [v.taskId])
+      if (dup) return Number(dup.version)
+    }
+    const conn = await pool.getConnection()
+    try {
+      await conn.beginTransaction()
+      const [rows] = await conn.execute<Row[]>('SELECT current_version FROM sites WHERE id = ? AND workspace_id = ? FOR UPDATE', [
+        v.siteId,
+        v.workspaceId,
+      ])
+      if (!rows[0]) throw new Error('Site bulunamadı')
+      const version = Number(rows[0].current_version) + 1
+      await conn.execute(
+        'INSERT INTO site_versions (site_id, version, schema_json, content_hash, source, task_id, created_by) VALUES (?, ?, ?, ?, ?, ?, ?)',
+        [v.siteId, version, JSON.stringify(v.schema), v.contentHash, v.source, v.taskId, v.createdBy]
+      )
+      await conn.execute('UPDATE sites SET current_version = ? WHERE id = ?', [version, v.siteId])
+      await conn.commit()
+      return version
+    } catch (e) {
+      await conn.rollback()
+      throw e
+    } finally {
+      conn.release()
+    }
+  }
+
+  async getSiteVersion(siteId: string, version: number) {
+    const r = await queryOne<Row>('SELECT * FROM site_versions WHERE site_id = ? AND version = ? LIMIT 1', [siteId, version])
+    if (!r) return null
+    return {
+      siteId: String(r.site_id),
+      version: Number(r.version),
+      schema: json<SiteVersionRow['schema']>(r.schema_json)!,
+      contentHash: String(r.content_hash),
+      source: r.source as SiteVersionRow['source'],
+      createdAt: r.created_at as Date,
+    }
+  }
+
+  async publishSiteVersion(siteId: string, workspaceId: string, version: number, contentHash: string) {
+    const v = await queryOne<Row>('SELECT content_hash FROM site_versions WHERE site_id = ? AND version = ? LIMIT 1', [siteId, version])
+    if (!v || v.content_hash !== contentHash) return false
+    const res = await execute(
+      `UPDATE sites SET status = 'published', published_version = ?, published_at = COALESCE(published_at, NOW(3))
+       WHERE id = ? AND workspace_id = ?`,
+      [version, siteId, workspaceId]
+    )
+    return res.affectedRows === 1
+  }
+
+  async unpublishSite(siteId: string, workspaceId: string) {
+    const res = await execute("UPDATE sites SET status = 'draft' WHERE id = ? AND workspace_id = ?", [siteId, workspaceId])
+    return res.affectedRows === 1
+  }
+
+  async countPublishedSites(workspaceId: string) {
+    const r = await queryOne<Row>("SELECT COUNT(*) AS n FROM sites WHERE workspace_id = ? AND status = 'published'", [workspaceId])
+    return Number(r?.n ?? 0)
+  }
+
+  async addSiteLead(l: { siteId: string; workspaceId: string; name: string; phone: string | null; email: string | null; message: string; ipHash: string }) {
+    await execute(
+      'INSERT INTO site_leads (site_id, workspace_id, name, phone, email, message, ip_hash) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      [l.siteId, l.workspaceId, l.name, l.phone, l.email, l.message, l.ipHash]
+    )
+  }
+
+  async listSiteLeads(workspaceId: string, siteId: string, n: number) {
+    const rows = await query<Row>(
+      `SELECT id, site_id, name, phone, email, message, created_at FROM site_leads
+       WHERE workspace_id = ? AND site_id = ? ORDER BY created_at DESC LIMIT ${limit(n)}`,
+      [workspaceId, siteId]
+    )
+    return rows.map((r) => ({
+      id: Number(r.id),
+      siteId: String(r.site_id),
+      name: String(r.name),
+      phone: (r.phone as string) ?? null,
+      email: (r.email as string) ?? null,
+      message: String(r.message),
+      createdAt: r.created_at as Date,
+    }))
   }
 
   async findWorkspaceIdByOwnerEmail(email: string) {

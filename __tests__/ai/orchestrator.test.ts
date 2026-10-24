@@ -57,8 +57,8 @@ async function createWs(store: MemoryTaskStore, ws = 'ws1', user = 'u1') {
 const enqueue = (store: MemoryTaskStore, taskType: string, input: unknown, extra: Partial<Parameters<typeof enqueueTask>[0]> = {}) =>
   enqueueTask({ store, workspaceId: 'ws1', userId: 'u1', role: 'owner', taskType, input, ...extra })
 
-describe('orkestratör uçtan uca', () => {
-  it('etkisiz test görevini kuyruktan alýp tamamlar', async () => {
+describe('orkestrat?r u?tan uca', () => {
+  it('etkisiz test g?revini kuyruktan al?p tamamlar', async () => {
     const { store, deps } = setup()
     await createWs(store)
     const r = await enqueue(store, 'echo.test', { message: 'merhaba' })
@@ -73,7 +73,7 @@ describe('orkestratör uçtan uca', () => {
     expect(store.audits.some((a) => a.action === 'task.created')).toBe(true)
   })
 
-  it('model planý þemaya uymuyorsa hiçbir araç çalýþtýrýlmaz', async () => {
+  it('model plan? ?emaya uymuyorsa hi?bir ara? ?al??t?r?lmaz', async () => {
     const run = jest.fn(async () => ({}))
     const spy: AnyTool = { ...echoTool, run }
     const { store, deps } = setup({
@@ -90,7 +90,7 @@ describe('orkestratör uçtan uca', () => {
     expect(run).not.toHaveBeenCalled()
   })
 
-  it('geçerli model planýný çalýþtýrýr ve model çaðrýsýný kaydeder', async () => {
+  it('ge?erli model plan?n? ?al??t?r?r ve model ?a?r?s?n? kaydeder', async () => {
     const { store, deps } = setup({
       planReply: JSON.stringify({ version: 1, taskType: 'auto', steps: [{ key: 'say', tool: 'echo.test', input: { message: 'plan ok' } }] }),
       types: { auto: { ...TASK_TYPES.auto, allowedTools: ['echo.test'] } },
@@ -104,7 +104,7 @@ describe('orkestratör uçtan uca', () => {
     expect(store.calls[0]).toMatchObject({ provider: 'mock', purpose: 'plan', status: 'ok', taskId: task!.id, workspaceId: 'ws1' })
   })
 
-  it('model kapalýyken (off) serbest isteði kuralla sýnýflandýrýr', async () => {
+  it('model kapal?yken (off) serbest iste?i kuralla s?n?fland?r?r', async () => {
     const audit: AnyTool = {
       name: 'seo.audit',
       description: 'fake',
@@ -116,7 +116,7 @@ describe('orkestratör uçtan uca', () => {
     const { store, deps } = setup({ tools: [echoTool, audit] })
     deps.aiMode = 'off'
     await createWs(store)
-    const r = await enqueue(store, 'auto', { request: 'þu siteyi denetle: example.com lütfen' })
+    const r = await enqueue(store, 'auto', { request: '?u siteyi denetle: example.com l?tfen' })
     await runWorkerTick(store, { deps })
     const task = await store.getTask((r as { task: { id: string } }).task.id, 'ws1')
     expect(task?.status).toBe('succeeded')
@@ -124,7 +124,7 @@ describe('orkestratör uçtan uca', () => {
     expect(task?.modelCalls).toBe(0)
   })
 
-  it('zaman aþýmýnda retry_wait, deneme sýnýrýnda failed olur', async () => {
+  it('zaman a??m?nda retry_wait, deneme s?n?r?nda failed olur', async () => {
     const slow: AnyTool = { ...echoTool, timeoutMs: 20, run: () => new Promise((r) => setTimeout(() => r({}), 200)) }
     const { store, deps, advance } = setup({ tools: [slow] })
     await createWs(store)
@@ -148,7 +148,7 @@ describe('orkestratör uçtan uca', () => {
     expect(t?.errorCode).toBe('timeout')
   })
 
-  it('çýktý boyutu sýnýrýný aþan aracý baþarýsýz sayar', async () => {
+  it('??kt? boyutu s?n?r?n? a?an arac? ba?ar?s?z sayar', async () => {
     const big: AnyTool = { ...echoTool, run: async () => ({ blob: 'x'.repeat(5000) }) }
     const { store, deps } = setup({ tools: [big] })
     deps.limits = { maxOutputBytes: 1000 }
@@ -158,7 +158,7 @@ describe('orkestratör uçtan uca', () => {
     expect((await store.getTask((r as { task: { id: string } }).task.id, 'ws1'))?.errorCode).toBe('output_too_large')
   })
 
-  it('plan DB’de izinsiz araca çevrilirse çalýþma anýnda reddedilir', async () => {
+  it('plan DB?de izinsiz araca ?evrilirse ?al??ma an?nda reddedilir', async () => {
     const { store, deps } = setup()
     await createWs(store)
     const r = await enqueue(store, 'echo.test', { message: 'x' })
@@ -169,7 +169,7 @@ describe('orkestratör uçtan uca', () => {
     expect((await store.getTask(id, 'ws1'))?.errorCode).toBe('tool_not_allowed')
   })
 
-  it('iptal edilen görevde araç çalýþtýrýlmaz', async () => {
+  it('iptal edilen g?revde ara? ?al??t?r?lmaz', async () => {
     const run = jest.fn(async () => ({}))
     const { store, deps } = setup({ tools: [{ ...echoTool, run }] })
     await createWs(store)
@@ -184,7 +184,7 @@ describe('orkestratör uçtan uca', () => {
 })
 
 describe('kuyruk, idempotency ve kurtarma', () => {
-  it('ayný idempotency anahtarý ikinci görev oluþturmaz', async () => {
+  it('ayn? idempotency anahtar? ikinci g?rev olu?turmaz', async () => {
     const { store } = setup()
     await createWs(store)
     const a = await enqueue(store, 'echo.test', { message: 'x' }, { idempotencyKey: 'order-123-abc' })
@@ -195,7 +195,7 @@ describe('kuyruk, idempotency ve kurtarma', () => {
     expect(store.tasks.size).toBe(1)
   })
 
-  it('geçersiz girdi ve bilinmeyen görev türünü reddeder', async () => {
+  it('ge?ersiz girdi ve bilinmeyen g?rev t?r?n? reddeder', async () => {
     const { store } = setup()
     await createWs(store)
     expect(await enqueue(store, 'shell', {})).toMatchObject({ ok: false, code: 'unknown_task_type' })
@@ -203,7 +203,7 @@ describe('kuyruk, idempotency ve kurtarma', () => {
     expect(await enqueue(store, 'echo.test', { message: 'x'.repeat(30_000) })).toMatchObject({ ok: false, status: 413 })
   })
 
-  it('worker çökmesinden sonra lease süresi dolunca iþ kurtarýlýr, biten adým tekrar çalýþmaz', async () => {
+  it('worker ??kmesinden sonra lease s?resi dolunca i? kurtar?l?r, biten ad?m tekrar ?al??maz', async () => {
     const sideEffect = jest.fn(async (i: { message: string }) => ({ done: i.message }))
     const second = jest.fn(async () => ({ ok: true }))
     const tools: AnyTool[] = [
@@ -213,7 +213,7 @@ describe('kuyruk, idempotency ve kurtarma', () => {
     const types: Record<string, TaskTypeDef> = {
       two: {
         type: 'two',
-        label: 'iki adým',
+        label: 'iki ad?m',
         planner: 'static',
         allowedTools: ['step.one', 'step.two'],
         inputSchema: z.object({ message: z.string() }).strict(),
@@ -226,22 +226,23 @@ describe('kuyruk, idempotency ve kurtarma', () => {
           ],
         }),
         creditCost: 0,
+        userCreatable: false,
       },
     }
     const { store, deps, advance } = setup({ tools, types })
     await createWs(store)
     const r = await enqueueTask({ store, workspaceId: 'ws1', userId: 'u1', role: 'owner', taskType: 'two', input: { message: 'x' } }).catch(() => null)
-    // `two` global TASK_TYPES'ta yok; doðrudan store'a yaz
+    // `two` global TASK_TYPES'ta yok; do?rudan store'a yaz
     expect(r).toMatchObject({ ok: false })
     await store.createTask({ id: 't-crash', workspaceId: 'ws1', createdBy: 'u1', taskType: 'two', input: { message: 'x' }, idempotencyKey: null, budgetUsd: 0.05, maxAttempts: 3 })
 
-    // Ýlk adým bitti, ikinci adýmda worker "çöktü"
+    // ?lk ad?m bitti, ikinci ad?mda worker "??kt?"
     second.mockImplementationOnce(async () => {
       throw Object.assign(new Error('crash'), { crash: true })
     })
     const claimed = await store.claimNextTask(90_000)
     const crashingDeps = { ...deps, store: Object.assign(Object.create(store), {}) }
-    // Çökme simülasyonu: hata sonrasý durum geçiþini engelle (worker süreci öldü)
+    // ??kme sim?lasyonu: hata sonras? durum ge?i?ini engelle (worker s?reci ?ld?)
     crashingDeps.store.transition = async (...a: Parameters<MemoryTaskStore['transition']>) =>
       a[3] === 'running' ? store.transition(...a) : false
     await runTask(claimed!, crashingDeps)
@@ -258,7 +259,7 @@ describe('kuyruk, idempotency ve kurtarma', () => {
     expect(second).toHaveBeenCalledTimes(2)
   })
 
-  it('deneme sýnýrý dolunca kurtarýlamayan iþ failed olur', async () => {
+  it('deneme s?n?r? dolunca kurtar?lamayan i? failed olur', async () => {
     const { store, advance } = setup()
     await createWs(store)
     await store.createTask({ id: 't1', workspaceId: 'ws1', createdBy: 'u1', taskType: 'echo.test', input: { message: 'x' }, idempotencyKey: null, budgetUsd: 0, maxAttempts: 2 })
