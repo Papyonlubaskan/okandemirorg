@@ -1,6 +1,7 @@
 /** Basit HTML crawl sinyalleri + AI rapor */
 
 import { chatWithFailover } from '@/lib/ai-chat'
+import { safeFetch } from '@/lib/security/ssrf'
 
 export type CrawlSignals = {
   url: string
@@ -57,17 +58,16 @@ export async function crawlUrl(inputUrl: string): Promise<CrawlSignals> {
   try {
     const controller = new AbortController()
     const timer = setTimeout(() => controller.abort(), 12000)
-    const res = await fetch(url, {
+    const res = await safeFetch(url, {
       signal: controller.signal,
       headers: {
         'User-Agent': 'OkanDemirAIAuditBot/1.0 (+https://okandemir.org)',
         Accept: 'text/html',
       },
-      redirect: 'follow',
     })
     clearTimeout(timer)
     status = res.status
-    finalUrl = res.url
+    finalUrl = res.url || url
     const buf = await res.arrayBuffer()
     html = new TextDecoder('utf-8', { fatal: false }).decode(buf.slice(0, 500_000))
   } catch (e) {

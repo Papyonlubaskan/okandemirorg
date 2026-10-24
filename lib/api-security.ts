@@ -1,3 +1,4 @@
+import { createHmac, timingSafeEqual } from 'crypto'
 import { NextRequest, NextResponse } from 'next/server'
 
 const rateLimitStore = new Map<string, { count: number; resetAt: number }>()
@@ -14,22 +15,40 @@ export function blockDevRouteInProduction(): NextResponse | null {
   return null
 }
 
+export function safeEqual(a: string, b: string): boolean {
+  const ab = Buffer.from(a)
+  const bb = Buffer.from(b)
+  if (ab.length !== bb.length) return false
+  return timingSafeEqual(ab, bb)
+}
+
 /**
- * INTERNAL_API_KEY tanımlıysa zorunlu kılar.
- * Tanımlı değilse mevcut entegrasyonlar (n8n vb.) çalışmaya devam eder.
+ * Production'da INTERNAL_API_KEY zorunlu (tanımsızsa istek reddedilir).
+ * Geliştirmede tanımsızsa serbest bırakılır.
  */
 export function requireInternalApiKey(request: NextRequest): NextResponse | null {
   const expected = process.env.INTERNAL_API_KEY
-  if (!expected) return null
+  if (!expected) {
+    return isProduction()
+      ? NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
+      : null
+  }
 
   const provided =
     request.headers.get('x-api-key') ??
     request.headers.get('authorization')?.replace(/^Bearer\s+/i, '')
 
-  if (!provided || provided !== expected) {
+  if (!provided || !safeEqual(provided, expected)) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 })
   }
   return null
+}
+
+/** Meta X-Hub-Signature-256 doğrulaması (sha256=<hex>) */
+export function verifyMetaSignature(rawBody: string, header: string | null, appSecret: string): boolean {
+  if (!header?.startsWith('sha256=')) return false
+  const expected = createHmac('sha256', appSecret).update(rawBody, 'utf8').digest('hex')
+  return safeEqual(header.slice(7), expected)
 }
 
 export function getClientIp(request: NextRequest): string {

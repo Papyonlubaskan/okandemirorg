@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { createMailTransporter, MAIL_ADMIN, MAIL_FROM } from '@/lib/mailer'
+import { maskSecret } from '@/lib/security/secrets'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
@@ -34,12 +36,22 @@ export async function GET(request: NextRequest) {
       // Long-lived token al (60 gün geçerli)
       const longLivedResponse = await fetch(`https://graph.instagram.com/access_token?grant_type=ig_exchange_token&client_secret=${process.env.INSTAGRAM_APP_SECRET}&access_token=${tokenData.access_token}`)
       const longLivedData = await longLivedResponse.json()
-      
+
+      // Token yanıtta açık dönmez; yalnızca yönetici e-postasına gider
+      if (longLivedData.access_token) {
+        await createMailTransporter().sendMail({
+          from: MAIL_FROM,
+          to: MAIL_ADMIN,
+          subject: 'Instagram access token (INSTAGRAM_ACCESS_TOKEN)',
+          text: `Railway'de INSTAGRAM_ACCESS_TOKEN olarak kaydedin:\n\n${longLivedData.access_token}\n\nGeçerlilik (sn): ${longLivedData.expires_in}`,
+        })
+      }
+
       return NextResponse.json({
-        success: true,
-        accessToken: longLivedData.access_token,
+        success: Boolean(longLivedData.access_token),
+        accessToken: maskSecret(longLivedData.access_token),
         expiresIn: longLivedData.expires_in,
-        message: 'Instagram access token başarıyla alındı!'
+        message: 'Token yönetici e-postasına gönderildi.'
       })
     }
 
@@ -48,12 +60,10 @@ export async function GET(request: NextRequest) {
       error: tokenData.error_message || 'Access token alınamadı'
     }, { status: 400 })
 
-  } catch (error) {
-    // Error handled silently
+  } catch {
     return NextResponse.json({
       success: false,
-      error: 'Instagram authentication hatası',
-      details: error instanceof Error ? error.message : 'Unknown error'
+      error: 'Instagram authentication hatası'
     }, { status: 500 })
   }
 }

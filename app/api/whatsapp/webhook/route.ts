@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { verifyMetaSignature } from '@/lib/api-security'
 import { handleWaSalesBot } from '@/lib/wa-sales-bot'
 
 export async function GET(request: NextRequest) {
@@ -16,7 +17,15 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const body = await request.json()
+    const rawBody = await request.text()
+
+    // WHATSAPP_APP_SECRET tanımlıysa imza zorunlu
+    const appSecret = process.env.WHATSAPP_APP_SECRET
+    if (appSecret && !verifyMetaSignature(rawBody, request.headers.get('x-hub-signature-256'), appSecret)) {
+      return NextResponse.json({ error: 'Invalid signature' }, { status: 401 })
+    }
+
+    const body = JSON.parse(rawBody)
 
     if (body.object === 'whatsapp_business_account') {
       for (const entry of body.entry || []) {
@@ -29,14 +38,8 @@ export async function POST(request: NextRequest) {
     }
 
     return NextResponse.json({ status: 'ok' })
-  } catch (error) {
-    return NextResponse.json(
-      {
-        error: 'Internal server error',
-        details: error instanceof Error ? error.message : 'Unknown error',
-      },
-      { status: 500 }
-    )
+  } catch {
+    return NextResponse.json({ error: 'Internal server error' }, { status: 500 })
   }
 }
 

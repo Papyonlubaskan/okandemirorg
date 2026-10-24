@@ -59,6 +59,9 @@ export async function POST(request: NextRequest) {
  * GET - Migration durumunu kontrol et
  */
 export async function GET(request: NextRequest) {
+  const blocked = blockDevRouteInProduction()
+  if (blocked) return blocked
+
   const authError = requireInternalApiKey(request)
   if (authError) return authError
 
