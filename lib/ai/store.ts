@@ -56,6 +56,7 @@ function toTask(r: Row): TaskRow {
     budgetUsd: Number(r.budget_usd),
     costUsd: Number(r.cost_usd),
     modelCalls: Number(r.model_calls),
+    creditsCharged: Number(r.credits_charged ?? 0),
     createdAt: r.created_at as Date,
     updatedAt: r.updated_at as Date,
     startedAt: (r.started_at as Date) ?? null,
@@ -139,10 +140,25 @@ export class MysqlTaskStore implements TaskStore {
   // --- Görevler
   async createTask(t: NewTask) {
     try {
+      const credits = t.creditsCharged ?? 0
+      // credits_charged kolonu migration 005 ile gelir; kredisiz görevler 005 öncesi de çalışır
       await execute(
-        `INSERT INTO ai_tasks (id, workspace_id, created_by, task_type, input_json, idempotency_key, budget_usd, max_attempts)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
-        [t.id, t.workspaceId, t.createdBy, t.taskType, JSON.stringify(t.input), t.idempotencyKey, t.budgetUsd, t.maxAttempts]
+        credits > 0
+          ? `INSERT INTO ai_tasks (id, workspace_id, created_by, task_type, input_json, idempotency_key, budget_usd, max_attempts, credits_charged)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)`
+          : `INSERT INTO ai_tasks (id, workspace_id, created_by, task_type, input_json, idempotency_key, budget_usd, max_attempts)
+             VALUES (?, ?, ?, ?, ?, ?, ?, ?)`,
+        [
+          t.id,
+          t.workspaceId,
+          t.createdBy,
+          t.taskType,
+          JSON.stringify(t.input),
+          t.idempotencyKey,
+          t.budgetUsd,
+          t.maxAttempts,
+          ...(credits > 0 ? [credits] : []),
+        ]
       )
       return { task: (await this.getTask(t.id, t.workspaceId))!, created: true }
     } catch (e) {
@@ -159,6 +175,11 @@ export class MysqlTaskStore implements TaskStore {
 
   async getTask(taskId: string, workspaceId: string) {
     const r = await queryOne<Row>('SELECT * FROM ai_tasks WHERE id = ? AND workspace_id = ? LIMIT 1', [taskId, workspaceId])
+    return r ? toTask(r) : null
+  }
+
+  async findTaskByIdempotencyKey(workspaceId: string, key: string) {
+    const r = await queryOne<Row>('SELECT * FROM ai_tasks WHERE workspace_id = ? AND idempotency_key = ? LIMIT 1', [workspaceId, key])
     return r ? toTask(r) : null
   }
 
@@ -455,6 +476,116 @@ export class MysqlTaskStore implements TaskStore {
         e.metadata ? JSON.stringify(redact(e.metadata)) : null,
       ]
     )
+  }
+
+  // --- Kredi / plan
+  async getCreditBalance(workspaceId: string) {
+    const r = await queryOne<Row>('SELECT COALESCE(SUM(delta), 0) AS balance FROM credit_ledger WHERE workspace_id = ?', [workspaceId])
+    return Number(r?.balance ?? 0)
+  }
+
+  /** Workspace satırı FOR UPDATE ile kilitlenir: eşzamanlı düşümler bakiyeyi eksiye çekemez */
+  async debitCredits(workspaceId: string, amount: number, ref: string) {
+    const conn = await pool.getConnection()
+    try {
+      await conn.beginTransaction()
+      await conn.execute('SELECT id FROM workspaces WHERE id = ? FOR UPDATE', [workspaceId])
+      const [rows] = await conn.execute<Row[]>('SELECT COALESCE(SUM(delta), 0) AS balance FROM credit_ledger WHERE workspace_id = ?', [workspaceId])
+      if (Number(rows[0]?.balance ?? 0) < amount) {
+        await conn.rollback()
+        return false
+      }
+      await conn.execute("INSERT INTO credit_ledger (workspace_id, delta, reason, ref) VALUES (?, ?, 'task', ?)", [workspaceId, -amount, ref])
+      await conn.commit()
+      return true
+    } catch (e) {
+      await conn.rollback()
+      if ((e as { errno?: number }).errno === 1062) return false
+      throw e
+    } finally {
+      conn.release()
+    }
+  }
+
+  async addCredits(workspaceId: string, delta: number, reason: 'refund' | 'plan_grant' | 'claim' | 'admin', ref: string) {
+    const res = await execute('INSERT IGNORE INTO credit_ledger (workspace_id, delta, reason, ref) VALUES (?, ?, ?, ?)', [
+      workspaceId,
+      delta,
+      reason,
+      ref.slice(0, 128),
+    ])
+    return res.affectedRows === 1
+  }
+
+  async refundFailedTasks() {
+    const res = await execute(
+      `INSERT IGNORE INTO credit_ledger (workspace_id, delta, reason, ref)
+       SELECT workspace_id, credits_charged, 'refund', CONCAT('refund:', id) FROM ai_tasks
+       WHERE status IN ('failed', 'cancelled', 'expired') AND credits_charged > 0
+         AND updated_at >= DATE_SUB(NOW(3), INTERVAL 30 DAY)`
+    )
+    return res.affectedRows
+  }
+
+  async grantMonthlyPlanCredits(grants: Record<WorkspaceRow['plan'], number>) {
+    const res = await execute(
+      `INSERT IGNORE INTO credit_ledger (workspace_id, delta, reason, ref)
+       SELECT id, CASE plan WHEN 'starter' THEN ? WHEN 'pro' THEN ? WHEN 'agency' THEN ? ELSE 0 END, 'plan_grant',
+              CONCAT('plan:', id, ':', DATE_FORMAT(UTC_TIMESTAMP(), '%Y-%m'))
+       FROM workspaces WHERE status = 'active' AND plan IN ('starter', 'pro', 'agency')`,
+      [grants.starter, grants.pro, grants.agency]
+    )
+    return res.affectedRows
+  }
+
+  async setWorkspacePlan(workspaceId: string, plan: WorkspaceRow['plan'], monthlyBudgetUsd?: number) {
+    const res =
+      monthlyBudgetUsd === undefined
+        ? await execute('UPDATE workspaces SET plan = ? WHERE id = ?', [plan, workspaceId])
+        : await execute('UPDATE workspaces SET plan = ?, monthly_budget_usd = ? WHERE id = ?', [plan, monthlyBudgetUsd, workspaceId])
+    return res.affectedRows === 1
+  }
+
+  async findWorkspaceIdByOwnerEmail(email: string) {
+    const r = await queryOne<Row>(
+      `SELECT w.id FROM workspaces w JOIN users u ON u.id = w.owner_user_id
+       WHERE u.email = ? ORDER BY w.created_at ASC LIMIT 1`,
+      [email.trim().toLowerCase()]
+    )
+    return r ? String(r.id) : null
+  }
+
+  // --- Claim
+  async upsertClaim(c: { id: string; tokenHash: string; orderCode: string; productSlug: string; credits: number; ttlMs: number }) {
+    const existing = await queryOne<Row>('SELECT status FROM workspace_claims WHERE order_code = ? LIMIT 1', [c.orderCode])
+    if (existing?.status === 'claimed') return 'already_claimed' as const
+    if (existing) {
+      await execute(
+        `UPDATE workspace_claims SET token_hash = ?, status = 'pending', expires_at = DATE_ADD(NOW(3), INTERVAL ? MICROSECOND)
+         WHERE order_code = ? AND status <> 'claimed'`,
+        [c.tokenHash, c.ttlMs * 1000, c.orderCode]
+      )
+      return 'rotated' as const
+    }
+    await execute(
+      `INSERT INTO workspace_claims (id, token_hash, order_code, product_slug, credits, expires_at)
+       VALUES (?, ?, ?, ?, ?, DATE_ADD(NOW(3), INTERVAL ? MICROSECOND))`,
+      [c.id, c.tokenHash, c.orderCode, c.productSlug, c.credits, c.ttlMs * 1000]
+    )
+    return 'created' as const
+  }
+
+  async redeemClaim(tokenHash: string, workspaceId: string) {
+    const claim = await queryOne<Row>('SELECT id, credits FROM workspace_claims WHERE token_hash = ? LIMIT 1', [tokenHash])
+    if (!claim) return null
+    const res = await execute(
+      `UPDATE workspace_claims SET status = 'claimed', claimed_workspace_id = ?, claimed_at = NOW(3)
+       WHERE id = ? AND status = 'pending' AND expires_at > NOW(3)`,
+      [workspaceId, claim.id]
+    )
+    if (res.affectedRows !== 1) return null
+    await this.addCredits(workspaceId, Number(claim.credits), 'claim', `claim:${claim.id}`)
+    return { claimId: String(claim.id), credits: Number(claim.credits) }
   }
 }
 

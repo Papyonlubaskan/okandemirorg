@@ -51,6 +51,7 @@ function setup(opts: { planReply?: string; tools?: AnyTool[]; types?: Record<str
 
 async function createWs(store: MemoryTaskStore, ws = 'ws1', user = 'u1') {
   await store.createWorkspace({ id: ws, name: 'Test', ownerUserId: user })
+  await store.addCredits(ws, 10, 'admin', `seed:${ws}`)
 }
 
 const enqueue = (store: MemoryTaskStore, taskType: string, input: unknown, extra: Partial<Parameters<typeof enqueueTask>[0]> = {}) =>

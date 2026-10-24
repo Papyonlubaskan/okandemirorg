@@ -1,4 +1,5 @@
 import { randomBytes } from 'crypto'
+import { issueClaimLink } from '@/lib/billing/claims'
 import pool from '@/lib/mysql'
 import {
   DIGITAL_PRODUCTS,
@@ -139,6 +140,7 @@ async function fulfillOrderInternal(orderCode: string): Promise<{
   ok: boolean
   message: string
   downloadUrl?: string | null
+  claimUrl?: string | null
   customerPhone?: string | null
   productName?: string
 }> {
@@ -185,10 +187,19 @@ async function fulfillOrderInternal(orderCode: string): Promise<{
       portalUrl = `${siteUrl}/hizmetler/ai-landing/panel?token=${order.access_token}`
     }
 
+    // Yeni panel (AI_ORCHESTRATOR_ENABLED=1 ise): krediyi hesaba yükleyen tek kullanımlık link
+    let claimUrl: string | null = null
+    try {
+      claimUrl = await issueClaimLink({ orderCode: order.order_code, productSlug: order.product_slug })
+    } catch {
+      claimUrl = null
+    }
+
     if (order.customer_phone) {
       let body = `Ödemeniz onaylandı ✅\n\n${order.product_name}\nKod: ${order.order_code}\n`
       if (downloadUrl) body += `\nİndirme linki:\n${downloadUrl}\n`
       if (portalUrl) body += `\nPanel (işlem burada):\n${portalUrl}\n`
+      if (claimUrl) body += `\nYeni müşteri paneli (kredinizi hesabınıza yükler, tek kullanımlık):\n${claimUrl}\n`
       if (!downloadUrl && !portalUrl) {
         body += `\nSüreç başlıyor. Kısa sürede bilgilendirileceksiniz.`
       }
@@ -199,6 +210,7 @@ async function fulfillOrderInternal(orderCode: string): Promise<{
       ok: true,
       message: 'Teslim edildi',
       downloadUrl: downloadUrl || portalUrl,
+      claimUrl,
       customerPhone: order.customer_phone,
       productName: order.product_name,
     }

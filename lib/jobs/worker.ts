@@ -4,6 +4,7 @@ import type { TaskStore } from '@/lib/ai/store-types'
 import { runTask, type OrchestratorDeps, type RunOutcome } from '@/lib/agents/orchestrator'
 import { TASK_LIMITS } from '@/lib/agents/policies'
 import { getToolRegistry } from '@/lib/agents/registry'
+import { PLAN_MONTHLY_CREDITS } from '@/lib/billing/plans'
 
 export type TickResult = {
   recovered: number
@@ -39,6 +40,8 @@ export async function runWorkerTick(
   const recovered = await store.recoverExpiredLeases()
   const released = await store.releaseDueRetries()
   const expired = await store.expireStaleApprovals().catch(() => 0)
+  // Kredi tabloları (migration 005) yoksa görev işlemeyi engellemez
+  await store.grantMonthlyPlanCredits(PLAN_MONTHLY_CREDITS).catch(() => 0)
 
   const processed: TickResult['processed'] = []
   while (processed.length < maxTasks && Date.now() - started < timeBudget) {
@@ -47,5 +50,6 @@ export async function runWorkerTick(
     const outcome = await runTask(task, deps)
     processed.push({ taskId: task.id, outcome })
   }
+  await store.refundFailedTasks().catch(() => 0)
   return { recovered, released, expired, processed }
 }

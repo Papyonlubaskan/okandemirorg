@@ -29,6 +29,8 @@ export class MemoryTaskStore implements TaskStore {
   usage = new Map<string, { requests: number; rateLimited: number }>()
   approvals = new Map<string, ApprovalRow>()
   audits: AuditEntry[] = []
+  ledger: { workspaceId: string; delta: number; reason: string; ref: string }[] = []
+  claims = new Map<string, { id: string; tokenHash: string; orderCode: string; productSlug: string; credits: number; status: 'pending' | 'claimed' | 'expired'; expiresAt: number; workspaceId: string | null }>()
 
   constructor(private clock: Clock = { now: () => new Date() }) {}
 
@@ -73,6 +75,7 @@ export class MemoryTaskStore implements TaskStore {
     const now = this.now()
     const row = {
       ...t,
+      creditsCharged: t.creditsCharged ?? 0,
       status: 'queued' as TaskStatus,
       plan: null,
       result: null,
@@ -99,6 +102,10 @@ export class MemoryTaskStore implements TaskStore {
   async getTask(taskId: string, workspaceId: string) {
     const t = this.tasks.get(taskId)
     return t && t.workspaceId === workspaceId ? this.public(t) : null
+  }
+  async findTaskByIdempotencyKey(workspaceId: string, key: string) {
+    const t = [...this.tasks.values()].find((x) => x.workspaceId === workspaceId && x.idempotencyKey === key)
+    return t ? this.public(t) : null
   }
   async listTasks(workspaceId: string, limit: number) {
     return [...this.tasks.values()]
@@ -309,5 +316,74 @@ export class MemoryTaskStore implements TaskStore {
 
   async audit(entry: AuditEntry) {
     this.audits.push(structuredClone(entry))
+  }
+
+  // --- Kredi / plan
+  async getCreditBalance(workspaceId: string) {
+    return this.ledger.filter((l) => l.workspaceId === workspaceId).reduce((s, l) => s + l.delta, 0)
+  }
+  async debitCredits(workspaceId: string, amount: number, ref: string) {
+    if (this.ledger.some((l) => l.ref === ref)) return false
+    if ((await this.getCreditBalance(workspaceId)) < amount) return false
+    this.ledger.push({ workspaceId, delta: -amount, reason: 'task', ref })
+    return true
+  }
+  async addCredits(workspaceId: string, delta: number, reason: 'refund' | 'plan_grant' | 'claim' | 'admin', ref: string) {
+    if (this.ledger.some((l) => l.ref === ref)) return false
+    this.ledger.push({ workspaceId, delta, reason, ref })
+    return true
+  }
+  async refundFailedTasks() {
+    let n = 0
+    for (const t of this.tasks.values()) {
+      if (['failed', 'cancelled', 'expired'].includes(t.status) && t.creditsCharged > 0) {
+        if (await this.addCredits(t.workspaceId, t.creditsCharged, 'refund', `refund:${t.id}`)) n++
+      }
+    }
+    return n
+  }
+  async grantMonthlyPlanCredits(grants: Record<WorkspaceRow['plan'], number>) {
+    const month = this.now().toISOString().slice(0, 7)
+    let n = 0
+    for (const w of this.workspaces.values()) {
+      const amount = grants[w.plan] ?? 0
+      if (w.status === 'active' && amount > 0 && (await this.addCredits(w.id, amount, 'plan_grant', `plan:${w.id}:${month}`))) n++
+    }
+    return n
+  }
+  async setWorkspacePlan(workspaceId: string, plan: WorkspaceRow['plan'], monthlyBudgetUsd?: number) {
+    const w = this.workspaces.get(workspaceId)
+    if (!w) return false
+    w.plan = plan
+    if (monthlyBudgetUsd !== undefined) w.monthlyBudgetUsd = monthlyBudgetUsd
+    return true
+  }
+
+  ownerEmails = new Map<string, string>() // email → userId (test)
+  async findWorkspaceIdByOwnerEmail(email: string) {
+    const userId = this.ownerEmails.get(email.trim().toLowerCase())
+    const w = [...this.workspaces.values()].find((x) => x.ownerUserId === userId)
+    return w?.id ?? null
+  }
+
+  // --- Claim
+  async upsertClaim(c: { id: string; tokenHash: string; orderCode: string; productSlug: string; credits: number; ttlMs: number }) {
+    const existing = [...this.claims.values()].find((x) => x.orderCode === c.orderCode)
+    const expiresAt = this.now().getTime() + c.ttlMs
+    if (existing) {
+      if (existing.status === 'claimed') return 'already_claimed' as const
+      Object.assign(existing, { tokenHash: c.tokenHash, status: 'pending', expiresAt })
+      return 'rotated' as const
+    }
+    this.claims.set(c.id, { ...c, status: 'pending', expiresAt, workspaceId: null })
+    return 'created' as const
+  }
+  async redeemClaim(tokenHash: string, workspaceId: string) {
+    const c = [...this.claims.values()].find((x) => x.tokenHash === tokenHash)
+    if (!c || c.status !== 'pending' || c.expiresAt <= this.now().getTime()) return null
+    c.status = 'claimed'
+    c.workspaceId = workspaceId
+    await this.addCredits(workspaceId, c.credits, 'claim', `claim:${c.id}`)
+    return { claimId: c.id, credits: c.credits }
   }
 }

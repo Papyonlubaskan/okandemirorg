@@ -98,6 +98,11 @@ export async function POST(request: NextRequest) {
               ? `<p><a href="${link}" style="display:inline-block;background:#2563eb;color:#fff;padding:12px 20px;border-radius:8px;text-decoration:none">Aç / İndir</a></p>`
               : `<p>Süreç başlıyor; kısa sürede bilgilendirileceksiniz.</p>`
           }
+          ${
+            result.claimUrl
+              ? `<p>Yeni müşteri paneli: kredinizi hesabınıza yüklemek için <a href="${escapeHtml(result.claimUrl)}">bu tek kullanımlık linki</a> açın.</p>`
+              : ''
+          }
           <p>Sipariş: ${escapeHtml(order.order_code)} · ${amountLabel}</p>
         </div>
       `,

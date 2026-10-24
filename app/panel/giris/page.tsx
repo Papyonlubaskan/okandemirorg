@@ -10,22 +10,28 @@ const MESSAGES: Record<string, string> = {
   OAuthAccountNotLinked: 'Bu e-posta başka bir giriş yöntemiyle kayıtlı. E-posta linkiyle giriş yapın.',
 }
 
+/** Yalnızca panel içi göreli yollara dönüş (açık yönlendirme yok) */
+function safeNext(v: unknown): string {
+  const s = typeof v === 'string' ? v : ''
+  return /^\/panel(\/[A-Za-z0-9/_-]*)?(\?[A-Za-z0-9=&_-]*)?$/.test(s) ? s : '/panel'
+}
+
 async function emailSignIn(formData: FormData) {
   'use server'
   const email = String(formData.get('email') || '').trim().toLowerCase()
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || email.length > 255) redirect('/panel/giris?durum=hata')
   try {
-    await signIn('email', { email, redirectTo: '/panel' })
+    await signIn('email', { email, redirectTo: safeNext(formData.get('next')) })
   } catch (e) {
     if (e instanceof AuthError) redirect('/panel/giris?durum=hata')
     throw e
   }
 }
 
-async function googleSignIn() {
+async function googleSignIn(formData: FormData) {
   'use server'
   try {
-    await signIn('google', { redirectTo: '/panel' })
+    await signIn('google', { redirectTo: safeNext(formData.get('next')) })
   } catch (e) {
     if (e instanceof AuthError) redirect('/panel/giris?durum=hata')
     throw e
@@ -33,8 +39,9 @@ async function googleSignIn() {
 }
 
 export default async function GirisPage({ searchParams }: { searchParams: Promise<Record<string, string | undefined>> }) {
-  if (await getSessionUser()) redirect('/panel')
   const sp = await searchParams
+  const next = safeNext(sp.next)
+  if (await getSessionUser()) redirect(next)
   const message = MESSAGES[sp.durum || ''] || MESSAGES[sp.error || '']
   const googleEnabled = Boolean(process.env.AUTH_GOOGLE_ID && process.env.AUTH_GOOGLE_SECRET)
 
@@ -50,6 +57,7 @@ export default async function GirisPage({ searchParams }: { searchParams: Promis
       )}
 
       <form action={emailSignIn} className="space-y-3 mb-6">
+        <input type="hidden" name="next" value={next} />
         <label className="block">
           <span className="text-sm font-bold text-gray-700 dark:text-gray-200">E-posta</span>
           <input
@@ -67,6 +75,7 @@ export default async function GirisPage({ searchParams }: { searchParams: Promis
 
       {googleEnabled && (
         <form action={googleSignIn}>
+          <input type="hidden" name="next" value={next} />
           <button type="submit" className="w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white font-bold px-6 py-3">
             Google ile giriş
           </button>
