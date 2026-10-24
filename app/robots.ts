@@ -8,6 +8,7 @@ const DISALLOW = [
   '/api/',
   '/_next/',
   '/admin/',
+  '/panel/',
   '/seo/',
   '/blog/',
   '/blog/sehir/',
