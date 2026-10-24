@@ -46,7 +46,7 @@ Kurallar:
   )
 
   if (!ai?.content) return fallback
-  let content = ai.content.replace(/^```html?\s*/i, '').replace(/```$/i, '').trim()
+  const content = ai.content.replace(/^```html?\s*/i, '').replace(/```$/i, '').trim()
   if (!content.includes('<html') && !content.includes('<!DOCTYPE')) {
     return fallback
   }
