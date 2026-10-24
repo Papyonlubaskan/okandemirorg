@@ -1,5 +1,6 @@
 import { randomBytes } from 'crypto'
 import { issueClaimLink } from '@/lib/billing/claims'
+import { applyBillingOrder } from '@/lib/billing/fulfill'
 import pool from '@/lib/mysql'
 import {
   DIGITAL_PRODUCTS,
@@ -19,7 +20,7 @@ function generateAccessToken(): string {
   return randomBytes(24).toString('hex')
 }
 
-async function ensureOrdersTable() {
+export async function ensureOrdersTable() {
   const connection = await pool.getConnection()
   try {
     await connection.execute(`
@@ -141,6 +142,7 @@ async function fulfillOrderInternal(orderCode: string): Promise<{
   message: string
   downloadUrl?: string | null
   claimUrl?: string | null
+  billing?: Awaited<ReturnType<typeof applyBillingOrder>>
   customerPhone?: string | null
   productName?: string
 }> {
@@ -149,7 +151,7 @@ async function fulfillOrderInternal(orderCode: string): Promise<{
   try {
     const [rows] = await connection.execute(
       `SELECT order_code, access_token, product_slug, product_name, amount_try,
-              customer_name, customer_email, customer_phone, status
+              customer_name, customer_email, customer_phone, status, notes
        FROM digital_orders WHERE order_code = ? LIMIT 1`,
       [orderCode]
     )
@@ -163,6 +165,7 @@ async function fulfillOrderInternal(orderCode: string): Promise<{
       customer_email: string
       customer_phone: string | null
       status: string
+      notes: string | null
     }>
     const order = list[0]
     if (!order) return { ok: false, message: 'Sipariş bulunamadı' }
@@ -187,12 +190,22 @@ async function fulfillOrderInternal(orderCode: string): Promise<{
       portalUrl = `${siteUrl}/hizmetler/ai-landing/panel?token=${order.access_token}`
     }
 
-    // Yeni panel (AI_ORCHESTRATOR_ENABLED=1 ise): krediyi hesaba yükleyen tek kullanımlık link
-    let claimUrl: string | null = null
+    // Panelden verilen kredi/plan siparişi: doğrudan workspace'e yüklenir (idempotent)
+    let billing: Awaited<ReturnType<typeof applyBillingOrder>> = null
     try {
-      claimUrl = await issueClaimLink({ orderCode: order.order_code, productSlug: order.product_slug })
+      billing = await applyBillingOrder(order)
     } catch {
-      claimUrl = null
+      billing = null
+    }
+
+    // Diğer kredi veren ürünler: hesaba yükleyen tek kullanımlık link
+    let claimUrl: string | null = null
+    if (!billing) {
+      try {
+        claimUrl = await issueClaimLink({ orderCode: order.order_code, productSlug: order.product_slug })
+      } catch {
+        claimUrl = null
+      }
     }
 
     if (order.customer_phone) {
@@ -200,7 +213,8 @@ async function fulfillOrderInternal(orderCode: string): Promise<{
       if (downloadUrl) body += `\nİndirme linki:\n${downloadUrl}\n`
       if (portalUrl) body += `\nPanel (işlem burada):\n${portalUrl}\n`
       if (claimUrl) body += `\nYeni müşteri paneli (kredinizi hesabınıza yükler, tek kullanımlık):\n${claimUrl}\n`
-      if (!downloadUrl && !portalUrl) {
+      if (billing) body += `\n${billing.plan ? `${billing.plan} planınız aktif. ` : ''}${billing.credits} kredi hesabınıza yüklendi.\nPanel: ${siteUrl}/panel\n`
+      if (!downloadUrl && !portalUrl && !billing) {
         body += `\nSüreç başlıyor. Kısa sürede bilgilendirileceksiniz.`
       }
       await sendWhatsAppText(order.customer_phone, body)
@@ -211,6 +225,7 @@ async function fulfillOrderInternal(orderCode: string): Promise<{
       message: 'Teslim edildi',
       downloadUrl: downloadUrl || portalUrl,
       claimUrl,
+      billing,
       customerPhone: order.customer_phone,
       productName: order.product_name,
     }

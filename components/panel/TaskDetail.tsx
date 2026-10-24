@@ -75,6 +75,14 @@ export default function TaskDetail({ taskId, workspaceId }: { taskId: string; wo
     return () => clearInterval(id)
   }, [data, load])
 
+  // Site üretimi/düzenlemesi bitince editöre geç
+  useEffect(() => {
+    const r = data?.task.result as { siteId?: string } | null
+    if (data?.task.status === 'succeeded' && r?.siteId && (data.task.taskType === 'site.generate' || data.task.taskType === 'site.edit')) {
+      window.location.href = `/panel/siteler/${r.siteId}?ws=${encodeURIComponent(workspaceId)}`
+    }
+  }, [data, workspaceId])
+
   async function decide(a: Approval, decision: 'approve' | 'reject') {
     setBusy(true)
     setError('')

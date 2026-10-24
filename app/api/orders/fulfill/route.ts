@@ -103,6 +103,11 @@ export async function POST(request: NextRequest) {
               ? `<p>Yeni müşteri paneli: kredinizi hesabınıza yüklemek için <a href="${escapeHtml(result.claimUrl)}">bu tek kullanımlık linki</a> açın.</p>`
               : ''
           }
+          ${
+            result.billing
+              ? `<p>${result.billing.plan ? `${escapeHtml(result.billing.plan)} planınız aktif. ` : ''}${result.billing.credits} kredi hesabınıza yüklendi. <a href="${siteUrl}/panel">Panele git</a></p>`
+              : ''
+          }
           <p>Sipariş: ${escapeHtml(order.order_code)} · ${amountLabel}</p>
         </div>
       `,

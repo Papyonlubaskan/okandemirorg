@@ -14,9 +14,12 @@ export default function PanelLayout({ children }: { children: React.ReactNode })
   if (!isOrchestratorEnabled()) notFound()
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 py-10">
-      <div className="container mx-auto px-4 max-w-4xl">
+      <div className="container mx-auto px-4 max-w-6xl">
         <nav className="flex flex-wrap gap-4 text-sm font-bold text-teal-800 dark:text-teal-300 mb-8">
-          <Link href="/panel">Görevler</Link>
+          <Link href="/panel">Panel</Link>
+          <Link href="/panel/baslangic">+ Yeni site</Link>
+          <Link href="/panel/gorevler">Görevler</Link>
+          <Link href="/panel/kredi">Kredi & Plan</Link>
           <Link href="/panel/kullanim">Kullanım</Link>
         </nav>
         {children}
