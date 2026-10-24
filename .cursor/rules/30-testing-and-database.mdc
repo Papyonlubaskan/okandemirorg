@@ -1,0 +1,12 @@
+---
+description: Tests, migrations, database safety, and release readiness
+alwaysApply: true
+---
+- Inspect `package.json` for real scripts; don't guess command names.
+- Add tests for changed behavior; mock providers and avoid paid API calls in CI.
+- Test malformed output, timeouts/429/5xx, fallback limits, budget exhaustion, tenant isolation, approval bypass, payload tampering, duplicate requests, and worker recovery as relevant.
+- Inspect actual schema, indexes, foreign keys, DB version, and migration conventions before schema changes.
+- Never run production migrations, drop/rename tables, delete data, or change production Railway variables without explicit authorization.
+- Prefer additive backward-compatible migrations and a recovery plan.
+- Run focused tests, then supported typecheck/lint/build; report actual results and skipped checks.
+- Avoid unnecessary dependencies and lockfile changes.

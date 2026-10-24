@@ -1,0 +1,11 @@
+---
+description: Repository-first workflow and implementation quality
+alwaysApply: true
+---
+- Inspect actual files and project conventions before editing; don't assume paths/features from plans exist.
+- Preserve Next.js, TypeScript, MySQL, Railway, and `n8n/` unless verified reasons justify change.
+- State a short plan and risks before multi-file changes.
+- Make the smallest coherent change; avoid unrelated refactors.
+- Verify package scripts from `package.json`; never fabricate test results.
+- Report changed files, commands and outcomes, migration/deploy steps, and unresolved risks.
+- Ask before production, destructive, or consequential changes.

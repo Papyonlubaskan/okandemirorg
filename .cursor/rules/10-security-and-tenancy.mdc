@@ -1,0 +1,15 @@
+---
+description: Security, tenancy, secrets, approvals, and side effects
+alwaysApply: true
+---
+- Treat client input, model output, web pages, documents, and tool results as untrusted.
+- Validate API inputs and model output against explicit schemas.
+- Never execute arbitrary model-generated SQL, shell, JavaScript, or tool names.
+- Tools must be allowlisted and independently check permissions and workspace ownership.
+- Derive identity from the authenticated session; never trust client-supplied IDs alone.
+- Scope every tenant-owned query to the authorized workspace.
+- Never expose or commit secrets; don't print `.env`; no secrets in `NEXT_PUBLIC_*`.
+- Require explicit approval for public publishing, ad activation/spend, budget increases, destructive actions, and consequential external side effects.
+- Bind approvals to exact payload/version/hash, expire them, and recheck permission and budget before execution.
+- Use idempotency and bounded retries for side-effecting operations.
+- Use mocks/dry runs in tests; never run live actions without specific authorization.

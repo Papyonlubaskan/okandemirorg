@@ -14,3 +14,7 @@ Bu projede kod degisikligi yapildiginda kullaniciya sormadan:
 Kullanicidan ayri push/commit onayi isteme. Push basarisiz olursa hatayi bildir ve duzeltmeyi dene.
 
 Asla force push yapma. `.env`, `railway.env` ve gizli dosyalari commit etme.
+
+Oncelik: Kullanici kararıyla bu kural, AGENTS.md'deki "canliya cikisi ayrica onayla" maddesinden onceliklidir.
+Bu yuzden yeni ozellikler varsayilan KAPALI bir bayrak arkasinda push edilir. Canli migration, Railway
+degisken degisikligi, gercek reklam harcamasi ve herkese acik yayin yine acik kullanici onayi ister.

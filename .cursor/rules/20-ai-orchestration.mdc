@@ -1,0 +1,14 @@
+---
+description: AI providers, bounded agents, quotas, and cost control
+alwaysApply: true
+---
+- Use a bounded orchestrator with explicit states, step limits, timeouts, output limits, and max model-call budget.
+- Verify provider API shape, modality support, current quotas, and commercial terms from official docs before implementation.
+- Open weights do not imply a free unlimited hosted API. Unknown quota/cost is not unlimited/zero.
+- Prefer eligible free/low-cost providers; fallback only for classified errors and bounded retries.
+- Paid fallback requires enabled policy and remaining budget; otherwise queue or fail clearly.
+- Keep text, image, and video capabilities distinct where APIs differ.
+- Model plans may select only registered tools and must pass schema/permission validation.
+- Record provider/model, purpose, latency, status, available token usage, and cost estimate. Don't claim estimates are exact.
+- Define max steps, retries, timeout, cancellation, and safe terminal states.
+- Long-running jobs must survive HTTP termination and worker restarts.
