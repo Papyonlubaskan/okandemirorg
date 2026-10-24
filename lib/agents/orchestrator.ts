@@ -200,6 +200,10 @@ export async function runTask(claimed: TaskRow, deps: OrchestratorDeps): Promise
 
         if (matching && approval.status === 'rejected') throw new TaskFailure('approval_rejected', 'Kullanıcı işlemi reddetti')
 
+        // Onay sonrası da yetki/durum yeniden doğrulanır: askıya alınmış workspace'te yan etki yok
+        const ws = await store.getWorkspace(task.workspaceId)
+        if (!ws || ws.status !== 'active') throw new TaskFailure('workspace_inactive', 'Workspace aktif değil')
+
         let consumed = false
         if (matching && approval.status === 'approved' && approval.approvedBy) {
           const member = await store.getMembership(approval.approvedBy, task.workspaceId)

@@ -147,6 +147,29 @@ describe('onay politikası', () => {
     expect(publish).not.toHaveBeenCalled()
   })
 
+  it('onay sonrası workspace askıya alındıysa araç çalışmaz; onaylayan artık yetkili değilse yeniden onay istenir', async () => {
+    const { store, deps, publish } = setup()
+    await seed(store)
+    store.addMember('ws1', 'admin2', 'admin')
+    await runWorkerTick(store, { deps })
+    const [a] = await store.listPendingApprovals('ws1')
+    await decideApproval({ store, approvalId: a.id, workspaceId: 'ws1', userId: 'admin2', role: 'admin', decision: 'approve', payloadHash: a.payloadHash })
+
+    // Onaylayan admin üyelikten çıkarıldı → onay tüketilmez, yeni onay istenir
+    store.members.delete('ws1|admin2')
+    await runWorkerTick(store, { deps })
+    expect(publish).not.toHaveBeenCalled()
+    expect(store.tasks.get('t1')!.status).toBe('awaiting_approval')
+
+    // Workspace askıya alındı → yeni onay verilse bile çalışmaz
+    const [b] = await store.listPendingApprovals('ws1')
+    await decideApproval({ store, approvalId: b.id, workspaceId: 'ws1', userId: 'owner', role: 'owner', decision: 'approve', payloadHash: b.payloadHash })
+    store.workspaces.get('ws1')!.status = 'suspended'
+    await runWorkerTick(store, { deps })
+    expect(publish).not.toHaveBeenCalled()
+    expect(store.tasks.get('t1')).toMatchObject({ status: 'failed', errorCode: 'workspace_inactive' })
+  })
+
   it('stableStringify anahtar sırasından bağımsızdır', () => {
     expect(stableStringify({ b: 1, a: { d: 2, c: 3 } })).toBe(stableStringify({ a: { c: 3, d: 2 }, b: 1 }))
   })
