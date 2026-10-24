@@ -22,12 +22,14 @@
   "dependencies": {
     "clsx": "^2.1.1",
     "lucide-react": "^0.468.0",
-    "next": "15.5.18",
     "mysql2": "^3.16.0",
+    "next": "15.5.18",
+    "next-auth": "5.0.0-beta.32",
     "nodemailer": "^8.0.7",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
-    "tailwind-merge": "^2.5.5"
+    "tailwind-merge": "^2.5.5",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
