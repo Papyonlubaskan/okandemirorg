@@ -11,6 +11,7 @@ import { redact } from '@/lib/security/secrets'
 import type {
   ApprovalRow,
   AuditEntry,
+  DraftRow,
   MembershipRow,
   NewTask,
   StepRow,
@@ -573,6 +574,60 @@ export class MysqlTaskStore implements TaskStore {
       [c.id, c.tokenHash, c.orderCode, c.productSlug, c.credits, c.ttlMs * 1000]
     )
     return 'created' as const
+  }
+
+  // --- Site taslakları
+  private toDraft(r: Row): DraftRow {
+    return {
+      id: String(r.id),
+      workspaceId: String(r.workspace_id),
+      taskId: (r.task_id as string) ?? null,
+      slug: String(r.slug),
+      title: String(r.title),
+      html: String(r.html),
+      contentHash: String(r.content_hash),
+      status: r.status as DraftRow['status'],
+      publishedHash: (r.published_hash as string) ?? null,
+      publishedAt: (r.published_at as Date) ?? null,
+    }
+  }
+
+  async createDraft(d: Omit<DraftRow, 'status' | 'publishedHash' | 'publishedAt'>) {
+    if (d.taskId) {
+      const existing = await queryOne<Row>('SELECT * FROM site_drafts WHERE task_id = ? LIMIT 1', [d.taskId])
+      if (existing) return this.toDraft(existing)
+    }
+    await execute(
+      'INSERT INTO site_drafts (id, workspace_id, task_id, slug, title, html, content_hash) VALUES (?, ?, ?, ?, ?, ?, ?)',
+      [d.id, d.workspaceId, d.taskId, d.slug, d.title.slice(0, 255), d.html, d.contentHash]
+    )
+    return (await this.getDraft(d.id, d.workspaceId))!
+  }
+
+  async getDraft(draftId: string, workspaceId: string) {
+    const r = await queryOne<Row>('SELECT * FROM site_drafts WHERE id = ? AND workspace_id = ? LIMIT 1', [draftId, workspaceId])
+    return r ? this.toDraft(r) : null
+  }
+
+  async getPublishedDraftBySlug(slug: string) {
+    const r = await queryOne<Row>(
+      "SELECT * FROM site_drafts WHERE slug = ? AND status = 'published' AND published_hash = content_hash LIMIT 1",
+      [slug]
+    )
+    return r ? this.toDraft(r) : null
+  }
+
+  async publishDraft(draftId: string, workspaceId: string, contentHash: string) {
+    await execute(
+      `UPDATE site_drafts SET status = 'published', published_hash = content_hash, published_at = COALESCE(published_at, NOW(3))
+       WHERE id = ? AND workspace_id = ? AND content_hash = ?`,
+      [draftId, workspaceId, contentHash]
+    )
+    const r = await queryOne<Row>(
+      "SELECT id FROM site_drafts WHERE id = ? AND workspace_id = ? AND status = 'published' AND published_hash = ? LIMIT 1",
+      [draftId, workspaceId, contentHash]
+    )
+    return Boolean(r)
   }
 
   async redeemClaim(tokenHash: string, workspaceId: string) {

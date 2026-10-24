@@ -55,6 +55,19 @@ export type NewTask = {
 
 export type ClaimUpsertResult = 'created' | 'rotated' | 'already_claimed'
 
+export type DraftRow = {
+  id: string
+  workspaceId: string
+  taskId: string | null
+  slug: string
+  title: string
+  html: string
+  contentHash: string
+  status: 'draft' | 'published' | 'unpublished'
+  publishedHash: string | null
+  publishedAt: Date | null
+}
+
 export type TaskPatch = Partial<{
   plan: Plan
   result: unknown
@@ -188,4 +201,12 @@ export interface TaskStore {
   upsertClaim(c: { id: string; tokenHash: string; orderCode: string; productSlug: string; credits: number; ttlMs: number }): Promise<ClaimUpsertResult>
   /** pending + süresi dolmamışsa atomik olarak claimed yapar ve krediyi yükler */
   redeemClaim(tokenHash: string, workspaceId: string): Promise<{ claimId: string; credits: number } | null>
+
+  // Site taslakları (migration 006)
+  /** Aynı görev için tekrar çağrılırsa mevcut taslağı döndürür (idempotent) */
+  createDraft(d: Omit<DraftRow, 'status' | 'publishedHash' | 'publishedAt'>): Promise<DraftRow>
+  getDraft(draftId: string, workspaceId: string): Promise<DraftRow | null>
+  getPublishedDraftBySlug(slug: string): Promise<DraftRow | null>
+  /** Yalnızca içerik hash'i eşleşirse yayınlar; aynı hash ile tekrar çağrı etkisizdir */
+  publishDraft(draftId: string, workspaceId: string, contentHash: string): Promise<boolean>
 }

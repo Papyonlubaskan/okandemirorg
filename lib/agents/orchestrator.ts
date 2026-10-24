@@ -7,6 +7,7 @@ import { NoModelAvailableError } from '@/lib/ai/types'
 import { toEntryUsage } from '@/lib/ai/usage'
 import { redactString } from '@/lib/security/secrets'
 import { computePayloadHash } from './approvals'
+import { PermanentToolError } from './errors'
 import { APPROVAL_TTL_MS, TASK_LIMITS, canApprove, requiresApproval, retryBackoffMs } from './policies'
 import type { ToolRegistry } from './registry'
 import { getTaskType, type TaskTypeDef } from './task-types'
@@ -81,6 +82,7 @@ function withTimeout<T>(promise: Promise<T>, ms: number, controller: AbortContro
 
 function toFailure(err: unknown): TaskFailure {
   if (err instanceof TaskFailure) return err
+  if (err instanceof PermanentToolError) return new TaskFailure(err.code, err.message, false)
   if (err instanceof NoModelAvailableError) {
     const retryable = err.reason === 'quota_exhausted' || err.reason === 'all_failed' || err.reason === 'no_provider'
     return new TaskFailure(`model_${err.reason}`, err.message, retryable)
@@ -257,6 +259,7 @@ export async function runTask(claimed: TaskRow, deps: OrchestratorDeps): Promise
         aiMode: deps.aiMode,
         llm,
         previous: { ...outputs },
+        store,
       }
       const output = await withTimeout(tool.run(parsedInput.data, ctx), Math.min(tool.timeoutMs, remaining), controller)
       const size = Buffer.byteLength(JSON.stringify(output ?? null))

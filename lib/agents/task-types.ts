@@ -1,4 +1,5 @@
 import { z } from 'zod'
+import { landingBriefSchema } from './tools/landing'
 import type { Plan } from './types'
 
 export type TaskTypeDef = {
@@ -35,6 +36,24 @@ export const TASK_TYPES: Record<string, TaskTypeDef> = {
     inputSchema: auditInput,
     staticPlan: (input) => ({ version: 1, taskType: 'seo.audit', steps: [{ key: 'audit', tool: 'seo.audit', input }] }),
     creditCost: 1,
+  },
+  'landing.draft': {
+    type: 'landing.draft',
+    label: 'AI Landing taslağı',
+    planner: 'static',
+    allowedTools: ['landing.draft'],
+    inputSchema: landingBriefSchema,
+    staticPlan: (input) => ({ version: 1, taskType: 'landing.draft', steps: [{ key: 'draft', tool: 'landing.draft', input }] }),
+    creditCost: 3,
+  },
+  'landing.publish': {
+    type: 'landing.publish',
+    label: 'Landing yayınla (onay gerekir)',
+    planner: 'static',
+    allowedTools: ['landing.publish'],
+    inputSchema: z.object({ draftId: z.string().uuid(), contentHash: z.string().regex(/^[a-f0-9]{64}$/) }).strict(),
+    staticPlan: (input) => ({ version: 1, taskType: 'landing.publish', steps: [{ key: 'publish', tool: 'landing.publish', input }] }),
+    creditCost: 0,
   },
   auto: {
     type: 'auto',

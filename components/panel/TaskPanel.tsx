@@ -6,19 +6,32 @@ import StatusBadge, { TERMINAL } from './StatusBadge'
 
 type TaskSummary = { id: string; taskType: string; status: string; createdAt: string; errorCode: string | null }
 
-const FIELDS: Record<string, { name: string; label: string; placeholder: string; multiline?: boolean }> = {
-  'echo.test': { name: 'message', label: 'Mesaj', placeholder: 'Merhaba' },
-  'seo.audit': { name: 'url', label: 'Site URL', placeholder: 'https://ornek.com' },
-  auto: { name: 'request', label: 'İsteğiniz', placeholder: 'ornek.com sitemi SEO açısından denetle', multiline: true },
+type Field = { name: string; label: string; placeholder: string; multiline?: boolean; optional?: boolean }
+
+const FIELDS: Record<string, Field[]> = {
+  'echo.test': [{ name: 'message', label: 'Mesaj', placeholder: 'Merhaba' }],
+  'seo.audit': [{ name: 'url', label: 'Site URL', placeholder: 'https://ornek.com' }],
+  'landing.draft': [
+    { name: 'businessName', label: 'İşletme adı', placeholder: 'Demir Mobilya' },
+    { name: 'city', label: 'Şehir', placeholder: 'İzmir' },
+    { name: 'service', label: 'Hizmet', placeholder: 'Özel ölçü mobilya' },
+    { name: 'whatsapp', label: 'WhatsApp (opsiyonel)', placeholder: '905xxxxxxxxx', optional: true },
+    { name: 'highlights', label: 'Öne çıkanlar (opsiyonel)', placeholder: '20 yıllık tecrübe, ücretsiz keşif', optional: true, multiline: true },
+  ],
+  auto: [{ name: 'request', label: 'İsteğiniz', placeholder: 'ornek.com sitemi SEO açısından denetle', multiline: true }],
 }
+
+/** Panelden doğrudan oluşturulmayan türler (ör. yayın: görev detayından, onaylı) */
+const HIDDEN_TYPES = ['landing.publish']
 
 function newKey() {
   return typeof crypto !== 'undefined' && 'randomUUID' in crypto ? crypto.randomUUID() : `k-${Date.now()}-${Math.random()}`
 }
 
 export default function TaskPanel({ workspaceId, taskTypes }: { workspaceId: string; taskTypes: { type: string; label: string }[] }) {
-  const [taskType, setTaskType] = useState(taskTypes.find((t) => t.type === 'seo.audit')?.type ?? taskTypes[0]?.type)
-  const [value, setValue] = useState('')
+  const creatable = taskTypes.filter((t) => !HIDDEN_TYPES.includes(t.type))
+  const [taskType, setTaskType] = useState(creatable.find((t) => t.type === 'seo.audit')?.type ?? creatable[0]?.type)
+  const [values, setValues] = useState<Record<string, string>>({})
   const [tasks, setTasks] = useState<TaskSummary[]>([])
   const [error, setError] = useState('')
   const [busy, setBusy] = useState(false)
@@ -39,24 +52,29 @@ export default function TaskPanel({ workspaceId, taskTypes }: { workspaceId: str
     return () => clearInterval(id)
   }, [tasks, load])
 
-  const field = FIELDS[taskType] ?? FIELDS['echo.test']
+  const fields = FIELDS[taskType] ?? FIELDS['echo.test']
 
   async function submit(e: React.FormEvent) {
     e.preventDefault()
     setError('')
     setBusy(true)
+    const input: Record<string, string> = {}
+    for (const f of fields) {
+      const v = (values[f.name] || '').trim()
+      if (v) input[f.name] = v
+    }
     try {
       const res = await fetch('/api/ai/tasks', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Idempotency-Key': idemKey },
-        body: JSON.stringify({ workspaceId, taskType, input: { [field.name]: value } }),
+        body: JSON.stringify({ workspaceId, taskType, input }),
       })
       const data = await res.json()
       if (!res.ok) {
         setError(data.error || 'Görev oluşturulamadı')
         return
       }
-      setValue('')
+      setValues({})
       setIdemKey(newKey())
       await load()
     } catch {
@@ -76,36 +94,38 @@ export default function TaskPanel({ workspaceId, taskTypes }: { workspaceId: str
             onChange={(e) => setTaskType(e.target.value)}
             className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white"
           >
-            {taskTypes.map((t) => (
+            {creatable.map((t) => (
               <option key={t.type} value={t.type}>
                 {t.label}
               </option>
             ))}
           </select>
         </label>
-        <label className="block">
-          <span className="text-sm font-bold text-gray-700 dark:text-gray-200">{field.label}</span>
-          {field.multiline ? (
-            <textarea
-              required
-              maxLength={2000}
-              rows={3}
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              placeholder={field.placeholder}
-              className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white"
-            />
-          ) : (
-            <input
-              required
-              maxLength={2048}
-              value={value}
-              onChange={(e) => setValue(e.target.value)}
-              placeholder={field.placeholder}
-              className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white"
-            />
-          )}
-        </label>
+        {fields.map((field) => (
+          <label key={field.name} className="block">
+            <span className="text-sm font-bold text-gray-700 dark:text-gray-200">{field.label}</span>
+            {field.multiline ? (
+              <textarea
+                required={!field.optional}
+                maxLength={2000}
+                rows={3}
+                value={values[field.name] || ''}
+                onChange={(e) => setValues((v) => ({ ...v, [field.name]: e.target.value }))}
+                placeholder={field.placeholder}
+                className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white"
+              />
+            ) : (
+              <input
+                required={!field.optional}
+                maxLength={2048}
+                value={values[field.name] || ''}
+                onChange={(e) => setValues((v) => ({ ...v, [field.name]: e.target.value }))}
+                placeholder={field.placeholder}
+                className="mt-1 w-full rounded-lg border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-900 px-4 py-3 text-gray-900 dark:text-white"
+              />
+            )}
+          </label>
+        ))}
         {error && (
           <p className="text-red-600 dark:text-red-400 text-sm font-medium" role="alert">
             {error}

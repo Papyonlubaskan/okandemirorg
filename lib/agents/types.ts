@@ -1,6 +1,7 @@
 import type { z } from 'zod'
 import type { AiMode } from '@/lib/ai/catalog'
 import type { TaskLlm } from '@/lib/ai/fallback'
+import type { TaskStore } from '@/lib/ai/store-types'
 
 export type TaskStatus =
   | 'queued'
@@ -34,6 +35,8 @@ export type ToolContext = {
   llm: TaskLlm | null
   /** Önceki adımların çıktıları (step key → output) */
   previous: Record<string, unknown>
+  /** Veri erişimi; araçlar DAİMA ctx.workspaceId ile kapsamlı sorgu yapar */
+  store: TaskStore
 }
 
 export type ToolDef<I = Record<string, unknown>, O = unknown> = {

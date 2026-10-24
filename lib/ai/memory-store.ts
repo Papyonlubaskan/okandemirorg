@@ -7,6 +7,7 @@ import type { TaskStatus } from '@/lib/agents/types'
 import type {
   ApprovalRow,
   AuditEntry,
+  DraftRow,
   MembershipRow,
   NewTask,
   StepRow,
@@ -356,6 +357,29 @@ export class MemoryTaskStore implements TaskStore {
     if (!w) return false
     w.plan = plan
     if (monthlyBudgetUsd !== undefined) w.monthlyBudgetUsd = monthlyBudgetUsd
+    return true
+  }
+
+  drafts = new Map<string, DraftRow>()
+  async createDraft(d: Omit<DraftRow, 'status' | 'publishedHash' | 'publishedAt'>) {
+    const existing = [...this.drafts.values()].find((x) => d.taskId && x.taskId === d.taskId)
+    if (existing) return structuredClone(existing)
+    const row: DraftRow = { ...d, status: 'draft', publishedHash: null, publishedAt: null }
+    this.drafts.set(d.id, row)
+    return structuredClone(row)
+  }
+  async getDraft(draftId: string, workspaceId: string) {
+    const d = this.drafts.get(draftId)
+    return d && d.workspaceId === workspaceId ? structuredClone(d) : null
+  }
+  async getPublishedDraftBySlug(slug: string) {
+    const d = [...this.drafts.values()].find((x) => x.slug === slug && x.status === 'published' && x.publishedHash === x.contentHash)
+    return d ? structuredClone(d) : null
+  }
+  async publishDraft(draftId: string, workspaceId: string, contentHash: string) {
+    const d = this.drafts.get(draftId)
+    if (!d || d.workspaceId !== workspaceId || d.contentHash !== contentHash) return false
+    if (d.status !== 'published') Object.assign(d, { status: 'published', publishedHash: contentHash, publishedAt: this.now() })
     return true
   }
 

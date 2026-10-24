@@ -30,6 +30,19 @@ type Detail = {
   role: string
 }
 
+type DraftResult = { draftId: string; contentHash: string; previewPath: string; title: string; source: string }
+type PublishResult = { published: true; path: string }
+
+function draftOf(result: unknown): DraftResult | null {
+  const r = result as Partial<DraftResult> | null
+  return r && typeof r.previewPath === 'string' && typeof r.draftId === 'string' && typeof r.contentHash === 'string' ? (r as DraftResult) : null
+}
+
+function publishedOf(result: unknown): PublishResult | null {
+  const r = result as Partial<PublishResult> | null
+  return r && r.published === true && typeof r.path === 'string' ? (r as PublishResult) : null
+}
+
 function reportOf(result: unknown): string | null {
   if (result && typeof result === 'object' && typeof (result as { report?: unknown }).report === 'string') {
     return (result as { report: string }).report
@@ -75,6 +88,23 @@ export default function TaskDetail({ taskId, workspaceId }: { taskId: string; wo
     load()
   }
 
+  async function requestPublish(d: DraftResult) {
+    setBusy(true)
+    setError('')
+    const res = await fetch('/api/ai/tasks', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Idempotency-Key': `publish-${d.draftId}-${d.contentHash.slice(0, 16)}` },
+      body: JSON.stringify({ workspaceId, taskType: 'landing.publish', input: { draftId: d.draftId, contentHash: d.contentHash } }),
+    })
+    const body = await res.json()
+    setBusy(false)
+    if (!res.ok) {
+      setError(body.error || 'Yayın isteği oluşturulamadı')
+      return
+    }
+    window.location.href = `/panel/gorev/${body.task.id}?ws=${encodeURIComponent(workspaceId)}`
+  }
+
   async function cancel() {
     setBusy(true)
     const res = await fetch(`/api/ai/tasks/${taskId}?${qs}`, { method: 'DELETE' })
@@ -88,6 +118,8 @@ export default function TaskDetail({ taskId, workspaceId }: { taskId: string; wo
 
   const { task } = data
   const report = reportOf(task.result)
+  const draft = draftOf(task.result)
+  const published = publishedOf(task.result)
 
   return (
     <div className="space-y-6">
@@ -152,7 +184,37 @@ export default function TaskDetail({ taskId, workspaceId }: { taskId: string; wo
         </p>
       )}
 
+      {task.status === 'succeeded' && draft && (
+        <div className="space-y-3">
+          <p className="text-sm text-gray-600 dark:text-gray-300">
+            Taslak: <strong>{draft.title}</strong> ({draft.source === 'ai' ? 'AI' : 'şablon'}) · yalnızca siz görüyorsunuz
+          </p>
+          <iframe
+            title="Taslak önizleme"
+            sandbox=""
+            src={`${draft.previewPath}?workspaceId=${encodeURIComponent(workspaceId)}`}
+            className="w-full h-[600px] rounded-xl border border-gray-200 dark:border-gray-700 bg-white"
+          />
+          {data.role !== 'member' && (
+            <button onClick={() => requestPublish(draft)} disabled={busy} className="rounded-lg bg-teal-700 text-white font-bold px-5 py-2 disabled:opacity-50">
+              Yayınla (onay ekranı açılır)
+            </button>
+          )}
+        </div>
+      )}
+
+      {task.status === 'succeeded' && published && (
+        <p className="rounded-lg bg-teal-50 dark:bg-teal-900/30 p-4 text-sm text-teal-900 dark:text-teal-100">
+          Yayında:{' '}
+          <a href={published.path} target="_blank" rel="noopener noreferrer" className="font-bold underline">
+            okandemir.org{published.path}
+          </a>
+        </p>
+      )}
+
       {task.status === 'succeeded' &&
+        !draft &&
+        !published &&
         (report ? (
           <pre className="whitespace-pre-wrap rounded-xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-5 text-sm text-gray-800 dark:text-gray-100 overflow-x-auto">
             {report}
