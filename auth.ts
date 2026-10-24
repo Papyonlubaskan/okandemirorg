@@ -1,4 +1,5 @@
 import NextAuth from 'next-auth'
+import GitHub from 'next-auth/providers/github'
 import Google from 'next-auth/providers/google'
 import type { EmailConfig } from 'next-auth/providers/email'
 import { escapeHtml } from '@/lib/api-security'
@@ -41,8 +42,12 @@ export const { handlers, auth, signIn, signOut } = NextAuth(() => ({
   trustHost: true,
   providers: [
     emailProvider,
+    // Google ve GitHub yalnızca doğrulanmış e-posta döndürür: aynı e-postayla hesap birleştirme güvenli
     ...(process.env.AUTH_GOOGLE_ID && process.env.AUTH_GOOGLE_SECRET
       ? [Google({ allowDangerousEmailAccountLinking: true })]
+      : []),
+    ...(process.env.AUTH_GITHUB_ID && process.env.AUTH_GITHUB_SECRET
+      ? [GitHub({ allowDangerousEmailAccountLinking: true })]
       : []),
   ],
   pages: {
