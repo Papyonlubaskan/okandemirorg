@@ -94,20 +94,29 @@ export const MODEL_CATALOG: ModelEntry[] = [
     pricing: { inputPer1M: 0, outputPer1M: 0 },
     commercialUse: 'restricted',
     enabled: () => getAiMode() === 'live' && flag('AI_ENABLE_NVIDIA'),
-    notes: 'API Catalog ücretsiz erişimi deneme/geliştirme amaçlıdır; üretim kullanımı için NVIDIA AI Enterprise lisansı gerekir.',
+    notes:
+      'Doğrulandı (2026-10, docs.api.nvidia.com/nim/docs/product + API Trial ToS): ücretsiz uç noktalar yalnızca prototip/test; ' +
+      'gerçek kullanıcıya hizmet "production" sayılır ve NVIDIA AI Enterprise lisansı ister. Hız sınırı ~40 RPM (modele göre değişir). ' +
+      'Router production ortamında restricted girdileri reddeder.',
   },
   {
     key: 'huggingface:default',
     provider: 'huggingface',
-    model: () => process.env.HF_MODEL || 'meta-llama/Llama-3.3-70B-Instruct',
-    tier: 'free',
+    model: () => process.env.HF_MODEL || 'openai/gpt-oss-120b:cheapest',
+    tier: 'paid',
     purposes: CHEAP,
     jsonMode: false,
     quota: { status: 'unknown' },
-    pricing: { inputPer1M: 0, outputPer1M: 0 },
+    pricing: {
+      inputPer1M: Number(process.env.HF_PRICE_IN || 0.2),
+      outputPer1M: Number(process.env.HF_PRICE_OUT || 0.8),
+    },
     commercialUse: 'unverified',
     enabled: () => getAiMode() === 'live' && flag('AI_ENABLE_HF'),
-    notes: 'Aylık küçük ücretsiz kredi; sonrası sağlayıcı fiyatıyla faturalanır. Model lisansı ayrıca kontrol edilmeli.',
+    notes:
+      'Doğrulandı (2026-10, huggingface.co/docs/inference-providers/pricing): OpenAI uyumlu router.huggingface.co/v1 (yalnız chat). ' +
+      'Ücretsiz hesap ayda $0.10 kredi; sonrası sağlayıcı fiyatıyla kullandıkça öde → ücretli sayılır. ' +
+      'Fiyat sağlayıcıya göre değişir; varsayılan tahmin muhafazakârdır. Model lisansı ayrıca kontrol edilmeli.',
   },
   {
     key: 'openrouter:mini',

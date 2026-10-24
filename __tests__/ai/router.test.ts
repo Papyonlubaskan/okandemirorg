@@ -68,6 +68,17 @@ describe('selectCandidates', () => {
     ])
   })
 
+  it('ticari kullanımı kısıtlı sağlayıcıyı production’da eler, geliştirmede izin verir', () => {
+    const env = process.env as Record<string, string | undefined>
+    const original = env.NODE_ENV
+    const trial = entry({ key: 'trial', commercialUse: 'restricted' })
+    env.NODE_ENV = 'production'
+    expect(selectCandidates(base({ catalog: [trial] })).rejected).toEqual([{ key: 'trial', reason: 'restricted_in_production' }])
+    env.NODE_ENV = 'development'
+    expect(selectCandidates(base({ catalog: [trial] })).candidates).toHaveLength(1)
+    env.NODE_ENV = original
+  })
+
   it('JSON gereken işte JSON modu olmayanı eler', () => {
     const r = selectCandidates(base({ json: true, catalog: [entry({ key: 'nojson', jsonMode: false })] }))
     expect(r.rejected[0].reason).toBe('json')

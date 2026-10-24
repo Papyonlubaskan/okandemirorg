@@ -19,7 +19,15 @@ export type RouteContext = {
   catalog?: ModelEntry[]
 }
 
-export type RejectReason = 'disabled' | 'purpose' | 'not_configured' | 'json' | 'quota' | 'paid_not_allowed' | 'budget'
+export type RejectReason =
+  | 'disabled'
+  | 'restricted_in_production'
+  | 'purpose'
+  | 'not_configured'
+  | 'json'
+  | 'quota'
+  | 'paid_not_allowed'
+  | 'budget'
 
 export type RouteResult = {
   candidates: ModelEntry[]
@@ -47,6 +55,11 @@ export function selectCandidates(ctx: RouteContext): RouteResult {
   for (const entry of catalog) {
     const reject = (reason: RejectReason) => rejected.push({ key: entry.key, reason })
     if (!entry.enabled()) { reject('disabled'); continue }
+    // Ticari kullanımı kısıtlı (ör. deneme amaçlı) sağlayıcılar gerçek müşteriye hizmet vermez
+    if (entry.commercialUse === 'restricted' && process.env.NODE_ENV === 'production') {
+      reject('restricted_in_production')
+      continue
+    }
     if (!entry.purposes.includes(ctx.purpose)) { reject('purpose'); continue }
     const provider = ctx.providers[entry.provider]
     if (!provider || !provider.isConfigured()) { reject('not_configured'); continue }
