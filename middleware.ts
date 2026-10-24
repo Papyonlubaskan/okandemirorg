@@ -20,7 +20,7 @@ export function middleware(request: NextRequest) {
   
   // HTTPS yönlendirmesi (Railway otomatik yapar ama yine de ekleyelim)
   const url = request.nextUrl.clone()
-  if (url.protocol === 'http:' && process.env.NODE_ENV === 'production') {
+  if (url.protocol === 'http:' && process.env.NODE_ENV === 'production' && url.pathname !== '/api/health') {
     url.protocol = 'https:'
     return NextResponse.redirect(url)
   }
