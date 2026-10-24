@@ -11,3 +11,9 @@ README.md
 .gitignore
 .next
 .vercel
+.cursor
+__tests__
+coverage
+public/instagram-videos
+railway*.env
+*.env

@@ -9,6 +9,8 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 })
 
 const nextConfig: NextConfig = {
+  /* Küçük Docker imajı: Dockerfile çalışma aşaması yalnızca .next/standalone'u kopyalar */
+  output: 'standalone',
   outputFileTracingRoot: projectRoot,
 
   typescript: {
