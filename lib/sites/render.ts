@@ -24,6 +24,8 @@ export type RenderOptions = {
   /** Yayında arama motoru indeksi */
   indexable?: boolean
   canonicalUrl?: string
+  /** Sayfa üstünde gösterilecek kısa bildirim (ör. form gönderildi) */
+  notice?: string
 }
 
 const FONTS: Record<SiteTheme['font'], string> = {
@@ -170,6 +172,7 @@ ${opts.canonicalUrl ? `<link rel="canonical" href="${esc(opts.canonicalUrl)}">` 
 <script type="application/ld+json">${JSON.stringify(ld).replace(/</g, '\\u003c')}</script>
 <style>${themeCss(site.theme)}</style></head><body>
 ${opts.preview ? '<div class="pv">Önizleme — yayında değil</div>' : ''}
+${opts.notice ? `<div class="pv" style="background:#16a34a;color:#fff">${esc(opts.notice)}</div>` : ''}
 <header class="top"><div class="w"><a class="brand" href="${esc(href(site.pages[0]))}">${esc(b.name)}</a><nav class="m">${links}</nav><details class="mm"><summary class="btn alt" style="padding:8px 14px">Menü</summary><nav>${links}</nav></details></div></header>
 <main>${page.sections.map((s, i) => section(site, s, i, opts)).join('\n')}</main>
 <footer class="ft"><div class="w"><span>© ${new Date().getFullYear()} ${esc(b.name)}${b.city ? ` · ${esc(b.city)}` : ''}</span><span>okandemir.org ile oluşturuldu</span></div></footer>
