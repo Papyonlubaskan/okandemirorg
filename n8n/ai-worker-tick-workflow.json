@@ -1,0 +1,44 @@
+{
+  "name": "AI Worker Tick (her dakika)",
+  "notes": "AI orkestratör kuyruğunu işler: POST /api/ai/worker/tick. AI_ORCHESTRATOR_ENABLED=1 değilse 404 döner (zararsız). Eşzamanlı çalışmalar güvenli (atomik lease). Ayrı worker servisi açılırsa bu workflow devre dışı bırakılabilir. n8n ortamında SITE_URL ve INTERNAL_API_KEY tanımlı olmalı.",
+  "active": false,
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [{ "field": "minutes", "minutesInterval": 1 }]
+        }
+      },
+      "name": "Her dakika",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [0, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{ $env.SITE_URL || 'https://okandemir.org' }}/api/ai/worker/tick",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "x-api-key", "value": "={{ $env.INTERNAL_API_KEY }}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "options": {
+          "timeout": 55000,
+          "response": { "response": { "neverError": true } }
+        }
+      },
+      "name": "Worker Tick",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4,
+      "position": [260, 0]
+    }
+  ],
+  "connections": {
+    "Her dakika": {
+      "main": [[{ "node": "Worker Tick", "type": "main", "index": 0 }]]
+    }
+  }
+}
