@@ -4,7 +4,6 @@ import Script from 'next/script'
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd'
 import MiniAuditForm from '@/components/MiniAuditForm'
 import WhatsAppCtaCard from '@/components/WhatsAppCtaCard'
-import { isMiniAuditEnabled } from '@/lib/ai/feature'
 import { getProductBySlug, FUNNEL, formatTry } from '@/lib/digital-products'
 import { productWhatsAppUrl } from '@/lib/bank-transfer'
 import { PERSON_ID, SITE_URL } from '@/lib/brand-seo'
@@ -108,13 +107,7 @@ export default function AiDenetimPage() {
           </div>
         </section>
 
-        {isMiniAuditEnabled() && (
-          <section className="pb-16">
-            <div className="container mx-auto px-4 max-w-5xl">
-              <MiniAuditForm fullAuditHref={wa} />
-            </div>
-          </section>
-        )}
+        <MiniAuditForm fullAuditHref={wa} />
       </div>
     </>
   )

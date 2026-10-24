@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 type Result = { finalUrl: string; status: number; score: number; topIssues: string[]; issueCount: number }
 
@@ -10,6 +10,16 @@ export default function MiniAuditForm({ fullAuditHref }: { fullAuditHref: string
   const [busy, setBusy] = useState(false)
   const [error, setError] = useState('')
   const [result, setResult] = useState<Result | null>(null)
+  const [enabled, setEnabled] = useState(false)
+
+  useEffect(() => {
+    fetch('/api/ai/mini-audit', { cache: 'no-store' })
+      .then((r) => (r.ok ? r.json() : { enabled: false }))
+      .then((d) => setEnabled(Boolean(d.enabled)))
+      .catch(() => setEnabled(false))
+  }, [])
+
+  if (!enabled) return null
 
   async function submit(e: React.FormEvent) {
     e.preventDefault()
@@ -33,6 +43,8 @@ export default function MiniAuditForm({ fullAuditHref }: { fullAuditHref: string
   }
 
   return (
+    <section className="pb-16">
+    <div className="container mx-auto px-4 max-w-5xl">
     <div className="rounded-2xl bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 p-6 space-y-4">
       <h2 className="text-2xl font-black text-gray-900 dark:text-white">Ücretsiz mini denetim</h2>
       <p className="text-sm text-gray-600 dark:text-gray-300">Sitenizin hızlı skorunu ve ilk 3 sorununu görün. Günde 2 deneme.</p>
@@ -80,5 +92,7 @@ export default function MiniAuditForm({ fullAuditHref }: { fullAuditHref: string
         </div>
       )}
     </div>
+    </div>
+    </section>
   )
 }

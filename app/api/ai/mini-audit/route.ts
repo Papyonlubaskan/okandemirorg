@@ -9,6 +9,11 @@ export const dynamic = 'force-dynamic'
 
 const DAY = 24 * 60 * 60 * 1000
 
+/** GET /api/ai/mini-audit — form görünürlüğü (statik sayfa bayrağı çalışma anında öğrenir) */
+export async function GET() {
+  return NextResponse.json({ enabled: isMiniAuditEnabled() }, { headers: { 'Cache-Control': 'no-store' } })
+}
+
 /** POST /api/ai/mini-audit — { url, email } · herkese açık, sıfır model maliyeti, sıkı limitli */
 export async function POST(request: NextRequest) {
   if (!isMiniAuditEnabled()) return NextResponse.json({ error: 'Not found' }, { status: 404 })
