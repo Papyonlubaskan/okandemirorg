@@ -18,3 +18,4 @@ __tests__
 *.test.tsx
 jest.config.js
 jest.setup.js
+public/instagram-videos

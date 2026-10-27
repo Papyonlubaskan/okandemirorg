@@ -278,7 +278,7 @@ export default function Footer() {
           {/* Copyright */}
           <div className="text-center">
             <p className="text-lg text-gray-400">
-              <span className="font-black text-white">O Copyright© Dijital Pazarlama & Yazılım</span> Tüm Hakları Saklıdır.
+              <span className="font-black text-white">OD Dijital Pazarlama & Yazılım</span> · Tüm Hakları Saklıdır.
             </p>
             <p className="text-lg text-gray-500 dark:text-gray-400 mt-2">
               © 2025 <span className="font-black text-gray-300">Okan Demir</span>

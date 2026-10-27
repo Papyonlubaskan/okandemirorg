@@ -1,8 +1,9 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const STORAGE_KEY = 'okd_site_prompt'
+const AB_VARIANT_KEY = 'okd_home_ab_variant'
 
 const CHIPS = [
   'İzmir’de kuaför salonum için randevu alan bir site',
@@ -12,8 +13,39 @@ const CHIPS = [
   'Tadilat firmam için teklif toplayan site',
 ]
 
+const AB_COPY = {
+  a: {
+    helper: 'Kayıt ol → sitenin taslağı dakikalar içinde hazır',
+    cta: 'Sitemi oluştur →',
+    placeholder: 'İşletmeni anlat: ne yapıyorsun, nerede, kimlere? Gerisini yapay zekâ halletsin…',
+  },
+  b: {
+    helper: 'Otuz saniyede anlat, ilk taslağı hemen aç',
+    cta: 'Taslağı başlat →',
+    placeholder: 'Sektörünü ve hedef müşterini yaz; çok sayfalı site taslağın hazır gelsin…',
+  },
+} as const
+
+type Variant = keyof typeof AB_COPY
+
 export default function HeroPrompt() {
   const [text, setText] = useState('')
+  const [variant, setVariant] = useState<Variant>('a')
+
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(AB_VARIANT_KEY)
+      if (saved === 'a' || saved === 'b') {
+        setVariant(saved)
+        return
+      }
+      const picked: Variant = Math.random() < 0.5 ? 'a' : 'b'
+      localStorage.setItem(AB_VARIANT_KEY, picked)
+      setVariant(picked)
+    } catch {
+      // localStorage kapalı olabilir
+    }
+  }, [])
 
   function start(e?: React.FormEvent) {
     e?.preventDefault()
@@ -22,7 +54,7 @@ export default function HeroPrompt() {
     } catch {
       // localStorage kapalı olabilir
     }
-    window.location.href = '/panel/baslangic'
+    window.location.href = `/panel/baslangic?ab=${variant}`
   }
 
   return (
@@ -36,14 +68,14 @@ export default function HeroPrompt() {
           }}
           rows={3}
           maxLength={600}
-          placeholder="İşletmeni anlat: ne yapıyorsun, nerede, kimlere? Gerisini yapay zekâ halletsin…"
+          placeholder={AB_COPY[variant].placeholder}
           aria-label="İşletmenizi anlatın"
           className="w-full resize-none bg-transparent text-white placeholder:text-slate-300 text-lg outline-none px-3 py-2"
         />
         <div className="flex items-center justify-between gap-3 px-2 pb-1">
-          <span className="text-xs text-slate-300">Kayıt ol → sitenin taslağı dakikalar içinde hazır</span>
+          <span className="text-xs text-slate-300">{AB_COPY[variant].helper}</span>
           <button type="submit" className="rounded-xl bg-teal-400 hover:bg-teal-300 text-slate-900 font-black px-5 py-2.5">
-            Sitemi oluştur →
+            {AB_COPY[variant].cta}
           </button>
         </div>
       </div>

@@ -33,7 +33,7 @@ export default function Loading() {
         </div>
         
         <h2 className="text-2xl font-black text-gray-900 dark:text-white mb-4">
-          O Copyright© Dijital Pazarlama & Yazılım
+          OD Dijital Pazarlama & Yazılım
         </h2>
         
         <div className="flex justify-center">

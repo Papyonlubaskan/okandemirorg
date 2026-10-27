@@ -45,10 +45,23 @@ const WHY = [
   ['⚡', 'Dakikalar içinde', 'Ajans süreçleri haftalar sürer; ilk taslağın dakikalar içinde hazır.'],
 ]
 
+const TRUST_BADGES = [
+  'SSL ile güvenli',
+  'Kredi iade koruması',
+  'Türkçe insan desteği',
+  'Yayın ve harcamada onay',
+]
+
+const SOCIAL_PROOF = [
+  ['Gerçek müşteri yorumları', '/referanslar', 'Platformu kullanan işletmelerin deneyimlerini ve sonuçlarını incele.'],
+  ['Canlı teslim projeler', '/projeler#tamamlanan-isler', 'Yayındaki örnekleri gör, sektörüne uygun yapıları kıyasla.'],
+  ['Detaylı vaka analizi', '/case-studies/hacettepe-isitme-samsun', 'Süreç, strateji ve sonuç metriklerini adım adım incele.'],
+]
+
 const FAQ = [
   ['Ücretsiz deneme var mı?', `Hayır. Platform kredi ile çalışır; site oluşturma ${CREDIT_COSTS['site.generate']} kredi, AI düzenleme ${CREDIT_COSTS['site.edit']} kredidir. Başarısız işlemlerin kredisi otomatik iade edilir.`],
   ['Siteyi yayınlamak için ne gerekir?', 'Aktif bir plan. Plan kapsamındaki site sayısı kadar siteyi yayında tutabilirsin.'],
-  ['Ödeme nasıl yapılıyor?', 'Şu an havale/EFT ile. Panelden paketi seçersin, ödeme onaylanınca kredi ve plan hesabına otomatik yüklenir. Kartla ödeme yakında.'],
+  ['Ödeme nasıl yapılıyor?', 'Şu an havale/EFT ile. Panelde paketi seçip sipariş kodunu görürsün; ödeme sonrası yükleme otomatik yapılır ve panelden durumunu anlık takip edersin. Kartla ödeme yakında.'],
   ['Kendi alan adımı kullanabilir miyim?', 'Özel alan adı bağlama yakında geliyor. Şimdilik siten okandemir.org/s/... adresinde yayınlanır.'],
   ['Sitemi elle de düzenleyebilir miyim?', 'Evet. Metin, renk, bölüm sırası ve SEO alanlarını kredi harcamadan elle düzenleyebilirsin.'],
 ]
@@ -72,6 +85,13 @@ export default function Home() {
           </p>
           <div className="mt-10">
             <HeroPrompt />
+          </div>
+          <div className="mt-7 flex flex-wrap justify-center gap-2.5 text-xs md:text-sm">
+            {TRUST_BADGES.map((item) => (
+              <span key={item} className="rounded-full border border-white/20 bg-white/10 px-3 py-1.5 text-slate-200">
+                {item}
+              </span>
+            ))}
           </div>
           <p className="mt-6 text-sm text-slate-400">
             Zaten hesabın var mı?{' '}
@@ -124,6 +144,24 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="container mx-auto px-4 pb-20">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
+          <h2 className="text-2xl md:text-3xl font-black text-center">Güvenmek için önce sonucu gör</h2>
+          <p className="mt-3 text-center text-slate-300 max-w-2xl mx-auto">
+            Gerçek yorumlar, canlı projeler ve vaka analizleriyle platformun nasıl sonuç ürettiğini incele.
+          </p>
+          <div className="mt-8 grid md:grid-cols-3 gap-4">
+            {SOCIAL_PROOF.map(([title, href, desc]) => (
+              <Link key={href} href={href} className="rounded-2xl border border-white/10 bg-slate-950/50 p-5 hover:border-teal-300/50 transition-colors">
+                <p className="font-black text-white">{title}</p>
+                <p className="mt-2 text-sm text-slate-300">{desc}</p>
+                <p className="mt-4 text-teal-300 text-sm font-bold">İncele →</p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-slate-900/60 border-y border-white/10" id="fiyatlar">
         <div className="container mx-auto px-4 py-20">
           <h2 className="text-3xl md:text-4xl font-black text-center">Fiyatlar</h2>
@@ -151,6 +189,16 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <p className="text-center text-xs text-slate-400 mt-6">
+            Ödeme ve kullanım koşulları:{' '}
+            <Link href="/privacy-policy" className="underline hover:text-slate-200">
+              Gizlilik Politikası
+            </Link>
+            {' '}ve{' '}
+            <Link href="/terms-conditions" className="underline hover:text-slate-200">
+              Kullanım Şartları
+            </Link>
+          </p>
         </div>
       </section>
 

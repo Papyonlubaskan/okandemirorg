@@ -8,8 +8,8 @@ export const seoKeywords = {
     'Okan Demir dijital pazarlama',
     'Okan Demir yazılım',
     'Okan Demir web tasarım',
-    'O Copyright Dijital Pazarlama',
-    'O Copyright Yazılım',
+    'OD Dijital Pazarlama',
+    'OD Yazılım',
   ],
   
   digitalMarketing: [

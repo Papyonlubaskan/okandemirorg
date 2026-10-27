@@ -1,0 +1,6 @@
+file 'C:/Users/Teknogenetik/Downloads/okandemirorg/public/instagram-videos/_php_podcast/voice/pad_00.wav'
+file 'C:/Users/Teknogenetik/Downloads/okandemirorg/public/instagram-videos/_php_podcast/voice/pad_01.wav'
+file 'C:/Users/Teknogenetik/Downloads/okandemirorg/public/instagram-videos/_php_podcast/voice/pad_02.wav'
+file 'C:/Users/Teknogenetik/Downloads/okandemirorg/public/instagram-videos/_php_podcast/voice/pad_03.wav'
+file 'C:/Users/Teknogenetik/Downloads/okandemirorg/public/instagram-videos/_php_podcast/voice/pad_04.wav'
+file 'C:/Users/Teknogenetik/Downloads/okandemirorg/public/instagram-videos/_php_podcast/voice/pad_05.wav'
