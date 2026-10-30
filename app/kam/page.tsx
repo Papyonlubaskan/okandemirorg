@@ -13,11 +13,15 @@ const APK_VERSION = '0.2.0';
 
 const FEATURES = [
   { icon: '📱', text: 'Telefon sistem sağlığı ve güvenlik kontrolü' },
-  { icon: '🔒', text: 'GitHub repo güvenlik açığı taraması' },
+  { icon: '🔒', text: 'GitHub repo güvenlik açığı taraması ve düzeltme' },
   { icon: '🔔', text: 'Müşteri mesajlarında sesli bildirim' },
   { icon: '💻', text: 'PC ile koordineli çalışma (otomasyonlar PC’de devam eder)' },
   { icon: '🎙️', text: 'Sesli komut ve sohbet' },
   { icon: '♻️', text: 'Kendini güncelleme (OTA) ve yeni özellik alma' },
+  { icon: '📎', text: 'Dosya sürükle-bırak, ekran görüntüsü yapıştırma' },
+  { icon: '🔊', text: 'Ses seviyesi ayarı' },
+  { icon: '📡', text: 'Sosyal medya kanalları yönetimi (telefon + PC)' },
+  { icon: '🧹', text: 'Docker / Ollama / LM Studio otomatik kapatma' },
 ];
 
 export default function KamDownloadPage() {
@@ -60,7 +64,7 @@ export default function KamDownloadPage() {
         </a>
 
         <p className="mt-5 text-[13px] text-[#707088]">
-          Kurulum için "Bilinmeyen kaynaklara izin ver" gerektirir.
+          Kurulum için &quot;Bilinmeyen kaynaklara izin ver&quot; gerektirir.
         </p>
         <p className="mt-2 text-[12px] text-[#5a5a70]">
           Android 7.0 ve üzeri gerekir. Güncellemeler uygulama içinden otomatik gelir;
