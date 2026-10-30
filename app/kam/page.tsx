@@ -8,7 +8,8 @@ export const metadata: Metadata = {
 };
 
 const APK_URL = '/kam/kam.apk';
-const APK_MB = '7.2';
+const APK_MB = '4.3';
+const APK_VERSION = '0.2.0';
 
 const FEATURES = [
   { icon: '📱', text: 'Telefon sistem sağlığı ve güvenlik kontrolü' },
@@ -33,7 +34,7 @@ export default function KamDownloadPage() {
         </p>
 
         <span className="inline-block px-3 py-1 rounded-full bg-[#667eea]/15 text-[#8b9cf0] text-xs mb-6">
-          Sürüm 1.0.1
+          Sürüm {APK_VERSION}
         </span>
 
         <div className="text-left mb-8">
@@ -62,7 +63,8 @@ export default function KamDownloadPage() {
           Kurulum için "Bilinmeyen kaynaklara izin ver" gerektirir.
         </p>
         <p className="mt-2 text-[12px] text-[#5a5a70]">
-          Güncellemeler uygulama içinden otomatik gelir; APK&apos;yı tekrar indirmen gerekmez.
+          Android 7.0 ve üzeri gerekir. Güncellemeler uygulama içinden otomatik gelir;
+          APK&apos;yı tekrar indirmen gerekmez.
         </p>
       </div>
     </div>
